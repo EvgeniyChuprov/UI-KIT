@@ -1,9 +1,12 @@
 extends template/template
 
+include header/header
+
 block content
     .content
         .standart-buttons
             .header
+                +header('standard buttons')
             .standart-buttons__block
                 .standart-buttons__block_small-button
                 .standart-buttons__block_button
@@ -19,6 +22,7 @@ block content
                 .standart-buttons__block_small-button
         .arrow-buttons
             .header
+                +header('arrow buttons')
             .arrow-buttons__block
                 .arrow-buttons__block_button
                 .arrow-buttons__block_button
@@ -28,6 +32,7 @@ block content
                 .arrow-buttons__block_button
         .percentages
             .header
+                +header('percentages / pie chart')
             .percentages__block
                 .percentages__block_percent
                 .percentages__block_percent
@@ -37,40 +42,59 @@ block content
                 
         .sliders
             .header
+                +header('sliders')
             .sliders__block_left
             .sliders__block_right
             .clear
         .stages
             .header
+                +header('stages')
             .stages__block
         .form-elements
             .header
+                +header('form elements')
             .form-elements__block
                 .form-elements__block_left
-                .form-elements__block_right
+                .form-elements__block_togglesTick
                     .header
+                        +header('toggles')
+                    .toggles__block
+                       .toggles__block_off
+                       .toggles__block_on 
+                    .header
+                        +header('tick boxes')
+                    .tick-box__block
+                       .tick-box__block_off
+                       .tick-box__block_on    
                 .clear 
                 .form-elements__block_left
-                    .header    
+                    .header 
+                        +header('search / drop down')   
                 .form-elements__block_right 
                     .header 
+                        +header('user profile')
                     .form-elements__block_right-profile
                     .form-elements__block_right-profile
                 .clear  
         .news-events
-            .header 
+            .header
+                +header('news & events') 
             .news-events__block_left
             .news-events__block_right
         .location
             .header
+                +header('location')
             .location__block
         .calendar
             .header 
+                +header('calendar')
             .calendar__block       
         .messaging
             .header
+                +header('messaging')
             .messaging__block
         .clear
         .video
-            .header 
+            .header
+                +header('video') 
             .video__block   

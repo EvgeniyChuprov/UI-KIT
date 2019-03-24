@@ -1,19 +1,19 @@
 @import 'reset/reset';
 
-
+@import 'fonts/fonts';
+@import 'header/header';
 .content{
-    margin:80px auto;
+    margin:83px auto;
     width: 600px;
 }
 .standart-buttons{
     margin:auto;
     width: 470px;
-    height: 290px;
+    height: 287px;
     background: #3cb17a;
 }
 .header{
     height: 25px;
-    background: #b13c3c;
 }
 .standart-buttons__block{
     height: 160px;
@@ -37,7 +37,7 @@
 .arrow-buttons{
     margin:auto;
     width: 470px;
-    height: 150px;
+    height: 152px;
     background: #1ff731;
 }
 .arrow-buttons__block{
@@ -52,7 +52,7 @@
     background: #591ff7;
 }
 .percentages{
-    height: 177px;
+    height: 176px;
     background: #4618b3;
 }
 .percentages__block{
@@ -76,7 +76,7 @@
     margin-left: 20px;
 }
 .sliders{
-    height: 130px;
+    height: 131px;
     background: #c584eb; 
 }
 .sliders__block_left{
@@ -93,7 +93,7 @@
     background: #1ff731;
 }
 .stages{
-    height: 130px;
+    height: 131px;
     background: #f8cf82;   
 }
 .stages__block{
@@ -101,13 +101,20 @@
     background: #591ff7;
 }
 .form-elements{
-    height: 705px;
+    height: 706px;
     background: #08eb79;   
 }
 .form-elements__block_left{
     float: left;
     margin: 40px 0 0 2px;
     width: 290px;
+    height: 243px;
+    background: yellowgreen;
+}
+.form-elements__block_togglesTick{
+    float: right;
+    margin: 42px 11px 0 2px;
+    width: 270px;
     height: 243px;
     background: yellowgreen;
 }
@@ -118,13 +125,55 @@
     height: 243px;
     background: yellowgreen;
 }
+.toggles__block{
+    margin: 25px auto;
+    margin-bottom: 38px;
+    width: 135px;
+    height: 25px;
+    background: #591ff7
+}
+.toggles__block_off{
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    background: #f71f67
+}
+.toggles__block_on{
+    display: inline-block;
+    margin-left: 11px;
+    width: 60px;
+    height: 25px;
+    background: #f71f67
+}
+
+.tick-box__block{
+    margin: 25px auto;
+    width: 70px;
+    height: 25px;
+    background: #591ff7
+}
+.tick-box__block_off{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #f71f67
+}
+.tick-box__block_on{
+    display: inline-block;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    background: #f71f67
+}
+
+
 .form-elements__block_right-profile{
     height: 100px;
     background: rgb(50, 86, 205);
     margin-top: 23px;
 }
 .news-events{
-    height: 317px;
+    height: 314px;
     background: #27628a;  
 }
 .news-events__block_left{
@@ -144,7 +193,7 @@
     background: yellowgreen;
 }
 .location{
-    height: 370px;
+    height: 374px;
     background: #e05858;  
 }
 .location__block{
@@ -155,7 +204,7 @@
 .calendar{
     float: left;
     width: 285px;
-    height: 530px;
+    height: 528px;
     background: #4612a7;
 }
 .calendar__block {
@@ -167,7 +216,7 @@
 .messaging{
     float: right;
     width: 295px;
-    height: 530px;
+    height: 528px;
     background: #4612a7;
 }
 .messaging__block{
