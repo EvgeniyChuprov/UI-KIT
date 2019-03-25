@@ -1,6 +1,7 @@
 extends template/template
 
 include header/header
+include buttons/buttons
 
 block content
     .content
@@ -9,17 +10,29 @@ block content
                 +header('standard buttons')
             .standart-buttons__block
                 .standart-buttons__block_small-button
+                    +button-ripple({small: true, green: true})
                 .standart-buttons__block_button
+                    +button-ripple({small: false, green: true})
                 .standart-buttons__block_button
+                    +button-ripple({small: false, green: false})
                 .standart-buttons__block_small-button
+                    +button-ripple({small: true, green: false})
                 .standart-buttons__block_small-button
+                    +button-ripple({small: true, green: true})
                 .standart-buttons__block_button
+                    +button-ripple({small: false, green: true})
                 .standart-buttons__block_button
+                    +button-ripple({small: false, green: false})
                 .standart-buttons__block_small-button
+                    +button-ripple({small: true, green: false})
                 .standart-buttons__block_small-button
+                    +button-ripple({small: true, green: true})
                 .standart-buttons__block_button
+                    +button-ripple({small: false, green: true})
                 .standart-buttons__block_button
+                    +button-ripple({small: false, green: false})
                 .standart-buttons__block_small-button
+                    +button-ripple({small: true, green: false})
         .arrow-buttons
             .header
                 +header('arrow buttons')
