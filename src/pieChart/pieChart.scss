@@ -1,0 +1,18 @@
+.chart {
+    width: 4.38vw;
+    height: 4.45vw;
+    border: .23vw solid transparent;
+    border-radius: 50%;
+    background: linear-gradient($main-white, $main-white) padding-box, conic-gradient($main-red var(--value), #fff var(--value)) border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percent-num {
+    color: #9d9d9d;
+    font-family: Lato Light;
+    font-size: 2vw;
+    font-weight: 300; 
+}

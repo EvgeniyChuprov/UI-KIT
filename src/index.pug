@@ -3,6 +3,7 @@ extends template/template
 include header/header
 include buttons/buttons
 include arrow-button/arrow-button
+include pieChart/pieChart
 
 block content
     .content
@@ -55,9 +56,13 @@ block content
                 +header('percentages / pie chart')
             .percentages__block
                 .percentages__block_percent
-                .percentages__block_percent
+                    +percent(0)
+                .percentages__block_percent.percentages__block_second
+                    +percent(38)
                 .percentages__block_percent.percentages__block_third
+                    +percent(62)
                 .percentages__block_percent.percentages__block_fourth
+                    +percent(89)
                 .percentages__block_percent.percentages__block_fifth
                 
         .sliders

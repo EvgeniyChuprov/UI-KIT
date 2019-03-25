@@ -9,6 +9,7 @@ $main-gray: #e5e5e5;
 @import 'header/header';
 @import 'buttons/buttons';
 @import 'arrow-button/arrow-button';
+@import 'pieChart/pieChart';
 
 .content{
     margin:83px auto;
@@ -55,27 +56,25 @@ $main-gray: #e5e5e5;
 }
 .percentages{
     height: 176px;
-    background: #4618b3;
 }
-.percentages__block{
-    padding-top: 20px;
-    background: #cbcbd8; 
-}
+
 .percentages__block_percent{
     display: inline-block;
     margin-right: 5px;
-    height: 97px;
-    width: 97px;
-    background: #591ff7; 
+    height: 83px;
+
+}
+.percentages__block_second{
+    margin-left:8px;
 }
 .percentages__block_third{
-    margin-left: 27px;
+    margin-left: 31px;
 }
 .percentages__block_fourth{
-    margin-left: 24px;
+    margin-left: 27px;
 }
 .percentages__block_fifth{
-    margin-left: 20px;
+    margin-left: 18px;
 }
 .sliders{
     height: 131px;
