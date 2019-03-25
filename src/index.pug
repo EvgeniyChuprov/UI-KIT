@@ -2,6 +2,7 @@ extends template/template
 
 include header/header
 include buttons/buttons
+include arrow-button/arrow-button
 
 block content
     .content
@@ -38,11 +39,17 @@ block content
                 +header('arrow buttons')
             .arrow-buttons__block
                 .arrow-buttons__block_button
+                    +arrow({right: false, disabled: false, hover: false})
                 .arrow-buttons__block_button
+                    +arrow({right: true, disabled: false, hover: false})
                 .arrow-buttons__block_button
+                    +arrow({right: false, disabled: true, hover: false})
                 .arrow-buttons__block_button
+                    +arrow({right: true, disabled: true, hover: false})
                 .arrow-buttons__block_button
+                    +arrow({right: false, disabled: false, hover: true})
                 .arrow-buttons__block_button
+                    +arrow({right: true, disabled: false, hover: true})
         .percentages
             .header
                 +header('percentages / pie chart')

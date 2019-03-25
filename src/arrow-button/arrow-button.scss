@@ -1,0 +1,85 @@
+.arrow__button{
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+  }
+  .arrow-button__arrow{
+    display: inline-block;
+    cursor: pointer;
+    width: 2.27vw;
+    height: 2.27vw;
+    line-height: 2.2vw;
+    border: 0.15vw solid $main-green;
+    border-radius: 50%;
+  }
+  .arrow-button__arrow::after{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10%;
+    width: 27%;
+    height: 27%;
+    border-top: .18vw solid $main-green;
+    border-right: .18vw solid $main-green;
+    transform: rotate(-135deg);
+  }
+  .arrow-button__arrow:hover{
+    background: $main-green;
+    &::after {
+      border-top-color: $main-white;
+      border-right-color: $main-white;
+    }
+  }
+  .arrow-button__arrow_direction_right{
+    &::after {
+      margin-left: 0;
+      border-top: none;
+      border-right: none;
+      margin-right: 13%;
+      border-bottom: .18vw solid $main-green;
+      border-left: .18vw solid $main-green;  
+  }
+    &:hover {
+      &::after {
+          border-bottom-color: $main-white;
+          border-left-color: $main-white;
+      }
+    }
+  }
+  .arrow__button:disabled .arrow-button__arrow{
+    cursor: default;
+    background-color: $main-gray;
+    border: .09vw solid $main-gray;
+    &::after {
+        border-top: .18vw solid $main-white;
+        border-right: .18vw solid $main-white;
+    }
+    &:hover {
+        background-color: $main-gray;
+    }
+  }
+  .arrow__button:disabled .arrow-button__arrow_direction_right::after {
+      margin-left: 0;
+      border-top: none;
+      border-right: none;
+      margin-right: 13%;
+      border-bottom: .18vw solid $main-white;
+      border-left: .18vw solid $main-white;  
+  }
+  .arrow-button__hover{
+    background: $main-green;
+    >.arrow-button__arrow::after{
+        border-top: .18vw solid $main-white;
+        border-right: .18vw solid $main-white;
+    }
+    >.arrow-button__arrow_direction_right::after{
+        border-top: none;
+        border-right: none;
+        border-bottom: .18vw solid $main-white;
+        border-left: .18vw solid $main-white;  
+    }
+  }
