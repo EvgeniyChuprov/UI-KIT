@@ -11,6 +11,9 @@ $main-gray: #e5e5e5;
 @import 'arrow-button/arrow-button';
 @import 'pieChart/pieChart';
 
+@import 'form/form';
+
+
 .content{
     margin:83px auto;
     width: 600px;
@@ -107,24 +110,21 @@ $main-gray: #e5e5e5;
 }
 .form-elements__block_left{
     float: left;
-    margin: 40px 0 0 2px;
+    margin: 43px 0 0 2px;
     width: 290px;
     height: 243px;
-    background: yellowgreen;
 }
 .form-elements__block_togglesTick{
     float: right;
     margin: 42px 11px 0 2px;
     width: 270px;
     height: 243px;
-    background: yellowgreen;
 }
 .form-elements__block_right{
     float: right;
     margin: 40px 0 0 2px;
     width: 280px;
     height: 243px;
-    background: yellowgreen;
 }
 .toggles__block{
     margin: 25px auto;

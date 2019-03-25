@@ -1,0 +1,63 @@
+.login-page__main-form{
+    display: flex;
+    margin-bottom: .56vw;
+}
+.text-area__main-form{
+    
+}
+.form-line__field{
+    background-color: #e5e5e5;
+    outline: none;
+    border:none;
+    height: 1.4vw;
+    width: 10.85vw;
+    border-radius: .2vw;
+}
+.form-line__field::placeholder{
+    padding-left: .7vw;
+}
+.form-line__box{
+    background-color: #e75735;
+    display: flex;
+    color:#ffffff;
+    height: 1vw;
+    width: 3.7vw;
+    border-radius: 0.2vw;
+    text-transform: uppercase;
+    justify-content: center;
+    font-family: Lato Light;
+    font-weight: 500;
+    font-size: .54vw;
+    padding-top: .52vw;
+}
+
+    
+.arrow-left {
+    height: 0px;
+        border-top: .2vw solid transparent;
+        border-bottom: .2vw solid transparent;
+        border-right: .2vw solid #e75735;
+        float: left;
+        margin-top: .54vw;
+        margin-left: .27vw;
+    }
+.true{
+    background-color: #4eb7a8;
+    }
+.true-arrow{
+    border-right:0.2vw solid #4eb7a8; 
+}    
+
+.text-area{
+    width: 14.2vw;
+    height: 4.4vw;
+    padding: .6vw 0 0 .8vw;
+    font-family: Lato Light;
+    font-weight: 500;
+    font-size: .7vw;
+
+}
+
+.form__button{
+    float: right;
+}

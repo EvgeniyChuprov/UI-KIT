@@ -1,0 +1,18 @@
+mixin form()
+    .form
+        form.login-page__main-form
+            input(class="form-line__field" type="text" name="email" placeholder="Your Name")
+            div.form-line__state
+                div.arrow-left
+                div.form-line__box error
+        div.login-page__main-form
+            input(class="form-line__field" type="email" name="email" placeholder="Your Email")
+            div.form-line__state
+                .arrow-left.true-arrow
+                div.form-line__box.true THANKS!
+        div.text-area__main-form
+            textarea( name="text" class="form-line__field text-area text")
+                | Your Message
+        .form__button        
+            +button-ripple({name: 'submit', small: false, green: true})
+            .clear

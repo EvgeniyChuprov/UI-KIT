@@ -5,6 +5,8 @@ include buttons/buttons
 include arrow-button/arrow-button
 include pieChart/pieChart
 
+include form/form
+
 block content
     .content
         .standart-buttons
@@ -12,29 +14,29 @@ block content
                 +header('standard buttons')
             .standart-buttons__block
                 .standart-buttons__block_small-button
-                    +button-ripple({small: true, green: true})
+                    +button-ripple({name: 'button', small: true, green: true})
+                .standart-buttons__block_button
+                    +button-ripple({name: 'button', small: false, green: true})
+                .standart-buttons__block_button
+                    +button-ripple({name: 'button', small: false, green: false})
+                .standart-buttons__block_small-button
+                    +button-ripple({name: 'button', small: true, green: false})
+                .standart-buttons__block_small-button
+                    +button-ripple({name: 'button', small: true, green: true})
                 .standart-buttons__block_button
                     +button-ripple({small: false, green: true})
                 .standart-buttons__block_button
-                    +button-ripple({small: false, green: false})
+                    +button-ripple({name: 'button', small: false, green: false})
                 .standart-buttons__block_small-button
-                    +button-ripple({small: true, green: false})
+                    +button-ripple({name: 'button', small: true, green: false})
                 .standart-buttons__block_small-button
-                    +button-ripple({small: true, green: true})
+                    +button-ripple({name: 'button', small: true, green: true})
                 .standart-buttons__block_button
-                    +button-ripple({small: false, green: true})
+                    +button-ripple({name: 'button', small: false, green: true})
                 .standart-buttons__block_button
-                    +button-ripple({small: false, green: false})
+                    +button-ripple({name: 'button', small: false, green: false})
                 .standart-buttons__block_small-button
-                    +button-ripple({small: true, green: false})
-                .standart-buttons__block_small-button
-                    +button-ripple({small: true, green: true})
-                .standart-buttons__block_button
-                    +button-ripple({small: false, green: true})
-                .standart-buttons__block_button
-                    +button-ripple({small: false, green: false})
-                .standart-buttons__block_small-button
-                    +button-ripple({small: true, green: false})
+                    +button-ripple({name: 'button', small: true, green: false})
         .arrow-buttons
             .header
                 +header('arrow buttons')
@@ -69,10 +71,11 @@ block content
             .header
                 +header('sliders')
             .sliders__block_left
+                
             .sliders__block_right
             .clear
         .stages
-            .header
+            .header 
                 +header('stages')
             .stages__block
         .form-elements
@@ -80,6 +83,7 @@ block content
                 +header('form elements')
             .form-elements__block
                 .form-elements__block_left
+                    +form()
                 .form-elements__block_togglesTick
                     .header
                         +header('toggles')
