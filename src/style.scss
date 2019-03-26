@@ -13,6 +13,7 @@ $main-gray: #e5e5e5;
 
 @import 'form/form';
 @import 'toggle/toggle';
+@import 'tick/tick';
 
 
 .content{
@@ -149,20 +150,16 @@ $main-gray: #e5e5e5;
     margin: 25px auto;
     width: 70px;
     height: 25px;
-    background: #591ff7
 }
 .tick-box__block_off{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: #f71f67
 }
 .tick-box__block_on{
     display: inline-block;
     margin-left: 10px;
     width: 25px;
-    height: 25px;
-    background: #f71f67
 }
 
 

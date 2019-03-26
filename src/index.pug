@@ -7,6 +7,7 @@ include pieChart/pieChart
 
 include form/form
 include toggle/toggle
+include tick/tick
 
 block content
     .content
@@ -96,8 +97,10 @@ block content
                     .header
                         +header('tick boxes')
                     .tick-box__block
-                       .tick-box__block_off
-                       .tick-box__block_on    
+                        .tick-box__block_off
+                            +tick({name: 'radio', id:'one', checked: true})
+                        .tick-box__block_on 
+                            +tick({name: 'radio', id:'two', checked: false})   
                 .clear 
                 .form-elements__block_left
                     .header 
