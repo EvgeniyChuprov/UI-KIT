@@ -10,6 +10,7 @@ include toggle/toggle
 include tick/tick
 include search/search
 include select/select
+include user-profile/user-profile
 
 block content
     .content
@@ -28,7 +29,7 @@ block content
                 .standart-buttons__block_small-button
                     +button-ripple({name: 'button', small: true, green: true})
                 .standart-buttons__block_button
-                    +button-ripple({small: false, green: true})
+                    +button-ripple({name: 'button', small: false, green: true})
                 .standart-buttons__block_button
                     +button-ripple({name: 'button', small: false, green: false})
                 .standart-buttons__block_small-button
@@ -117,7 +118,9 @@ block content
                     .header 
                         +header('user profile')
                     .form-elements__block_right-profile
+                        +userProfile({img:'./src/img/photo1.png', name:'John Smith', job:'ux designer', color:''})
                     .form-elements__block_right-profile
+                        +userProfile({img:'./src/img/photo2.png', name:'Sarah Brown', job:'developer', color:'green'})
                 .clear  
         .news-events
             .header

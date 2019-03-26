@@ -16,6 +16,7 @@ $main-gray: #e5e5e5;
 @import 'tick/tick';
 @import 'search/search';
 @import 'select/select';
+@import 'user-profile/user-profile';
 
 
 .content{
@@ -109,8 +110,7 @@ $main-gray: #e5e5e5;
     background: #591ff7;
 }
 .form-elements{
-    height: 706px;
-    background: #08eb79;   
+    height: 706px; 
 }
 .form-elements__block_left{
     float: left;
@@ -166,12 +166,11 @@ $main-gray: #e5e5e5;
     margin-left: 10px;
     width: 25px;
 }
-
-
 .form-elements__block_right-profile{
-    height: 100px;
-    background: rgb(50, 86, 205);
-    margin-top: 23px;
+    height: 92px;
+    width: 266px;
+    margin-top: 21px;
+    margin-left:9px;
 }
 .news-events{
     height: 314px;
