@@ -14,6 +14,7 @@ $main-gray: #e5e5e5;
 @import 'form/form';
 @import 'toggle/toggle';
 @import 'tick/tick';
+@import 'search/search';
 
 
 .content{
@@ -115,6 +116,9 @@ $main-gray: #e5e5e5;
     margin: 43px 0 0 2px;
     width: 290px;
     height: 243px;
+}
+.form-elements__block_search {
+    margin: .48vw 0 0 .1vw;
 }
 .form-elements__block_togglesTick{
     float: right;

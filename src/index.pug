@@ -8,6 +8,7 @@ include pieChart/pieChart
 include form/form
 include toggle/toggle
 include tick/tick
+include search/search
 
 block content
     .content
@@ -104,7 +105,11 @@ block content
                 .clear 
                 .form-elements__block_left
                     .header 
-                        +header('search / drop down')   
+                        +header('search / drop down') 
+                    .form-elements__block_search   
+                        +search('Search') 
+                    .form-elements__block_search    
+                        +search("I've not found what I'm looking for..." , ' search-errer')  
                 .form-elements__block_right 
                     .header 
                         +header('user profile')
