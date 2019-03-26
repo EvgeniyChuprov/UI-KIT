@@ -9,6 +9,7 @@ include form/form
 include toggle/toggle
 include tick/tick
 include search/search
+include select/select
 
 block content
     .content
@@ -109,7 +110,9 @@ block content
                     .form-elements__block_search   
                         +search('Search') 
                     .form-elements__block_search    
-                        +search("I've not found what I'm looking for..." , ' search-errer')  
+                        +search("I've not found what I'm looking for..." , ' search-errer')
+                    .form-elements__block_search 
+                        +select()   
                 .form-elements__block_right 
                     .header 
                         +header('user profile')
