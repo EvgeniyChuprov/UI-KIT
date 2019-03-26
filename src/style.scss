@@ -12,6 +12,7 @@ $main-gray: #e5e5e5;
 @import 'pieChart/pieChart';
 
 @import 'form/form';
+@import 'toggle/toggle';
 
 
 .content{
@@ -131,20 +132,17 @@ $main-gray: #e5e5e5;
     margin-bottom: 38px;
     width: 135px;
     height: 25px;
-    background: #591ff7
 }
 .toggles__block_off{
     display: inline-block;
     width: 60px;
     height: 25px;
-    background: #f71f67
 }
 .toggles__block_on{
     display: inline-block;
     margin-left: 11px;
     width: 60px;
     height: 25px;
-    background: #f71f67
 }
 
 .tick-box__block{

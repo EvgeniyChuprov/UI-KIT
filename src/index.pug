@@ -6,6 +6,7 @@ include arrow-button/arrow-button
 include pieChart/pieChart
 
 include form/form
+include toggle/toggle
 
 block content
     .content
@@ -88,8 +89,10 @@ block content
                     .header
                         +header('toggles')
                     .toggles__block
-                       .toggles__block_off
-                       .toggles__block_on 
+                        .toggles__block_off
+                            +toggle()
+                        .toggles__block_on 
+                            +toggle('checked')
                     .header
                         +header('tick boxes')
                     .tick-box__block
