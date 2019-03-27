@@ -1,0 +1,11 @@
+mixin event(parametr)
+    .event__block
+        img(class='news__img' src= parametr.img alt='bike')
+        .event__block_text
+            .event__block_data
+                .event__block_data-num= parametr.dataNum
+                .event__block_data-month= parametr.dataMonth
+            .event__block_header=  parametr.header
+            .event__block_info= parametr.text
+            .event__block_button
+                +button-ripple({name: 'add to calendar', small: false, green: true})
