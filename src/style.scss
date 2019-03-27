@@ -1,7 +1,9 @@
 $main-green: #44ae9f;
+$second-green:#46ab9d;
 $main-white: #ffffff;
 $main-red: #e75735;
 $main-gray: #e5e5e5;
+$second-gray:#f2f2f2;
 
 @import 'reset/reset';
 
@@ -21,6 +23,7 @@ $main-gray: #e5e5e5;
 @import 'event/event';
 @import 'map/map';
 @import 'video/video';
+@import 'message/message';
 
 .content{
     margin:83px auto;
@@ -213,14 +216,15 @@ $main-gray: #e5e5e5;
 }
 .messaging{
     float: right;
-    width: 295px;
+    width: 289px;
     height: 528px;
     background: #4612a7;
+    margin-right: 3px;
 }
 .messaging__block{
-    width: 290px;
+    margin-top: 25px;
+    width: 100%;
     height: 430px;
-    margin: 25px auto;
     background: yellowgreen
 }
 .clear{

@@ -15,6 +15,7 @@ include news/news
 include event/event
 include map/map
 include video/video
+include message/message
 
 
 block content
@@ -150,6 +151,7 @@ block content
             .header
                 +header('messaging')
             .messaging__block
+                +message()
         .clear
         .video
             .header

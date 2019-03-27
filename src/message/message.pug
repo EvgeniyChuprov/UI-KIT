@@ -1,0 +1,14 @@
+mixin message()
+    .message__box
+        .message__header
+            .message__chat-icon
+                img(src="./src/img/chat.png" alt="chat icon")
+            .message__camera-icon
+                img(src="./src/img/camera.png" alt="camera icon")
+            .message__name Sarah Brown
+            img(class="message__photo-block-image" src= "./src/img/photo2.png" alt="User photo")
+        .message__body
+            .message__message-from="Hey! So are we cool to meet at the art gallery? Say 8pm"
+            .message__message-to="Yeah that sounds great. See you then."
+            .message__reply-button
+               +button-ripple({name: 'reply', small: false, green: true})

@@ -1,0 +1,82 @@
+.message__header{
+    position: relative;
+    text-align: center;
+    background: linear-gradient(to bottom, $main-green 70%, $second-green 30%);
+    border-radius: .3vw .3vw 0 0;
+}
+.message__name {
+    padding: 7.5% 0 21.5% 0;
+    font-family: 'SourceSansPro-Light';
+    font-size: 200%;
+    color:$main-white;
+}
+.message__chat-icon {
+    position: absolute;
+    background-color: $second-gray;
+    border: none;
+    outline: none;
+    top: 120%;
+    left: 8.2%;
+}
+.message__camera-icon {
+    position: absolute;
+    background-color: $second-gray;
+    border: none;
+    outline: none;
+    top: 117.5%;
+    right: 7%;
+}
+.message__body {
+    padding-top: 21.5%;
+    padding-bottom: 11%;
+    background-color: $second-gray;
+    border-radius: .3vw .3vw 0 0;
+    line-height: .75vw;
+}
+.message__message-from {
+    position: relative;
+    width: 71%;
+    margin: 0 auto;
+    padding: 6.4% 6% 7.5% 7.4%;
+    font-family: 'Lato Regular';
+    letter-spacing: .025vw;
+    font-size: 80%;
+    background-color: $main-white;
+    border-radius: .3vw;
+    color: #868686;
+    margin-bottom: 6.2%;
+}
+.message__message-from::before {
+    content: "";
+    padding: 3%;
+    position: absolute;
+    top: -7%;
+    left: 46%;
+    transform: rotate(45deg);
+    border-radius: .2vw;
+    background-color: $main-white;
+}       
+.message__message-to {
+    width: 70.5%;
+    margin: 0 auto;
+    margin-bottom: 6%;
+    padding: 6% 6% 12% 6.2%;
+    border: 0.1vw solid $main-white;
+    background-color: $main-gray;
+    border-radius: .2vw;
+    font-family: 'Lato Regular';
+    letter-spacing: .03vw;
+    font-size: 80%;
+    color:#777;
+}
+.message__reply-button {
+    width: 84%;
+    margin: auto;
+}
+.message__photo-block-image{
+    position: absolute;
+    border-radius: 50%;
+    border:.2vw solid $main-gray;
+    top: 61%;
+    left: 33%;
+}
