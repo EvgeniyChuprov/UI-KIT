@@ -19,6 +19,7 @@ $main-gray: #e5e5e5;
 @import 'user-profile/user-profile';
 @import 'news/news';
 @import 'event/event';
+@import 'map/map';
 
 .content{
     margin:83px auto;
@@ -191,13 +192,11 @@ $main-gray: #e5e5e5;
     height: 212px;
 }
 .location{
-    height: 374px;
-    background: #e05858;  
+    height: 368px;
 }
 .location__block{
     margin-top: 26px;
-    height: 272px;
-    background: yellowgreen;
+    height: 273px;
 }
 .calendar{
     float: left;

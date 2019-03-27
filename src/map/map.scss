@@ -1,0 +1,54 @@
+.map{
+    width:99%;
+    height: 74.5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.map_menu{
+    background: #e75735;
+    width:99%;
+    height:25.5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    border-radius: 0 .2vw .2vw 0;
+    color: $main-white;
+}
+.head{
+    font-family: 'Lato Light';
+    font-size: 185%;
+    padding-left: 4.5%;
+    padding-top:3%; 
+    vertical-align:middle;
+}
+.adress{
+    text-transform: uppercase;
+    font-family: 'Lato Regular';
+    font-size: 84%;
+    width: 25%;
+    padding-left: 4.6%;
+    padding-top:3.3%;
+    letter-spacing: .009vw;
+    line-height: .8vw;
+}
+.icon{
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+.locat{
+
+    background: url("./img/location.svg") no-repeat center;
+    height: 50%;
+    width: 11%;
+    margin-right: 4.5%;
+    margin-top:6.5%;
+}
+.pin{
+    background: url("./img/pin.svg") no-repeat center;
+    height: 50%;
+    width: 2rem; 
+    margin-right: 7%;
+    margin-top:6.5%;
+}

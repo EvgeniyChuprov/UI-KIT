@@ -13,6 +13,7 @@ include select/select
 include user-profile/user-profile
 include news/news
 include event/event
+include map/map
 
 
 block content
@@ -139,6 +140,7 @@ block content
             .header
                 +header('location')
             .location__block
+                +map()
         .calendar
             .header 
                 +header('calendar')
