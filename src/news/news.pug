@@ -1,0 +1,7 @@
+mixin news(parametr)
+    .news__block
+        img(class='news__img' src= parametr.img alt='bike')
+        .news__block_text
+            .news__block_header=  parametr.header
+            .news__block_data= parametr.data
+            .news__block_info= parametr.text

@@ -11,8 +11,12 @@ include tick/tick
 include search/search
 include select/select
 include user-profile/user-profile
+include news/news
+
 
 block content
+    -
+        var news = {img:"./src/img/photo3.png", header: 'It’s all going downhill', data: '24  AUGUST  2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'}
     .content
         .standart-buttons
             .header
@@ -126,6 +130,7 @@ block content
             .header
                 +header('news & events') 
             .news-events__block_left
+                +news(news)
             .news-events__block_right
         .location
             .header
