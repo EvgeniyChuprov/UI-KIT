@@ -20,6 +20,7 @@ $main-gray: #e5e5e5;
 @import 'news/news';
 @import 'event/event';
 @import 'map/map';
+@import 'video/video';
 
 .content{
     margin:83px auto;
@@ -227,10 +228,9 @@ $main-gray: #e5e5e5;
 }
 .video{
     height: 390px;
-    background: #e05858;  
 }
 .video__block{
-    height: 340px;
+    height: 336px;
     margin: 20px auto;
-    background: yellowgreen  
+    padding: 0 2px;
 }
