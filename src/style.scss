@@ -12,7 +12,7 @@ $second-gray:#f2f2f2;
 @import 'buttons/buttons';
 @import 'arrow-button/arrow-button';
 @import 'pieChart/pieChart';
-
+@import 'bubble-slider/bubble-slider';
 @import 'form/form';
 @import 'toggle/toggle';
 @import 'tick/tick';
@@ -92,13 +92,12 @@ $second-gray:#f2f2f2;
 }
 .sliders{
     height: 131px;
-    background: #c584eb; 
 }
 .sliders__block_left{
     float: left;
-    width: 265px;
+    width: 260px;
     height: 70px;
-    background: #1ff731;
+    margin-left: 4px;
 }
 .sliders__block_right{
     float: right;

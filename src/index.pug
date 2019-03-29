@@ -4,7 +4,7 @@ include header/header
 include buttons/buttons
 include arrow-button/arrow-button
 include pieChart/pieChart
-
+include bubble-Slider/bubble-Slider
 include form/form
 include toggle/toggle
 include tick/tick
@@ -14,8 +14,10 @@ include user-profile/user-profile
 include news/news
 include event/event
 include map/map
-include video/video
+
 include message/message
+include video/video
+
 
 
 block content
@@ -85,7 +87,7 @@ block content
             .header
                 +header('sliders')
             .sliders__block_left
-                
+                +bubble-slider(0, 100, 1)
             .sliders__block_right
             .clear
         .stages
@@ -146,7 +148,8 @@ block content
         .calendar
             .header 
                 +header('calendar')
-            .calendar__block       
+            .calendar__block 
+   
         .messaging
             .header
                 +header('messaging')
