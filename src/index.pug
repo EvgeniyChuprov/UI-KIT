@@ -15,7 +15,7 @@ include user-profile/user-profile
 include news/news
 include event/event
 include map/map
-
+include calendar/calendar
 include message/message
 include video/video
 
@@ -146,11 +146,11 @@ block content
                 +header('location')
             .location__block
                 +map()
-        .calendar
+        .calendar-block
             .header 
                 +header('calendar')
             .calendar__block 
-   
+                +calendar()
         .messaging
             .header
                 +header('messaging')

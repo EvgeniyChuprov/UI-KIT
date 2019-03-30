@@ -23,6 +23,7 @@ $second-gray:#f2f2f2;
 @import 'news/news';
 @import 'event/event';
 @import 'map/map';
+@import 'calendar/calendar';
 @import 'video/video';
 @import 'message/message';
 
@@ -203,17 +204,15 @@ $second-gray:#f2f2f2;
     margin-top: 26px;
     height: 273px;
 }
-.calendar{
+.calendar-block{
     float: left;
     width: 285px;
     height: 528px;
-    background: #4612a7;
 }
 .calendar__block {
     width: 280px;
     height: 430px;
     margin: 25px auto;
-    background: yellowgreen
 }
 .messaging{
     float: right;

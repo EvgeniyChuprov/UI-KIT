@@ -1,0 +1,119 @@
+.calendar {
+    width: 100%;
+    font-family: 'Lato Light';
+}
+.calendar__header { //заголовок с датой
+        display: inline-block;
+        width: 100%;
+        padding:  6% 0 6% 0;
+        background-color:$main-red;
+        font-size: 4vw;
+        color: #fff;
+        text-align: center;
+        border-top-left-radius: .3vw;
+        border-top-right-radius: .3vw;
+}
+.ui-datepicker-calendar thead {//месяцы
+    background: #e75735;
+    color: $main-white;
+    font-style: bold;
+    font-size: .45vw;
+    letter-spacing: .01vw;
+    line-height: .75vw;
+}
+
+.ui-datepicker-header {//< march 2019>
+    background-color: #d54c2c;
+    
+}
+.ui-datepicker-calendar .ui-state-default {//td th
+    line-height: 1.6vw;
+    border: none;
+    text-align: center;
+    font-size: 1vw;
+    color: #868686;
+    margin: 0;
+}
+.ui-corner-all >.ui-datepicker-calendar{
+    margin: 0;
+}
+.ui-datepicker td span, .ui-datepicker td a {//прошлый месяц
+    background-color: #f2f2f2; 
+}
+.ui-datepicker-other-month .ui-state-default {//td прошлый месяц
+    color: #fff;
+}
+.ui-corner-all>.ui-icon.ui-icon-circle-triangle-e{
+    margin-left:-45%;
+    margin-top: 0;
+}
+.ui-corner-all>.ui-icon.ui-icon-circle-triangle-w{
+    margin-left: 9%;
+    margin-top: 0;
+}
+
+.ui-datepicker div.ui-datepicker-title {//martch 2019
+    font-size: 1.4vw;
+    line-height: 1vw;
+    letter-spacing: -.11vw;
+    padding-bottom: .53vw;
+    padding-top: .41vw;
+    font-weight: 300;
+    font-style: normal;
+    color: $main-white;
+}
+.ui-widget-content .ui-state-active { // текущее число
+    background-color: #e75735;
+    color: $main-white;
+}
+.ui-icon, .ui-widget-content .ui-icon {//стрелки
+    background-image: none;
+    border: solid #fff;
+    border-width: 0 .15vw .15vw 0;
+    display: inline-block;
+    transform: rotate(-45deg);
+}
+.ui-datepicker-prev .ui-icon {//стрелки
+    border: solid #fff;
+    border-width: 0 .15vw .15vw 0;
+    display: inline-block;
+    transform: rotate(135deg);
+}
+
+.ui-icon { //тоже стрелки
+    width: .4vw;
+    height: .4vw;
+}
+.ui-corner-all >.ui-datepicker-buttonpane.ui-widget-content button { //today
+    width: 100%;
+    font-weight: 500;
+    font-style: bold;
+    text-align: left;
+    margin: 0;
+    outline: none;
+    border: none;
+    font-size: .7vw;
+    letter-spacing: 0.05vw;
+    text-transform: uppercase;
+    background-color: #e5e5e5;
+    color: #868686;
+    font-weight: bold;
+    border-bottom-left-radius: 0.4375rem;
+    border-bottom-right-radius: 0.4375rem;
+    padding: 6.7% 0 5.5% 7.3%;
+}
+.ui-datepicker-current.ui-state-default.ui-priority-secondary.ui-corner-all{
+    margin: 0;
+    width: 100%;
+}
+.ui-corner-all >.ui-datepicker-buttonpane.ui-widget-content{
+    margin: 0;
+    padding: 0;
+}
+.hasDatepicker > .ui-datepicker{
+    padding: 0;
+    width: 100%;
+}
+.ui-datepicker-year{
+    display: none;
+}
