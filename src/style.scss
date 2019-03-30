@@ -12,6 +12,7 @@ $second-gray:#f2f2f2;
 @import 'buttons/buttons';
 @import 'arrow-button/arrow-button';
 @import 'percent/percent';
+@import 'pie-chart/pie-chart';
 @import 'bubble-slider/bubble-slider';
 @import 'form/form';
 @import 'toggle/toggle';
@@ -88,7 +89,8 @@ $second-gray:#f2f2f2;
     margin-left: 27px;
 }
 .percentages__block_fifth{
-    margin-left: 18px;
+    padding-top: 20px;
+    margin-left: 23px;
 }
 .sliders{
     height: 131px;
@@ -217,7 +219,6 @@ $second-gray:#f2f2f2;
     float: right;
     width: 289px;
     height: 528px;
-    background: #4612a7;
     margin-right: 3px;
 }
 .messaging__block{

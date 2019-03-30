@@ -4,6 +4,7 @@ include header/header
 include buttons/buttons
 include arrow-button/arrow-button
 include percent/percent
+include pie-chart/pie-chart
 include bubble-Slider/bubble-Slider
 include form/form
 include toggle/toggle
@@ -82,7 +83,7 @@ block content
                 .percentages__block_percent.percentages__block_fourth
                     +percent(89)
                 .percentages__block_percent.percentages__block_fifth
-                
+                    +pie-chart()
         .sliders
             .header
                 +header('sliders')
