@@ -1,0 +1,74 @@
+.container{
+  padding: 5% 2.2% 5% 3.3%;
+}
+.steps {
+  background-color: $main-gray;
+  display: block;
+  height: .2vw;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.steps > li {
+  float: left;
+  margin: 0;
+  min-height: 1px;
+  padding: 0;
+  position: relative;
+}
+
+$step-map: (
+    2: two, 
+    3: three,
+    4: four,
+    5: five
+);
+
+@each $number, $word in $step-map {
+	.#{$word}.steps > li {
+		width: 100% / ( $number - 1 );
+	}
+}
+
+.steps > li:first-child { width: 0; }
+
+.steps > li > a {
+  background-color: $main-gray;
+  border-radius: 50%;
+  color: #888888;
+  display: block;
+  font-size: .9vw;
+  font-weight: bold;
+  height: 1.42vw;
+  width: 1.42vw;
+  right: -.5vw;
+  line-height: 1.5vw;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: -.6vw;
+}
+
+
+.steps > .complete > a,
+.steps > .complete > a:hover {
+  background-color: $main-red;
+  border-color: $main-red;
+  color: $main-white;
+}
+
+.steps > .complete > a:before,
+.steps > .complete > a:after {
+  display: none;
+}
+
+.steps > .complete + .complete:before {
+  background-color: $main-red;
+  content: "";
+  height: .2vw;
+  position: absolute;
+  width: calc(100% - 16px);
+  z-index: 2;
+}

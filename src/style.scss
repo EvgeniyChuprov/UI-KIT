@@ -14,6 +14,7 @@ $second-gray:#f2f2f2;
 @import 'percent/percent';
 @import 'pie-chart/pie-chart';
 @import 'bubble-slider/bubble-slider';
+@import 'stage/stage';
 @import 'form/form';
 @import 'toggle/toggle';
 @import 'tick/tick';
@@ -111,11 +112,9 @@ $second-gray:#f2f2f2;
 }
 .stages{
     height: 131px;
-    background: #f8cf82;   
 }
 .stages__block{
-    height: 55px;
-    background: #591ff7;
+
 }
 .form-elements{
     height: 706px; 
