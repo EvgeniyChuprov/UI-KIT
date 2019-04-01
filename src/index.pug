@@ -6,6 +6,7 @@ include arrow-button/arrow-button
 include percent/percent
 include pie-chart/pie-chart
 include bubble-Slider/bubble-Slider
+include range-slider/range-slider
 include stage/stage
 include form/form
 include toggle/toggle
@@ -91,6 +92,7 @@ block content
             .sliders__block_left
                 +bubble-slider(0, 100, 1)
             .sliders__block_right
+                +range()
             .clear
         .stages
             .header 
