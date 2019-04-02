@@ -6,231 +6,24 @@ $main-gray: #e5e5e5;
 $second-gray:#f2f2f2;
 
 @import 'reset/reset';
-
 @import 'fonts/fonts';
-@import 'header/header';
-@import 'buttons/buttons';
-@import 'arrow-button/arrow-button';
-@import 'percent/percent';
-@import 'pie-chart/pie-chart';
-@import 'bubble-slider/bubble-slider';
-@import 'range-slider/range-slider';
-@import 'stage/stage';
-@import 'form/form';
-@import 'toggle/toggle';
-@import 'tick/tick';
-@import 'search/search';
-@import 'select/select';
-@import 'user-profile/user-profile';
-@import 'news/news';
-@import 'event/event';
-@import 'map/map';
-@import 'calendar/calendar';
-@import 'video/video';
-@import 'message/message';
+@import 'ui-kit/ui-kit';
+@import 'site-header/site-header';
+@import 'footer/footer';
 
-.content{
-    margin:83px auto;
-    width: 600px;
+.wrapper{
+   
+    min-height: 100vh;
 }
-.standart-buttons{
-    margin:auto;
-    width: 470px;
-    height: 287px;
+.wrapper__header{
+    height: 15%;
 }
-.header{
-    height: 25px;
+.wrapper__main{
+    height: 70%;
+    background: red
 }
-.standart-buttons__block{
-    height: 160px;
-    padding-top: 65px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.standart-buttons__block_small-button{
-    height: 35px;
-    width: 80px;
-    margin-left:3px;
-}
-.standart-buttons__block_button{
-    height: 35px;
-    width: 120px;
-}
-.arrow-buttons{
-    margin:auto;
-    width: 470px;
-    height: 152px;
-}
-.arrow-buttons__block{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 25px 0;
-}
-.arrow-buttons__block_button{
-    height: 49px;
-    width: 49px;
-
-}
-.percentages{
-    height: 176px;
-}
-
-.percentages__block_percent{
-    display: inline-block;
-    margin-right: 5px;
-    height: 83px;
-
-}
-.percentages__block_second{
-    margin-left:8px;
-}
-.percentages__block_third{
-    margin-left: 31px;
-}
-.percentages__block_fourth{
-    margin-left: 27px;
-}
-.percentages__block_fifth{
-    padding-top: 20px;
-    margin-left: 23px;
-}
-.sliders{
-    height: 131px;
-}
-.sliders__block_left{
-    float: left;
-    width: 260px;
-    height: 70px;
-    margin-left: 4px;
-}
-.sliders__block_right{
-    float: right;
-   // margin-right: 3px;
-    width: 270px;
-    height: 70px;
-    
-}
-.stages{
-    height: 131px;
-}
-.form-elements{
-    height: 706px; 
-}
-.form-elements__block_left{
-    float: left;
-    margin: 43px 0 0 2px;
-    width: 290px;
-    height: 243px;
-}
-.form-elements__block_search {
-    margin: .48vw 0 .85vw .1vw;
-}
-.form-elements__block_togglesTick{
-    float: right;
-    margin: 42px 11px 0 2px;
-    width: 270px;
-    height: 243px;
-}
-.form-elements__block_right{
-    float: right;
-    margin: 40px 0 0 2px;
-    width: 280px;
-    height: 243px;
-}
-.toggles__block{
-    margin: 25px auto;
-    margin-bottom: 38px;
-    width: 135px;
-    height: 25px;
-}
-.toggles__block_off{
-    display: inline-block;
-    width: 60px;
-    height: 25px;
-}
-.toggles__block_on{
-    display: inline-block;
-    margin-left: 11px;
-    width: 60px;
-    height: 25px;
-}
-
-.tick-box__block{
-    margin: 25px auto;
-    width: 70px;
-    height: 25px;
-}
-.tick-box__block_off{
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-}
-.tick-box__block_on{
-    display: inline-block;
-    margin-left: 10px;
-    width: 25px;
-}
-.form-elements__block_right-profile{
-    height: 92px;
-    width: 266px;
-    margin-top: 21px;
-    margin-left:9px;
-}
-.news-events{
-    height: 314px;
-}
-.news-events__block_left{
-    float: left;
-    margin-top:32px;
-    margin-left: 3px; 
-    width: 288px;
-    height: 212px;
-}
-.news-events__block_right{
-    float: right;
-    margin-top:32px;
-    margin-right: 3px; 
-    width: 288px;
-    height: 212px;
-}
-.location{
-    height: 368px;
-}
-.location__block{
-    margin-top: 26px;
-    height: 273px;
-}
-.calendar-block{
-    float: left;
-    width: 285px;
-    height: 528px;
-}
-.calendar__block {
-    width: 280px;
-    height: 430px;
-    margin: 25px auto;
-}
-.messaging{
-    float: right;
-    width: 289px;
-    height: 528px;
-    margin-right: 3px;
-}
-.messaging__block{
-    margin-top: 25px;
+.wrapper__footer{
+    position: absolute;
     width: 100%;
-    height: 430px;
-    background: yellowgreen
-}
-.clear{
-    clear: both;
-}
-.video{
-    height: 390px;
-}
-.video__block{
-    height: 336px;
-    margin: 20px auto;
-    padding: 0 2px;
+bottom: 0;
 }
