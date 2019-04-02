@@ -27,12 +27,12 @@ module.exports = {
                 ]
             },
             {
-                test:/\.(jpg|png|svg|gif)$/,
+                test:/\.(jpg|svg|png|gif)$/,
                 use:[
                     {
                         loader: 'file-loader',
                         options:{
-                           name: '[name].[ext]',
+                           name: '/img/[name].[ext]',
                            outputPath:'./',
                            useRelativePath: true 
                         }
@@ -41,6 +41,10 @@ module.exports = {
                         loader:'image-webpack-loader',
                         options: {
                             mozjpeg: {
+                                progressive: true,
+                                quality: 70
+                            },
+                            mozpng: {
                                 progressive: true,
                                 quality: 70
                             }
@@ -55,17 +59,30 @@ module.exports = {
                             pretty: true
                         }
             },
-             {
+            {
                      test: /\.(woff|woff2|eot|ttf|otf)$/,
                      use: [
-                        'file-loader'
+                        {
+                            loader: 'file-loader',
+                            options:{
+                               name: 'fonts/[name].[ext]',
+                               outputPath:'./',
+                               useRelativePath: true 
+                            }
+                        }
                         ]
-                      }
+            }
         ]
     },
     plugins:[
         new HtmlWebpackPlugin({
+            filename: 'index.html',
             template:'./src/index.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'ui-kit.html',
+            template:'./src/ui-kit.pug'
+
         }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
