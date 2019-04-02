@@ -1,5 +1,9 @@
 mixin percent(num)
-    -
-        var styleNum = "--value:" + num + "%"
-    div(class="chart" style= styleNum)
-        p   #{num}
+    .percent__container
+        .percent-circle.pc3(data-percent= num)
+            svg
+                use.percent-circle-inner(xlink:href="#percent-circle-svg")
+        // hidden svg that we refer to
+    svg.hidden
+        circle(id="percent-circle-svg", cx="50%", cy="50%", r="50%", stroke-alignment="inner")
+            
