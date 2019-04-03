@@ -82,7 +82,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'ui-kit.html',
             template:'./src/ui-kit.pug'
-
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'recording.html',
+            template:'./src/recording.pug'
         }),
         new MiniCssExtractPlugin({
             filename: "[name].css",

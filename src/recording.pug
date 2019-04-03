@@ -2,7 +2,11 @@ extends template/template
 
 include site-header/site-header
 include footer/footer
+include header/header
+include calendar/calendar
+include form/form
 include buttons/buttons
+
 
 
 
@@ -11,7 +15,8 @@ block content
     .wrapper
         .wrapper__header
             +site-header()
-        .wrapper__main  
-            +button-ripple({name: 'button', small: true, green: true})
+        .wrapper__main 
+            .wrapper__main-header заполните форму записи на прием
+
         .wrapper__footer
             +footer()
