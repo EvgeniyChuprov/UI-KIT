@@ -1,0 +1,8 @@
+mixin entry-field(options)
+    -
+        var correctClass = "entry-field__state "
+            correctClass += options.correct ? "" : "correct_error" 
+        var correctText = options.correct ? "thanks" : "error" 
+    .entry-field
+        input(class="entry-field__form" type="text" name= options.name placeholder= options.placeholder)
+        div(class= correctClass)= correctText

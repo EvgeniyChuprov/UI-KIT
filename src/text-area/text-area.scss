@@ -1,0 +1,14 @@
+.text-area{
+    min-width: 70px;
+    width: 96%;
+    min-height: 50px;
+    padding: .6vw 0 0 .8vw;
+    font-family: 'Lato Light';
+    font-weight: 500;
+    font-size: .7vw;
+    color:#888;
+    background-color: $main-gray;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}

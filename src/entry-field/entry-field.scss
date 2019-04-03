@@ -1,0 +1,45 @@
+
+.entry-field{
+    display: flex;
+}
+.entry-field__state{
+    min-width: 30px;
+    width: 30%;
+    padding: 12px  0;
+    position: relative;
+    background: $main-green;
+    border-radius: 5px;
+    margin-left: 5px;
+    text-align: center;
+    font-family: 'Lato Regular';
+    color:$main-white;
+    font-size: 60%;
+    text-transform: uppercase;
+}
+.entry-field__state::after{
+    content: "";
+    position: absolute;
+    right: 99%;
+    top: 30%;
+    border: 5px solid transparent;
+    border-right-color: $main-green;
+    z-index: -1;
+}
+.entry-field__form{
+    background-color: $main-gray;
+    outline: none;
+    border: none;
+    height: 30px;
+    min-width: 70px;
+    width: 70%;
+    border-radius: 5px;
+}
+.entry-field__form::placeholder{
+    padding-left:5px; 
+}
+.correct_error{
+    background: $main-red;
+}
+.correct_error:after{
+    border-right-color: $main-red;
+}

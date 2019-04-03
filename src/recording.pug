@@ -4,9 +4,12 @@ include site-header/site-header
 include footer/footer
 include header/header
 include calendar/calendar
+include entry-field/entry-field
 include form/form
 include buttons/buttons
-
+include text-area/text-area
+include tick/tick
+include calendar/calendar
 
 
 
@@ -16,7 +19,32 @@ block content
         .wrapper__header
             +site-header()
         .wrapper__main 
-            .wrapper__main-header заполните форму записи на прием
+            .wrapper__main_header заполните форму записи на прием
+            .wrapper__main_block
+                .wrapper__block_left
+                    +calendar()
+                .wrapper__block_right
+                    .wrapper__main_sex
+                        +header('ваш пол')
+                        .wrapper__main_radio
+                            .wrapper__main_radio-left 
+                                span Муж.
+                                +tick({name: 'radio', id:'one', checked: false})
+                            .wrapper__main_radio-right   
+                                +tick({name: 'radio', id:'two', checked: true})
+                                span  Жен.
+                    .wrapper__main_form
+                        +entry-field({placeholder:'Ваше имя', type:'text', name:'form', correct: true})
+                    .wrapper__main_form
+                        +entry-field({placeholder:'Ваша фамилия', type:'text', name:'form', correct: false})
+                    .wrapper__main_form
+                        +entry-field({placeholder:'Ваше отчество', type:'text', name:'form', correct: true})
+                    .wrapper__main_form
+                        +entry-field({placeholder:'Ваш номер телефона', type:'tel', name:'form', correct: false}) 
+                    .wrapper__main_form
+                        +text-area({text:'Дополнительная информация', name:'form'})
+                    .wrapper__main_form
+                        +button-ripple({name: 'отправить', small: false, green: true})   
 
         .wrapper__footer
             +footer()
