@@ -9,7 +9,9 @@ $second-gray:#f2f2f2;
 @import 'fonts/fonts';
 @import 'ui-kit/ui-kit';
 @import 'recording/recording';
+@import 'online/online';
 @import 'site-header/site-header';
+@import 'staff/staff';
 @import 'footer/footer';
 
 
@@ -17,11 +19,7 @@ $second-gray:#f2f2f2;
    
     min-height: 100vh;
 }
-.wrapper__header{   
-}
-.wrapper__main{
 
-}
 .wrapper__footer{
     position: absolute;
     width: 100%;

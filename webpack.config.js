@@ -87,6 +87,14 @@ module.exports = {
             filename: 'recording.html',
             template:'./src/recording.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'online.html',
+            template:'./src/online.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'staff.html',
+            template:'./src/staff.pug'
+        }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
         }),

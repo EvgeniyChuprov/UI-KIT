@@ -73,10 +73,11 @@
     width: 84%;
     margin: auto;
 }
-.message__photo-block-image{
+.message__photo_block-image{
+    width: 25%;
     position: absolute;
     border-radius: 50%;
     border:.2vw solid $main-gray;
-    top: 61%;
-    left: 33%;
+    top: 60%;
+    left: 38%;
 }
