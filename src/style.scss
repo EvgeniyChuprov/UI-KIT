@@ -7,12 +7,12 @@ $second-gray:#f2f2f2;
 
 @import 'reset/reset';
 @import 'fonts/fonts';
-@import 'ui-kit/ui-kit';
-@import 'recording/recording';
-@import 'online/online';
+@import 'style/ui-kit';
+@import 'style/recording';
+@import 'style/online';
 @import 'site-header/site-header';
-@import 'staff/staff';
-@import 'discount/discount';
+@import 'style/staff';
+@import 'style/discount';
 @import 'footer/footer';
 
 

@@ -23,7 +23,7 @@ module.exports = {
                 use:[
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'sass-loader'
+                    'sass-loader',
                 ]
             },
             {
@@ -53,15 +53,15 @@ module.exports = {
                 ]
             },
             {
-                        test: /\.pug$/,
-                        loader: 'pug-loader',
-                        options: {
-                            pretty: true
-                        }
+                test: /\.pug$/,
+                loader: 'pug-loader',
+                options: {
+                        pretty: true
+                }
             },
             {
-                     test: /\.(woff|woff2|eot|ttf|otf)$/,
-                     use: [
+                test: /\.(woff|woff2|eot|ttf|otf)$/,
+                    use: [
                         {
                             loader: 'file-loader',
                             options:{
@@ -70,7 +70,7 @@ module.exports = {
                                useRelativePath: true 
                             }
                         }
-                        ]
+                    ]
             }
         ]
     },
