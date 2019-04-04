@@ -1,0 +1,36 @@
+extends template/template
+
+include site-header/site-header
+include header/header
+include buttons/buttons
+include text-area/text-area
+include map/map
+include footer/footer
+
+
+block content
+    .wrapper
+        .wrapper__header
+            +site-header()
+        .wrapper__main  
+            .contacts__block
+                .contacts__block_text
+                    +header('позвоните нам')
+                    p.block_text   Есть вопросы? Мы поможем!
+                    p.block_text   9 999 999-999-9 для Москвы
+                    p.block_text   8 800 999-999-9 для регионов
+                .contacts__block_text
+                    +header('напишите нам')
+                    p.block_text    Идеи? Предложения?
+                    p.block_text    Мы открыты для любых
+                    p.block_text    вопросов!
+                .contacts__block_text
+                    +header('оставьте отзыв')
+                    .wrapper__main_form
+                        +text-area({text:'Дополнительная информация', name:'form'})
+                    .wrapper__main_form
+                        +button-ripple({name: 'отправить', small: false, green: true}) 
+            .contacts-map
+                +map()
+        .wrapper__footer
+            +footer()

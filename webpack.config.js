@@ -99,6 +99,10 @@ module.exports = {
             filename: 'discount.html',
             template:'./src/discount.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'contacts.html',
+            template:'./src/contacts.pug'
+        }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
         }),
