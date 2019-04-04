@@ -95,6 +95,10 @@ module.exports = {
             filename: 'staff.html',
             template:'./src/staff.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'discount.html',
+            template:'./src/discount.pug'
+        }),
         new MiniCssExtractPlugin({
             filename: "[name].css",
         }),

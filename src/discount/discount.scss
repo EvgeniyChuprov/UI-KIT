@@ -1,0 +1,47 @@
+.discount {
+    display: flex;
+}
+.discont__slider{
+    width: 20%;
+    margin-right: auto;
+    margin-left: 10%
+}
+
+.discount__block{
+    text-align: center;
+    width: 20%;
+    height: 150px;
+    margin-top: 2%;
+    margin-left:auto;
+}
+.discont__slider{
+    width:  20%;
+    margin-top: 7%
+}
+.discont__slider-bubble{
+    width: 90%;
+    margin:15% auto;
+    margin-top: 10%;
+}
+.discont__slider-range{
+    width: 90%;
+    margin:5% auto;
+}
+.discont__coupon{
+    margin-top: 3%;
+}
+.discont__coupon-toggle{
+    margin: auto;
+    margin-top: 5%;
+    width: 50px;
+    height: 30px;
+}
+.discont__slider_range-header{
+    margin-top:10%; 
+}
+.discont__slider-bubble-header{
+    margin: 20% auto;
+}
+.discont__coupon-header{
+    margin: 10% auto;
+}
