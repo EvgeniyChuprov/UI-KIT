@@ -2,6 +2,8 @@ extends template/template
 
 include site-header/site-header
 include footer/footer
+include pie-chart/pie-chart
+include percent/percent
 
 
 
@@ -13,6 +15,7 @@ block content
         .wrapper__header
             +site-header()
         .wrapper__main  
-            
+            +pie-chart()
+            +percent('23')
         .wrapper__footer
             +footer()

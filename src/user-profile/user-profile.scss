@@ -6,10 +6,11 @@
 .photo-block__image{
     border:.2vw solid $main-gray;
     border-radius: 50%;
+    width: 31.5%;
+    height: 31.5%;
 }
 .user-profile__tooltip_box {
-    width: 8.5vw;
-    height: 4.77vw;
+    width: 61%;
     position: relative;
     background: $main-gray;
     border-radius: .4vw;   
@@ -18,32 +19,33 @@
     border: solid transparent;
     position: absolute;  
     right: 100%;
-    top: 2vw;
+    top: 45%;
     border-right-color: $main-gray;
-    border-width: .4vw;
+    border-width: .3vw;
     }
 }
 .user-profile__name{
     font-family: 'Lato Regular';
     color:$main-red;
-    padding-top: .495vw;
-    font-size: .92vw; 
+    padding-top: 7%;
+    font-size: .95vw; 
     text-align: center;
 }
 .user-profile__job{
     font-family: 'Lato Regular';
-    padding-top: .22vw; 
-    font-size: .65vw; 
+    padding-top: 3.5%; 
+    font-size: .55vw;
+    letter-spacing: .05vw; 
     text-align: center;
     text-transform: uppercase;
 }
 .social{
     width: 5vw;
-    padding-top: .55vw;
-    margin-left: 1.9vw;
-    margin-top:.1vw; 
+    padding-top: 7%;
+    margin:auto;
+    margin-top:.7%; 
     display: flex;
-    justify-content: space-between;
+    
 }
 .user-profile__tooltip_green{
     background: $main-green;
@@ -51,4 +53,16 @@
     &:before {
         border-right-color: $main-green;
     }
+}
+.social__img{
+    height: 1.1vw;
+    width: 1.2vw;
+}
+.social__img:nth-child(1){
+    width: .5vw;
+    padding-left:5%; 
+  }
+.social__img:nth-child(2){
+  margin: 1% 20% 0 21%;
+  width: 1.4vw;
 }
