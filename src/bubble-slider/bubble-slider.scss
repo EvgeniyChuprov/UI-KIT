@@ -1,68 +1,114 @@
-
-.range-control {
-    position: relative;
-    margin-top: 16%;
-  }
-  .bubbleSlider__input[type=range] {
+.custom-rangeslider { 
+  position:relative;
+  padding:0;
+}
+@mixin rangeThumb { 
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+}
+@mixin unSelectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+@mixin avoidClicks {
+  pointer-events: none;
+}
+.custom-rangeInput {
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  height: 20px; 
+  // Thumb
+  &::-webkit-slider-thumb { 
+    @include rangeThumb;
+    margin-top:-8px;
+  } // Webkit
+  &::-moz-range-thumb { 
+    @include rangeThumb; 
+  } // Mozilla
+  &::-ms-thumb { 
+    @include rangeThumb;
+    margin:auto;
+  } // IE
+}
+.custom-rangeslider__tooltip {
+    line-height : 20px;
+    position : absolute;
+    height : 20px;
+    width : 40px;
+    font-family: 'Lato Regular';
+    color:$main-white;
+    font-size: .8em;
+    background-color : $main-red;
+    padding : 3px 3px;
+    border : 1px $main-red solid;
+    top : -40px;
+    left : 0;
+    text-align : center;
+    transform: translate(-26%, 0);
+    border-radius : 3px;
+    
+    @include unSelectable;
+    @include avoidClicks;
+    
+    &:after {
+      display: block;
+      content : ' ';
+      background : $main-red;
+      position : absolute;
+      border:1px $main-red solid;
+      border-top : 0; 
+      border-left :0;
+      width: 10px;
+      height: 10px;
+      left: calc(50% - 6px);
+      bottom : -6px;
+      transform:rotate(45deg);
+    }
+}
+.custom-rangeInput[type=range] {
     display: block;
     width: 100%;
     margin: auto;
     -webkit-appearance: none;
     outline: none;
-  }
-  
-  .bubbleSlider__input[type=range]::-webkit-slider-runnable-track {
-    position: relative;
-    height: 5px;
-    border-radius:10%;
+}
+.custom-rangeInput[type=range]::-webkit-slider-runnable-track {
+    animate: 0.2s;
     background-color: $main-gray;
-  }
-  
-  .bubbleSlider__input[type=range]::-webkit-slider-thumb {
-    position: relative;
-    top: -8px;
-    width: 1vw;
-    height: 1vw;
-    -webkit-appearance: none;
-    background-color: $main-red;
-    border-radius: 100%;
+    border-radius: 4px;
     cursor: pointer;
-  }
-  
-  .bubbleSlider__label {
-    position: absolute;
-    bottom: 1vw;
-    left:34%;
-    width: 1.85vw;
-    height: 1.35vw;
-    background-color:$main-red;
-    border-radius: .3vw;
-    font-family: 'Lato Regular';
-    color:$main-white;
-    font-size: .8em;
-    line-height: 24px;
-    text-align: center;
-  }
-  .bubbleSlider__label:after {
-      content: "";
-      width: 0;
-      height: 0;
-      top: 1.15vw;
-      position: absolute;
-      border-left: 7px solid transparent;
-      border-top: 7px solid $main-red;
-      border-right: 7px solid transparent;
-      left: 10px;
-  }
-  
-  .bubbleSlider__input[type=range]:active + output {
+    width: 100%;
+    height: 7.5px;
+}
+.custom-rangeInput[type=range]::-webkit-slider-thumb {
+    background:  $main-red;
+    border-radius: 50%;
+    border: 1px solid $main-red;
+    -webkit-appearance: none;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+.custom-rangeInput[type=range]:active + output {
     display: block;
     transform: translateX(-50%);
-  }
-  input[type=range]:active::-webkit-slider-runnable-track {
+}
+.custom-rangeInput[type=range]:active::-webkit-slider-runnable-track {
 	opacity: 0.8;
 }
-input[type=range]::-moz-range-track {
+.custom-rangeInput[type=range]::-moz-range-track {
 	animate: 0.2s;
 	background-color: $main-gray;
 	border-radius: 4px;
@@ -70,37 +116,11 @@ input[type=range]::-moz-range-track {
 	width: 100%;
 	height: 7.5px;
 }
-input[type=range]::-moz-range-thumb {
+.custom-rangeInput[type=range]::-moz-range-thumb {
 	background:  $main-red;
 	border-radius: 50%;
 	border: 1px solid $main-red;
-  	cursor: pointer;
+  cursor: pointer;
 	height: 20px;
 	width: 20px;
-}
-input[type=range]::-ms-track {
-	animate: 0.2s;
-	background-color: $main-gray;
-	border-radius: 4px;
-	cursor: pointer;
-	width: 100%;
-	height: 7.5px;
-}
-input[type=range]::-ms-thumb {
-	background:  $main-red;
-	border-radius: 50%;
-	border: 1px solid $main-red;
-  	cursor: pointer;
-	height: 50px;
-	width: 50px;
-	margin: 0;
-	box-sizing: border-box;
-}
-
-input[type=range]:active::-ms-fill-lower {
-  background: $main-red;
-}
-
-input[type=range]:active::-ms-fill-upper {
-  background: $main-red;
 }
