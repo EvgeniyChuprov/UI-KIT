@@ -25,7 +25,6 @@ $(document).ready(function() {
                 inst.selectedDay = date.getDate();
                 inst.drawMonth = inst.selectedMonth = date.getMonth();
                 inst.drawYear = inst.selectedYear = date.getFullYear();
-                // the below two lines are new
                 this._setDateDatepicker(target, date);
                 this._selectDate(id, this._getDateDatepicker(target));
         }

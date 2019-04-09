@@ -4,7 +4,7 @@
 .steps {
   background-color: $main-gray;
   display: block;
-  height: .2vw;
+  height: 4px;
   list-style-type: none;
   margin: auto;
   padding: 0;
@@ -39,16 +39,17 @@ $step-map: (
   border-radius: 50%;
   color: #888888;
   display: block;
-  font-size: .9vw;
+  font-family: 'Lato Black';
+  font-size: 14px;
   font-weight: bold;
-  height: 1.42vw;
-  width: 1.42vw;
-  right: -.5vw;
-  line-height: 1.5vw;
+  height: 28px;
+  width: 28px;
+  right: -10px;
+  line-height: 26px;
   position: absolute;
   text-align: center;
   text-decoration: none;
-  top: -.6vw;
+  top: -12px;
 }
 
 
@@ -67,7 +68,7 @@ $step-map: (
 .steps > .complete + .complete:before {
   background-color: $main-red;
   content: "";
-  height: .2vw;
+  height: 4px;
   position: absolute;
   width: calc(100% - 16px);
   z-index: 2;

@@ -9,6 +9,8 @@ include bubble-Slider/bubble-Slider
 include range-slider/range-slider
 include stage/stage
 include form/form
+include entry-field/entry-field
+include text-area/text-area
 include toggle/toggle
 include tick/tick
 include search/search
@@ -30,7 +32,7 @@ block content
     .content
         .standart-buttons
             .header
-                +header('standard buttons')
+                +header('standard  buttons')
             .standart-buttons__block
                 .standart-buttons__block_small-button
                     +button-ripple({name: 'button', small: true, green: true})
@@ -122,7 +124,7 @@ block content
                             +tick({name: 'radio', id:'two', checked: false})   
                 .clear 
                 .form-elements__block_left
-                    .header 
+                    .header-search
                         +header('search / drop down') 
                     .form-elements__block_search   
                         +search('Search') 
@@ -131,11 +133,11 @@ block content
                     .form-elements__block_search 
                         +select()   
                 .form-elements__block_right 
-                    .header 
+                    .header-profile 
                         +header('user profile')
-                    .form-elements__block_right-profile
+                    .form-elements__block_profile-one
                         +userProfile({img:require('./img/photo1.png'), name:'John Smith', job:'ux designer', color:''})
-                    .form-elements__block_right-profile
+                    .form-elements__block_profile-two
                         +userProfile({img:require('./img/photo2.png'), name:'Sarah Brown', job:'developer', color:'green'})
                 .clear  
         .news-events
@@ -151,18 +153,18 @@ block content
             .location__block
                 +map()
         .calendar-block
-            .header 
+            .header-datepicker
                 +header('calendar')
             .calendar__block 
                 +calendar()
         .messaging
-            .header
+            .header-messaging
                 +header('messaging')
             .messaging__block
                 +message({text1:"Hey! So are we cool to meet at the art gallery? Say 8pm", text2:"Yeah that sounds great. See you then.",foto:require('./img/photo2.png'), button:'reply'})
         .clear
         .video
-            .header
+            .header-video
                 +header('video') 
             .video__block
                 +video("https://player.vimeo.com/video/62980495")   

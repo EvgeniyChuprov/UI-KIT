@@ -5,15 +5,15 @@
 background-color: $main-gray;
 outline: none;
 border:none;
-height: 1.35vw;
-width: 13.2vw;
-border-radius: 0.2vw 0 0 0.2vw;
+height: 26px;
+width: 255px;
+border-radius: 3px 0 0 3px;
 }
 .search-form__field::placeholder{
-padding-left: .6vw;
+padding-left: 13px;
 }
 .search-form__button:last-child {
-    border-radius:0 0.2vw  0.2vw 0;
+    border-radius:0 3px  3px 0;
 }
 .search-form__button {
     flex: 1;
@@ -22,7 +22,7 @@ padding-left: .6vw;
     justify-content: center;
     background-image: url("./img/search.svg");
     background-position: center center;
-    background-size: .7vw;
+    background-size: 14px;
     background-repeat: no-repeat;
     color: #888;
     font: inherit;

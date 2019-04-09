@@ -3,33 +3,34 @@
 }
 .news__img{
     width: 33%;
-    border-radius: .2vw 0 0 .2vw;
+    border-radius: 3px 0 0 3px;
 }
 .news__block_text{
     background: $main-red;
     width: 67.01%;
-    height: 11.017vw;
-    border-radius:0 .2vw .2vw 0;
+    height: 212px;
+    border-radius:0 3px 3px 0;
     color:$main-white;
-    padding-left: 8%;
+    padding-left: 22px;
     text-align: left;
 }
 .news__block_header{
     font-family:'Lato Light';
-    font-size: 1.45vw;
-    padding-top: 12.5%;
+    font-size: 27.5px;
+    padding-top: 21px;
 }
 .news__block_data{
     text-transform: uppercase;
     font-family:'Lato Regular';
-    font-size: .65vw;
-    padding-top: 7%; 
+    font-size: 10px;
+    padding-top: 7%;
+    letter-spacing: 1.5px; 
 }
 .news__block_info{
     font-family:'Lato Light';
-    font-size: .65vw;
-    padding-top: 7%;
+    font-size: 11px;
+    padding-top: 14px;
     padding-right:10%; 
-    line-height: .7vw;
-    letter-spacing: -.003vw;
+    line-height: 13px;
+    letter-spacing: .6px;
 }

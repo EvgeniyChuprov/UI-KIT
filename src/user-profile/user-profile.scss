@@ -4,16 +4,17 @@
    justify-content: space-between;
 }
 .photo-block__image{
-    border:.2vw solid $main-gray;
+    border:3px solid $main-gray;
     border-radius: 50%;
     width: 31.5%;
     height: 31.5%;
 }
 .user-profile__tooltip_box {
     width: 61%;
+    height: 94px;
     position: relative;
     background: $main-gray;
-    border-radius: .4vw;   
+    border-radius: 5px;   
     &:before {
     content: ""; 
     border: solid transparent;
@@ -21,29 +22,28 @@
     right: 100%;
     top: 45%;
     border-right-color: $main-gray;
-    border-width: .3vw;
+    border-width: 6px;
     }
 }
 .user-profile__name{
     font-family: 'Lato Regular';
     color:$main-red;
-    padding-top: 7%;
-    font-size: .95vw; 
+    padding-top: 11px;
+    font-size: 18px; 
     text-align: center;
 }
 .user-profile__job{
     font-family: 'Lato Regular';
-    padding-top: 3.5%; 
-    font-size: .55vw;
+    padding-top: 5px; 
+    font-size: 11px;
     letter-spacing: .05vw; 
     text-align: center;
     text-transform: uppercase;
 }
 .social{
-    width: 5vw;
-    padding-top: 7%;
+    width: 98px;
+    padding-top: 12px;
     margin:auto;
-    margin-top:.7%; 
     display: flex;
     
 }
@@ -55,14 +55,14 @@
     }
 }
 .social__img{
-    height: 1.1vw;
-    width: 1.2vw;
+    height:21px;
+    width: 20px;
 }
 .social__img:nth-child(1){
-    width: .5vw;
-    padding-left:5%; 
+    width: 10px;
+    padding-left:5px; 
   }
 .social__img:nth-child(2){
-  margin: 1% 20% 0 21%;
-  width: 1.4vw;
+  margin: 2px 16px 0 22px;
+  width: 30px;
 }

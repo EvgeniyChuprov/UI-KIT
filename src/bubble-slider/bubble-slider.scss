@@ -28,7 +28,7 @@
   border: 0;
   padding: 0;
   margin: 0;
-  height: 20px; 
+  height: 12px; 
   // Thumb
   &::-webkit-slider-thumb { 
     @include rangeThumb;
@@ -43,17 +43,17 @@
   } // IE
 }
 .custom-rangeslider__tooltip {
-    line-height : 20px;
+    line-height : 15px;
     position : absolute;
-    height : 20px;
-    width : 40px;
+    height : 16px;
+    width : 25px;
     font-family: 'Lato Regular';
     color:$main-white;
     font-size: .8em;
     background-color : $main-red;
     padding : 3px 3px;
     border : 1px $main-red solid;
-    top : -40px;
+    top : -36px;
     left : 0;
     text-align : center;
     transform: translate(-26%, 0);
@@ -64,17 +64,13 @@
     
     &:after {
       display: block;
-      content : ' ';
-      background : $main-red;
+      content : '';
       position : absolute;
-      border:1px $main-red solid;
-      border-top : 0; 
-      border-left :0;
-      width: 10px;
-      height: 10px;
+      border: 5px solid transparent;
+      border-top: 5px solid $main-red;
       left: calc(50% - 6px);
-      bottom : -6px;
-      transform:rotate(45deg);
+      left: 11px; 
+      bottom: -10px;
     }
 }
 .custom-rangeInput[type=range] {
@@ -90,7 +86,7 @@
     border-radius: 4px;
     cursor: pointer;
     width: 100%;
-    height: 7.5px;
+    height: 5px;
 }
 .custom-rangeInput[type=range]::-webkit-slider-thumb {
     background:  $main-red;
@@ -114,7 +110,7 @@
 	border-radius: 4px;
 	cursor: pointer;
 	width: 100%;
-	height: 7.5px;
+	height: 5px;
 }
 .custom-rangeInput[type=range]::-moz-range-thumb {
 	background:  $main-red;

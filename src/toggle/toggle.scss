@@ -8,29 +8,28 @@
 
 .toggle .ball{
   position: absolute;
-  top: .15vw;
-  width: 1vw;
-  height: 1vw;
-  border-radius: 2vw;
-  background: #fff;
+  top: 3px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: $main-white;
   transition: all 0.3s ease-in 0s; 
-  left: .2vw;
 }
 
 .toggle #switch:checked ~ .ball{
   transition: all 0.3s ease-in 0s; 
-  left: 100%;
-  margin-left: -1.2vw;
+  left: 65%;
 }
 .toggle .on_off{
    border-radius: 2vw;
-   height: .8vw;
-   width: .85vw;
+   height: 17px;
+   width: 19px;
    overflow: hidden;
    transition: all 0.3s ease-in 0s; 
    color: $main-white;
    background-color: $main-gray;
-   padding: .25vw .65vw .23vw 1.6vw;
+   padding: 3px 10px 3px 31px;
 }
 
 .toggle #switch:checked ~ .on_off{
@@ -40,13 +39,18 @@
 
 .toggle .on_off:before{
   transition: all 0.3s ease-in 0s; 
-  margin: 0 0 0 -.3vw;
+  margin: 0 0 0 -.1vw;
+  font-family: 'Lato Regular';
+  font-size: 12px;
+  top:-20px;
   content: 'OFF';
 }
 
 .toggle #switch:checked ~ .on_off:before{
   transition: all 0.3s ease-in 0s; 
-  margin: 0 .1vw 0 -1.3vw;
+  margin: 0 .1vw 0 -1vw;
+  font-family: 'Lato Regular';
+  font-size: 12px;
   color: $main-white;
   content: 'ON';
 }
