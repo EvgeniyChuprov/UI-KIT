@@ -151,7 +151,7 @@ block content
             .header
                 +header('location')
             .location__block
-                +map()
+                +map({marker:require('./img/marker.png'), lat:37.795680, lng:-122.415021, zoom: 14})
         .calendar-block
             .header-datepicker
                 +header('calendar')
