@@ -1,31 +1,67 @@
-.header__section{
+.site-header{
     display: flex;
-    justify-content:space-between;
-    padding: 10px;
+    flex-direction: column;
+    width: 100%;
     background: #689CD2;
-    text-transform: uppercase;
-    color:$main-white;
-    align-items: center;
+    justify-content: space-around;
+    .navigation{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+        .navigation__logo{
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+            vertical-align: middle;
+        }
+        .navigation__logo:hover{
+           color:greenyellow;
+        }
+        .navigation__menu{
+            list-style: none;
+            text-transform: uppercase;
+            display: flex; 
+            .navigation__menu_element{
+                padding:0 15px;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            .link:hover{
+                color:greenyellow;
+                border-bottom: greenyellow solid 3px;
+                padding-bottom: 3px;
+            } 
+        }
+    }
 }
-.header__item{
-    padding: 10px 15px 15px;
-    font-size: 20px;
-    margin-left: 5px;
+@media screen and (max-width: 1100px){
+    .site-header{
+        .navigation{
+            flex-direction: column;
+            justify-content:center;
+            .navigation__logo{
+                margin-bottom: 20px;
+            }   
+            .navigation__menu{
+                .navigation__menu_element{
+                    padding:0 5px; 
+                    font-size: .65rem;
+                }
+            }
+        }
+    }
 }
-
-.header-logo{
-    font-family: 'Lato Black';
-    font-size: 30px;
-}
-.header-button{
-    cursor: pointer;
-}
-.header-button:hover{
-    background-color: #FF9900;
-    border-radius: 4px;
-}
-a{
-    text-decoration: none;
-    color: $main-white;
-    font-family: 'Lato Light';
+@media screen and (max-width: 550px){
+    .site-header{
+        .navigation{
+            .navigation__menu{
+                display: flex;
+                flex-flow: column wrap;
+                .navigation__menu_element{
+                    margin-bottom: 7px
+                }
+            }
+        }
+    }
 }
