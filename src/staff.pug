@@ -1,30 +1,24 @@
 extends template/template
 
 include site-header/site-header
-include footer/footer
 include user-profile/user-profile
 include header/header
 include video/video
 
 block content
-    .wrapper
-        .wrapper__header
-            +site-header()
-        .wrapper__main  
-            .staff__block
-                .staff__block-video
-                    +header('видео презентация')
-                    .video-staff
-                        +video("https://player.vimeo.com/video/62980495")  
-                .staff
-                    +header('наши врачи')
-                    .staff__block-block
-                        +userProfile({img:require('./img/photo1.png'), name:'Иванов Иван', job:'хирург', color:''})   
-                    .staff__block-block
-                        +userProfile({img:require('./img/photo2.png'), name:'Машина Даша', job:'ортопед', color:'green'})
-                    .staff__block-block
-                        +userProfile({img:require('./img/photo1.png'), name:'Сидоров Сидор', job:'терапевт', color:''})   
-                    .staff__block-block
-                        +userProfile({img:require('./img/photo2.png'), name:'Дашина Маша', job:'детский врач', color:'green'})    
-        .wrapper__footer
-            +footer()
+    +site-header()
+    .staff__block
+        .staff__block-video
+            +header('видео презентация')
+            .video-staff
+                +video("https://player.vimeo.com/video/62980495")  
+        .doctor
+            +header('наши врачи')
+            .doctor__block
+                +userProfile({img:require('./img/photo1.png'), name:'Иванов Иван', job:'хирург', color:''})   
+            .doctor__block
+                +userProfile({img:require('./img/photo2.png'), name:'Машина Даша', job:'ортопед', color:'green'})
+            .doctor__block
+                +userProfile({img:require('./img/photo1.png'), name:'Сидоров Сидор', job:'терапевт', color:''})   
+            .doctor__block
+                +userProfile({img:require('./img/photo2.png'), name:'Дашина Маша', job:'детский врач', color:'green'})    

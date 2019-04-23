@@ -6,36 +6,32 @@ include percent/percent
 include range-slider/range-slider
 include bubble-Slider/bubble-Slider
 include toggle/toggle
-include footer/footer
+
 
 block content
-    .wrapper
-        .wrapper__header
-            +site-header()
-        .wrapper__main 
-            .discount 
-                .discount__block
-                    +header('скидка за каждую пломбу')   
-                    +percent(5) 
-                    +header('скидка на удаление зуба')
-                    +percent(20)
-                    +header('скидка на виниры')
-                    +percent(43)
-                    +header('скидка на брекеты')
-                    +percent(60)
-                .discont__slider
-                    .discont__slider-range
-                        .discont__slider_range-header
-                            +header('Ваш возраст')
-                        +range()
-                    .discont__slider-bubble
-                        .discont__slider-bubble-header
-                             +header('что то')
-                        +bubble-slider(0, 100, 1, 40)
-                    .discont__coupon
-                        .discont__coupon-header
-                            +header('У Вас есть дисконтная карта?') 
-                        .discont__coupon-toggle
-                            +toggle('checked')    
-        .wrapper__footer
-            +footer()
+        +site-header()
+        h2.inform-header Скидки и акции
+        .discount 
+            .discount__block
+                +header('скидка за каждую пломбу')   
+                +percent(5) 
+                +header('скидка на удаление зуба')
+                +percent(20)
+                +header('скидка на виниры')
+                +percent(43)
+                +header('скидка на брекеты')
+                +percent(60)
+            .discont__slider
+                .discont__slider-range
+                    .discont__slider_range-header
+                        +header('Ваш возраст')
+                    +range()
+                .discont__slider-bubble
+                    .discont__slider-bubble-header
+                        +header('что то')
+                    +bubble-slider(0, 100, 1, 40)
+                .discont__coupon
+                    .discont__coupon-header
+                        +header('У Вас есть дисконтная карта?') 
+                    .discont__coupon-toggle
+                        +toggle('checked')   

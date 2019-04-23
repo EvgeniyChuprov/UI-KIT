@@ -5,32 +5,24 @@ include header/header
 include buttons/buttons
 include text-area/text-area
 include map/map
-include footer/footer
+
 
 
 block content
-    .wrapper
-        .wrapper__header
-            +site-header()
-        .wrapper__main  
-            .contacts__block
-                .contacts__block_text
-                    +header('позвоните нам')
-                    p.block_text   Есть вопросы? Мы поможем!
-                    p.block_text   9 999 999-999-9 для Москвы
-                    p.block_text   8 800 999-999-9 для регионов
-                .contacts__block_text
-                    +header('напишите нам')
-                    p.block_text    Идеи? Предложения?
-                    p.block_text    Мы открыты для любых
-                    p.block_text    вопросов!
-                .contacts__block_text
-                    +header('оставьте отзыв')
-                    .wrapper__main_form
-                        +text-area({text:'Дополнительная информация', name:'form'})
-                    .wrapper__main_form
-                        +button-ripple({name: 'отправить', small: false, green: true}) 
-            .contacts-map
-                +map({marker:require('./img/marker.png'), lat:70.735, lng:'54.45', zoom: 4})
-        .wrapper__footer
-            +footer()
+    +site-header() 
+    .contacts__block
+        .contacts__block_text
+            +header('контакты')
+            p.block_text   Контактные телефоны: 
+            p.block_text   9 999 999-999-9 
+            p.block_text   9 999 999-555-5 
+            p.block_text   9 999 999-333-3 
+            p.block_text   Эл. почта: zubynapolku@mail.com
+        .contacts__block_text
+            +header('оставьте отзыв')
+            .wrapper__main_form
+                +text-area({text:'Дополнительная информация', name:'form'})
+            .wrapper__main_form
+                +button-ripple({name: 'отправить', small: false, green: true}) 
+    .contacts-map
+        +map({marker:require('./img/marker.png'), lat:70.735, lng:'54.45', zoom: 4})

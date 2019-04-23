@@ -14,27 +14,20 @@ $second-gray:#f2f2f2;
 @import 'style/staff';
 @import 'style/contacts';
 @import 'style/discount';
-@import 'footer/footer';
 
-
-
-.wrapper{
-    min-height: 100vh;
-}
-
-.wrapper__footer{
-    position: absolute;
-    width: 100%;
-    bottom: 0;
+.inform-header{
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px auto;
 }
 .company, .company-news{
     text-align: center;
-    font-size: 25px;
-    margin: 1% auto;
+    font-size: 1.5rem;
+    margin: 20px auto;
 }
 .company-name{
     text-align: center; 
-    font-size: 60px;
+    font-size: 3.5rem;
     text-transform:uppercase
 }
 
@@ -42,10 +35,26 @@ $second-gray:#f2f2f2;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 50%;
-    margin:1% auto 0;
+    width: 70%;
+    margin:auto;
+    .news-block__elem{
+        width: 40%;
+        margin-bottom: 30px
+    }
 }
-.news-block-elem{
-    width: 350px;
-    margin:3% auto;
+@media screen and (max-width: 920px){
+    .news-block{
+        display: block;
+        .news-block__elem{
+            width:80%;
+            margin:20px;
+            margin: auto;
+            margin-bottom: 30px
+        }
+    }
+}
+@media screen and (max-width: 590px){
+    .news-block{
+        width: 100%;
+    }
 }

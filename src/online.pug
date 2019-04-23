@@ -1,20 +1,11 @@
 extends template/template
 
 include site-header/site-header
-include footer/footer
 include message/message
 include buttons/buttons
 
-
-
-
-
 block content
-    .wrapper
-        .wrapper__header
-            +site-header()
-        .wrapper__main  
-            .online__block
-                +message({text1:'Здравствуйте! Чем я могу вам помоч?', text2:"", foto:require('./img/photo2.png'), button:'ответить'} )
-        .wrapper__footer
-            +footer()
+    +site-header()
+    h2.inform-header Онлайн консультация
+    .online__block
+        +message({text1:'Здравствуйте! Чем я могу вам помоч?', text2:"", foto:require('./img/photo2.png'), button:'ответить'} )

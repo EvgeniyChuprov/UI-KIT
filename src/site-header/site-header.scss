@@ -10,6 +10,7 @@
         align-items: center;
         padding: 15px;
         .navigation__logo{
+            color:$main-white;
             font-size: 2rem;
             font-weight: bold;
             text-decoration: none;
@@ -27,6 +28,10 @@
                 font-size: 1rem;
                 font-weight: bold;
             }
+            .link{
+                color:$main-white;
+                text-decoration: none;
+            }
             .link:hover{
                 color:greenyellow;
                 border-bottom: greenyellow solid 3px;
@@ -35,7 +40,7 @@
         }
     }
 }
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1140px){
     .site-header{
         .navigation{
             flex-direction: column;
@@ -52,7 +57,7 @@
         }
     }
 }
-@media screen and (max-width: 550px){
+@media screen and (max-width: 575px){
     .site-header{
         .navigation{
             .navigation__menu{

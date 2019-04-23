@@ -8,7 +8,6 @@ import "./percent/percent.js"
 import "./pie-chart/pie-chart.js"
 import "./calendar/calendar.js"
 import "./stage/stage.js"
-import "./site-header/site-header.js"
 
 
 require('webpack-jquery-ui/datepicker');
