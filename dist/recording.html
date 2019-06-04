@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head><link href="main.css" rel="stylesheet"></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="manifest" href="favicons/site.webmanifest">
+  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="theme-color" content="#ffffff">
+  <title>UI-KIT</title>
+  <body>
+    <header class="site-header">
+      <nav class="navigation"><a class="navigation__logo" href="index.html">Зубы на полку</a>
+        <menu class="navigation__menu">
+          <li class="navigation__menu_element"><a class="link" href="discount.html">скидки и акции </a></li>
+          <li class="navigation__menu_element"><a class="link" href="recording.html">запись на прием</a></li>
+          <li class="navigation__menu_element"><a class="link" href="online.html">онлайн консультация</a></li>
+          <li class="navigation__menu_element"><a class="link" href="contacts.html">контакты</a></li>
+          <li class="navigation__menu_element"><a class="link" href="staff.html">наши врачи </a></li>
+        </menu>
+      </nav><a class="ui-kit" href="ui-kit.html">UI-KIT</a>
+    </header>
+    <h3 class="inform-header">Заполните форму записи на прием</h3>
+    <div class="wrapper__main_block">
+      <div class="wrapper__block_left">
+        <div class="calendar">
+          <div class="calendar__header"></div>
+          <div class="datepicker" id="#datepicker"></div>
+        </div>
+      </div>
+      <div class="wrapper__block_right">
+        <div class="wrapper__main_sex">
+          <div class="header-block"><span class="header-block__tile">ваш пол</span></div>
+          <div class="wrapper__main_radio">
+            <div class="wrapper__main_radio-left"> <span>Муж.
+                <input class="ui-radio" type="radio" name="radio" id="one">
+                <label class="ui-radio-label" for="one"></label></span></div>
+            <div class="wrapper__main_radio-right"> <span> Жен. </span>
+              <input class="ui-radio" type="radio" name="radio" id="two" checked>
+              <label class="ui-radio-label" for="two"></label>
+            </div>
+          </div>
+        </div>
+        <div class="entry-field">
+          <input class="entry-field__form" type="text" name="form" placeholder="Ваше имя">
+          <div class="entry-field__state ">thanks</div>
+        </div>
+        <div class="entry-field">
+          <input class="entry-field__form" type="text" name="form" placeholder="Ваша фамилия">
+          <div class="entry-field__state correct_error">error</div>
+        </div>
+        <div class="entry-field">
+          <input class="entry-field__form" type="text" name="form" placeholder="Ваше отчество">
+          <div class="entry-field__state ">thanks</div>
+        </div>
+        <div class="entry-field">
+          <input class="entry-field__form" type="text" name="form" placeholder="Ваш номер телефона">
+          <div class="entry-field__state correct_error">error</div>
+        </div>
+        <textarea class="text-area" name="form"></textarea>
+        <button class="button-ripple button-ripple__green" type="button" id="btn">отправить
+          <div class="c-ripple js-ripple"><span class="c-ripple__circle"></span></div>
+        </button>
+      </div>
+    </div>
+  <script type="text/javascript" src="main.js"></script></body>
+</html>
