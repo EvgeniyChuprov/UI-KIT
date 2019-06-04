@@ -36,8 +36,8 @@
     left: 33%;
   }
   &__body {
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+    padding-top: 3.8rem;
+    padding-bottom: .4rem;
     background-color: $second-gray;
     border-radius: $radius $radius 0 0;
     line-height: 1rem;
@@ -52,7 +52,7 @@
       background-color: $main-white;
       border-radius: $radius;
       color: #868686;
-      margin-bottom: 1.1rem;
+      margin-bottom: 1rem;
       &::before {
         content: "";
         padding: 0.3rem;
@@ -67,7 +67,7 @@
     &_to {
       width: 82%;
       margin: 0 auto;
-      margin-bottom: 8%;
+      margin-bottom: 6%;
       background-color: $main-gray;
       border-radius: $radius;
     }
