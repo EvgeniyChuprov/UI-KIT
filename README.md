@@ -2,3 +2,6 @@
 1. npm install
 2. npm run start запуск webpack-dev-server
 3. npm run webpack создаст готовые файлы в папке dist
+
+Github Pages site:https://evgeniychuprov.github.io/UI-KIT/dist/
+Github Pages UI:https://evgeniychuprov.github.io/UI-KIT/dist/ui-kit.html
