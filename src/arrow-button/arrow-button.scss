@@ -1,84 +1,100 @@
-.arrow__button{
-    text-align: center;
-    display: inline-block;
-    border-radius: 50%;
-    padding: 0;
-    outline: none;
-    border: none;
-    background: none;
-  }
-  .arrow-button__arrow{
+.arrow__button {
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
+  .arrow-button__arrow {
     display: inline-block;
     cursor: pointer;
-    width: 44px;
-    height: 44px;
-    line-height: 42px;
-    border: 3px solid $main-green;
+    width: 2.8rem;
+    height: 2.7rem;
+    line-height: 2.5rem;
+    border: $radius solid $main-green;
     border-radius: 50%;
-  }
-  .arrow-button__arrow::after{
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 10%;
-    width: 27%;
-    height: 27%;
-    border-top: 3px solid $main-green;
-    border-right: 3px solid $main-green;
-    transform: rotate(-135deg);
-  }
-  .arrow-button__arrow:hover{
-    background: $main-green;
     &::after {
-      border-top-color: $main-white;
-      border-right-color: $main-white;
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10%;
+      width: 0.84rem;
+      height: 0.84rem;
+      border-top: $radius solid $main-green;
+      border-right: $radius solid $main-green;
+      transform: rotate(-135deg);
     }
-  }
-  .arrow-button__arrow_direction_right{
-    &::after {
-      margin-left: 0;
-      border-top: none;
-      border-right: none;
-      margin-right: 13%;
-      border-bottom: 3px solid $main-green;
-      border-left: 3px solid $main-green;  
-  }
     &:hover {
+      background: $main-green;
       &::after {
+        border-top-color: $main-white;
+        border-right-color: $main-white;
+      }
+    }
+    &_direction_right {
+      &::after {
+        margin-left: 0;
+        border-top: none;
+        border-right: none;
+        margin-right: 13%;
+        border-bottom: $radius solid $main-green;
+        border-left: $radius solid $main-green;
+      }
+      &:hover {
+        &::after {
           border-bottom-color: $main-white;
           border-left-color: $main-white;
+        }
       }
     }
   }
-  .arrow__button:disabled .arrow-button__arrow{
-    cursor: default;
-    background-color: $main-gray;
-    border: 3px solid $main-gray;
+}
+.arrow-button__arrow_direction_right {
+  &::after {
+    margin-left: 0;
+    border-top: none;
+    border-right: none;
+    margin-right: 13%;
+    border-bottom: $radius solid $main-green;
+    border-left: $radius solid $main-green;
+  }
+  &:hover {
     &::after {
-        border-top: 3px solid $main-white;
-        border-right: 3px solid $main-white;
-    }
-    &:hover {
-        background-color: $main-gray;
+      border-bottom-color: $main-white;
+      border-left-color: $main-white;
     }
   }
-  .arrow__button:disabled .arrow-button__arrow_direction_right::after {
-      margin-left: 0;
-      border-top: none;
-      border-right: none;
-      border-bottom: 3px solid $main-white;
-      border-left: 3px solid $main-white;  
+}
+.arrow__button:disabled .arrow-button__arrow {
+  cursor: default;
+  background-color: $main-gray;
+  border: 3px solid $main-gray;
+  &::after {
+    border-top: $radius solid $main-white;
+    border-right: $radius solid $main-white;
   }
-  .arrow-button__hover{
-    background: $main-green;
-    >.arrow-button__arrow::after{
-        border-top: 3px solid $main-white;
-        border-right: 3px solid $main-white;
-    }
-    >.arrow-button__arrow_direction_right::after{
-        border-top: none;
-        border-right: none;
-        border-bottom: 3px solid $main-white;
-        border-left: 3px solid $main-white;  
-    }
+  &:hover {
+    background-color: $main-gray;
   }
+}
+.arrow__button:disabled .arrow-button__arrow_direction_right::after {
+  margin-left: 0;
+  border-top: none;
+  border-right: none;
+  border-bottom: $radius solid $main-white;
+  border-left: $radius solid $main-white;
+}
+.arrow-button__hover {
+  background: $main-green;
+  > .arrow-button__arrow::after {
+    border-top: $radius solid $main-white;
+    border-right: $radius solid $main-white;
+  }
+  > .arrow-button__arrow_direction_right::after {
+    border-top: none;
+    border-right: none;
+    border-bottom: $radius solid $main-white;
+    border-left: $radius solid $main-white;
+  }
+}

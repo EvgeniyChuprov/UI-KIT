@@ -1,26 +1,23 @@
-.ui-radio{ 
-   display: none; 
+.ui-radio {
+  display: none;
 }
 .ui-radio-label {
   position: relative;
+  &:before {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: $main-gray url("./img/checkOff.svg") no-repeat center;
+    border-radius: 100%;
+  }
 }
-.ui-radio-label:before {
-  content: "";
-  display: inline-block;
-  width: 24px; 
-  height: 24px;
-  background: #e5e5e5 url("./img/checkOff.svg") no-repeat center;
-}
-.ui-radio-label:before{
-  border-radius: 100%;
-}
-.ui-radio:checked + .ui-radio-label:before{
+.ui-radio:checked + .ui-radio-label:before {
   background: #4eb7a8 url("./img/check.svg") no-repeat center;
 }
-
-.ui-radio:checked + .ui-radio-label:after{
+.ui-radio:checked + .ui-radio-label:after {
   position: absolute;
-  content:"";
+  content: "";
   display: inline-block;
   border-radius: 100%;
   z-index: -1;

@@ -1,11 +1,11 @@
 extends template/template
-
 include site-header/site-header
 include message/message
+include text-area/text-area
 include buttons/buttons
 
 block content
-    +site-header()
-    h2.inform-header Онлайн консультация
-    .online__block
-        +message({text1:'Здравствуйте! Чем я могу вам помоч?', text2:"", foto:require('./img/photo2.png'), button:'ответить'} )
+  +site-header()
+  h2.inform-header Онлайн консультация
+  .online__block
+    +message({text:'Здравствуйте! Чем я могу вам помоч?', placeholder:"Добрый день. Как записаться на прием?", foto:require('./img/photo2.png'), button:'ответить'} )

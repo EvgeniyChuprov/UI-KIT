@@ -1,41 +1,32 @@
 extends template/template
-
 include site-header/site-header
 include header/header
 include calendar/calendar
 include entry-field/entry-field
-include form/form
 include buttons/buttons
 include text-area/text-area
 include tick/tick
 include calendar/calendar
 
-
 block content
-    +site-header()
-    h3.inform-header Заполните форму записи на прием
-    .wrapper__main_block
-        .wrapper__block_left
-            +calendar()
-        .wrapper__block_right
-            .wrapper__main_sex
-                +header('ваш пол')
-                .wrapper__main_radio
-                    .wrapper__main_radio-left 
-                        span Муж.
-                         +tick({name: 'radio', id:'one', checked: false})
-                    .wrapper__main_radio-right  
-                        span  Жен. 
-                        +tick({name: 'radio', id:'two', checked: true})
-            .wrapper__main_form
-                +entry-field({placeholder:'Ваше имя', type:'text', name:'form', correct: true})
-            .wrapper__main_form
-                +entry-field({placeholder:'Ваша фамилия', type:'text', name:'form', correct: false})
-            .wrapper__main_form
-                +entry-field({placeholder:'Ваше отчество', type:'text', name:'form', correct: true})
-            .wrapper__main_form
-                +entry-field({placeholder:'Ваш номер телефона', type:'tel', name:'form', correct: false}) 
-            .wrapper__main_form
-                +text-area({text:'Дополнительная информация', name:'form'})
-            .wrapper__main_form
-                +button-ripple({name: 'отправить', small: false, green: true})   
+  +site-header()
+  h3.inform-header Заполните форму записи на прием
+  .wrapper__main_block
+    .wrapper__block_left
+      +calendar()
+    .wrapper__block_right
+      .wrapper__main_sex
+        +header('ваш пол')
+        .wrapper__main_radio
+          .wrapper__main_radio-left 
+            span Муж.
+              +tick({name: 'radio', id:'one', checked: false})
+          .wrapper__main_radio-right  
+            span  Жен. 
+            +tick({name: 'radio', id:'two', checked: true})
+      +entry-field({placeholder:'Ваше имя', type:'text', name:'form', correct: true})
+      +entry-field({placeholder:'Ваша фамилия', type:'text', name:'form', correct: false})
+      +entry-field({placeholder:'Ваше отчество', type:'text', name:'form', correct: true})
+      +entry-field({placeholder:'Ваш номер телефона', type:'tel', name:'form', correct: false}) 
+      +text-area({text:'Дополнительная информация', name:'form'})
+      +button-ripple({name: 'отправить', small: false, green: true})   

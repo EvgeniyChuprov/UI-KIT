@@ -8,7 +8,6 @@ include pie-chart/pie-chart
 include bubble-Slider/bubble-Slider
 include range-slider/range-slider
 include stage/stage
-include form/form
 include entry-field/entry-field
 include text-area/text-area
 include toggle/toggle
@@ -26,146 +25,100 @@ include video/video
 
 
 block content
-    -
-        var news = {img:require('./img/photo3.png'), header: 'It’s all going downhill', data: '24  august  2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'}
-        var event = {img:require('./img/photo4.png'), header: 'this is the title', dataNum: '24', dataMonth:'Aug', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
-    .content
-        .standart-buttons
-            .header
-                +header('standard  buttons')
-            .standart-buttons__block
-                .standart-buttons__block_small-button
-                    +button-ripple({name: 'button', small: true, green: true})
-                .standart-buttons__block_button
-                    +button-ripple({name: 'button', small: false, green: true})
-                .standart-buttons__block_button
-                    +button-ripple({name: 'button', small: false, green: false})
-                .standart-buttons__block_small-button
-                    +button-ripple({name: 'button', small: true, green: false})
-                .standart-buttons__block_small-button
-                    +button-ripple({name: 'button', small: true, green: true})
-                .standart-buttons__block_button
-                    +button-ripple({name: 'button', small: false, green: true})
-                .standart-buttons__block_button
-                    +button-ripple({name: 'button', small: false, green: false})
-                .standart-buttons__block_small-button
-                    +button-ripple({name: 'button', small: true, green: false})
-                .standart-buttons__block_small-button
-                    +button-ripple({name: 'button', small: true, green: true})
-                .standart-buttons__block_button
-                    +button-ripple({name: 'button', small: false, green: true})
-                .standart-buttons__block_button
-                    +button-ripple({name: 'button', small: false, green: false})
-                .standart-buttons__block_small-button
-                    +button-ripple({name: 'button', small: true, green: false})
-        .arrow-buttons
-            .header
-                +header('arrow buttons')
-            .arrow-buttons__block
-                .arrow-buttons__block_button
-                    +arrow({right: false, disabled: false, hover: false})
-                .arrow-buttons__block_button
-                    +arrow({right: true, disabled: false, hover: false})
-                .arrow-buttons__block_button
-                    +arrow({right: false, disabled: true, hover: false})
-                .arrow-buttons__block_button
-                    +arrow({right: true, disabled: true, hover: false})
-                .arrow-buttons__block_button
-                    +arrow({right: false, disabled: false, hover: true})
-                .arrow-buttons__block_button
-                    +arrow({right: true, disabled: false, hover: true})
-        .percentages
-            .header
-                +header('percentages / pie chart')
-            .percentages__block
-                .percentages__block_percent
-                    +percent(0)
-                .percentages__block_percent.percentages__block_second
-                    +percent(38)
-                .percentages__block_percent.percentages__block_third
-                    +percent(62)
-                .percentages__block_percent.percentages__block_fourth
-                    +percent(89)
-                .percentages__block_percent.percentages__block_fifth
-                    +pie-chart()
-        .sliders
-            .header
-                +header('sliders')
-            .sliders__block_left
-                +bubble-slider(0, 100, 1, 40)
-            .sliders__block_right
-                +range()
-            .clear
-        .stages
-            .header 
-                +header('stages')
-            .stages__block
-                +stage()
-        .form-elements
-            .header
-                +header('form elements')
-            .form-elements__block
-                .form-elements__block_left
-                    +form()
-                .form-elements__block_togglesTick
-                    .header
-                        +header('toggles')
-                    .toggles__block
-                        .toggles__block_off
-                            +toggle()
-                        .toggles__block_on 
-                            +toggle('checked')
-                    .header
-                        +header('tick boxes')
-                    .tick-box__block
-                        .tick-box__block_off
-                            +tick({name: 'radio', id:'one', checked: true})
-                        .tick-box__block_on 
-                            +tick({name: 'radio', id:'two', checked: false})   
-                .clear 
-                .form-elements__block_left
-                    .header-search
-                        +header('search / drop down') 
-                    .form-elements__block_search   
-                        +search('Search') 
-                    .form-elements__block_search    
-                        +search("I've not found what I'm looking for..." , ' search-errer')
-                    .form-elements__block_search 
-                        +select()   
-                .form-elements__block_right 
-                    .header-profile 
-                        +header('user profile')
-                    .form-elements__block_profile-one
-                        +userProfile({img:require('./img/photo1.png'), name:'John Smith', job:'ux designer', color:''})
-                    .form-elements__block_profile-two
-                        +userProfile({img:require('./img/photo2.png'), name:'Sarah Brown', job:'developer', color:'green'})
-                .clear  
-        .news-events
-            .header
-                +header('news & events') 
-            .news-events__block_left
-                +news(news)
-            .news-events__block_right
-                +event(event)
-        .location
-            .header
-                +header('location')
-            .location__block
-                +map({marker:require('./img/marker.png'), lat:37.795680, lng:-122.415021, zoom: 14})
-        .calendar-block
-            .header-datepicker
-                +header('calendar')
-            .calendar__block 
-                +calendar()
-        .messaging
-            .header-messaging
-                +header('messaging')
-            .messaging__block
-                +message({text1:"Hey! So are we cool to meet at the art gallery? Say 8pm", text2:"Yeah that sounds great. See you then.",foto:require('./img/photo2.png'), button:'reply'})
-        .clear
-        .video
-            .header-video
-                +header('video') 
-            .video__block
-                +video("https://player.vimeo.com/video/62980495")   
-        a(rel="import" href='index.html' ) gtgrg
+	-
+		var news = {img:require('./img/photo3.png'), header: 'It’s all going downhill', data: '24  august  2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'}
+		var event = {img:require('./img/photo4.png'), header: 'this is the title', dataNum: '24', dataMonth:'Aug', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+	.content
+		+header('standard  buttons')
+		.standart-buttons
+			.standart-buttons__block
+				+button-ripple({name: 'button', small: true, green: true})
+			.standart-buttons__block
+				+button-ripple({name: 'button', small: false, green: true})
+			.standart-buttons__block
+				+button-ripple({name: 'button', small: false, green: false})
+			.standart-buttons__block
+				+button-ripple({name: 'button', small: true, green: false})
+		.arrow-buttons
+			+header('arrow buttons')
+			.arrow-buttons__block
+				+arrow({right: false, disabled: false, hover: false})
+				+arrow({right: true, disabled: false, hover: false})
+				+arrow({right: false, disabled: true, hover: false})
+				+arrow({right: true, disabled: true, hover: false})
+				+arrow({right: false, disabled: false, hover: true})
+				+arrow({right: true, disabled: false, hover: true})
+		.percentages
+			+header('percentages / pie chart')
+			.percentages__block
+				+percent(0)
+			.percentages__block
+				+percent(38)
+			.percentages__block
+				+percent(62)
+			.percentages__block
+				+percent(89)
+			.percentages__block
+				+pie-chart({one:11, two: 26, three: 29})
+		+header('sliders')
+		.sliders__left
+			+bubble-slider(0, 100, 1, 40)
+		.sliders__right
+			+range()
+		.clear
+		.stages
+			+header('stages')
+			.stages__block
+				+stage()
+		.form-elements
+			.header
+				+header('form elements')
+				.form-elements__form
+					+entry-field({placeholder:'Your Name', type:'text', name:'form', correct: false})
+					+entry-field({placeholder:'Your Email', type:'text', name:'form', correct: true})
+					+text-area({placeholder:'Your Message', name:'form'})
+					.form-elements__form_button
+						+button-ripple({name: 'submit', small: false, green: true})
+				.form-elements__togglesTick
+					+header('toggles')
+					.toggles__block
+						.toggles__block_off
+							+toggle()
+						.toggles__block_on 
+							+toggle('checked')
+					+header('tick boxes')
+					.tick-box
+						+tick({name: 'radio', id:'one', checked: true})
+						+tick({name: 'radio', id:'two', checked: false})   
+				.clear 
+				.form-elements__block_left
+					+header('search / drop down') 
+					+search('Search') 
+					+search("I've not found what I'm looking for..." , ' search-error')
+					+select({first:'Pure CSS', second:'No JS', third:'Nice!'})   
+				.form-elements__block_right 
+					+header('user profile')
+					+userProfile({img:require('./img/photo1.png'), name:'John Smith', job:'ux designer', color:''})
+					+userProfile({img:require('./img/photo2.png'), name:'Sarah Brown', job:'developer', color:'green'})
+				.clear  
+		.news-events
+			+header('news & events') 
+			.news-events__block_left
+				+news(news)
+			.news-events__block_right
+				+event(event)
+			.clear 
+		.location
+			+header('location')
+			.location__block
+				+map({marker:require('./img/marker.png'), lat:37.795680, lng:-122.415021, zoom: 14})
+		.calendar-block
+			+header('calendar')
+			+calendar()
+		.messaging
+			+header('messaging')
+			+message({text:"Hey! So are we cool to meet at the art gallery? Say 8pm", placeholder:"Yeah that sounds great. See you then.",foto:require('./img/photo2.png'), button:'reply'})
+		.clear
+		.video
+			+header('video') 
+			+video("https://player.vimeo.com/video/62980495")   

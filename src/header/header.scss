@@ -1,12 +1,11 @@
-.header__block{
-    text-align:  center;
-    background: white;
-}
-.header__tile{
-    color:#4f4f4f;
+.header-block {
+  padding: 5% 0;
+  text-align: center;
+  &__tile {
+    color: #4f4f4f;
     font-family: "Lato Black";
-    font-size: 19px;
+    font-size: 1.11rem;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: .1px;
+  }
 }

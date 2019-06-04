@@ -1,37 +1,43 @@
-.range{
+.range {
+  -webkit-appearance: none;
+  margin: auto;
+  margin-top: 15%;
+  width: 97%;
+  height: 0.32rem;
+  outline: none;
+  border-radius: 0.2rem;
+  background: -webkit-linear-gradient(left, #4eb7a8 0%, #4eb7a8 75%, $main-gray 25%, $main-gray 100%);
+  -moz-appearance: none;
+  background: -moz-linear-gradient(left, #4eb7a8 0%, #4eb7a8 75%, $main-gray 25%, $main-gray 100%);
+  &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    margin: auto;
-    margin-top: 15%;
-    width: 97%;
-    height: 5px;
-    outline: none;
-    border-radius: 4px;
-    background: -webkit-linear-gradient(left, #4eb7a8 0%, #4eb7a8 75%, $main-gray 25%, $main-gray 100%)
-}
-.range::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    width:20px;
-    height:20px;
-    background:#4eb7a8;
-    border-radius:50%;
-    cursor:pointer;
-}
-.range{
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #4eb7a8;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &::-moz-renge-thumb {
     -moz-appearance: none;
-    background: -moz-linear-gradient(left, #4eb7a8 0%, #4eb7a8 75%, $main-gray 25%, $main-gray 100%)
+    width: 1.2rem;
+    height: 1.2rem;
+    background: #4eb7a8;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
-.range::-moz-slider-thumb{
-    -moz-appearance: none;
-    width:20px;
-    height:20px;
-    background:#4eb7a8;
-    border-radius:50%;
-    cursor:pointer;
+.range-num {
+  margin-top: 2%;
+  color: $main-gray;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
 }
-.range-num{
-    margin-top: 2%;
-    color: $main-gray;
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
+.range[type="range"]::-moz-range-thumb {
+  -moz-appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #4eb7a8;
+  border-radius: 50%;
+  cursor: pointer;
 }

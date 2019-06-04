@@ -1,8 +1,7 @@
 mixin percent(num)
-    .percent__container
-        .percent-circle.pc3(data-percent= num)
-            svg
-                use.percent-circle-inner(xlink:href="#percent-circle-svg")
-    svg.hidden
-        circle(id="percent-circle-svg", cx="50%", cy="50%", r="50%", stroke-alignment="inner")
-            
+  .percent__container
+    .percent-circle.pc3(data-percent= num)
+      svg
+        use.percent-circle-inner(xlink:href="#percent-circle-svg")
+  svg.hidden
+    circle(id="percent-circle-svg", cx="50%", cy="50%", r="50%", stroke-alignment="inner")

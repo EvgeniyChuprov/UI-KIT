@@ -1,28 +1,24 @@
 extends template/template
-
 include site-header/site-header
 include header/header
 include buttons/buttons
 include text-area/text-area
 include map/map
 
-
-
 block content
-    +site-header() 
-    .contacts__block
-        .contacts__block_text
-            +header('контакты')
-            p.block_text   Контактные телефоны: 
-            p.block_text   9 999 999-999-9 
-            p.block_text   9 999 999-555-5 
-            p.block_text   9 999 999-333-3 
-            p.block_text   Эл. почта: zubynapolku@mail.com
-        .contacts__block_text
-            +header('оставьте отзыв')
-            .wrapper__main_form
-                +text-area({text:'Дополнительная информация', name:'form'})
-            .wrapper__main_form
-                +button-ripple({name: 'отправить', small: false, green: true}) 
-    .contacts-map
-        +map({marker:require('./img/marker.png'), lat:70.735, lng:'54.45', zoom: 4})
+  +site-header() 
+  .contacts
+    .contacts__text
+      +header('контакты')
+      p.block_text   Контактные телефоны: 
+      p.block_text   9 999 999-999-9 
+      p.block_text   9 999 999-555-5 
+      p.block_text   9 999 999-333-3 
+      p.block_text   Эл. почта: zubynapolku@mail.com
+    .contacts__text
+      +header('оставьте отзыв')
+      +text-area({text:'Дополнительная информация', name:'form'})
+      .contacts__text_button
+        +button-ripple({name: 'отправить', small: false, green: true}) 
+  .contacts-map
+    +map({marker:require('./img/marker.png'), lat:'70.735', lng:'54.45', zoom: 4})

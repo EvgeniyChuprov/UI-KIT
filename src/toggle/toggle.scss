@@ -4,53 +4,47 @@
 .toggle { 
   position: relative; 
   display: inline-block; 
-}
-
-.toggle .ball{
-  position: absolute;
-  top: 3px;
-  left: 4px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: $main-white;
-  transition: all 0.3s ease-in 0s; 
-}
-
-.toggle #switch:checked ~ .ball{
-  transition: all 0.3s ease-in 0s; 
-  left: 65%;
-}
-.toggle .on_off{
-   border-radius: 2vw;
-   height: 17px;
-   width: 19px;
-   overflow: hidden;
-   transition: all 0.3s ease-in 0s; 
-   color: $main-white;
-   background-color: $main-gray;
-   padding: 3px 10px 3px 31px;
-}
-
-.toggle #switch:checked ~ .on_off{
-  transition: all 0.3s ease-in 0s; 
-  background: $main-green;
-}
-
-.toggle .on_off:before{
-  transition: all 0.3s ease-in 0s; 
-  margin: 0 0 0 -.1vw;
-  font-family: 'Lato Regular';
-  font-size: 12px;
-  top:-20px;
-  content: 'OFF';
-}
-
-.toggle #switch:checked ~ .on_off:before{
-  transition: all 0.3s ease-in 0s; 
-  margin: 0 .1vw 0 -1vw;
-  font-family: 'Lato Regular';
-  font-size: 12px;
-  color: $main-white;
-  content: 'ON';
+  .ball{
+    position: absolute;
+    top: .2rem;
+    left: .2rem;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 100%;
+    background: $main-white;
+    transition: all 0.3s ease-in 0s; 
+  }
+  #switch:checked ~ .ball{
+    transition: all 0.3s ease-in 0s; 
+    left: 2.5rem;
+  }
+  #switch:checked ~ .on_off{
+    transition: all 0.3s ease-in 0s; 
+    background: $main-green;
+  }
+  .on_off{
+    border-radius: 1.5rem;
+    height: 1.1rem;
+    width: 1.2rem;
+    overflow: hidden;
+    transition: all 0.3s ease-in 0s; 
+    color: $main-white;
+    background-color: $main-gray;
+    padding: .2rem .6rem .2rem 2rem;
+    &:before{
+      transition: all 0.3s ease-in 0s; 
+      margin: 0 0 0 -.2rem;
+      font-family: 'Lato Regular';
+      font-size: .8rem;
+      content: 'OFF';
+    }
+  }
+  #switch:checked ~ .on_off:before{
+    transition: all 0.3s ease-in 0s; 
+    margin: 0 .8rem 0 -1.6rem;
+    font-family: 'Lato Regular';
+    font-size: .8rem;
+    color: $main-white;
+    content: 'ON';
+  }
 }

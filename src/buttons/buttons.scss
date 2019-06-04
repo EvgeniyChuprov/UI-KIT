@@ -1,93 +1,86 @@
-
-.button-ripple{
-   font-family: "Lato Black";
-   padding-top:5px; 
-   font-size: 78%;
-   letter-spacing: -0.1px;
-    text-transform: uppercase;
+.button-ripple {
+  font-family: "Lato Black";
+  font-size: .8rem;
+  text-transform: uppercase;
+  border-radius: 3px;
+  width: 100%;
+  min-width: 7.2rem;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  padding: .45rem;
+  background-color: $main-white;
+  &__small {
+    padding:.2rem;
     width: 100%;
-    height:32px;
-    outline: none;
-    user-select: none;
-    position: relative;
- }
-.button-green{
+    min-width: 4.9rem;
+    font-size: .6rem;
+  }
+  &__green {
     border: 1px $main-green solid;
-    background-color: $main-white;
-    color:$main-green;
-    border-radius: 5px;
-    box-shadow:0 3px #28a290;
-}
-.button-red{
+    color: $main-green;
+    box-shadow: 0 3px #28a290;
+    &:hover {
+      background-color: $main-green;
+      color: $main-white;
+    }
+    &:active {
+      top: 3px;
+      background-color: $main-green;
+      box-shadow: none;
+      color: $main-white;
+    }
+  }
+  &__red {
     border: 1px $main-red solid;
     background-color: $main-white;
-    color:$main-red;
-    border-radius: 5px;
-    box-shadow:0 3px $main-red;
+    color: $main-red;
+    box-shadow: 0 3px #c94322;
+    &:hover {
+      background-color: $main-red;
+      color: $main-white;
+    }
+    &:active {
+      top: 3px;
+      background-color: $main-red;
+      box-shadow: none;
+      color: $main-white;
+    }
+  }
 }
- .small-button{
-    margin-top: 10px;
-    font-size: 10px;
-    letter-spacing: .01vw;
-    text-transform: uppercase;
-    width: 100%;
-    height: 21px;
- }
- .button-green:hover{
-    background-color: $main-green;
-    color:$main-white;
- }
- .button-green:active{
-    background-color: $main-green;
-    box-shadow:0 3px $main-white;
-    color:$main-white;
-    cursor: pointer;
- }
- .button-red:hover{
-    background-color: $main-red;
-    color:$main-white;
- }
- .button-red:active{
-    background-color: $main-red;
-    box-shadow:0 3px $main-red;
-    color:$main-white;
-    cursor: pointer;
- }
- .c-ripple {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   overflow: hidden;
-   background: transparent;
- }
- 
- .c-ripple__circle {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   opacity: 0;
-   width: 0;
-   height: 0;
-   border-radius: 50%;
-   background: rgba(255, 255, 255, .25);
-   .c-ripple.is-active & {
-     animation: a-ripple .4s ease-in;
-   }
- }
-
- @keyframes a-ripple {
-   0% {
-     opacity: 0;
-   }
-   25% {
-     opacity: 1;
-   }
-   100% {
-     width: 200%;
-     padding-bottom: 200%;
-     opacity: 0;
-   }
- }
+.c-ripple {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+  &__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    .c-ripple.is-active & {
+      animation: a-ripple 0.4s ease-in;
+    }
+  }
+}
+@keyframes a-ripple {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
+    width: 200%;
+    padding-bottom: 200%;
+    opacity: 0;
+  }
+}

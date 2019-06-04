@@ -1,24 +1,23 @@
 extends template/template
-
 include site-header/site-header
 include user-profile/user-profile
 include header/header
 include video/video
 
 block content
-    +site-header()
-    .staff__block
-        .staff__block-video
-            +header('видео презентация')
-            .video-staff
-                +video("https://player.vimeo.com/video/62980495")  
-        .doctor
-            +header('наши врачи')
-            .doctor__block
-                +userProfile({img:require('./img/photo1.png'), name:'Иванов Иван', job:'хирург', color:''})   
-            .doctor__block
-                +userProfile({img:require('./img/photo2.png'), name:'Машина Даша', job:'ортопед', color:'green'})
-            .doctor__block
-                +userProfile({img:require('./img/photo1.png'), name:'Сидоров Сидор', job:'терапевт', color:''})   
-            .doctor__block
-                +userProfile({img:require('./img/photo2.png'), name:'Дашина Маша', job:'детский врач', color:'green'})    
+  +site-header()
+  .staff__block
+    .staff__block-video
+      +header('видео презентация')
+      .video-staff
+        +video("https://player.vimeo.com/video/62980495")  
+    .doctor
+      +header('наши врачи')
+      .doctor__block
+        +userProfile({img:require('./img/photo1.png'), name:'Иванов Иван', job:'хирург', color:''})   
+      .doctor__block
+        +userProfile({img:require('./img/photo2.png'), name:'Машина Даша', job:'ортопед', color:'green'})
+      .doctor__block
+        +userProfile({img:require('./img/photo1.png'), name:'Сидоров Сидор', job:'терапевт', color:''})   
+      .doctor__block
+        +userProfile({img:require('./img/photo2.png'), name:'Дашина Маша', job:'детский врач', color:'green'})    

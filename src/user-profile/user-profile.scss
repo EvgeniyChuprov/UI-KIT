@@ -1,68 +1,58 @@
-.user-profile{
-    width: 100%;
-   display: flex;
-   justify-content: space-between;
-}
-.photo-block__image{
-    border:3px solid $main-gray;
+.user-profile {
+  padding: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .photo-block__image {
+    border: 3px solid $main-gray;
     border-radius: 50%;
     width: 31.5%;
     height: 31.5%;
-}
-.user-profile__tooltip_box {
+  }
+  &__tooltip {
     width: 61%;
-    height: 94px;
     position: relative;
     background: $main-gray;
-    border-radius: 5px;   
+    border-radius: $radius;
     &:before {
-    content: ""; 
-    border: solid transparent;
-    position: absolute;  
-    right: 100%;
-    top: 45%;
-    border-right-color: $main-gray;
-    border-width: 6px;
+      content: "";
+      border: solid transparent;
+      position: absolute;
+      right: 100%;
+      top: 45%;
+      border-right-color: $main-gray;
+      border-width: 0.3rem;
     }
-}
-.user-profile__name{
-    font-family: 'Lato Regular';
-    color:$main-red;
-    padding-top: 11px;
-    font-size: 18px; 
-    text-align: center;
-}
-.user-profile__job{
-    font-family: 'Lato Regular';
-    padding-top: 5px; 
-    font-size: 11px;
-    letter-spacing: .05vw; 
-    text-align: center;
-    text-transform: uppercase;
-}
-.social{
-    width: 98px;
-    padding-top: 12px;
-    margin:auto;
-    display: flex;
-    
-}
-.user-profile__tooltip_green{
-    background: $main-green;
-    color:$main-white;
-    &:before {
+    &_green {
+      background: $main-green;
+      color: $main-white;
+      &:before {
         border-right-color: $main-green;
+      }
     }
-}
-.social__img{
-    height:21px;
-    width: 20px;
-}
-.social__img:nth-child(1){
-    width: 10px;
-    padding-left:5px; 
+    &_name {
+      font-family: "Lato Regular";
+      color: $main-red;
+      padding-top: 6%;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    &_job {
+      font-family: "Lato Regular";
+      padding-top: 4%;
+      font-size: 0.7rem;
+      letter-spacing: 0.05rem;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .social {
+      width: 55%;
+      padding: 6% 0;
+      margin: auto;
+      display: flex;
+      &__img {
+        margin: auto;
+      }
+    }
   }
-.social__img:nth-child(2){
-  margin: 2px 16px 0 22px;
-  width: 30px;
 }

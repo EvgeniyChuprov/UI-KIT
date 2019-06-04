@@ -1,4 +1,14 @@
-.online__block{
-    width: 300px;
-    margin:5% auto 0;
+.online__block {
+  width: 20%;
+  margin: 5% auto 0;
+}
+@media screen and (max-width: 1150px) {
+  .online__block {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .online__block {
+    width: 50%;
+  }
 }

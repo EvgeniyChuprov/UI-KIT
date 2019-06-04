@@ -1,60 +1,64 @@
 $main-green: #44ae9f;
-$second-green:#46ab9d;
+$second-green: #46ab9d;
 $main-white: #ffffff;
 $main-red: #e75735;
 $main-gray: #e5e5e5;
-$second-gray:#f2f2f2;
+$second-gray: #f2f2f2;
+$radius:.25rem;
 
-@import 'reset/reset';
-@import 'fonts/fonts';
-@import 'style/ui-kit';
-@import 'style/recording';
-@import 'style/online';
-@import 'site-header/site-header';
-@import 'style/staff';
-@import 'style/contacts';
-@import 'style/discount';
+@import "reset/reset";
+@import "fonts/fonts";
+@import "style/ui-kit";
+@import "style/recording";
+@import "style/online";
+@import "site-header/site-header";
+@import "style/staff";
+@import "style/contacts";
+@import "style/discount";
+html {
+  font-size: 16px;
+  min-width: 350px;
+}
+.inform-header {
+  font-size: 3rem;
+  text-align: center;
+}
+.company,
+.company-news {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+.company-name {
+  text-align: center;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
 
-.inform-header{
-    font-size: 3rem;
-    text-align: center;
-    margin: 20px auto;
-}
-.company, .company-news{
-    text-align: center;
-    font-size: 1.5rem;
-    margin: 20px auto;
-}
-.company-name{
-    text-align: center; 
-    font-size: 3.5rem;
-    text-transform:uppercase
+.news-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+  .news-block__elem {
+    width: 40%;
+    margin-bottom: 30px;
+  }
 }
 
-.news-block{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 70%;
-    margin:auto;
-    .news-block__elem{
-        width: 40%;
-        margin-bottom: 30px
+@media screen and (max-width: 920px) {
+  .news-block {
+    display: block;
+    .news-block__elem {
+      width: 80%;
+      margin: auto;
+      margin-bottom: 2rem;
     }
+  }
 }
-@media screen and (max-width: 920px){
-    .news-block{
-        display: block;
-        .news-block__elem{
-            width:80%;
-            margin:20px;
-            margin: auto;
-            margin-bottom: 30px
-        }
-    }
-}
-@media screen and (max-width: 590px){
-    .news-block{
-        width: 100%;
-    }
+@media screen and (max-width: 590px) {
+  .news-block {
+    width: 100%;
+  }
 }

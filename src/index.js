@@ -9,6 +9,5 @@ import "./pie-chart/pie-chart.js"
 import "./calendar/calendar.js"
 import "./stage/stage.js"
 
-
 require('webpack-jquery-ui/datepicker');
 

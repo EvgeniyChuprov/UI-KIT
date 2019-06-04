@@ -1,16 +1,16 @@
-.text-area{
-    width: 276px;
-    min-height: 50px;
-    height: 76px;
-    padding: 10px 0 0 13px;
-    font-family: 'Lato Light';
-    font-weight: 500;
-    font-size: 13px;
-    letter-spacing: .4px;
-    color:#888;
-    background-color: $main-gray;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    resize: none;
+.text-area {
+  width: 95%;
+  min-height: 4.9rem;
+  padding: 0.7rem 0 0 0.8rem;
+  font-family: "Lato Light";
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.02rem;
+  color: #888;
+  background-color: $main-gray;
+  outline: none;
+  border: none;
+  border-radius: $radius;
+  resize: none;
+  box-shadow: 0 0 0 3px #fff;
 }

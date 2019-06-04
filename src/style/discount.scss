@@ -1,41 +1,34 @@
-.sale{
-    font-size: 3rem;
-    text-align: center;
-    margin: 20px auto;
-}
 .discount {
-    display: flex;
-    .discount__block{
+  display: flex;
+  &__block {
+    text-align: center;
+    margin-left: auto;
+  }
+  &__slider {
+    margin: auto;
+    padding: 2rem;
+    &_range {
+      width: 90%;
+    }
+    &_bubble {
+      width: 90%;
+      &-header {
+        margin: 3rem auto;
+      }
+    }
+    .discount__coupon {
+      margin-top: 6rem;
+      &-header {
+        margin: 2rem auto;
+      }
+      &-toggle {
         text-align: center;
-        width: 310px;
-        height: 150px;
-        margin-top: 30px;
-        margin-left:auto;
+      }
     }
-    .discont__slider{
-        width: 450px;
-        margin-right: auto;
-        margin-left: 10%;
-        margin-top: 50px;
-        .discont__slider-bubble{
-            width: 90%;
-            margin:auto;
-            .discont__slider-bubble-header{
-                margin: 50px auto;
-            }
-        }
-        .discont__slider-range{
-            width: 90%;
-            margin:20px auto;
-        }
-        .discont__coupon{
-            margin-top: 90px;
-            .discont__coupon-header{
-                margin: 30px auto;
-            }
-            .discont__coupon-toggle{
-                text-align: center
-            }
-        }
-    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .discount {
+    display: block;
+  }
 }

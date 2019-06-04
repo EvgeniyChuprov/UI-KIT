@@ -1,50 +1,48 @@
-.event__block{
-    display: flex;
-}
-.event__img{
+.event {
+  display: flex;
+  &__img {
     width: 33%;
-    border-radius: 3px 0 0 3px;
-}
-.event__block_text{
+    border-radius: $radius 0 0 $radius;
+  }
+  &__text {
     background: $main-green;
     width: 67.01%;
-    height: 212px;
-    border-radius:0 3px 3px 0;
-    color:$main-white;
-    padding-left: 18px;
+    border-radius: 0 $radius $radius 0;
+    color: $main-white;
+    padding-left: 6%;
     text-align: left;
-}
-.event__block_header{
-    text-transform: uppercase;
-    font-family:'Lato Regular';
-    font-size: 13px;
-    padding-top: 17px;
-    margin-left: 6px;
-}
-.event__block_data{
-    display: flex;
-}
-.event__block_data-num{
-    font-family:'Lato Light';
-    font-size: 73px;
-    padding-top: 13px;
-}
-.event__block_data-month{
-    font-family:'Lato Light';
-    font-size: 28.5px;
-    padding-top: 52px;
-    padding-left: 11px;
-}
-.event__block_info{
-    font-family:'Lato Light';
-    font-size: 12px;
-    padding-top:3px; 
-    margin-left: 5px;
-    line-height: 13.5px;
-    letter-spacing: -.003vw;
-}
-.event__block_button{
-    width: 74%;
-    margin-left:13px; 
-    margin-top: 7px;
+    &_data {
+      display: flex;
+      font-family: "Lato Light";
+      &-num {
+        font-size: 4.5rem;
+        padding-top: 7.8%;
+      }
+      &-month {
+        font-size: 1.8rem;
+        padding-top: 30%;
+        padding-left: 6%;
+      }
+    }
+    &_header {
+      text-transform: uppercase;
+      font-family: "Lato Regular";
+      font-size: 0.73rem;
+      letter-spacing: 0.05rem;
+      padding-top: 9%;
+      margin-left: 3%;
+    }
+    &_info {
+      font-family: "Lato Light";
+      font-size: 0.7rem;
+      padding-top: 4%;
+      margin-left: 3%;
+      letter-spacing: 0.04rem;
+      line-height: 0.8rem;
+    }
+    &_button {
+      width: 74%;
+      padding: 11% 0 5% 8%;
+    }
+  }
 }

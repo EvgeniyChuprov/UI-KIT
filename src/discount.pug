@@ -1,5 +1,4 @@
 extends template/template
-
 include site-header/site-header
 include header/header
 include percent/percent
@@ -7,31 +6,27 @@ include range-slider/range-slider
 include bubble-Slider/bubble-Slider
 include toggle/toggle
 
-
 block content
-        +site-header()
-        h2.inform-header Скидки и акции
-        .discount 
-            .discount__block
-                +header('скидка за каждую пломбу')   
-                +percent(5) 
-                +header('скидка на удаление зуба')
-                +percent(20)
-                +header('скидка на виниры')
-                +percent(43)
-                +header('скидка на брекеты')
-                +percent(60)
-            .discont__slider
-                .discont__slider-range
-                    .discont__slider_range-header
-                        +header('Ваш возраст')
-                    +range()
-                .discont__slider-bubble
-                    .discont__slider-bubble-header
-                        +header('что то')
-                    +bubble-slider(0, 100, 1, 40)
-                .discont__coupon
-                    .discont__coupon-header
-                        +header('У Вас есть дисконтная карта?') 
-                    .discont__coupon-toggle
-                        +toggle('checked')   
+  +site-header()
+  h2.inform-header Скидки и акции
+  .discount 
+    .discount__block
+      +header('скидка за каждую пломбу')   
+      +percent(5) 
+      +header('скидка на удаление зуба')
+      +percent(20)
+      +header('скидка на виниры')
+      +percent(43)
+      +header('скидка на брекеты')
+      +percent(60)
+    .discount__slider
+      .discount__slider-range
+        +header('Ваш возраст')
+        +range()
+      .discount__slider_bubble
+        +header('Количество зубов')
+        +bubble-slider(0, 32, 1, 0)
+      .discount__coupon
+        +header('У Вас есть дисконтная карта?') 
+        .discount__coupon-toggle
+          +toggle('checked')   

@@ -1,36 +1,35 @@
-.news__block{
-    display: flex;
-}
-.news__img{
+.news {
+  display: flex;
+  &__img {
     width: 33%;
-    border-radius: 3px 0 0 3px;
-}
-.news__block_text{
+    border-radius: $radius 0 0 $radius;
+  }
+  &__text {
     background: $main-red;
     width: 67.01%;
-    height: 212px;
-    border-radius:0 3px 3px 0;
-    color:$main-white;
-    padding-left: 22px;
+    border-radius: 0 $radius $radius 0;
+    color: $main-white;
+    padding-left: 8%;
     text-align: left;
-}
-.news__block_header{
-    font-family:'Lato Light';
-    font-size: 27.5px;
-    padding-top: 21px;
-}
-.news__block_data{
-    text-transform: uppercase;
-    font-family:'Lato Regular';
-    font-size: 10px;
-    padding-top: 7%;
-    letter-spacing: 1.5px; 
-}
-.news__block_info{
-    font-family:'Lato Light';
-    font-size: 11px;
-    padding-top: 14px;
-    padding-right:10%; 
-    line-height: 13px;
-    letter-spacing: .6px;
+    &_header {
+      font-family: "Lato Light";
+      font-size: 1.7rem;
+      padding-top: 13%;
+    }
+    &_data {
+      text-transform: uppercase;
+      font-family: "Lato Regular";
+      font-size: 0.68rem;
+      padding-top: 7%;
+      letter-spacing: 0.05rem;
+    }
+    &_info {
+      font-family: "Lato Light";
+      font-size: 0.7rem;
+      padding-top: 9%;
+      padding-right: 10%;
+      line-height: 0.85rem;
+      letter-spacing: 0.01rem;
+    }
+  }
 }

@@ -1,83 +1,79 @@
-.message__header{
+.message {
+  &__header {
     position: relative;
     text-align: center;
-    background: linear-gradient(to bottom, $main-green 70%, $second-green 30%);
-    border-radius: 3px 3px 0 0;
-}
-.message__name {
-    padding: 22px 0 62px 0;
-    font-family: 'SourceSansPro-Light';
-    font-size: 32px;
-    color:$main-white;
-}
-.message__chat-icon {
+    background: linear-gradient(to bottom, $main-green 70%, #2ea192 30%);
+    border-radius: $radius $radius 0 0;
+  }
+  &__chat {
     position: absolute;
     background-color: $second-gray;
     border: none;
     outline: none;
-    top: 139px;
-    left: 28px;
-}
-.message__camera-icon {
+    top: 120%;
+    left: 10%;
+  }
+  &__camera {
     position: absolute;
     background-color: $second-gray;
     border: none;
     outline: none;
-    top: 137px;
-    right: 27px;
-}
-.message__body {
-    padding-top: 62px;
-    padding-bottom: 32px;
-    background-color: $second-gray;
-    border-radius: 3px 3px 0 0;
-    line-height: 16px;
-}
-.message__message-from {
-    position: relative;
-    width: 71%;
-    margin: 0 auto;
-    padding: 16px 18px 21px 20px;
-    font-family: 'Lato Regular';
-    letter-spacing: .025vw;
-    font-size: 13px;
-    background-color: $main-white;
-    border-radius: 3px;
-    color: #868686;
-    margin-bottom: 17px;
-}
-.message__message-from::before {
-    content: "";
-    padding: 5px;
-    position: absolute;
-    top: -7%;
-    left: 46%;
-    transform: rotate(45deg);
-    border-radius: .2vw;
-    background-color: $main-white;
-}       
-.message__message-to {
-    width: 72.5%;
-    margin: 0 auto;
-    margin-bottom: 6%;
-    padding: 16px 12px 34px 18px;
-    border: 0.1vw solid $main-white;
-    background-color: $main-gray;
-    border-radius: .2vw;
-    font-family: 'Lato Regular';
-    letter-spacing: .03vw;
-    font-size: 80%;
-    color:#777;
-}
-.message__reply-button {
-    width: 85%;
-    margin: auto;
-}
-.message__photo_block-image{
+    top: 120%;
+    right: 10%;
+  }
+  &__name {
+    padding: 9% 0 4.5rem 0;
+    font-family: "SourceSansPro-Light";
+    font-size: 2rem;
+    color: $main-white;
+  }
+  &__photo {
     width: 30%;
     position: absolute;
     border-radius: 50%;
-    border:2px solid $main-gray;
+    border: 0.1rem solid $main-gray;
     top: 60%;
     left: 33%;
+  }
+  &__body {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    background-color: $second-gray;
+    border-radius: $radius $radius 0 0;
+    line-height: 1rem;
+    &_from {
+      position: relative;
+      width: 75%;
+      margin: 0 auto;
+      padding: 3.5% 3% 3.5% 6%;
+      font-family: "Lato Regular";
+      letter-spacing: 0.025rem;
+      font-size: 0.9rem;
+      background-color: $main-white;
+      border-radius: $radius;
+      color: #868686;
+      margin-bottom: 1.1rem;
+      &::before {
+        content: "";
+        padding: 0.3rem;
+        position: absolute;
+        top: -7%;
+        left: 46%;
+        transform: rotate(45deg);
+        border-radius: 0.2rem;
+        background-color: $main-white;
+      }
+    }
+    &_to {
+      width: 82%;
+      margin: 0 auto;
+      margin-bottom: 8%;
+      background-color: $main-gray;
+      border-radius: $radius;
+    }
+    &-button {
+      width: 85%;
+      margin: 0 auto 4%;
+    }
+  }
 }
