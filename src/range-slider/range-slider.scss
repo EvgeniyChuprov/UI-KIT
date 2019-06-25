@@ -6,9 +6,9 @@
   height: 0.32rem;
   outline: none;
   border-radius: 0.2rem;
-  background: -webkit-linear-gradient(left, #4eb7a8 0%, #4eb7a8 75%, $main-gray 25%, $main-gray 100%);
+  background: -webkit-linear-gradient(left, #4eb7a8 0%, #4eb7a8 75%, #e5e5e5 25%, #e5e5e5 100%);
   -moz-appearance: none;
-  background: -moz-linear-gradient(left, #4eb7a8 0%, #4eb7a8 75%, $main-gray 25%, $main-gray 100%);
+  background: -moz-linear-gradient(left, #4eb7a8 0%, #4eb7a8 75%, #e5e5e5 25%, #e5e5e5 100%);
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 1.2rem;
@@ -28,7 +28,7 @@
 }
 .range-num {
   margin-top: 2%;
-  color: $main-gray;
+  color: #e5e5e5;
   display: flex;
   justify-content: space-between;
   height: 100%;

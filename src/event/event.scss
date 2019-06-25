@@ -2,13 +2,13 @@
   display: flex;
   &__img {
     width: 33%;
-    border-radius: $radius 0 0 $radius;
+    border-radius: .25rem 0 0 .25rem;
   }
   &__text {
-    background: $main-green;
+    background: #44ae9f;
     width: 67.01%;
-    border-radius: 0 $radius $radius 0;
-    color: $main-white;
+    border-radius: 0 .25rem .25rem 0;
+    color: #ffffff;
     padding-left: 6%;
     text-align: left;
     &_data {

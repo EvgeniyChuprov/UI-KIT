@@ -2,12 +2,12 @@
   &__header {
     position: relative;
     text-align: center;
-    background: linear-gradient(to bottom, $main-green 70%, #2ea192 30%);
-    border-radius: $radius $radius 0 0;
+    background: linear-gradient(to bottom, #44ae9f 70%, #2ea192 30%);
+    border-radius: .25rem .25rem 0 0;
   }
   &__chat {
     position: absolute;
-    background-color: $second-gray;
+    background-color: #f2f2f2;
     border: none;
     outline: none;
     top: 120%;
@@ -15,7 +15,7 @@
   }
   &__camera {
     position: absolute;
-    background-color: $second-gray;
+    background-color: #f2f2f2;
     border: none;
     outline: none;
     top: 120%;
@@ -25,21 +25,21 @@
     padding: 9% 0 4.5rem 0;
     font-family: "SourceSansPro-Light";
     font-size: 2rem;
-    color: $main-white;
+    color: #ffffff;
   }
   &__photo {
     width: 30%;
     position: absolute;
     border-radius: 50%;
-    border: 0.1rem solid $main-gray;
+    border: 0.1rem solid #e5e5e5;
     top: 60%;
     left: 33%;
   }
   &__body {
     padding-top: 3.8rem;
     padding-bottom: .4rem;
-    background-color: $second-gray;
-    border-radius: $radius $radius 0 0;
+    background-color: #f2f2f2;
+    border-radius: .25rem .25rem 0 0;
     line-height: 1rem;
     &_from {
       position: relative;
@@ -49,8 +49,8 @@
       font-family: "Lato Regular";
       letter-spacing: 0.025rem;
       font-size: 0.9rem;
-      background-color: $main-white;
-      border-radius: $radius;
+      background-color: #ffffff;
+      border-radius: .25rem;
       color: #868686;
       margin-bottom: 1rem;
       &::before {
@@ -61,15 +61,15 @@
         left: 46%;
         transform: rotate(45deg);
         border-radius: 0.2rem;
-        background-color: $main-white;
+        background-color: #ffffff;
       }
     }
     &_to {
       width: 82%;
       margin: 0 auto;
       margin-bottom: 6%;
-      background-color: $main-gray;
-      border-radius: $radius;
+      background-color: #e5e5e5;
+      border-radius: .25rem;
     }
     &-button {
       width: 85%;

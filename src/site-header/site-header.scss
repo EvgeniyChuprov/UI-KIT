@@ -10,7 +10,7 @@
     align-items: center;
     padding: 15px;
     &__logo {
-      color: $main-white;
+      color: #ffffff;
       font-size: 2rem;
       font-weight: bold;
       text-decoration: none;
@@ -29,7 +29,7 @@
         font-weight: bold;
       }
       .link {
-        color: $main-white;
+        color: #ffffff;
         text-decoration: none;
         &:hover {
           color: greenyellow;
@@ -42,11 +42,11 @@
   .ui-kit {
     height: 20px;
     width: 100%;
-    background: $main-red;
+    background: #e75735;
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    color: $main-white;
+    color: #ffffff;
   }
 }
 @media screen and (max-width: 1140px) {

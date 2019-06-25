@@ -13,8 +13,8 @@
     height: $diameter;
     transform: rotate(-90deg);
     .percent-circle-inner {
-      fill: $main-white;
-      stroke: $main-red;
+      fill: #ffffff;
+      stroke: #e75735;
       stroke-width: $stroke-width * 2;
       stroke-dasharray: 0 $circumference;
       transition: stroke-dasharray 0.6s ease-out;
@@ -43,7 +43,7 @@
   align-items: center;
 }
 .pc3 {
-  @include percent-circle(93px, 5px, $main-red, $main-white);
+  @include percent-circle(93px, 5px, #e75735, #ffffff);
 }
 .hidden {
   display: none;

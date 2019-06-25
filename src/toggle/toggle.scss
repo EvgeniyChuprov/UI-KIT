@@ -11,7 +11,7 @@
     width: 1.1rem;
     height: 1.1rem;
     border-radius: 100%;
-    background: $main-white;
+    background: #ffffff;
     transition: all 0.3s ease-in 0s; 
   }
   #switch:checked ~ .ball{
@@ -20,7 +20,7 @@
   }
   #switch:checked ~ .on_off{
     transition: all 0.3s ease-in 0s; 
-    background: $main-green;
+    background: #44ae9f;
   }
   .on_off{
     border-radius: 1.5rem;
@@ -28,8 +28,8 @@
     width: 1.2rem;
     overflow: hidden;
     transition: all 0.3s ease-in 0s; 
-    color: $main-white;
-    background-color: $main-gray;
+    color: #ffffff;
+    background-color: #e5e5e5;
     padding: .2rem .6rem .2rem 2rem;
     &:before{
       transition: all 0.3s ease-in 0s; 
@@ -44,7 +44,7 @@
     margin: 0 .8rem 0 -1.6rem;
     font-family: 'Lato Regular';
     font-size: .8rem;
-    color: $main-white;
+    color: #ffffff;
     content: 'ON';
   }
 }

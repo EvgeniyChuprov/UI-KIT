@@ -2,7 +2,7 @@
   padding: 5% 2.2% 5% 3.3%;
 }
 .steps {
-  background-color: $main-gray;
+  background-color: #e5e5e5;
   display: block;
   height: 4px;
   list-style-type: none;
@@ -32,7 +32,7 @@ $step-map: (
   width: 0;
 }
 .steps > li > a {
-  background-color: $main-gray;
+  background-color: #e5e5e5;
   border-radius: 50%;
   color: #888888;
   display: block;
@@ -50,16 +50,16 @@ $step-map: (
 }
 .steps > .complete > a,
 .steps > .complete > a:hover {
-  background-color: $main-red;
-  border-color: $main-red;
-  color: $main-white;
+  background-color: #e75735;
+  border-color: #e75735;
+  color: #ffffff;
 }
 .steps > .complete > a:before,
 .steps > .complete > a:after {
   display: none;
 }
 .steps > .complete + .complete:before {
-  background-color: $main-red;
+  background-color: #e75735;
   content: "";
   height: 4px;
   position: absolute;

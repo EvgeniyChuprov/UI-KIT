@@ -4,12 +4,12 @@
   display: block;
 }
 .map_menu {
-  background: $main-red;
+  background: #e75735;
   width: 100%;
   padding: 1.2rem 0;
   display: flex;
-  border-radius: 0 0 $radius $radius;
-  color: $main-white;
+  border-radius: 0 0 .25rem .25rem;
+  color: #ffffff;
   .head {
     font-family: "Lato Light";
     font-size: 1.8rem;
@@ -31,11 +31,11 @@
     padding: 0 4.5%;
     justify-content: flex-end;
     .locat {
-      background: url("./img/location.svg") no-repeat center;
+      background: url("../img/location.svg") no-repeat center;
       width: 2rem;
     }
     .pin {
-      background: url("./img/pin.svg") no-repeat center;
+      background: url("../img/pin.svg") no-repeat center;
       width: 2rem;
       padding-left: 4.5%;
     }

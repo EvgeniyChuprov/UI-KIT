@@ -1,20 +1,48 @@
-$main-green: #44ae9f;
-$second-green: #46ab9d;
-$main-white: #ffffff;
-$main-red: #e75735;
-$main-gray: #e5e5e5;
-$second-gray: #f2f2f2;
-$radius:.25rem;
+@font-face {
+  font-family: 'Lato Black';
+  src: url('/fonts/Lato-Black.eot');
+  src: local('☺'), url('/fonts/Lato-Black.woff') format('woff'), 
+  url('/fonts/Lato-Black.ttf') format('truetype');
+  font-weight: 400;
+  font-weight: normal;
+  font-style: normal;
+}
 
-@import "reset/reset";
-@import "fonts/fonts";
-@import "style/ui-kit";
-@import "style/recording";
-@import "style/online";
-@import "site-header/site-header";
-@import "style/staff";
-@import "style/contacts";
-@import "style/discount";
+@font-face {
+  font-family: 'Lato Regular';
+  src: url('/fonts/Lato-Regular.eot');
+  src: local('☺'), url('/fonts/Lato-Regular.woff') format('woff'), 
+  url('/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Lato Light';
+  src: url('/fonts/Lato-Light.eot');
+  src: local('☺'), url('/fonts/Lato-Light.woff') format('woff'), 
+  url('/fonts/Lato-Light.ttf') format('truetype');
+  font-weight: 400;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SourceSansPro-Light';
+  src: url('fonts/SourceSansPro-Light.eot');
+  src: local('☺'), url('fonts/SourceSansPro-Light.woff') format('woff'), 
+  url('fonts/SourceSansPro-Light.ttf') format('truetype');
+  font-weight: 200;
+  font-weight: normal;
+  font-style: normal;
+}
+
+// $main-white: #ffffff;
+// $main-red: #e75735;
+// $main-gray: #e5e5e5;
+// $second-gray: #f2f2f2;
+// $radius:.25rem;
+
 html {
   font-size: 16px;
   min-width: 350px;

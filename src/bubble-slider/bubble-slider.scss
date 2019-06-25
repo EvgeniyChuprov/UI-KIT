@@ -19,11 +19,11 @@
     height: 1rem;
     width: 1.6rem;
     font-family: "Lato Regular";
-    color: $main-white;
+    color: #ffffff;
     font-size: 0.8rem;
-    background-color: $main-red;
+    background-color: #e75735;
     padding: 0.2rem 0.2rem;
-    border: 1px $main-red solid;
+    border: 1px #e75735 solid;
     top: -2.2rem;
     left: 0;
     text-align: center;
@@ -38,7 +38,7 @@
       content: "";
       position: absolute;
       border: 5px solid transparent;
-      border-top: 5px solid $main-red;
+      border-top: 5px solid #e75735;
       left: calc(50% - 6px);
       left: 11px;
       bottom: -10px;
@@ -67,16 +67,16 @@
 }
 .custom-rangeInput[type="range"]::-webkit-slider-runnable-track {
   animate: 0.2s;
-  background-color: $main-gray;
+  background-color: #e5e5e5;
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
   height: 0.35rem;
 }
 .custom-rangeInput[type="range"]::-webkit-slider-thumb {
-  background: $main-red;
+  background: #e75735;
   border-radius: 50%;
-  border: 1px solid $main-red;
+  border: 1px solid #e75735;
   -webkit-appearance: none;
   cursor: pointer;
   height: 1.2rem;
@@ -91,16 +91,16 @@
 }
 .custom-rangeInput[type="range"]::-moz-range-track {
   animate: 0.2s;
-  background-color: $main-gray;
+  background-color: #e5e5e5;
   border-radius: 4px;
   cursor: pointer;
   width: 100%;
   height: 0.35rem;
 }
 .custom-rangeInput[type="range"]::-moz-range-thumb {
-  background: $main-red;
+  background: #e75735;
   border-radius: 50%;
-  border: 1px solid $main-red;
+  border: 1px solid #e75735;
   cursor: pointer;
   height: 1.2rem;
   width: 1.2rem;

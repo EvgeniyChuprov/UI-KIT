@@ -12,7 +12,7 @@
     width: 2.8rem;
     height: 2.7rem;
     line-height: 2.5rem;
-    border: $radius solid $main-green;
+    border: .25rem solid #44ae9f;
     border-radius: 50%;
     &::after {
       content: "";
@@ -21,15 +21,15 @@
       margin-left: 10%;
       width: 0.84rem;
       height: 0.84rem;
-      border-top: $radius solid $main-green;
-      border-right: $radius solid $main-green;
+      border-top: .25rem solid #44ae9f;
+      border-right: .25rem solid #44ae9f;
       transform: rotate(-135deg);
     }
     &:hover {
-      background: $main-green;
+      background: #44ae9f;
       &::after {
-        border-top-color: $main-white;
-        border-right-color: $main-white;
+        border-top-color: #ffffff;
+        border-right-color: #ffffff;
       }
     }
     &_direction_right {
@@ -38,13 +38,13 @@
         border-top: none;
         border-right: none;
         margin-right: 13%;
-        border-bottom: $radius solid $main-green;
-        border-left: $radius solid $main-green;
+        border-bottom: .25rem solid #44ae9f;
+        border-left: .25rem solid #44ae9f;
       }
       &:hover {
         &::after {
-          border-bottom-color: $main-white;
-          border-left-color: $main-white;
+          border-bottom-color: #ffffff;
+          border-left-color: #ffffff;
         }
       }
     }
@@ -56,45 +56,45 @@
     border-top: none;
     border-right: none;
     margin-right: 13%;
-    border-bottom: $radius solid $main-green;
-    border-left: $radius solid $main-green;
+    border-bottom: .25rem solid #44ae9f;
+    border-left: .25rem solid #44ae9f;
   }
   &:hover {
     &::after {
-      border-bottom-color: $main-white;
-      border-left-color: $main-white;
+      border-bottom-color: #ffffff;
+      border-left-color: #ffffff;
     }
   }
 }
 .arrow__button:disabled .arrow-button__arrow {
   cursor: default;
-  background-color: $main-gray;
-  border: 3px solid $main-gray;
+  background-color: #e5e5e5;
+  border: 3px solid #e5e5e5;
   &::after {
-    border-top: $radius solid $main-white;
-    border-right: $radius solid $main-white;
+    border-top: .25rem solid #ffffff;
+    border-right: .25rem solid #ffffff;
   }
   &:hover {
-    background-color: $main-gray;
+    background-color: #e5e5e5;
   }
 }
 .arrow__button:disabled .arrow-button__arrow_direction_right::after {
   margin-left: 0;
   border-top: none;
   border-right: none;
-  border-bottom: $radius solid $main-white;
-  border-left: $radius solid $main-white;
+  border-bottom: .25rem solid #ffffff;
+  border-left: .25rem solid #ffffff;
 }
 .arrow-button__hover {
-  background: $main-green;
+  background: #44ae9f;
   > .arrow-button__arrow::after {
-    border-top: $radius solid $main-white;
-    border-right: $radius solid $main-white;
+    border-top: .25rem solid #ffffff;
+    border-right: .25rem solid #ffffff;
   }
   > .arrow-button__arrow_direction_right::after {
     border-top: none;
     border-right: none;
-    border-bottom: $radius solid $main-white;
-    border-left: $radius solid $main-white;
+    border-bottom: .25rem solid #ffffff;
+    border-left: .25rem solid #ffffff;
   }
 }

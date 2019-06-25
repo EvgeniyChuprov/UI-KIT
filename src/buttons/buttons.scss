@@ -9,7 +9,7 @@
   cursor: pointer;
   position: relative;
   padding: .45rem;
-  background-color: $main-white;
+  background-color: #ffffff;
   &__small {
     padding:.2rem;
     width: 100%;
@@ -17,34 +17,34 @@
     font-size: .6rem;
   }
   &__green {
-    border: 1px $main-green solid;
-    color: $main-green;
+    border: 1px #44ae9f solid;
+    color: #44ae9f;
     box-shadow: 0 3px #28a290;
     &:hover {
-      background-color: $main-green;
-      color: $main-white;
+      background-color: #44ae9f;
+      color: #ffffff;
     }
     &:active {
       top: 3px;
-      background-color: $main-green;
+      background-color: #44ae9f;
       box-shadow: none;
-      color: $main-white;
+      color: #ffffff;
     }
   }
   &__red {
-    border: 1px $main-red solid;
-    background-color: $main-white;
-    color: $main-red;
+    border: 1px #e75735 solid;
+    background-color: #ffffff;
+    color: #e75735;
     box-shadow: 0 3px #c94322;
     &:hover {
-      background-color: $main-red;
-      color: $main-white;
+      background-color: #e75735;
+      color: #ffffff;
     }
     &:active {
       top: 3px;
-      background-color: $main-red;
+      background-color: #e75735;
       box-shadow: none;
-      color: $main-white;
+      color: #ffffff;
     }
   }
 }
