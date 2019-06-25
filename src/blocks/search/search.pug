@@ -1,0 +1,8 @@
+mixin search(placeholder, error)
+  - let classSearch = 'search-form__block_field ';
+  - classSearch += 'error';
+
+  form.search-form
+    .search-form__block
+      input(class= classSearch type="text" name="search" placeholder= placeholder)
+      button(class="search-form__block_button" type="submit")

@@ -1,32 +1,44 @@
-extends template/template
-include site-header/site-header
-include header/header
-include calendar/calendar
-include entry-field/entry-field
-include buttons/buttons
-include text-area/text-area
-include tick/tick
-include calendar/calendar
+include blocks/site-header/site-header
+include blocks/header/header
+include blocks/calendar/calendar
+include blocks/entry-field/entry-field
+include blocks/buttons/buttons
+include blocks/text-area/text-area
+include blocks/tick/tick
+include blocks/calendar/calendar
 
-block content
-  +site-header()
-  h3.inform-header Заполните форму записи на прием
-  .wrapper__main_block
-    .wrapper__block_left
-      +calendar()
-    .wrapper__block_right
-      .wrapper__main_sex
-        +header('ваш пол')
-        .wrapper__main_radio
-          .wrapper__main_radio-left 
-            span Муж.
-              +tick({name: 'radio', id:'one', checked: false})
-          .wrapper__main_radio-right  
-            span  Жен. 
-            +tick({name: 'radio', id:'two', checked: true})
-      +entry-field({placeholder:'Ваше имя', type:'text', name:'form', correct: true})
-      +entry-field({placeholder:'Ваша фамилия', type:'text', name:'form', correct: false})
-      +entry-field({placeholder:'Ваше отчество', type:'text', name:'form', correct: true})
-      +entry-field({placeholder:'Ваш номер телефона', type:'tel', name:'form', correct: false}) 
-      +text-area({text:'Дополнительная информация', name:'form'})
-      +button-ripple({name: 'отправить', small: false, green: true})   
+doctype html
+html
+  head
+    meta(charset = 'utf-8')
+    meta(name='viewport', content="initial-scale=1.0, width=device-width, shrink-to-fit=no")
+    link( rel="apple-touch-icon" sizes="180x180" href=require('./favicons/apple-touch-icon.png'))
+    link( rel="icon" type="image/png" sizes="32x32" href=require('./favicons/favicon-32x32.png'))
+    link( rel="icon" type="image/png" sizes="16x16" href=require('./favicons/favicon-16x16.png'))
+    link( rel="manifest" href="favicons/site.webmanifest")
+    link( rel="mask-icon" href=require('./favicons/safari-pinned-tab.svg') color="#5bbad5")
+    meta( name="msapplication-TileColor" content="#2d89ef")
+    meta( name="theme-color" content="#ffffff")
+    title UI-KIT
+  body
+    +site-header()
+    h3.inform-header Заполните форму записи на прием
+    .wrapper__main_block
+      .wrapper__block_left
+        +calendar()
+      .wrapper__block_right
+        .wrapper__main_sex
+          +header('ваш пол')
+          .wrapper__main_radio
+            .wrapper__main_radio-left 
+              span Муж.
+                +tick({name: 'radio', id:'one', checked: false})
+            .wrapper__main_radio-right  
+              span  Жен. 
+              +tick({name: 'radio', id:'two', checked: true})
+        +entry-field({placeholder:'Ваше имя', type:'text', name:'form', correct: true})
+        +entry-field({placeholder:'Ваша фамилия', type:'text', name:'form', correct: false})
+        +entry-field({placeholder:'Ваше отчество', type:'text', name:'form', correct: true})
+        +entry-field({placeholder:'Ваш номер телефона', type:'tel', name:'form', correct: false}) 
+        +text-area({text:'Дополнительная информация', name:'form'})
+        +button-ripple({name: 'отправить', small: false, green: true})   

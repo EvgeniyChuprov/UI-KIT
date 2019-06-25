@@ -1,8 +1,0 @@
-mixin button-ripple(parametr)
-  -   
-    var butRipple = "button-ripple"
-    butRipple += parametr.small ? ' button-ripple__small' : '' 
-    butRipple += parametr.green ? ' button-ripple__green' : ' button-ripple__red' 
-  button(type="button" id="btn" class= butRipple) #{parametr.name}
-    .c-ripple.js-ripple
-      span.c-ripple__circle

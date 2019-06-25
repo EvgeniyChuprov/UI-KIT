@@ -1,24 +1,36 @@
-extends template/template
-include site-header/site-header
-include header/header
-include buttons/buttons
-include text-area/text-area
-include map/map
+include blocks/site-header/site-header
+include blocks/header/header
+include blocks/buttons/buttons
+include blocks/text-area/text-area
+include blocks/map/map
 
-block content
-  +site-header() 
-  .contacts
-    .contacts__text
-      +header('контакты')
-      p.block_text   Контактные телефоны: 
-      p.block_text   9 999 999-999-9 
-      p.block_text   9 999 999-555-5 
-      p.block_text   9 999 999-333-3 
-      p.block_text   Эл. почта: zubynapolku@mail.com
-    .contacts__text
-      +header('оставьте отзыв')
-      +text-area({text:'Дополнительная информация', name:'form'})
-      .contacts__text_button
-        +button-ripple({name: 'отправить', small: false, green: true}) 
-  .contacts-map
-    +map({marker:require('./img/marker.png'), lat:'70.735', lng:'54.45', zoom: 4})
+doctype html
+html
+  head
+    meta(charset = "utf-8")
+    meta(name="viewport", content="initial-scale=1.0, width=device-width, shrink-to-fit=no")
+    link( rel="apple-touch-icon" sizes="180x180" href=require("./favicons/apple-touch-icon.png"))
+    link( rel="icon" type="image/png" sizes="32x32" href=require("./favicons/favicon-32x32.png"))
+    link( rel="icon" type="image/png" sizes="16x16" href=require("./favicons/favicon-16x16.png"))
+    link( rel="manifest" href="favicons/site.webmanifest")
+    link( rel="mask-icon" href=require("./favicons/safari-pinned-tab.svg") color="#5bbad5")
+    meta( name="msapplication-TileColor" content="#2d89ef")
+    meta( name="theme-color" content="#ffffff")
+    title UI-KIT
+  body
+    +site-header() 
+    .contacts
+      .contacts__text
+        +header("контакты")
+        p.block_text   Контактные телефоны: 
+        p.block_text   9 999 999-999-9 
+        p.block_text   9 999 999-555-5 
+        p.block_text   9 999 999-333-3 
+        p.block_text   Эл. почта: zubynapolku@mail.com
+      .contacts__text
+        +header("оставьте отзыв")
+        +text-area({text:"Дополнительная информация", name:"form"})
+        .contacts__text_button
+          +button-ripple({name: "отправить", small: false, green: true}) 
+    .contacts-map
+      +map({marker:require("./img/marker.png"), lat:"70.735", lng:"54.45", zoom: 4})

@@ -1,0 +1,43 @@
+.map {
+  width: 100%;
+  height: 74.5%;
+  display: block;
+}
+.map_menu {
+  background: #e75735;
+  width: 100%;
+  padding: 1.2rem 0;
+  display: flex;
+  border-radius: 0 0 .25rem .25rem;
+  color: #ffffff;
+  .head {
+    font-family: "Lato Light";
+    font-size: 1.8rem;
+    padding-left: 4.5%;
+    vertical-align: middle;
+  }
+  .adress {
+    text-transform: uppercase;
+    font-family: "Lato Regular";
+    font-size: 0.7rem;
+    width: 25%;
+    padding-left: 4.6%;
+    letter-spacing: 0.009rem;
+    line-height: 1rem;
+  }
+  .icon {
+    display: flex;
+    flex-grow: 1;
+    padding: 0 4.5%;
+    justify-content: flex-end;
+    .locat {
+      background: url("../../img/location.svg") no-repeat center;
+      width: 2rem;
+    }
+    .pin {
+      background: url("../../img/pin.svg") no-repeat center;
+      width: 2rem;
+      padding-left: 4.5%;
+    }
+  }
+}

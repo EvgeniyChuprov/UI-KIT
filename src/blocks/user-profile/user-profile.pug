@@ -1,0 +1,13 @@
+mixin userProfile(parametr)
+  -  let teme = 'user-profile__tooltip';
+  -  teme += parametr.color === 'green' ? ' user-profile__tooltip_green' : '';
+
+  .user-profile
+    img(class="photo-block__image" src= parametr.img alt="User photo")
+    div(class= teme)
+      .user-profile__tooltip_name= parametr.name
+      .user-profile__tooltip_job= parametr.job
+      .social
+        img(class="social__img" src=require("./img/FB.svg") alt="FB")
+        img(class="social__img" src=require("./img/Twitter.png") alt="Twitter")
+        img(class="social__img" src=require("./img/Dribbble.png") alt="Dribbble")

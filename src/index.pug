@@ -1,24 +1,35 @@
-extends template/template
-include site-header/site-header
-include news/news
-include event/event
-include buttons/buttons
+include blocks/site-header/site-header
+include blocks/news/news
+include blocks/event/event
+include blocks/buttons/buttons
 
-block content
-  -
-    var news = {img:require('./img/photo3.png'), header: 'It’s all going downhill', data: '24  august  2013', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.'}
-    var event = {img:require('./img/photo4.png'), header: 'this is the title', dataNum: '24', dataMonth:'Aug', text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+doctype html
+html
+  head
+    meta(charset = "utf-8")
+    meta(name="viewport", content="initial-scale=1.0, width=device-width, shrink-to-fit=no")
+    link( rel="apple-touch-icon" sizes="180x180" href=require("./favicons/apple-touch-icon.png"))
+    link( rel="icon" type="image/png" sizes="32x32" href=require("./favicons/favicon-32x32.png"))
+    link( rel="icon" type="image/png" sizes="16x16" href=require("./favicons/favicon-16x16.png"))
+    link( rel="manifest" href="favicons/site.webmanifest")
+    link( rel="mask-icon" href=require("./favicons/safari-pinned-tab.svg") color="#5bbad5")
+    meta( name="msapplication-TileColor" content="#2d89ef")
+    meta( name="theme-color" content="#ffffff")
+    title UI-KIT
+  body
+    - const news = {img:require("./img/photo3.png"), header: "It’s all going downhill", data: "24  august  2013", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."};
+    - const event = {img:require("./img/photo4.png"), header: "this is the title", dataNum: "24", dataMonth:"Aug", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."};
 
-  +site-header()
-  h2.company Стоматологическая клиника 
-  h1.company-name Зубы на полку  
-  h3.company-news Новости клиники
-  .news-block
-    .news-block__elem
-      +news(news)
-    .news-block__elem
-      +news(news)
-    .news-block__elem
-      +event(event)
-    .news-block__elem
-      +event(event) 
+    +site-header()
+    h2.company Стоматологическая клиника 
+    h1.company-name Зубы на полку  
+    h3.company-news Новости клиники
+    .news-block
+      .news-block__elem
+        +news(news)
+      .news-block__elem
+        +news(news)
+      .news-block__elem
+        +event(event)
+      .news-block__elem
+        +event(event) 

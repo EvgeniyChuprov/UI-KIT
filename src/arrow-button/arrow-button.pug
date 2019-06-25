@@ -1,9 +1,0 @@
-mixin arrow(parametr)
-  -
-    var arrowRight = "arrow-button__arrow"
-    var arrowButton = "arrow__button"
-    arrowRight += parametr.right  ? " arrow-button__arrow_direction_right" : ""
-    arrowButton += parametr.hover ? " arrow-button__hover" : ""
-    var disabled = parametr.disabled ? true : false
-  button(class= arrowButton type="button" disabled= disabled) 
-    span(class= arrowRight)

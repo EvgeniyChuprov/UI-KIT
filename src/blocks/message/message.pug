@@ -1,0 +1,15 @@
+mixin message(options)
+  .message
+    .message__header
+      .message__chat
+        img(src=require("./img/chat.png") alt="chat icon")
+      .message__camera
+        img(src=require("./img/camera.png") alt="camera icon")
+      .message__name Sarah Brown
+      img(class="message__photo" src= options.foto alt="User photo")
+    .message__body
+      .message__body_from= options.text
+      .message__body_to
+       +text-area({placeholder: options.placeholder, name:"form"})
+      .message__body-button
+        +button-ripple({name: options.button, small: false, green: true})
