@@ -1,2 +1,3 @@
 mixin text-area(options)
-  textarea( class="text-area" name= options.name placeholder= options.placeholder)
+  - let {name='name', placeholder="placeholder"} = options
+  textarea( class="text-area" name= name placeholder= placeholder)

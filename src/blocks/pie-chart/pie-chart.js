@@ -1,10 +1,10 @@
 $(function () {
 	$("[data-doughnut]").each(function () {
 		const $this = $(this);
-		const start = 0;
-		const offset = 0;
-		const total = 0;
-		const n = 0;
+		let start = 0;
+		let offset = 0;
+		let total = 0;
+		let n = 0;
 
 		$this.find("> div").each(function () {
 			const item = $(this);

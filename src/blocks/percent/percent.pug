@@ -1,4 +1,5 @@
-mixin percent(num)
+mixin percent(options)
+  - let {num= 100} = options;
   .percent__container
     .percent-circle.pc3(data-percent= num)
       svg

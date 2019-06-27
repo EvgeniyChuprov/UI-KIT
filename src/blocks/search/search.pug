@@ -1,8 +1,9 @@
-mixin search(placeholder, error)
+mixin search(options)
+  - let {placeholder='placeholder', error=''} = options;
   - let classSearch = 'search-form__block_field ';
-  - classSearch += 'error';
+  - classSearch += error;
 
-  form.search-form
-    .search-form__block
-      input(class= classSearch type="text" name="search" placeholder= placeholder)
-      button(class="search-form__block_button" type="submit")
+        //-form.search-form
+  .search-form__block
+    input(class= classSearch type="text" name="search" placeholder= placeholder)
+    button(class="search-form__block_button" type="submit")

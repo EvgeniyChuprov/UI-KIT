@@ -1,9 +1,10 @@
-mixin arrow(parametr)
+mixin arrow-button(options)
+  - let {right= false, disabled= false, hover= false} = options;
   - let arrowRight = "arrow-button__arrow";
   - let arrowButton = "arrow__button";
-  - arrowRight += parametr.right  ? " arrow-button__arrow_direction_right" : "";
-  - arrowButton += parametr.hover ? " arrow-button__hover" : "";
-  - let disabled = parametr.disabled ? true : false;
-  
-  button(class= arrowButton type="button" disabled= disabled) 
+  - let disable = disabled ? true : false;
+  - arrowRight += right  ? " arrow-button__arrow_direction_right" : "";
+  - arrowButton += hover ? " arrow-button__hover" : "";
+
+  button(class= arrowButton type="button" disabled= disable) 
     span(class= arrowRight)

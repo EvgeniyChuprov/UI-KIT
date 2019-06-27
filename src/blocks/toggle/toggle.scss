@@ -34,7 +34,6 @@
     &:before{
       transition: all 0.3s ease-in 0s; 
       margin: 0 0 0 -.2rem;
-      font-family: 'Lato Regular';
       font-size: .8rem;
       content: 'OFF';
     }
@@ -42,7 +41,6 @@
   #switch:checked ~ .on_off:before{
     transition: all 0.3s ease-in 0s; 
     margin: 0 .8rem 0 -1.6rem;
-    font-family: 'Lato Regular';
     font-size: .8rem;
     color: #ffffff;
     content: 'ON';

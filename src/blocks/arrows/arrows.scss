@@ -1,0 +1,100 @@
+.arrow__button {
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 0;
+  outline: none;
+  border: none;
+  background: none;
+  .arrow-button__arrow {
+    display: inline-block;
+    cursor: pointer;
+    width: 2.8rem;
+    height: 2.7rem;
+    line-height: 2.5rem;
+    border: 0.25rem solid #44ae9f;
+    border-radius: 50%;
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10%;
+      width: 0.84rem;
+      height: 0.84rem;
+      border-top: 0.25rem solid #44ae9f;
+      border-right: 0.25rem solid #44ae9f;
+      transform: rotate(-135deg);
+    }
+    &:hover {
+      background: #44ae9f;
+      &::after {
+        border-top-color: #ffffff;
+        border-right-color: #ffffff;
+      }
+    }
+    &_direction_right {
+      &::after {
+        margin-left: 0;
+        border-top: none;
+        border-right: none;
+        margin-right: 13%;
+        border-bottom: 0.25rem solid #44ae9f;
+        border-left: 0.25rem solid #44ae9f;
+      }
+      &:hover {
+        &::after {
+          border-bottom-color: #ffffff;
+          border-left-color: #ffffff;
+        }
+      }
+    }
+  }
+}
+.arrow-button__arrow_direction_right {
+  &::after {
+    margin-left: 0;
+    border-top: none;
+    border-right: none;
+    margin-right: 13%;
+    border-bottom: 0.25rem solid #44ae9f;
+    border-left: 0.25rem solid #44ae9f;
+  }
+  &:hover {
+    &::after {
+      border-bottom-color: #ffffff;
+      border-left-color: #ffffff;
+    }
+  }
+}
+.arrow__button:disabled .arrow-button__arrow {
+  cursor: default;
+  background-color: #e5e5e5;
+  border: 3px solid #e5e5e5;
+  &::after {
+    border-top: 0.25rem solid #ffffff;
+    border-right: 0.25rem solid #ffffff;
+  }
+  &:hover {
+    background-color: #e5e5e5;
+  }
+}
+.arrow__button:disabled .arrow-button__arrow_direction_right::after {
+  margin-left: 0;
+  border-top: none;
+  border-right: none;
+  border-bottom: 0.25rem solid #ffffff;
+  border-left: 0.25rem solid #ffffff;
+}
+.arrow-button__hover {
+  background: #44ae9f;
+  > .arrow-button__arrow::after {
+    border-top: 0.25rem solid #ffffff;
+    border-right: 0.25rem solid #ffffff;
+  }
+  > .arrow-button__arrow_direction_right::after {
+    border-top: none;
+    border-right: none;
+    border-bottom: 0.25rem solid #ffffff;
+    border-left: 0.25rem solid #ffffff;
+  }
+}

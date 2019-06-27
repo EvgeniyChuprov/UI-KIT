@@ -1,15 +1,15 @@
 include blocks/header/header
 include blocks/buttons/buttons
-include blocks/arrow-button/arrow-button
-include blocks/percent/percent
-include blocks/pie-chart/pie-chart
-include blocks/bubble-Slider/bubble-Slider
-include blocks/range-slider/range-slider
+include blocks/arrows/arrows
+include blocks/percentages/percentages
+include blocks/sliders/sliders
 include blocks/stage/stage
+include blocks/form/form
 include blocks/entry-field/entry-field
 include blocks/text-area/text-area
 include blocks/toggle/toggle
 include blocks/tick/tick
+include blocks/search-block/search-block
 include blocks/search/search
 include blocks/select/select
 include blocks/user-profile/user-profile
@@ -28,105 +28,90 @@ html
 		link( rel="apple-touch-icon" sizes="180x180" href=require("./favicons/apple-touch-icon.png"))
 		link( rel="icon" type="image/png" sizes="32x32" href=require("./favicons/favicon-32x32.png"))
 		link( rel="icon" type="image/png" sizes="16x16" href=require("./favicons/favicon-16x16.png"))
-		link( rel="manifest" href="favicons/site.webmanifest")
+		link( rel="manifest" href="./favicons/site.webmanifest")
 		link( rel="mask-icon" href=require("./favicons/safari-pinned-tab.svg") color="#5bbad5")
 		meta( name="msapplication-TileColor" content="#2d89ef")
 		meta( name="theme-color" content="#ffffff")
 		title UI-KIT
 	body
-		-	const news = {img:require("./img/photo3.png"), header: "It’s all going downhill", data: "24  august  2013", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."};
-		-	const event = {img:require("./img/photo4.png"), header: "this is the title", dataNum: "24", dataMonth:"Aug", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."};
+		-	const news = {img:require("./img/photo-bike.png"), header: "It’s all going downhill", data: "24  august  2013", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."};
+		-	const event = {img:require("./img/photo-city.png"), header: "this is the title", dataNum: "24", dataMonth:"Aug", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."};
 		.content
-			+header("standard  buttons")
-			.standart-buttons
-				.standart-buttons__block
-					+button-ripple({name: "button", small: true, green: true})
-				.standart-buttons__block
-					+button-ripple({name: "button", small: false, green: true})
-				.standart-buttons__block
-					+button-ripple({name: "button", small: false, green: false})
-				.standart-buttons__block
-					+button-ripple({name: "button", small: true, green: false})
-			.arrow-buttons
-				+header("arrow buttons")
-				.arrow-buttons__block
-					+arrow({right: false, disabled: false, hover: false})
-					+arrow({right: true, disabled: false, hover: false})
-					+arrow({right: false, disabled: true, hover: false})
-					+arrow({right: true, disabled: true, hover: false})
-					+arrow({right: false, disabled: false, hover: true})
-					+arrow({right: true, disabled: false, hover: true})
-			.percentages
-				+header("percentages / pie chart")
-				.percentages__block
-					+percent(0)
-				.percentages__block
-					+percent(38)
-				.percentages__block
-					+percent(62)
-				.percentages__block
-					+percent(89)
-				.percentages__block
-					+pie-chart({one:11, two: 26, three: 29})
-			+header("sliders")
-			.sliders__left
-				+bubble-slider(0, 100, 1, 40)
-			.sliders__right
-				+range()
-			.clear
+			h1 Перевести все блоки в рем!!!!
+			+buttons({header:"standard  buttons", buttons:[
+				{text: "button", small: true, green: true},
+				{text: "button", small: false, green: true},
+				{text: "button", small: false, green: false},
+				{text: "button", small: true, green: false}
+			]})
+
+			+arrows({header:"arrow buttons", arrows:[
+				{right: false, disabled: false, hover: false},
+				{right: true, disabled: false, hover: false},
+				{right: false, disabled: true, hover: false},
+				{right: true, disabled: true, hover: false},
+				{right: false, disabled: false, hover: true},
+				{right: true, disabled: false, hover: true}
+			]})
+
+			+percentages({header:"percentages / pie chart", percentages:[
+									{num:0}, {num:38}, {num:62}, {num:89}
+									], pie:{one:11, two: 26, three: 29}})
+
+			+sliders({header:"sliders", bubble:{bmin:0, bmax:100, bstep:1, bvalue:40}, range:{rmin:0, rmax:100, rstep:1, value:40}})
+
 			.stages
-				+header("stages")
+				+header({header:"stages"})
 				.stages__block
 					+stage()
+
 			.form-elements
-				.header
-					+header("form elements")
-					.form-elements__form
-						+entry-field({placeholder:"Your Name", type:"text", name:"form", correct: false})
-						+entry-field({placeholder:"Your Email", type:"text", name:"form", correct: true})
-						+text-area({placeholder:"Your Message", name:"form"})
-						.form-elements__form_button
-							+button-ripple({name: "submit", small: false, green: true})
-					.form-elements__togglesTick
-						+header("toggles")
-						.toggles__block
-							.toggles__block_off
-								+toggle()
-							.toggles__block_on 
-								+toggle("checked")
-						+header("tick boxes")
-						.tick-box
-							+tick({name: "radio", id:"one", checked: true})
-							+tick({name: "radio", id:"two", checked: false})   
-					.clear 
-					.form-elements__block_left
-						+header("search / drop down") 
-						+search("Search") 
-						+search("I've not found what I'm looking for..." , " search-error")
-						+select({first:"Pure CSS", second:"No JS", third:"Nice!"})   
-					.form-elements__block_right 
-						+header("user profile")
-						+userProfile({img:require("./img/photo1.png"), name:"John Smith", job:"ux designer", color:""})
-						+userProfile({img:require("./img/photo2.png"), name:"Sarah Brown", job:"developer", color:"green"})
-					.clear  
+				+header({header:"form elements"})
+				+form({field:[{placeholder:"Your Name", type:"text", name:"form", correct: false},
+							{placeholder:"Your Email", type:"text", name:"form", correct: true}],
+							textarea:{placeholder:"Your Message", name:"form"},
+							button:{text: "submit", small: false, green: true}})
+
+			.form-elements__togglesTick
+				+header({header:"toggles"})
+				.toggles__block
+					.toggles__block_off
+						+toggle()
+					.toggles__block_on 
+						+toggle("checked")
+				+header({header:"tick boxes"})
+				.tick-box
+					+tick({name: "radio", id:"one", checked: true})
+					+tick({name: "radio", id:"two", checked: false})   
+			.clear 
+			.form-elements__block_left
+				+search-block({header:"search / drop down", 
+											search:[{placeholder:"Search", error:""},
+											{placeholder:"I've not found what I'm looking for...", error:" search-error"}],
+											select:{first:"Pure CSS", second:"No JS", third:"Nice!"}})
+			.form-elements__block_right 
+				+header({header:"user profile"})
+				+userProfile({img:require("./img/photo-man.png"), name:"John Smith", job:"ux designer", color:""})
+				+userProfile({img:require("./img/photo-woman.png"), name:"Sarah Brown", job:"developer", color:"green"})
+			.clear  
 			.news-events
-				+header("news & events") 
+				+header({header:"news & events"}) 
 				.news-events__block_left
 					+news(news)
 				.news-events__block_right
 					+event(event)
-				.clear 
+				//- .clear 
 			.location
-				+header("location")
+				+header({header:"location"})
 				.location__block
 					+map({marker:require("./img/marker.png"), lat:37.795680, lng:-122.415021, zoom: 14})
 			.calendar-block
-				+header("calendar")
+				+header({header:"calendar"})
 				+calendar()
 			.messaging
 				+header("messaging")
-				+message({text:"Hey! So are we cool to meet at the art gallery? Say 8pm", placeholder:"Yeah that sounds great. See you then.",foto:require("./img/photo2.png"), button:"reply"})
+				+message({text:"Hey! So are we cool to meet at the art gallery? Say 8pm", placeholder:"Yeah that sounds great. See you then.",foto:require("./img/photo-woman.png"), button:"reply"})
 			.clear
 			.video
-				+header("video") 
-				+video("https://player.vimeo.com/video/62980495")   
+				+header({header:"video"}) 
+				+video("https://player.vimeo.com/video/62980495") 

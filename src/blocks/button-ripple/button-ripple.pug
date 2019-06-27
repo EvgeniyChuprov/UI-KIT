@@ -1,0 +1,9 @@
+mixin button-ripple(options) 
+  - let {text="text", small=true, green=true} = options;
+  - let butRipple = 'button-ripple';
+  - butRipple += small ? ' button-ripple__small' : '' ;
+  - butRipple += green ? ' button-ripple__green' : ' button-ripple__red' ;
+
+  button(class= butRipple) #{text}
+    .c-ripple.js-ripple
+      span.c-ripple__circle

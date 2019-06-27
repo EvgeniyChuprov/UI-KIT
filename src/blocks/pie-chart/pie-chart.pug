@@ -1,5 +1,6 @@
-mixin pie-chart(parametr)
+mixin pie-chart(options)
+  -let {one=10, two=10, three=10} = options;
   div(data-doughnut)
-    div(data-doughnut-value= parametr.one)
-    div(data-doughnut-value= parametr.two)
-    div(data-doughnut-value= parametr.three)
+    div(data-doughnut-value= one)
+    div(data-doughnut-value= two)
+    div(data-doughnut-value= three)

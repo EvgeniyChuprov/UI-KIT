@@ -1,0 +1,16 @@
+include ../header/header
+include ../percent/percent
+include ../pie-chart/pie-chart
+
+mixin percentages(options) 
+  -let {header="header", percentages=[], pie={}} = options;
+  -let {one= 10, two= 10, three= 10} = pie;
+  .percentages
+    +header({header:"percentages / pie chart"})
+
+    each item in percentages
+      .percentages__block
+        +percent(item)
+
+    .percentages__block
+      +pie-chart({one:one, two: two, three: three})

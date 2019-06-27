@@ -1,0 +1,11 @@
+include ../header/header
+include ../search/search
+include ../select/select
+
+mixin search-block(options) 
+  -let {header="header", search=[], select={}} = options;
+  +header({header:header}) 
+  form.search-form
+    each item in search 
+      +search(item) 
+    +select({first:"Pure CSS", second:"No JS", third:"Nice!"})   

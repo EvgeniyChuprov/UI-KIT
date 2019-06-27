@@ -1,0 +1,12 @@
+include ../entry-field/entry-field
+include ../text-area/text-area
+include ../button-ripple/button-ripple
+
+mixin form(options) 
+  -let {field=[], textarea={}, button={}} = options;
+  .form-elements__form
+    each item in field 
+      +entry-field(item)
+    +text-area(textarea)
+    .form-elements__form_button
+      +button-ripple(button)

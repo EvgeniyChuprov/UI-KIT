@@ -1,8 +1,9 @@
 mixin entry-field(options)
+  - let {placeholder="placeholder",  name="name", correct= false} = options;
   - let correctClass = 'entry-field__state ';
-  - correctClass += options.correct ? '' : 'correct_error';
-  - let correctText = options.correct ? 'thanks' : 'error'; 
+  - correctClass += correct ? '' : 'correct_error';
+  - let correctText = correct ? 'thanks' : 'error'; 
 
   .entry-field
-    input(class="entry-field__form" type="text" name= options.name placeholder= options.placeholder)
+    input(class="entry-field__form" type="text" name= name placeholder= placeholder)
     div(class= correctClass)= correctText

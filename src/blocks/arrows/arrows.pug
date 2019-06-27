@@ -1,0 +1,9 @@
+include ../arrow-button/arrow-button
+
+mixin arrows(options) 
+  - let {header="title", arrows=[]} = options;
+  .arrow-buttons
+    +header({header:"arrow buttons"})
+    .arrow-buttons__block
+      each item in arrows
+        +arrow-button(item)

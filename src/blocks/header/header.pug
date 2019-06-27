@@ -1,3 +1,4 @@
-mixin header(title)
+mixin header(options)
+  -let {header="title"} = options;
   .header-block
-    span.header-block__tile= title
+    span.header-block__tile= header

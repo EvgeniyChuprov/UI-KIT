@@ -1,5 +1,6 @@
-mixin range()
-  input(class="range" type="range" min="0" max="100" step="25" value="75")
+mixin range-slider(options)
+  -let {min=0, max=100, step=0, value=0} = options;
+  input(class="range" type="range" min= min max= max value= value step= step)
   .range-num
     span 0
     span 25        

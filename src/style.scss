@@ -1,49 +1,47 @@
 @font-face {
-  font-family: 'Lato Black';
-  src: url('/fonts/Lato-Black.eot');
-  src: local('☺'), url('/fonts/Lato-Black.woff') format('woff'), 
-  url('/fonts/Lato-Black.ttf') format('truetype');
+  font-family: "latoblack";
+  src: url("/fonts/lato-black.eot");
+  src: local("☺"), url("/fonts/lato-black.woff") format("woff"), 
+  url("/fonts/lato-black.ttf") format("truetype");
   font-weight: 400;
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Lato Regular';
-  src: url('/fonts/Lato-Regular.eot');
-  src: local('☺'), url('/fonts/Lato-Regular.woff') format('woff'), 
-  url('/fonts/Lato-Regular.ttf') format('truetype');
+  font-family: "latoregular";
+  src: url("/fonts/lato-regular.eot");
+  src: local("☺"), url("/fonts/lato-regular.woff") format("woff"), 
+  url("/fonts/lato-regular.ttf") format("truetype");
   font-weight: 400;
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Lato Light';
-  src: url('/fonts/Lato-Light.eot');
-  src: local('☺'), url('/fonts/Lato-Light.woff') format('woff'), 
-  url('/fonts/Lato-Light.ttf') format('truetype');
+  font-family: "latolight";
+  src: url("/fonts/lato-light.eot");
+  src: local("☺"), url("/fonts/lato-light.woff") format("woff"), 
+  url("/fonts/lato-light.ttf") format("truetype");
   font-weight: 400;
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'SourceSansPro-Light';
-  src: url('fonts/SourceSansPro-Light.eot');
-  src: local('☺'), url('fonts/SourceSansPro-Light.woff') format('woff'), 
-  url('fonts/SourceSansPro-Light.ttf') format('truetype');
+  font-family: "sourcesanspro-light";
+  src: url("fonts/sourcesanspro-light.eot");
+  src: local("☺"), url("fonts/sourcesanspro-light.woff") format("woff"), 
+  url("fonts/sourcesanspro-light.ttf") format("truetype");
   font-weight: 200;
   font-weight: normal;
   font-style: normal;
 }
-
-// $main-white: #ffffff;
-// $main-red: #e75735;
-// $main-gray: #e5e5e5;
-// $second-gray: #f2f2f2;
-// $radius:.25rem;
-
+body{
+  margin: 0;
+  padding: 0;
+}
 html {
+  font-family: "latoregular";
   font-size: 16px;
   min-width: 350px;
 }
