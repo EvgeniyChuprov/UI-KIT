@@ -1,0 +1,12 @@
+include ../header/header
+include ../news/news
+include ../event/event
+
+mixin news-events(options) 
+  - let {header="header", news={}, event={}} = options; 
+  .news-events
+    +header({header:header}) 
+    .news-events__block_left
+      +news(news)
+    .news-events__block_right
+      +event(event)

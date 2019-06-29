@@ -6,13 +6,13 @@ include blocks/video/video
 doctype html
 html
   head
-    meta(charset = 'utf-8')
-    meta(name='viewport', content="initial-scale=1.0, width=device-width, shrink-to-fit=no")
-    link( rel="apple-touch-icon" sizes="180x180" href=require('./favicons/apple-touch-icon.png'))
-    link( rel="icon" type="image/png" sizes="32x32" href=require('./favicons/favicon-32x32.png'))
-    link( rel="icon" type="image/png" sizes="16x16" href=require('./favicons/favicon-16x16.png'))
+    meta(charset = "utf-8")
+    meta(name="viewport", content="initial-scale=1.0, width=device-width, shrink-to-fit=no")
+    link( rel="apple-touch-icon" sizes="180x180" href=require("./favicons/apple-touch-icon.png"))
+    link( rel="icon" type="image/png" sizes="32x32" href=require("./favicons/favicon-32x32.png"))
+    link( rel="icon" type="image/png" sizes="16x16" href=require("./favicons/favicon-16x16.png"))
     link( rel="manifest" href="favicons/site.webmanifest")
-    link( rel="mask-icon" href=require('./favicons/safari-pinned-tab.svg') color="#5bbad5")
+    link( rel="mask-icon" href=require("./favicons/safari-pinned-tab.svg") color="#5bbad5")
     meta( name="msapplication-TileColor" content="#2d89ef")
     meta( name="theme-color" content="#ffffff")
     title UI-KIT
@@ -20,16 +20,16 @@ html
     +site-header()
     .staff__block
       .staff__block-video
-        +header('видео презентация')
+        +header("видео презентация")
         .video-staff
           +video("https://player.vimeo.com/video/62980495")  
       .doctor
-        +header('наши врачи')
+        +header("наши врачи")
         .doctor__block
-          +userProfile({img:require('./img/photo-man.png'), name:'Иванов Иван', job:'хирург', color:''})   
+          +userProfile({img:require("./blocks/user-profile/img/photo-man.png"), name:"Иванов Иван", job:"хирург", color:""})   
         .doctor__block
-          +userProfile({img:require('./img/photo-woman.png'), name:'Машина Даша', job:'ортопед', color:'green'})
+          +userProfile({img:require("./blocks/user-profile/img/photo-woman.png"), name:"Машина Даша", job:"ортопед", color:"green"})
         .doctor__block
-          +userProfile({img:require('./img/photo-man.png'), name:'Сидоров Сидор', job:'терапевт', color:''})   
+          +userProfile({img:require("./blocks/user-profile/img/photo-man.png"), name:"Сидоров Сидор", job:"терапевт", color:""})   
         .doctor__block
-          +userProfile({img:require('./img/photo-woman.png'), name:'Дашина Маша', job:'детский врач', color:'green'})    
+          +userProfile({img:require("./blocks/user-profile/img/photo-woman.png"), name:"Дашина Маша", job:"детский врач", color:"green"})    

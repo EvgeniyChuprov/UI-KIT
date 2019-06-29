@@ -1,11 +1,12 @@
-mixin event(parametr)
+mixin event(options)
+  - let {img="img", header="header", dataNum="24", dataMonth="12", text="text", buttonText="text"} = options;
   .event
-    img(class="event__img" src= parametr.img alt="bike")
+    img(class="event__img" src= img alt="bike")
     .event__text
       .event__text_data
-        .event__text_data-num= parametr.dataNum
-        .event__text_data-month= parametr.dataMonth
-      .event__text_header=  parametr.header
-      .event__text_info= parametr.text
+        .event__text_data-num= dataNum
+        .event__text_data-month= dataMonth
+      .event__text_header=  header
+      .event__text_info= text
       .event__text_button
-        +button-ripple({text: "add to calendar", small: true, green: true})
+        +button-ripple({text: buttonText, small: true, green: true})

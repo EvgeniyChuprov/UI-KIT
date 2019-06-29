@@ -13,8 +13,7 @@ include blocks/search-block/search-block
 include blocks/search/search
 include blocks/select/select
 include blocks/user-profile/user-profile
-include blocks/news/news
-include blocks/event/event
+include blocks/news-events/news-events
 include blocks/map/map
 include blocks/calendar/calendar
 include blocks/message/message
@@ -34,8 +33,6 @@ html
 		meta( name="theme-color" content="#ffffff")
 		title UI-KIT
 	body
-		-	const news = {img:require("./img/photo-bike.png"), header: "It’s all going downhill", data: "24  august  2013", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."};
-		-	const event = {img:require("./img/photo-city.png"), header: "this is the title", dataNum: "24", dataMonth:"Aug", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."};
 		.content
 			h1 Перевести все блоки в рем!!!!
 			+buttons({header:"standard  buttons", buttons:[
@@ -84,34 +81,50 @@ html
 					+tick({name: "radio", id:"one", checked: true})
 					+tick({name: "radio", id:"two", checked: false})   
 			.clear 
+
 			.form-elements__block_left
 				+search-block({header:"search / drop down", 
 											search:[{placeholder:"Search", error:""},
 											{placeholder:"I've not found what I'm looking for...", error:" search-error"}],
 											select:{first:"Pure CSS", second:"No JS", third:"Nice!"}})
+
 			.form-elements__block_right 
 				+header({header:"user profile"})
-				+userProfile({img:require("./img/photo-man.png"), name:"John Smith", job:"ux designer", color:""})
-				+userProfile({img:require("./img/photo-woman.png"), name:"Sarah Brown", job:"developer", color:"green"})
+				+userProfile({img:require("./blocks/user-profile/img/photo-man.png"), name:"John Smith", job:"ux designer", color:"", 
+											webone:"/mock-address/change-me/", imgone:require("./blocks/user-profile/img/fb.svg"), altone:"FB",
+											websecond:"/mock-address/change-me/", imgsecond:require("./blocks/user-profile/img/twitter.png"), altsecond:"Twitter",
+											webthird:"/mock-address/change-me/", imgthird:require("./blocks/user-profile/img/dribbble.png"), altthird:"Dribbble"
+										})
+
+				+userProfile({img:require("./blocks/user-profile/img/photo-woman.png"), name:"Sarah Brown", job:"developer", color:"green",
+											webone:"/mock-address/change-me/", imgone:require("./blocks/user-profile/img/fb-white.png"), altone:"FB",
+											websecond:"/mock-address/change-me/", imgsecond:require("./blocks/user-profile/img/twitter-white.png"), altsecond:"Twitter",
+											webthird:"/mock-address/change-me/", imgthird:require("./blocks/user-profile/img/dribbble-white.png"), altthird:"Dribbble"
+											})
 			.clear  
-			.news-events
-				+header({header:"news & events"}) 
-				.news-events__block_left
-					+news(news)
-				.news-events__block_right
-					+event(event)
+
+			+news-events({header:"news & events",  
+										news:{img:require("./blocks/news/img/photo-bike.png"), header: "It’s all going downhill", data: "24  august  2013",
+										text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."},
+										event:{img:require("./blocks/event/img/photo-city.png"), header: "this is the title", dataNum: "24",
+										dataMonth:"Aug", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", buttonText:"add to calendar"}
+										})
+
 				//- .clear 
 			.location
 				+header({header:"location"})
 				.location__block
-					+map({marker:require("./img/marker.png"), lat:37.795680, lng:-122.415021, zoom: 14})
+					+map({marker:require("./blocks/map/img/marker.png"), lat:37.795680, lng:-122.415021, zoom: 14})
+
 			.calendar-block
 				+header({header:"calendar"})
 				+calendar()
+
 			.messaging
-				+header("messaging")
-				+message({text:"Hey! So are we cool to meet at the art gallery? Say 8pm", placeholder:"Yeah that sounds great. See you then.",foto:require("./img/photo-woman.png"), button:"reply"})
+				+header({header:"messaging"})
+				+message({text:"Hey! So are we cool to meet at the art gallery? Say 8pm", placeholder:"Yeah that sounds great. See you then.",foto:require("./blocks/message/img/photo-woman.png"), button:"reply"})
 			.clear
+
 			.video
 				+header({header:"video"}) 
 				+video("https://player.vimeo.com/video/62980495") 

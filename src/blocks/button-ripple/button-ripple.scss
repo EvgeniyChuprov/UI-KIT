@@ -1,54 +1,65 @@
-.button-ripple {
+.button {
   font-family: "latoblack";
-  font-size: .8rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  border-radius: 3px;
+  border-radius: 0.25rem;
   width: 100%;
   min-width: 7.2rem;
   outline: none;
   cursor: pointer;
   position: relative;
-  padding: .45rem;
   background-color: #ffffff;
-  &__small {
-    padding:.2rem;
-    width: 100%;
-    min-width: 4.9rem;
-    font-size: .6rem;
-  }
-  &__green {
-    border: 1px #44ae9f solid;
-    color: #44ae9f;
-    box-shadow: 0 3px #28a290;
-    &:hover {
-      background-color: #44ae9f;
-      color: #ffffff;
+  padding: 0.45rem;
+  &__element {
+    &_size_small {
+      padding: 0.2rem;
+      width: 100%;
+      min-width: 4.9rem;
+      font-size: 0.6rem;
     }
-    &:active {
-      top: 3px;
-      background-color: #44ae9f;
-      box-shadow: none;
-      color: #ffffff;
-    }
-  }
-  &__red {
-    border: 1px #e75735 solid;
-    background-color: #ffffff;
-    color: #e75735;
-    box-shadow: 0 3px #c94322;
-    &:hover {
-      background-color: #e75735;
-      color: #ffffff;
-    }
-    &:active {
-      top: 3px;
-      background-color: #e75735;
-      box-shadow: none;
-      color: #ffffff;
+
+    &_color {
+      &_green {
+        border: 1px #44ae9f solid;
+        color: #44ae9f;
+        box-shadow: 0 3px #28a290;
+
+        &:hover {
+          background-color: #44ae9f;
+          color: #ffffff;
+        }
+
+        &:active {
+          top: 3px;
+          background-color: #44ae9f;
+          box-shadow: none;
+          color: #ffffff;
+        }
+      }
+
+      &_red {
+        border: 1px #e75735 solid;
+        background-color: #ffffff;
+        color: #e75735;
+        box-shadow: 0 3px #c94322;
+
+        &:hover {
+          background-color: #e75735;
+          color: #ffffff;
+        }
+
+        &:active {
+          top: 3px;
+          background-color: #e75735;
+          box-shadow: none;
+          color: #ffffff;
+        }
+      }
     }
   }
 }
-.c-ripple {
+
+.element-ripple {
   position: absolute;
   top: 0;
   left: 0;
@@ -56,6 +67,7 @@
   height: 100%;
   overflow: hidden;
   background: transparent;
+
   &__circle {
     position: absolute;
     top: 50%;
@@ -66,11 +78,13 @@
     height: 0;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.25);
-    .c-ripple.is-active & {
+
+    .element-ripple.is-active & {
       animation: a-ripple 0.4s ease-in;
     }
   }
 }
+
 @keyframes a-ripple {
   0% {
     opacity: 0;

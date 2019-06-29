@@ -6,7 +6,7 @@
   $ripple.on('click.ui.ripple', function (e) {
     const $this = $(this);
     const $offset = $this.parent().offset();
-    const $circle = $this.find('.c-ripple__circle');
+    const $circle = $this.find('.element-ripple__circle');
     const x = e.pageX - $offset.left;
     const y = e.pageY - $offset.top;
 
