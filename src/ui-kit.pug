@@ -6,9 +6,8 @@ include blocks/sliders/sliders
 include blocks/stage/stage
 include blocks/form/form
 include blocks/entry-field/entry-field
-include blocks/text-area/text-area
-include blocks/toggle/toggle
-include blocks/tick/tick
+include blocks/toggles-tick/toggles-tick
+
 include blocks/search-block/search-block
 include blocks/search/search
 include blocks/select/select
@@ -33,6 +32,7 @@ html
 		meta( name="theme-color" content="#ffffff")
 		title UI-KIT
 	body
+
 		.content
 			h1 Перевести все блоки в рем!!!!
 			+buttons({header:"standard  buttons", buttons:[
@@ -55,7 +55,7 @@ html
 									{num:0}, {num:38}, {num:62}, {num:89}
 									], pie:{one:11, two: 26, three: 29}})
 
-			+sliders({header:"sliders", bubble:{bmin:0, bmax:100, bstep:1, bvalue:40}, range:{rmin:0, rmax:100, rstep:1, value:40}})
+			+sliders({header:"sliders", bubble:{min:0, max:100, step:1, value:40}, range:{min:0, max:100, step:25, value:75}})
 
 			.stages
 				+header({header:"stages"})
@@ -64,23 +64,14 @@ html
 
 			.form-elements
 				+header({header:"form elements"})
-				+form({field:[{placeholder:"Your Name", type:"text", name:"form", correct: false},
-							{placeholder:"Your Email", type:"text", name:"form", correct: true}],
-							textarea:{placeholder:"Your Message", name:"form"},
-							button:{text: "submit", small: false, green: true}})
+				.form-elements__block
+					+form({field:[{placeholder:"Your Name", type:"text", name:"form", correct: false},
+								{placeholder:"Your Email", type:"text", name:"form", correct: true}],
+								textarea:{placeholder:"Your Message", name:"form"},
+								button:{text: "submit", small: false, green: true}})
 
-			.form-elements__togglesTick
-				+header({header:"toggles"})
-				.toggles__block
-					.toggles__block_off
-						+toggle()
-					.toggles__block_on 
-						+toggle("checked")
-				+header({header:"tick boxes"})
-				.tick-box
-					+tick({name: "radio", id:"one", checked: true})
-					+tick({name: "radio", id:"two", checked: false})   
-			.clear 
+					+toggles-tick({toggleheader:"toggles", checkone:"", checksecond:"checked", tickheader:"tick boxes",
+					 tick:[{name: "radio", id:"one", checked: true}, {name: "radio", id:"two", checked: false}]}) 
 
 			.form-elements__block_left
 				+search-block({header:"search / drop down", 

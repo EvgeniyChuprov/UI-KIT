@@ -1,0 +1,19 @@
+include ../header/header
+include ../toggle/toggle
+include ../tick/tick
+
+mixin toggles-tick(options)
+	-	let {toggleheader="header", checkone="", checksecond="", tickheader="header", tick=[]} = options;
+
+	.form-elements__togglesTick
+		+header({header: toggleheader})
+
+		.toggles__block
+			.toggles__block_off
+				+toggle({check: checkone})
+			.toggles__block_on 
+				+toggle({check: checksecond})
+		+header({header: tickheader})
+		.tick-box
+			each item in tick
+				+tick(item)

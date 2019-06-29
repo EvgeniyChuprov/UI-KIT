@@ -3,52 +3,18 @@
   max-width: 600px;
 }
 
-.arrow-buttons {
-  padding: 5% 0;
-  &__block {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 26px 0;
-  }
-}
-.percentages {
-  padding: 5% 0;
-  &__block {
-    display: inline-block;
-    margin: 8% 1.7%;
-  }
-}
-.sliders__left {
-  float: left;
-  width: 45%;
-  margin-left: 4px;
-  margin-top: 6.5%;
-}
-.sliders__right {
-  float: right;
-  width: 45%;
-  margin-top: 2px;
-}
 .stages {
   padding: 5% 0;
   &__block {
     padding-top: 2%;
   }
 }
-.form-elements {
-  &__form {
-    float: left;
-    padding: 2.4rem 0 0 0;
-    width: 48%;
-    &_button {
-      float: right;
-      margin-top: 4%;
-    }
-  }
+.form-elements__block {
+  display: flex;
+  justify-content: space-around;
 }
 .form-elements__togglesTick {
-  float: right;
-  padding: 3rem 5rem 6rem 0;
+  padding-top: 3rem;
   .toggles__block {
     margin: 2.1rem auto;
     &_off {

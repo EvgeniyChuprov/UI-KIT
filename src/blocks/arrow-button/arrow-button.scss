@@ -6,14 +6,17 @@
   outline: none;
   border: none;
   background: none;
-  .arrow-button__arrow {
+
+  .arrow {
     display: inline-block;
+
     cursor: pointer;
     width: 2.8rem;
     height: 2.7rem;
     line-height: 2.5rem;
     border: .25rem solid #44ae9f;
     border-radius: 50%;
+
     &::after {
       content: "";
       display: inline-block;
@@ -25,14 +28,18 @@
       border-right: .25rem solid #44ae9f;
       transform: rotate(-135deg);
     }
+
     &:hover {
       background: #44ae9f;
+
       &::after {
         border-top-color: #ffffff;
         border-right-color: #ffffff;
       }
     }
+
     &_direction_right {
+
       &::after {
         margin-left: 0;
         border-top: none;
@@ -41,7 +48,9 @@
         border-bottom: .25rem solid #44ae9f;
         border-left: .25rem solid #44ae9f;
       }
+
       &:hover {
+
         &::after {
           border-bottom-color: #ffffff;
           border-left-color: #ffffff;
@@ -50,48 +59,37 @@
     }
   }
 }
-.arrow-button__arrow_direction_right {
-  &::after {
-    margin-left: 0;
-    border-top: none;
-    border-right: none;
-    margin-right: 13%;
-    border-bottom: .25rem solid #44ae9f;
-    border-left: .25rem solid #44ae9f;
-  }
-  &:hover {
-    &::after {
-      border-bottom-color: #ffffff;
-      border-left-color: #ffffff;
-    }
-  }
-}
-.arrow__button:disabled .arrow-button__arrow {
+
+.arrow__button:disabled .arrow {
   cursor: default;
   background-color: #e5e5e5;
   border: 3px solid #e5e5e5;
+
   &::after {
     border-top: .25rem solid #ffffff;
     border-right: .25rem solid #ffffff;
   }
+
   &:hover {
     background-color: #e5e5e5;
   }
 }
-.arrow__button:disabled .arrow-button__arrow_direction_right::after {
+
+.arrow__button:disabled .arrow_direction_right::after {
   margin-left: 0;
   border-top: none;
   border-right: none;
   border-bottom: .25rem solid #ffffff;
   border-left: .25rem solid #ffffff;
 }
-.arrow-button__hover {
+
+.arrow_hover {
   background: #44ae9f;
-  > .arrow-button__arrow::after {
+  > .arrow::after {
     border-top: .25rem solid #ffffff;
     border-right: .25rem solid #ffffff;
   }
-  > .arrow-button__arrow_direction_right::after {
+  > .arrow_direction_right::after {
     border-top: none;
     border-right: none;
     border-bottom: .25rem solid #ffffff;

@@ -1,5 +1,6 @@
-mixin tick(parametr) 
-  - let checked = parametr.checked ? true : false;
-  
-  input(type="radio" name= parametr.name  id= parametr.id class="ui-radio" checked= checked)
-  label(for= parametr.id class="ui-radio-label")
+mixin tick(options)
+  - let {name= "name", id="id", check= true} = options;
+  - let checked = check ? true : false;
+
+  input(type="radio" name= name  id= id class="ui-radio" checked= checked)
+  label(for= id class="ui-radio-label")

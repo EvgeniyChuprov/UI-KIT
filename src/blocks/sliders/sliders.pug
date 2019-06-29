@@ -4,11 +4,11 @@ include ../range-slider/range-slider
 
 mixin sliders(options) 
 	- let {header="title", bubble={}, range={}} = options;
-	- let {bmin=0, bmax=100, bstep=1, bvalue=40} = bubble;
-	-	let {rmin=0, rmax=100, rstep=1, rvalue=40} = range;
+
 	+header({header:header})
+
 	.sliders__left
-		+bubble-slider({min: bmin, max: bmax, step: bstep, value: bvalue})
+		+bubble-slider(bubble)
 
 	.sliders__right
-		+range-slider({min: 0, max: 100, step: 25, value: 75})
+		+range-slider(range)

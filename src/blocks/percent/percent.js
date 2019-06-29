@@ -10,7 +10,7 @@
       const stroke = Math.ceil(circumference * percent);
       const diff = circumference - stroke;
 
-      el.querySelector('.percent-circle-inner').style.strokeDasharray = stroke + 'px ' + diff + 'px';
+      el.querySelector('.percent-circle__inner').style.strokeDasharray = stroke + 'px ' + diff + 'px';
     });
   }
 
