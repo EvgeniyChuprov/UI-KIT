@@ -1,13 +1,14 @@
-mixin stage()
-  .container
-    ul.five.steps
-      li
-        a(href="#0") 1
-      li
-        a(href="#0") 2
-      li
-        a(href="#0") 3
-      li
-        a(href="#0") 4
-      li
-        a(href="#0") 5
+mixin stage(options)
+  - let {min=1, max=5, value=3} = options;
+
+  ul.stage(data-max= max data-value= value)
+
+      - for (let i = min; i <= max; i += 1) {
+          -if (i <= value){
+            li.stage__steps.stage__steps_color.complete
+              .stage__number= i
+          -} else {
+            li.stage__steps
+              .stage__number= i
+          -};
+      -};

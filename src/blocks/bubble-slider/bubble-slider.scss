@@ -1,18 +1,7 @@
-@mixin unSelectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-@mixin avoidClicks {
-  pointer-events: none;
-}
 .custom-rangeslider {
   position: relative;
-  padding: 0;
+  padding-top:2.5%;
+
   &__tooltip {
     line-height: 1rem;
     position: absolute;
@@ -23,14 +12,11 @@
     background-color: #e75735;
     padding: 0.2rem 0.2rem;
     border: 1px #e75735 solid;
-    top: -2.2rem;
+    top: -1.8rem;
     left: 0;
     text-align: center;
     transform: translate(-26%, 0);
     border-radius: 3px;
-
-    @include unSelectable;
-    @include avoidClicks;
 
     &:after {
       display: block;
@@ -44,26 +30,25 @@
     }
   }
 }
+
 .custom-rangeInput {
   width: 100%;
   background: transparent;
   cursor: pointer;
-  outline: 0;
-  border: 0;
-  padding: 0;
-  margin: 0;
   height: 12px;
   &::-webkit-slider-thumb {
     margin-top: -0.5rem;
   }
 }
+
 .custom-rangeInput[type="range"] {
+  -webkit-appearance: none;
   display: block;
   width: 100%;
   margin: auto;
-  -webkit-appearance: none;
   outline: none;
 }
+
 .custom-rangeInput[type="range"]::-webkit-slider-runnable-track {
   animate: 0.2s;
   background-color: #e5e5e5;
@@ -72,22 +57,26 @@
   width: 100%;
   height: 0.35rem;
 }
+
 .custom-rangeInput[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
   background: #e75735;
   border-radius: 50%;
   border: 1px solid #e75735;
-  -webkit-appearance: none;
   cursor: pointer;
   height: 1.2rem;
   width: 1.2rem;
 }
+
 .custom-rangeInput[type="range"]:active + output {
   display: block;
   transform: translateX(-50%);
 }
+
 .custom-rangeInput[type="range"]:active::-webkit-slider-runnable-track {
   opacity: 0.8;
 }
+
 .custom-rangeInput[type="range"]::-moz-range-track {
   animate: 0.2s;
   background-color: #e5e5e5;
@@ -96,6 +85,7 @@
   width: 100%;
   height: 0.35rem;
 }
+
 .custom-rangeInput[type="range"]::-moz-range-thumb {
   background: #e75735;
   border-radius: 50%;

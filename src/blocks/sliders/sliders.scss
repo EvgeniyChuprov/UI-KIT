@@ -1,11 +1,10 @@
-.sliders__left {
-  float: left;
-  width: 45%;
-  margin-left: 4px;
-  margin-top: 6.5%;
-}
-.sliders__right {
-  float: right;
-  width: 45%;
-  margin-top: 2px;
+.sliders{
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__element {
+    width: 48%;
+    padding-top:10%;
+  }
 }

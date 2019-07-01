@@ -3,20 +3,16 @@ include blocks/buttons/buttons
 include blocks/arrows/arrows
 include blocks/percentages/percentages
 include blocks/sliders/sliders
-include blocks/stage/stage
+include blocks/stages/stages
 include blocks/form/form
 include blocks/entry-field/entry-field
 include blocks/toggles-tick/toggles-tick
-
+include blocks/users-profiles/users-profiles
 include blocks/search-block/search-block
-include blocks/search/search
-include blocks/select/select
-include blocks/user-profile/user-profile
 include blocks/news-events/news-events
-include blocks/map/map
-include blocks/calendar/calendar
-include blocks/message/message
-include blocks/video/video
+include blocks/location/location
+include blocks/calendar-message/calendar-message
+include blocks/video-block/video-block
 
 doctype html
 html
@@ -36,20 +32,19 @@ html
 		.content
 			h1 Перевести все блоки в рем!!!!
 			+buttons({header:"standard  buttons", buttons:[
-				{text: "button", small: true, green: true},
-				{text: "button", small: false, green: true},
-				{text: "button", small: false, green: false},
-				{text: "button", small: true, green: false}
-			]})
+							{text: "button", small: true, green: true},
+							{text: "button", small: false, green: true},
+							{text: "button", small: false, green: false},
+							{text: "button", small: true, green: false}
+						]})
 
 			+arrows({header:"arrow buttons", arrows:[
-				{right: false, disabled: false, hover: false},
-				{right: true, disabled: false, hover: false},
-				{right: false, disabled: true, hover: false},
-				{right: true, disabled: true, hover: false},
-				{right: false, disabled: false, hover: true},
-				{right: true, disabled: false, hover: true}
-			]})
+							{right: false, disabled: false, hover: false},
+							{right: true, disabled: false, hover: false},
+							{right: false, disabled: true, hover: false},
+							{right: true, disabled: true, hover: false},
+							{right: false, disabled: false, hover: true},
+							{right: true, disabled: false, hover: true}]})
 
 			+percentages({header:"percentages / pie chart", percentages:[
 									{num:0}, {num:38}, {num:62}, {num:89}
@@ -57,65 +52,52 @@ html
 
 			+sliders({header:"sliders", bubble:{min:0, max:100, step:1, value:40}, range:{min:0, max:100, step:25, value:75}})
 
-			.stages
-				+header({header:"stages"})
-				.stages__block
-					+stage()
+			+stages({header:"stages",  stage:{min:1, max:5, value:3}})
 
-			.form-elements
+			.form
 				+header({header:"form elements"})
-				.form-elements__block
-					+form({field:[{placeholder:"Your Name", type:"text", name:"form", correct: false},
-								{placeholder:"Your Email", type:"text", name:"form", correct: true}],
-								textarea:{placeholder:"Your Message", name:"form"},
-								button:{text: "submit", small: false, green: true}})
 
-					+toggles-tick({toggleheader:"toggles", checkone:"", checksecond:"checked", tickheader:"tick boxes",
-					 tick:[{name: "radio", id:"one", checked: true}, {name: "radio", id:"two", checked: false}]}) 
+				.form__block
+					.form__element
+						+form({field:[{placeholder:"Your Name", type:"text", name:"form", correct: false},
+												{placeholder:"Your Email", type:"text", name:"form", correct: true}],
+												textarea:{placeholder:"Your Message", name:"form"},
+												button:{text: "submit", small: false, green: true}})
 
-			.form-elements__block_left
-				+search-block({header:"search / drop down", 
-											search:[{placeholder:"Search", error:""},
-											{placeholder:"I've not found what I'm looking for...", error:" search-error"}],
-											select:{first:"Pure CSS", second:"No JS", third:"Nice!"}})
+					.form__element
+						+toggles-tick({toggleheader:"toggles", checkone:"", checksecond:"checked", tickheader:"tick boxes",
+													tick:[{name: "radio", id:"one", checked: true}, {name: "radio", id:"two", checked: false}]}) 
 
-			.form-elements__block_right 
-				+header({header:"user profile"})
-				+userProfile({img:require("./blocks/user-profile/img/photo-man.png"), name:"John Smith", job:"ux designer", color:"", 
-											webone:"/mock-address/change-me/", imgone:require("./blocks/user-profile/img/fb.svg"), altone:"FB",
-											websecond:"/mock-address/change-me/", imgsecond:require("./blocks/user-profile/img/twitter.png"), altsecond:"Twitter",
-											webthird:"/mock-address/change-me/", imgthird:require("./blocks/user-profile/img/dribbble.png"), altthird:"Dribbble"
-										})
+					.form__element
+						+search-block({header:"search / drop down", 
+													search:[{placeholder:"Search", error:""},
+													{placeholder:"I've not found what I'm looking for...", error:" search-error"}],
+													select:{first:"Pure CSS", second:"No JS", third:"Nice!"}})
 
-				+userProfile({img:require("./blocks/user-profile/img/photo-woman.png"), name:"Sarah Brown", job:"developer", color:"green",
-											webone:"/mock-address/change-me/", imgone:require("./blocks/user-profile/img/fb-white.png"), altone:"FB",
-											websecond:"/mock-address/change-me/", imgsecond:require("./blocks/user-profile/img/twitter-white.png"), altsecond:"Twitter",
-											webthird:"/mock-address/change-me/", imgthird:require("./blocks/user-profile/img/dribbble-white.png"), altthird:"Dribbble"
-											})
-			.clear  
+					.form__element
+						+users-profiles({header:"user profile", profiles:[
+													{img:require("./blocks/user-profile/img/photo-man.png"), name:"John Smith", job:"ux designer", color:"", 
+													webone:"/mock-address/change-me/", imgone:require("./blocks/user-profile/img/fb.svg"), altone:"FB",
+													websecond:"/mock-address/change-me/", imgsecond:require("./blocks/user-profile/img/twitter.png"), altsecond:"Twitter",
+													webthird:"/mock-address/change-me/", imgthird:require("./blocks/user-profile/img/dribbble.png"), altthird:"Dribbble"
+													},
+													{img:require("./blocks/user-profile/img/photo-woman.png"), name:"Sarah Brown", job:"developer", color:"green",
+													webone:"/mock-address/change-me/", imgone:require("./blocks/user-profile/img/fb-white.png"), altone:"FB",
+													websecond:"/mock-address/change-me/", imgsecond:require("./blocks/user-profile/img/twitter-white.png"), altsecond:"Twitter",
+													webthird:"/mock-address/change-me/", imgthird:require("./blocks/user-profile/img/dribbble-white.png"), altthird:"Dribbble"}]})
 
 			+news-events({header:"news & events",  
-										news:{img:require("./blocks/news/img/photo-bike.png"), header: "It’s all going downhill", data: "24  august  2013",
-										text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."},
-										event:{img:require("./blocks/event/img/photo-city.png"), header: "this is the title", dataNum: "24",
-										dataMonth:"Aug", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", buttonText:"add to calendar"}
-										})
+									news:{img:require("./blocks/news/img/photo-bike.png"), header: "It’s all going downhill", data: "24  august  2013",
+									text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."},
+									event:{img:require("./blocks/event/img/photo-city.png"), header: "this is the title", dataNum: "24",
+									dataMonth:"Aug", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", buttonText:"add to calendar"}})
 
-				//- .clear 
-			.location
-				+header({header:"location"})
-				.location__block
-					+map({marker:require("./blocks/map/img/marker.png"), lat:37.795680, lng:-122.415021, zoom: 14})
+			+location({header: "location", map:{marker:require("./blocks/map/img/marker.png"), lat:37.795680, lng:-122.415021,
+																			 zoom: 14, city:"1259  CALIFORNIA ST San Francisco, CA", title:"Meet us!"}})
 
-			.calendar-block
-				+header({header:"calendar"})
-				+calendar()
+			+calendar-message({calendarhead:"calendar", messaginghead:"messaging", messaging:{
+			 									text:"Hey! So are we cool to meet at the art gallery? Say 8pm",
+												placeholder:"Yeah that sounds great. See you then.",
+												foto:require("./blocks/message/img/photo-woman.png"), button:"reply"}})
 
-			.messaging
-				+header({header:"messaging"})
-				+message({text:"Hey! So are we cool to meet at the art gallery? Say 8pm", placeholder:"Yeah that sounds great. See you then.",foto:require("./blocks/message/img/photo-woman.png"), button:"reply"})
-			.clear
-
-			.video
-				+header({header:"video"}) 
-				+video("https://player.vimeo.com/video/62980495") 
+			+video-block({header:"video", link:"https://player.vimeo.com/video/62980495"})

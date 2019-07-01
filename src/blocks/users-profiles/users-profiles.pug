@@ -1,0 +1,12 @@
+include ../header/header
+include ../user-profile/user-profile
+
+mixin users-profiles(options)
+  -	let {header="header", profiles={}} = options;
+
+  +header({header:header})
+  
+  each item in profiles
+    .users-profiles__block
+      +userProfile(item)
+

@@ -1,9 +1,8 @@
 mixin range-slider(options)
   -let {min=0, max=100, step=1, value=0} = options;
-  input(class="range" type="range" min= min max= max value= value step= step)
-  .range-num
-    span 0
-    span 25        
-    span 50
-    span 75
-    span 100                
+  .wrap-range
+    input.range( type="range" min= min max= max value= value step= step)
+    .range__scale
+          -for (let i = min; i <= max; i += step) {
+              .range__digit= i
+          -}               

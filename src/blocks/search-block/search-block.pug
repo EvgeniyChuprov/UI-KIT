@@ -7,5 +7,6 @@ mixin search-block(options)
   +header({header:header}) 
   form.search-form
     each item in search 
-      +search(item) 
+      .search-form__search
+        +search(item) 
     +select({first:"Pure CSS", second:"No JS", third:"Nice!"})   

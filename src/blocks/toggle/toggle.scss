@@ -1,9 +1,11 @@
 .toggle input[type="checkbox"]{
   display: none;
 }
+
 .toggle { 
   position: relative; 
   display: inline-block; 
+
   .ball{
     position: absolute;
     top: .2rem;
@@ -14,14 +16,17 @@
     background: #ffffff;
     transition: all 0.3s ease-in 0s; 
   }
+
   #switch:checked ~ .ball{
     transition: all 0.3s ease-in 0s; 
     left: 2.5rem;
   }
+
   #switch:checked ~ .on_off{
     transition: all 0.3s ease-in 0s; 
     background: #44ae9f;
   }
+
   .on_off{
     border-radius: 1.5rem;
     height: 1.1rem;
@@ -31,6 +36,7 @@
     color: #ffffff;
     background-color: #e5e5e5;
     padding: .2rem .6rem .2rem 2rem;
+
     &:before{
       transition: all 0.3s ease-in 0s; 
       margin: 0 0 0 -.2rem;
@@ -38,6 +44,7 @@
       content: 'OFF';
     }
   }
+  
   #switch:checked ~ .on_off:before{
     transition: all 0.3s ease-in 0s; 
     margin: 0 .8rem 0 -1.6rem;

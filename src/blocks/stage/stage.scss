@@ -1,68 +1,42 @@
-.container {
-  padding: 5% 2.2% 5% 3.3%;
-}
-.steps {
+
+.stage {
   background-color: #e5e5e5;
-  display: block;
-  height: 4px;
+  height: .25rem;
   list-style-type: none;
-  margin: auto;
   padding: 0;
-  width: 100%;
-  > li {
+
+  &__steps {
     float: left;
-    margin: 0;
     min-height: 1px;
-    padding: 0;
     position: relative;
   }
-}
-$step-map: (
-  2: two,
-  3: three,
-  4: four,
-  5: five
-);
-@each $number, $word in $step-map {
-  .#{$word}.steps > li {
-    width: 100% / ($number - 1);
+
+  &__number {
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    color: #888888;
+    font-family: "latoblack";
+    height: 1.7rem;
+    width: 1.7rem;
+    right: -.7rem;
+    line-height: 1.6rem;
+    position: absolute;
+    text-align: center;
+    top: -.8rem;
   }
 }
-.steps > li:first-child {
-  width: 0;
-}
-.steps > li > a {
-  background-color: #e5e5e5;
-  border-radius: 50%;
-  color: #888888;
-  display: block;
-  font-family: "latoblack";
-  font-size: 14px;
-  font-weight: bold;
-  height: 28px;
-  width: 28px;
-  right: -10px;
-  line-height: 26px;
-  position: absolute;
-  text-align: center;
-  text-decoration: none;
-  top: -12px;
-}
-.steps > .complete > a,
-.steps > .complete > a:hover {
+
+.stage__steps_color > .stage__number,
+.stage__steps_color > .stage__number:hover {
   background-color: #e75735;
-  border-color: #e75735;
   color: #ffffff;
 }
-.steps > .complete > a:before,
-.steps > .complete > a:after {
-  display: none;
-}
-.steps > .complete + .complete:before {
+
+.stage__steps_color + .stage__steps_color:before {
   background-color: #e75735;
   content: "";
-  height: 4px;
+  height: .25rem;
   position: absolute;
-  width: calc(100% - 16px);
+  width: calc(100% - .8rem);
   z-index: 2;
 }

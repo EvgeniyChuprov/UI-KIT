@@ -3,78 +3,17 @@
   max-width: 600px;
 }
 
-.stages {
-  padding: 5% 0;
+
+
+.form{
+
   &__block {
-    padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
-}
-.form-elements__block {
-  display: flex;
-  justify-content: space-around;
-}
-.form-elements__togglesTick {
-  padding-top: 3rem;
-  .toggles__block {
-    margin: 2.1rem auto;
-    &_off {
-      display: inline-block;
-    }
-    &_on {
-      display: inline-block;
-      margin-left: 1rem;
-    }
-  }
-}
-.tick-box {
-  margin-top: 1.7rem;
-  text-align: center;
-}
-.form-elements__block_left {
-  float: left;
-  margin: 40px 0 0 2px;
-  width: 48%;
-}
-.form-elements__block_right {
-  float: right;
-  margin: 40px 0 0 2px;
-  width: 280px;
-  height: 243px;
-}
-.news-events {
-  &__block_left {
-    float: left;
+  
+  &__element {
     width: 48%;
   }
-  &__block_right {
-    float: right;
-    width: 48%;
-  }
-}
-.location {
-  padding: 5% 0;
-  .location__block {
-    margin-top: 26px;
-    height: 273px;
-  }
-}
-.calendar-block {
-  float: left;
-  width: 47%;
-}
-.calendar__block {
-  width: 48%;
-}
-.messaging {
-  float: right;
-  width: 289px;
-  height: 528px;
-  margin-right: 3px;
-}
-.clear {
-  padding: 5%;
-  clear: both;
-}
-.video {
-  height: 390px;
 }

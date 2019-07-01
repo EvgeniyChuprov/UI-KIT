@@ -1,0 +1,19 @@
+.togglesTick {
+  .toggles__block {
+    margin: 2.1rem auto;
+    text-align: center;
+    &_off {
+      display: inline-block;
+    }
+    
+    &_on {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+  }
+}
+
+.tick-box {
+  margin-top: 1.7rem;
+  text-align: center;
+}

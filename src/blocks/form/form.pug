@@ -5,11 +5,12 @@ include ../button-ripple/button-ripple
 mixin form(options) 
   -let {field=[], textarea={}, button={}} = options;
 
-  .form-elements__form
+  form.form-elements
     each item in field 
-      +entry-field(item)
-
-    +text-area(textarea)
+      .form-elements__form
+        +entry-field(item)
+    .form-elements__form
+      +text-area(textarea)
     
-    .form-elements__form_button
+    .form-elements__button
       +button-ripple(button)

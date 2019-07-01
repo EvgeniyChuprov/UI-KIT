@@ -1,8 +1,9 @@
-mixin map(parametr)
-  div(id="map" class="map" data-marker= parametr.marker data-lat= parametr.lat data-lng= parametr.lng data-zoom= parametr.zoom)
+mixin map(options)
+  -let {marker="marker", lat="lat", lng="lng", zoom="zoom", city="city", title="title"} = options;
+  div(id="map" class="map" data-marker= marker data-lat= lat data-lng= lng data-zoom= zoom)
   .map_menu 
-    .head Meet us!
-    .adress 1259  CALIFORNIA ST San Francisco, CA
+    .head= title
+    .adress= city
     .icon
       .locat
       .pin

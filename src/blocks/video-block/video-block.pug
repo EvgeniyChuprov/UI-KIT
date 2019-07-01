@@ -1,0 +1,10 @@
+include ../header/header
+include ../video/video
+
+mixin video-block(options)
+  - let {header="header", link="link"} = options;
+
+  .video
+    +header({header:header}) 
+
+    +video({link:link}) 

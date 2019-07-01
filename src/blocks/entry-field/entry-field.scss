@@ -1,6 +1,6 @@
 .entry-field {
-  margin: 4% 0;
   display: flex;
+
   &__state {
     width: 30%;
     padding: 4.1% 0 2%;
@@ -14,6 +14,7 @@
     line-height: 2%;
     letter-spacing: 0.07rem;
     text-transform: uppercase;
+
     &::after {
       content: "";
       position: absolute;
@@ -24,6 +25,7 @@
       z-index: -1;
     }
   }
+
   &__form {
     background-color: #e5e5e5;
     outline: none;
@@ -35,7 +37,8 @@
 }
 .correct_error {
   background: #e75735;
+  &:after {
+    border-right-color: #e75735;
+  }
 }
-.correct_error:after {
-  border-right-color: #e75735;
-}
+
