@@ -1,7 +1,5 @@
-include blocks/site-header/site-header
-include blocks/news/news
-include blocks/event/event
-include blocks/buttons/buttons
+include blocks/site-blocks/first-site/first-site
+
 
 doctype html
 html
@@ -17,19 +15,14 @@ html
     meta( name="theme-color" content="#ffffff")
     title UI-KIT
   body
-    - const news = {img:require("./blocks/news/img/photo-bike.png"), header: "It’s all going downhill", data: "24  august  2013", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."};
-    - const event = {img:require("./blocks/event/img/photo-city.png"), header: "this is the title", dataNum: "24", dataMonth:"Aug", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", buttonText:"add to calendar"};
-
-    +site-header()
-    h2.company Стоматологическая клиника 
-    h1.company-name Зубы на полку  
-    h3.company-news Новости клиники
-    .news-block
-      .news-block__elem
-        +news(news)
-      .news-block__elem
-        +news(news)
-      .news-block__elem
-        +event(event)
-      .news-block__elem
-        +event(event) 
+    +first-site({siteHeader:{headTitle: "Зубы на полку", menu:[{link: "discount.html", title: "скидки и акции"}, 
+    {link: "recording.html", title: "запись на прием"}, {link: "online.html", title: "онлайн консультация"}, 
+    {link: "contacts.html", title: "контакты"},{link: "staff.html", title: "наши врачи"}]},
+    news:[{img:require("./blocks/news/img/photo-bike.png"), header: "It’s all going downhill", data: "24  august  2013",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."},
+    {img:require("./blocks/news/img/photo-bike.png"), header: "It’s all going downhill", data: "24  august  2013", 
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."}],
+    event:[{img:require("./blocks/event/img/photo-city.png"), header: "this is the title", dataNum: "24", dataMonth:"Aug", 
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", buttonText:"add to calendar"},
+    {img:require("./blocks/event/img/photo-city.png"), header: "this is the title", dataNum: "24", dataMonth:"Aug", 
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", buttonText:"add to calendar"}]})

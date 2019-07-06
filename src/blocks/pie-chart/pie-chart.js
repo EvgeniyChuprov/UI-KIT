@@ -1,48 +1,57 @@
-$(function () {
-	$("[data-doughnut]").each(function () {
-		const $this = $(this);
-		let start = 0;
-		let offset = 0;
-		let total = 0;
-		let n = 0;
+class Pie {
+  constructor(pie) {
+    this.pie = pie;
+    this.pieChart();
+  }
 
-		$this.find("> div").each(function () {
-			const item = $(this);
-			const value = item.data("doughnut-value") * 1;
+  pieChart() {
+    this.pie.each(function () { 
+      let start = 0;
+      let offset = 0;
+      let total = 0;
+      let n = 0;
 
-			item.append('<div class="before"></div>');
+      $(this).find('.pie-chart__block_color').each(function () {
+        const item = $(this);
+        const value = item.data('doughnut-value') *        
+        item.append('<div class="before"></div>');
 
-			if (value > 50) {
-				item.addClass("big");
-			}
+        if (value > 50) {
+          item.addClass('big');
+        }
 
-			total += value;
+        total += value;
 
-			n += 1;
+        n += 1;
 
-		}).each(function (index, el) {
-			const item = $(this);
-			const value = Math.round(item.data("doughnut-value") * 3.6);
+      }).each(function (index, el) {
+        const item = $(this);
+        const value = Math.round(item.data('doughnut-value') * 3.6);
 
-			if (total >= 99.9 && n == index + 1) {
-				value = 360 - start;
-			}
+        if (total >= 99.9 && n == index + 1) {
+          value = 360 - start;
+        }
 
-			item.css({
-				'-webkit-transform': 'rotate(' + (start + offset) + 'deg)',
-				'-moz-transform': 'rotate(' + (start + offset) + 'deg)',
-				'-o-transform': 'rotate(' + (start + offset) + 'deg)',
-				'transform': 'rotate(' + (start + offset) + 'deg)'
-			});
+        item.css({
+          '-webkit-transform': 'rotate(' + (start + offset) + 'deg)',
+          '-moz-transform': 'rotate(' + (start + offset) + 'deg)',
+          '-o-transform': 'rotate(' + (start + offset) + 'deg)',
+          'transform': 'rotate(' + (start + offset) + 'deg)'
+        });
 
-			item.find('.before').css({
-				'-webkit-transform': 'rotate(' + (value + 1) + 'deg)',
-				'-moz-transform': 'rotate(' + (value + 1) + 'deg)',
-				'-o-transform': 'rotate(' + (value + 1) + 'deg)',
-				'transform': 'rotate(' + (value + 1) + 'deg)'
-			});
+        item.find('.before').css({
+          '-webkit-transform': 'rotate(' + (value + 1) + 'deg)',
+          '-moz-transform': 'rotate(' + (value + 1) + 'deg)',
+          '-o-transform': 'rotate(' + (value + 1) + 'deg)',
+          'transform': 'rotate(' + (value + 1) + 'deg)'
+        });
 
-			start += value;
-		});
-	});
+        start += value;
+      });
+    });
+  }
+}
+
+$('.pie-chart').each((index, el) => {
+  new Pie($(el));
 });

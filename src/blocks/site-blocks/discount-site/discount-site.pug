@@ -1,0 +1,38 @@
+include ../../site-header/site-header
+include ../../header/header
+include ../../percent/percent
+include ../../range-slider/range-slider
+include ../../bubble-Slider/bubble-Slider
+include ../../toggle/toggle
+
+mixin discount-site(options)
+  - let {siteHeader={},lenght=4, percent=[], percentHeader=[], headerAge="Ваш возраст", age={}, headerTooth="", slider={}, headerCoupon="", check="" } = options;
+  - let a = percent.lenght;
+
+  +site-header(siteHeader)
+
+  h1.write Скидки и акции
+
+  .discount 
+    .discount__block
+      - for (let i = 0; i < lenght; i += 1) {
+        +header(percentHeader[i])  
+        +percent(percent[i])
+      -};
+
+    .discount__slider
+      .discount__slider-range
+        +header({header:headerAge})
+        +range-slider(age)
+
+      .discount__slider_bubble
+        .discount__slider_bubble_header
+          +header({header:headerTooth})
+
+        +bubble-slider(slider)
+
+      .discount__slider_coupon
+        +header({header:headerCoupon}) 
+
+        .discount__slider_coupon-toggle
+          +toggle({check:check})   

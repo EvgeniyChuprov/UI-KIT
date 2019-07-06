@@ -1,0 +1,17 @@
+.write {
+  margin: 4% auto;
+  text-align: center;
+}
+
+.online__block {
+  width: 20%;
+  margin: 5% auto 0;
+
+  @media screen and (max-width: 1150px) {
+    width: 30%;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 50%;
+  }
+}

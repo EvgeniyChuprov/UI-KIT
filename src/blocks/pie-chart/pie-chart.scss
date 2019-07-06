@@ -11,7 +11,7 @@ $green: #4eb7a8;
   #{$property}: $value;
 }
 
-[data-doughnut] {
+.pie-chart {
   width: 95px;
   height: 95px;
   border-radius: 100%;
@@ -19,6 +19,7 @@ $green: #4eb7a8;
   position: relative;
   display: inline-block;
   background: #e5e5e5;
+
   &:before,
   &:after {
     content: "";
@@ -36,13 +37,14 @@ $green: #4eb7a8;
     background: #ffffff;
   }
 
-  & > div {
+  &__block_color {
     position: absolute;
     width: 50%;
     height: 100%;
     overflow: hidden;
     left: 50%;
     @include prefixed(transform-origin, left center);
+
     .before {
       content: "";
       position: absolute;
@@ -79,7 +81,7 @@ $green: #4eb7a8;
     &:nth-child(2):after {
       background: $red;
     }
-    
+
     &:nth-child(3) .before,
     &:nth-child(3):after {
       background: $green;

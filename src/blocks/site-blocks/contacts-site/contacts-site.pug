@@ -1,0 +1,34 @@
+include ../../site-header/site-header
+include ../../header/header
+include ../../buttons/buttons
+include ../../text-area/text-area
+include ../../map/map
+
+mixin contacts-site(options)
+  - let {siteHeader={}, headCont="headCont", phone=[], email="", headerText="headerText", text={}, button={}, map={}} = options;
+
+  +site-header(siteHeader) 
+
+  .contacts
+    .contacts__block
+      +header({header:headCont})
+
+      p.contacts__block_text   Контактные телефоны: 
+      each item in phone
+        p.contacts__block_text
+          a.contacts__block_link(href=`tel: ${item.tel}`)=  item.tel
+
+      p.contacts__block_text   Эл. почта: 
+      p.contacts__block_text
+        a.contacts__block_link(href=`mailto: ${email}`)=  email
+
+    .contacts__block
+      +header({header:headerText})
+
+      +text-area(text)
+
+      .contacts__text_button
+        +button-ripple(button) 
+
+  .contacts__map
+    +map(map)

@@ -1,4 +1,5 @@
-mixin calendar()
-  .calendar
+
+mixin calendar(options)
+  - let {dayNames= [], firstDay= 1, buttonPanel="true", otherMonths="true", dateFormat="d", gotoCurrent="false"} = options;
+  .calendar(data-day-names= dayNames, data-first-day= firstDay, data-button-panel= buttonPanel,  data-other-months= otherMonths, data-data-format= dateFormat, data-goto-current= gotoCurrent)
     .calendar__header
-    .datepicker#datepicker

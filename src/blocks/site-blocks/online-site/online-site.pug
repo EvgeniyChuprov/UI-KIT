@@ -1,0 +1,12 @@
+include ../../site-header/site-header
+include ../../message/message
+include ../../text-area/text-area
+include ../../buttons/buttons
+
+mixin online-site(options)
+  - let {siteHeader={}, message={}} = options;
+  +site-header(siteHeader)
+
+  h2.write Онлайн консультация
+  .online__block
+    +message(message)

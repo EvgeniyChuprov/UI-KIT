@@ -1,25 +1,29 @@
-(function ($, window, document, undefined) {
-  'use strict';
+class ButtonRipple {
+  constructor(ripple) {
+    this.ripple = ripple;
+    this.ripples();
+    this.delRipple();
+  }
 
-  const $ripple = $('.js-ripple');
-
-  $ripple.on('click.ui.ripple', function (e) {
-    const $this = $(this);
-    const $offset = $this.parent().offset();
-    const $circle = $this.find('.element-ripple__circle');
-    const x = e.pageX - $offset.left;
-    const y = e.pageY - $offset.top;
-
-    $circle.css({
-      top: y + 'px',
-      left: x + 'px'
+  ripples() {
+    this.ripple.on('click', function (e) {
+      const $this = $(this);
+      const $offset = $this.parent().offset();
+      const $circle = $this.find('.element-ripple__circle');
+      const x = e.pageX - $offset.left;
+      const y = e.pageY - $offset.top;
+      $circle.css( { top: `${y}px`, left: `${x}px` });
+      $this.addClass('is-active');
     });
+  }
 
-    $this.addClass('is-active');
-  });
+  delRipple() {
+    this.ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function () {
+      $(this).removeClass('is-active');
+    });
+  }
+}
 
-  $ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', function (e) {
-    $(this).removeClass('is-active');
-  });
-
-})(jQuery, window, document);
+$('.js-ripple').each((index, el) => {
+  new ButtonRipple($(el));
+});

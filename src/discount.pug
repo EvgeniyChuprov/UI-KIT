@@ -1,9 +1,4 @@
-include blocks/site-header/site-header
-include blocks/header/header
-include blocks/percent/percent
-include blocks/range-slider/range-slider
-include blocks/bubble-Slider/bubble-Slider
-include blocks/toggle/toggle
+include blocks/site-blocks/discount-site/discount-site
 
 doctype html
 html
@@ -19,26 +14,11 @@ html
     meta( name="theme-color" content="#ffffff")
     title UI-KIT
   body
-    +site-header()
-    h2.inform-header Скидки и акции
-    .discount 
-      .discount__block
-        +header("скидка за каждую пломбу")   
-        +percent(5) 
-        +header("скидка на удаление зуба")
-        +percent(20)
-        +header("скидка на виниры")
-        +percent(43)
-        +header("скидка на брекеты")
-        +percent(60)
-      .discount__slider
-        .discount__slider-range
-          +header("Ваш возраст")
-          +range-slider({min: 0, max: 100, step: 25, value: 75})
-        .discount__slider_bubble
-          +header("Количество зубов")
-          +bubble-slider(0, 32, 1, 0)
-        .discount__coupon
-          +header("У Вас есть дисконтная карта?") 
-          .discount__coupon-toggle
-            +toggle("checked")   
+    +discount-site({siteHeader:{headTitle: "Зубы на полку", menu:[{link: "discount.html", title: "скидки и акции"}, 
+    {link: "recording.html", title: "запись на прием"}, {link: "online.html", title: "онлайн консультация"}, 
+    {link: "contacts.html", title: "контакты"}, {link: "staff.html", title: "наши врачи"}]}, lenght:4,
+    percent:[ {num:5}, {num:7}, {num:12}, {num:25}], percentHeader:[{header:"скидка за каждую пломбу"},
+    {header:"скидка на удаление зуба"}, {header:"скидка на виниры"}, {header:"скидка на брекеты"}],
+    headerAge:"Ваш возраст" , age:{min: 0, max: 100, step: 5, value: 35},
+    headerTooth:"Количество зубов", slider:{min:0, max:32, step:1, value:25},
+    headerCoupon:"У Вас есть дисконтная карта?", check:"checked"})

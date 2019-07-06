@@ -1,7 +1,7 @@
 mixin pie-chart(options)
   -let {one=10, two=10, three=10} = options;
-  
-  div(data-doughnut)
-    div(data-doughnut-value= one)
-    div(data-doughnut-value= two)
-    div(data-doughnut-value= three)
+
+  .pie-chart(data-doughnut)
+    .pie-chart__block_color(data-doughnut-value= one)
+    .pie-chart__block_color(data-doughnut-value= two)
+    .pie-chart__block_color(data-doughnut-value= three)

@@ -1,9 +1,10 @@
 mixin map(options)
   -let {marker="marker", lat="lat", lng="lng", zoom="zoom", city="city", title="title"} = options;
-  div(id="map" class="map" data-marker= marker data-lat= lat data-lng= lng data-zoom= zoom)
-  .map_menu 
-    .head= title
-    .adress= city
-    .icon
-      .locat
-      .pin
+
+  .map( data-marker= marker data-lat= lat data-lng= lng data-zoom= zoom)
+  .map__menu 
+    .map__head= title
+    .map__adress= city
+    .map__icon
+      .map__icon_locat
+      .map__icon_pin

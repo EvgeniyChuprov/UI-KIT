@@ -1,21 +1,32 @@
-$(document).ready(function () {
-  const loadGoogleMapsApi = require('load-google-maps-api');
-  const lat = $('#map').data('lat');
-  const lng = $('#map').data('lng');
-  const zoom = $('#map').data('zoom');
-  const marker = $('#map').data('marker');
-  const pos = { lat: lat, lng: lng };
+class Map {
+  constructor(map) {
+    this.loadGoogleMapsApi = require('load-google-maps-api');
+    this.map = map;
+    this.zoom = this.map.data('zoom'); 
+    this.marker = this.map.data('marker');
+    this.lat = this.map.data('lat');
+    this.lng = this.map.data('lng');
+    this.maps();
+  }
 
-  loadGoogleMapsApi().then(function (googleMaps) {
-    const map = new googleMaps.Map(document.querySelector('#map'), {
-      center: pos,
-      zoom: zoom,
-    })
+  maps() {
+    const pos = { lat: this.lat, lng: this.lng };
 
-    new google.maps.Marker({
-      position: pos,
-      map: map,
-      icon: marker
-    })
-  });
+    this.loadGoogleMapsApi().then((googleMaps) => {
+      const maps = new googleMaps.Map(document.querySelector('.map'), {
+        center: pos,
+        zoom: this.zoom,
+      });
+
+      const marker = new google.maps.Marker({
+        position: pos,
+        map: maps,
+        icon: this.marker,
+      });
+    });
+  }
+}
+
+$('.map').each((index, el) => {
+  new Map($(el));
 });

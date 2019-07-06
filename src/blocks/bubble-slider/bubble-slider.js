@@ -16,9 +16,11 @@ class BubbleSlider {
   }
 }
 
-const domEl = {
-  range: document.querySelector('.custom-rangeInput'),
-  tool: document.querySelector('.custom-rangeslider__tooltip'),
-};
 
-new BubbleSlider(domEl);
+$('.custom-rangeslider').each(() => {
+  const domEl = {
+    range: document.querySelector('.custom-rangeInput'),
+    tool: document.querySelector('.custom-rangeslider__tooltip'),
+  };
+  new BubbleSlider(domEl);
+});

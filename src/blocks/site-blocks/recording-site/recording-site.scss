@@ -1,0 +1,38 @@
+.write {
+  margin: 4% auto;
+  text-align: center;
+}
+
+.recording {
+  display: flex;
+  justify-content: space-between;
+  width: 50rem;
+  margin: auto;
+
+  @media screen and (max-width: 50rem) {
+    display: block;
+    width: 100%;
+  }
+
+  &__block {
+    padding-top: 4rem;
+    width: 40%;
+    margin: auto;
+
+    @media screen and (max-width: 715px) {
+      width: 80%;
+    }
+  }
+
+  &_gender {
+    margin-bottom: 2rem;
+  }
+
+  &__radio {
+    margin: 1rem auto;
+    text-align: center;
+  }
+}
+.fild {
+  margin: 1rem 0;
+}

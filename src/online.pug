@@ -1,7 +1,4 @@
-include blocks/site-header/site-header
-include blocks/message/message
-include blocks/text-area/text-area
-include blocks/buttons/buttons
+include blocks/site-blocks/online-site/online-site
 
 doctype html
 html
@@ -17,7 +14,8 @@ html
     meta( name="theme-color" content="#ffffff")
     title UI-KIT
   body
-    +site-header()
-    h2.inform-header Онлайн консультация
-    .online__block
-      +message({text:"Здравствуйте! Чем я могу вам помоч?", placeholder:"Добрый день. Как записаться на прием?", foto:require("./blocks/message/img/photo-woman.png"), button:"ответить"} )
+    +online-site({siteHeader:{headTitle: "Зубы на полку", menu:[{link: "discount.html", title: "скидки и акции"}, 
+    {link: "recording.html", title: "запись на прием"}, {link: "online.html", title: "онлайн консультация"}, 
+    {link: "contacts.html", title: "контакты"},{link: "staff.html", title: "наши врачи"}]},
+    message: {text:"Здравствуйте! Чем я могу вам помоч?", placeholder:"Добрый день. Как записаться на прием?", 
+    foto:require("./blocks/message/img/photo-woman.png"), button:"ответить"}})

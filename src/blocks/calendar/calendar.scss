@@ -9,8 +9,8 @@
     font-size: 4.8rem;
     color: #ffffff;
     text-align: center;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
   }
 }
 
@@ -72,14 +72,14 @@
 .ui-widget-content .ui-icon {
   background-image: none;
   border: solid #ffffff;
-  border-width: 0 .25rem .25rem 0;
+  border-width: 0 0.25rem 0.25rem 0;
   display: inline-block;
   transform: rotate(-45deg);
 }
 
 .ui-datepicker-prev .ui-icon {
   border: solid #ffffff;
-  border-width: 0 .25rem .25rem 0;
+  border-width: 0 0.25rem 0.25rem 0;
   display: inline-block;
   transform: rotate(135deg);
 }
@@ -103,8 +103,8 @@
   background-color: #e5e5e5;
   color: #868686;
   font-weight: bold;
-  border-bottom-left-radius: .25rem;
-  border-bottom-right-radius: .25rem;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
   padding: 1.1rem 0 1rem 1.2rem;
 }
 

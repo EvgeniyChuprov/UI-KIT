@@ -3,16 +3,13 @@
   max-width: 600px;
 }
 
-
-
-.form{
-
+.form {
   &__block {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
-  
+
   &__element {
     width: 48%;
   }

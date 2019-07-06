@@ -1,8 +1,7 @@
 @font-face {
   font-family: "latoblack";
   src: url("/fonts/lato-black.eot");
-  src: local("☺"), url("/fonts/lato-black.woff") format("woff"), 
-  url("/fonts/lato-black.ttf") format("truetype");
+  src: local("☺"), url("/fonts/lato-black.woff") format("woff"), url("/fonts/lato-black.ttf") format("truetype");
   font-weight: 400;
   font-weight: normal;
   font-style: normal;
@@ -11,8 +10,7 @@
 @font-face {
   font-family: "latoregular";
   src: url("/fonts/lato-regular.eot");
-  src: local("☺"), url("/fonts/lato-regular.woff") format("woff"), 
-  url("/fonts/lato-regular.ttf") format("truetype");
+  src: local("☺"), url("/fonts/lato-regular.woff") format("woff"), url("/fonts/lato-regular.ttf") format("truetype");
   font-weight: 400;
   font-weight: normal;
   font-style: normal;
@@ -20,8 +18,7 @@
 @font-face {
   font-family: "latolight";
   src: url("/fonts/lato-light.eot");
-  src: local("☺"), url("/fonts/lato-light.woff") format("woff"), 
-  url("/fonts/lato-light.ttf") format("truetype");
+  src: local("☺"), url("/fonts/lato-light.woff") format("woff"), url("/fonts/lato-light.ttf") format("truetype");
   font-weight: 400;
   font-weight: normal;
   font-style: normal;
@@ -30,13 +27,13 @@
 @font-face {
   font-family: "sourcesanspro-light";
   src: url("fonts/sourcesanspro-light.eot");
-  src: local("☺"), url("fonts/sourcesanspro-light.woff") format("woff"), 
-  url("fonts/sourcesanspro-light.ttf") format("truetype");
+  src: local("☺"), url("fonts/sourcesanspro-light.woff") format("woff"),
+    url("fonts/sourcesanspro-light.ttf") format("truetype");
   font-weight: 200;
   font-weight: normal;
   font-style: normal;
 }
-body{
+body {
   margin: 0;
   padding: 0;
 }
@@ -45,46 +42,7 @@ html {
   font-size: 16px;
   min-width: 350px;
 }
-.inform-header {
-  font-size: 3rem;
-  text-align: center;
-}
-.company,
-.company-news {
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 2rem;
-}
-.company-name {
-  text-align: center;
-  font-size: 3.5rem;
-  text-transform: uppercase;
-}
-
-.news-block {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 60%;
-  margin: auto;
-  .news-block__elem {
-    width: 40%;
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (max-width: 920px) {
-  .news-block {
-    display: block;
-    .news-block__elem {
-      width: 80%;
-      margin: auto;
-      margin-bottom: 2rem;
-    }
-  }
-}
-@media screen and (max-width: 590px) {
-  .news-block {
-    width: 100%;
-  }
-}
+// .inform-header {
+//   font-size: 3rem;
+//   text-align: center;
+// }
