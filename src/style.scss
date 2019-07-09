@@ -1,35 +1,16 @@
 @font-face {
-  font-family: "latoblack";
-  src: url("/fonts/lato-black.eot");
-  src: local("☺"), url("/fonts/lato-black.woff") format("woff"), url("/fonts/lato-black.ttf") format("truetype");
-  font-weight: 400;
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "latoregular";
-  src: url("/fonts/lato-regular.eot");
-  src: local("☺"), url("/fonts/lato-regular.woff") format("woff"), url("/fonts/lato-regular.ttf") format("truetype");
-  font-weight: 400;
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "latolight";
-  src: url("/fonts/lato-light.eot");
-  src: local("☺"), url("/fonts/lato-light.woff") format("woff"), url("/fonts/lato-light.ttf") format("truetype");
-  font-weight: 400;
+  src: url("./fonts/lato-regular.eot");
+  src: local("☺"), url("./fonts/lato-regular.woff") format("woff"), url("./fonts/lato-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "sourcesanspro-light";
-  src: url("fonts/sourcesanspro-light.eot");
-  src: local("☺"), url("fonts/sourcesanspro-light.woff") format("woff"),
-    url("fonts/sourcesanspro-light.ttf") format("truetype");
-  font-weight: 200;
+  src: url("./fonts/sourcesanspro-light.eot");
+  src: local("☺"), url("./fonts/sourcesanspro-light.woff") format("woff"),
+    url("./fonts/sourcesanspro-light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -38,11 +19,7 @@ body {
   padding: 0;
 }
 html {
-  font-family: "latoregular";
+  font-family: "latoregular", "Arial", Sans-Serif;
   font-size: 16px;
   min-width: 350px;
 }
-// .inform-header {
-//   font-size: 3rem;
-//   text-align: center;
-// }

@@ -23,12 +23,12 @@ class Calendar {
   createCalendar(calendar) {
     $(calendar).datepicker(this.getCalendar());
     $('.calendar__header').text($.datepicker.formatDate('dd', new Date()));
-    $(this.calendar).datepicker("setDate", new Date());
+    $(this.calendar).datepicker('setDate', new Date());
     // eslint-disable-next-line no-underscore-dangle
-    $.datepicker._gotoToday = function (id) {
-      $(id).datepicker('setDate', new Date());
+    $.datepicker._gotoToday = (e) => {
+      $(e).datepicker('setDate', new Date());
       $('.calendar__header').text($.datepicker.formatDate('dd', new Date()));
-    }
+    };
   }
 }
 

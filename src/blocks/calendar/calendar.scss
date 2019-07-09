@@ -1,6 +1,5 @@
 .calendar {
   width: 100%;
-  font-family: "latolight";
   &__header {
     display: inline-block;
     width: 100%;
@@ -91,7 +90,6 @@
 
 .ui-corner-all > .ui-datepicker-buttonpane.ui-widget-content button {
   width: 100%;
-  font-weight: 500;
   font-style: bold;
   text-align: left;
   margin: 0;

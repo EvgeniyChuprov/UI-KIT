@@ -1,7 +1,6 @@
-
 .stage {
   background-color: #e5e5e5;
-  height: .25rem;
+  height: 0.25rem;
   list-style-type: none;
   padding: 0;
 
@@ -15,14 +14,14 @@
     background-color: #e5e5e5;
     border-radius: 50%;
     color: #888888;
-    font-family: "latoblack";
+    font-weight: bold;
     height: 1.7rem;
     width: 1.7rem;
-    right: -.7rem;
+    right: -0.7rem;
     line-height: 1.6rem;
     position: absolute;
     text-align: center;
-    top: -.8rem;
+    top: -0.8rem;
   }
 }
 
@@ -35,8 +34,8 @@
 .stage__steps_color + .stage__steps_color:before {
   background-color: #e75735;
   content: "";
-  height: .25rem;
+  height: 0.25rem;
   position: absolute;
-  width: calc(100% - .8rem);
+  width: calc(100% - 0.8rem);
   z-index: 2;
 }

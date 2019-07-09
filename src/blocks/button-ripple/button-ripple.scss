@@ -1,5 +1,5 @@
 .button {
-  font-family: "latoblack";
+  font-weight: bold;
   font-size: 0.8rem;
   text-transform: uppercase;
   border-radius: 0.25rem;
@@ -10,6 +10,7 @@
   position: relative;
   background-color: #ffffff;
   padding: 0.45rem;
+
   &__element {
     &_size_small {
       padding: 0.2rem;
