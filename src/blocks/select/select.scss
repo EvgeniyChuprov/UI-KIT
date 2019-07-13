@@ -1,35 +1,30 @@
-.select {
-  margin: 3.1% 0;
-  padding: 2%;
-  padding-left: 4%;
-  position: relative;
-  display: block;
-  width: 94.3%;
-  line-height: 1;
-  background: #e5e5e5;
-  overflow: hidden;
-  border-radius: .25rem;
-  &__block {
-    -webkit-appearance: none;
-    appearance: none;
-    box-shadow: none;
-    background-image: none;
-    border: none;
-    outline: 0;
-    background: #e5e5e5;
-    width: 100%;
-    height: 100%;
-    color: #888;
-    cursor: pointer;
-  }
-  &::after {
+.ui-selectmenu-text {
+  font-weight: 100;
+
+  &:after {
     content: "";
-    background: #44ae9f url("./img/check-drop.svg") no-repeat center;
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0 6%;
-    pointer-events: none;
+    background: #4eb7a8 url("./img/check-drop.svg") no-repeat center;
+    color: #fff;
+    width: 11.5%;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    border-radius: 0 3px 3px 0;
   }
+}
+
+.select > .ui-selectmenu-button.ui-button {
+  width: 16rem;
+  background: #e5e5e5;
+}
+
+.ui-selectmenu-menu .ui-menu {
+  background: #4eb7a8;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.ui-state-disabled {
+  display: none;
 }
