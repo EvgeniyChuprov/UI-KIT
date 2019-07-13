@@ -1,11 +1,13 @@
-.news-events{
+.news-events {
+  padding-top: 14.5%;
 
-  &__wrap{
+  &__wrap {
+    padding-top: 5.5%;
     display: flex;
     justify-content: space-between;
   }
 
-  &__block{
-    width: 48%;
+  &__block {
+    width: 48.5%;
   }
 }

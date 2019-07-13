@@ -1,10 +1,12 @@
-.sliders{
+.sliders {
+  padding-top: 5%;
+
   &__block {
     display: flex;
     justify-content: space-between;
   }
   &__element {
-    width: 48%;
-    padding-top:10%;
+    width: 44%;
+    padding: 6% 1% 0;
   }
 }

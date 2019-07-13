@@ -7,10 +7,9 @@ mixin percentages(options)
 
   .percentages
     +header({header:"percentages / pie chart"})
-
-    each item in percentages
-      .percentages__block
+    .percentages__block
+      each item in percentages
         +percent(item)
 
-    .percentages__pie
-      +pie-chart(pie)
+      .percentages__pie
+        +pie-chart(pie)

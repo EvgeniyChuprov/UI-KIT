@@ -1,8 +1,12 @@
-.wrap{
+.wrap {
+  padding-top: 9.1%;
   display: flex;
   justify-content: space-between;
 
-  &__block{
-    width: 48%;
+  &__block {
+    width: 47%;
+    &_element {
+      padding-top: 9%;
+    }
   }
 }

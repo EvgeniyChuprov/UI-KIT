@@ -12,7 +12,7 @@ mixin message(options)
       img(class="message__photo" src= foto alt="User photo")
     .message__body
       .message__body_from= text
-      .message__body_to
-       +text-area({ name:"form", placeholder: placeholder})
+      .message__body_text-area
+        +text-area({ name:"form", placeholder: placeholder})
       .message__body-button
         +button-ripple({text: button, small: false, green: true})
