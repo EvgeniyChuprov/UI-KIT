@@ -1,9 +1,11 @@
 mixin button-ripple(options) 
-  - let {text="text", small=true, green=true} = options;
+  - let {text="text", small=true, green=true, bRipple=false} = options;
   - let butRipple = "button";
+  - let ripple = "element-ripple";
+  - ripple += bRipple ? " js-ripple" : "" ;
   - butRipple += small ? " button__element_size_small" : "" ;
   - butRipple += green ? " button__element_color_green" : " button__element_color_red" ;
 
   button(class= butRipple)= text
-    .element-ripple.js-ripple
+    div(class= ripple)
       span.element-ripple__circle

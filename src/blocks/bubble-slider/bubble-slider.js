@@ -1,26 +1,26 @@
 class BubbleSlider {
-  constructor(domEl) {
-    this.range = domEl.range;
-    this.tool = domEl.tool;
+  constructor($domEl) {
+    this.$range = $domEl.children().first();
+    this.$tool = $domEl.children().last();
     this.rangeTool();
     this.bubble();
   }
 
   rangeTool() {
-    this.tool.innerHTML = this.range.value;
-    this.tool.style.left = `${this.range.value * (this.range.offsetWidth / this.range.max) - this.tool.offsetWidth / 2 + (this.range.value - this.range.min) * -20 / (this.range.max - this.range.min) + 10 + 8}px`;
+    const tooltipAdjustmentFirst = -20;
+    const tooltipAdjustmentSecond = 18;
+    const moving = this.$range.val() * (this.$range.outerWidth() / this.$range.attr('max'))
+    - this.$tool.outerWidth() / 2 + (this.$range.val() - this.$range.attr('min'))
+    * tooltipAdjustmentFirst / (this.$range.attr('max') - this.$range.attr('min')) + tooltipAdjustmentSecond;
+    this.$tool.html(this.$range.val());
+    this.$tool.css('left', `${moving}px`);
   }
 
   bubble() {
-    this.range.oninput = this.rangeTool.bind(this);
+    this.$range.on('input', this.rangeTool.bind(this));
   }
 }
 
-
-$('.custom-rangeslider').each(() => {
-  const domEl = {
-    range: document.querySelector('.custom-rangeInput'),
-    tool: document.querySelector('.custom-rangeslider__tooltip'),
-  };
-  new BubbleSlider(domEl);
+$('.custom-rangeslider').each((index, domElement) => {
+  new BubbleSlider($(domElement));
 });
