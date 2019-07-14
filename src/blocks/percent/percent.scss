@@ -26,6 +26,7 @@
   &:after {
     content: $percent;
     display: block;
+    font-family: "lato-light", "Arial", Sans-Serif;
     width: $diameter - $stroke-width * 2;
     height: $diameter - $stroke-width * 2;
     background: $bg-color;

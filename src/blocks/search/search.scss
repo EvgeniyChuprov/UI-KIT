@@ -1,18 +1,23 @@
 .search-form {
   padding: 2.9% 0;
+
   &__block {
     display: flex;
+
     &_field {
+      font-family: "sourcesanspro-light", "Arial", "Sans-Serif";
       background-color: #e5e5e5;
       outline: none;
       border: none;
       padding: 2.2%;
       width: 84.2%;
       border-radius: 0.25rem 0 0 0.25rem;
+
       &::placeholder {
         padding-left: 0.3rem;
       }
     }
+
     &_button {
       flex: 1;
       display: flex;
@@ -31,8 +36,10 @@
         border-radius: 0 0.25rem 0.25rem 0;
       }
     }
+
     .search-error {
       background: #e75735;
+
       &::placeholder {
         color: #ffffff;
       }

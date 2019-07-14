@@ -1,6 +1,8 @@
 .calendar {
   width: 100%;
+
   &__header {
+    font-family: "lato-light", "Arial", "Sans-Serif";
     display: inline-block;
     width: 100%;
     padding: 1rem 0;
@@ -26,6 +28,7 @@
   background-color: #d54c2c;
 }
 .ui-datepicker-calendar .ui-state-default {
+  font-family: "sourcesanspro-light", "Arial", "Sans-Serif";
   line-height: 1.7rem;
   border: none;
   text-align: center;
@@ -52,6 +55,7 @@
 }
 
 .ui-datepicker div.ui-datepicker-title {
+  font-family: "lato-light", "Arial", "Sans-Serif";
   font-size: 1.7rem;
   line-height: 1.5rem;
   letter-spacing: 0rem;

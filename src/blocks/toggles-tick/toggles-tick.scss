@@ -2,10 +2,11 @@
   .toggles__block {
     margin: 2.1rem auto;
     text-align: center;
+
     &_off {
       display: inline-block;
     }
-    
+
     &_on {
       display: inline-block;
       margin-left: 1rem;

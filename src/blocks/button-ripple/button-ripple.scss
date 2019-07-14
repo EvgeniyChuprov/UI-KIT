@@ -1,5 +1,5 @@
 .button {
-  font-weight: bold;
+  font-family: "lato-black", "Arial", "Sans-Serif";
   font-size: 0.8rem;
   text-transform: uppercase;
   border-radius: 0.25rem;
@@ -13,7 +13,7 @@
 
   &__element {
     &_size_small {
-      padding: 0.2rem;
+      padding: 0.3rem;
       width: 100%;
       min-width: 4.9rem;
       font-size: 0.6rem;
@@ -55,6 +55,16 @@
           box-shadow: none;
           color: #ffffff;
         }
+      }
+
+      &_fill-green {
+        background-color: #44ae9f;
+        color: #ffffff;
+      }
+
+      &_fill-red {
+        background-color: #e75735;
+        color: #ffffff;
       }
     }
   }

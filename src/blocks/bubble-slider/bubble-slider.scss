@@ -1,6 +1,6 @@
 .custom-rangeslider {
   position: relative;
-  padding-top:2.5%;
+  padding-top: 2.5%;
 
   &__tooltip {
     line-height: 1rem;
@@ -22,11 +22,11 @@
       display: block;
       content: "";
       position: absolute;
-      border: 5px solid transparent;
-      border-top: 5px solid #e75735;
+      border: 0.3rem solid transparent;
+      border-top: 0.3rem solid #e75735;
       left: calc(50% - 6px);
-      left: 11px;
-      bottom: -10px;
+      left: 0.7rem;
+      bottom: -0.6rem;
     }
   }
 }
@@ -35,7 +35,8 @@
   width: 100%;
   background: transparent;
   cursor: pointer;
-  height: 12px;
+  height: 0.8rem;
+
   &::-webkit-slider-thumb {
     margin-top: -0.5rem;
   }

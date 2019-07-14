@@ -4,33 +4,40 @@
   width: 100%;
   background: #689cd2;
   justify-content: space-around;
+
   .navigation {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 15px;
+
     &__logo {
       color: #ffffff;
       font-size: 2rem;
       font-weight: bold;
       text-decoration: none;
       vertical-align: middle;
+
       &:hover {
         color: greenyellow;
       }
     }
+
     &__menu {
       list-style: none;
       text-transform: uppercase;
       display: flex;
+
       &_element {
         padding: 0 15px;
         font-size: 1rem;
         font-weight: bold;
       }
+
       .link {
         color: #ffffff;
         text-decoration: none;
+
         &:hover {
           color: greenyellow;
           border-bottom: greenyellow solid 3px;
@@ -39,6 +46,7 @@
       }
     }
   }
+
   .ui-kit {
     height: 20px;
     width: 100%;

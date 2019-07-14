@@ -26,7 +26,7 @@
 
   &__name {
     padding: 9% 0 4.5rem 0;
-    font-family: "sourcesanspro-light";
+    font-family: "sourcesanspro-light", "Arial", "Sans-Serif";
     font-size: 2rem;
     color: #ffffff;
   }
@@ -41,6 +41,7 @@
   }
 
   &__body {
+    font-family: "lato-light", "Arial", "Sans-Serif";
     padding-top: 3.8rem;
     padding-bottom: 0.4rem;
     background-color: #f2f2f2;
