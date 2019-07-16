@@ -11,20 +11,26 @@
     height: 100%;
     top: 0px;
     right: 0px;
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 0.25rem 0.25rem 0;
   }
 }
 
 .select > .ui-selectmenu-button.ui-button {
+  outline: none;
   width: 16rem;
   background: #e5e5e5;
+  border-radius: 0.25rem;
 }
 
 .ui-selectmenu-menu .ui-menu {
   font-family: "sourcesanspro-light", "Arial", "Sans-Serif";
   background: #4eb7a8;
   color: #fff;
-  border-radius: 3px;
+  border-radius: 0.25rem;
+}
+
+#ui-id-1-menu {
+  padding: 0.3rem 0 0.5rem;
 }
 
 #ui-id-1-menu .ui-state-disabled {
