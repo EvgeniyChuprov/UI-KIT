@@ -21,6 +21,6 @@ class BubbleSlider {
   }
 }
 
-$('.custom-rangeslider').each((index, domElement) => {
+$('.bubble-slider').each((index, domElement) => {
   new BubbleSlider($(domElement));
 });

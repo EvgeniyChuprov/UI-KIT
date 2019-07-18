@@ -6,8 +6,9 @@ mixin search-block(options)
   -let {header="header", search=[], select={}} = options;
   +header({header:header}) 
 
-  form.search-form
+  form.search-block
     each item in search 
-      .search-form__search
+      .search-block__search
         +search(item) 
+
     +select(select)   

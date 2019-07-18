@@ -10,8 +10,7 @@ class Percent {
     const circumference = Math.ceil(diameter * Math.PI);
     const stroke = Math.ceil(circumference * percent);
     const diff = circumference - stroke;
-
-    this.circles.querySelector('.percent-circle__inner').style.strokeDasharray = `${stroke}px ${diff}px`;
+    $(this.circles).children().children().css('strokeDasharray', `${stroke}px ${diff}px`);
   }
 }
 

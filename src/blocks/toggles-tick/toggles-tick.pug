@@ -5,16 +5,17 @@ include ../tick/tick
 mixin toggles-tick(options)
 	-	let {toggleheader="header", checkone="", checksecond="", tickheader="header", tick=[]} = options;
 
-	.togglesTick
+	.toggles-tick
 		+header({header: toggleheader})
 
-		.toggles__block
-			.toggles__block_off
+		.toggles-tick__block
+			.toggles-tick__block_off
 				+toggle({check: checkone})
-			.toggles__block_on 
+			.toggles-tick__block_on 
 				+toggle({check: checksecond})
 
 		+header({header: tickheader})
+
 		.tick-box
 			each item in tick
 				+tick(item)

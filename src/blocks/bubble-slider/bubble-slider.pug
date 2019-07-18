@@ -1,6 +1,6 @@
 mixin bubble-slider(options)
   -let {min=0, max=100, step=0, value=40} = options;
 
-  .custom-rangeslider
-    input.custom-rangeInput( id="rangeslider" type="range" min= min max= max value= value step= step)
-    label.custom-rangeslider__tooltip(for="rangeslider") 0
+  .bubble-slider
+    input.bubble-slider__input( id="rangeslider" type="range" min= min max= max value= value step= step)
+    label.bubble-slider__tooltip(for="rangeslider") 0

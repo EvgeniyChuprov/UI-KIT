@@ -24,6 +24,13 @@
       border-right-color: #44ae9f;
       z-index: -1;
     }
+
+    &_error {
+      background: #e75735;
+      &:after {
+        border-right-color: #e75735;
+      }
+    }
   }
 
   &__form {
@@ -36,12 +43,5 @@
     width: 76%;
     border-radius: 0.2rem;
     margin-left: 1.2%;
-  }
-}
-
-.correct_error {
-  background: #e75735;
-  &:after {
-    border-right-color: #e75735;
   }
 }

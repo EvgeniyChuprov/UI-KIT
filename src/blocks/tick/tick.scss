@@ -1,8 +1,8 @@
-.ui-radio {
+.tick {
   display: none;
 }
 
-.ui-radio-label {
+.tick-label {
   position: relative;
   &:before {
     content: "";
@@ -14,11 +14,11 @@
   }
 }
 
-.ui-radio:checked + .ui-radio-label:before {
+.tick:checked + .tick-label:before {
   background: #4eb7a8 url("./img/check.svg") no-repeat center;
 }
 
-.ui-radio:checked + .ui-radio-label:after {
+.tick:checked + .tick-label:after {
   position: absolute;
   content: "";
   display: inline-block;

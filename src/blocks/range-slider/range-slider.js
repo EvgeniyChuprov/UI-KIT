@@ -17,6 +17,6 @@ class RangeSlider {
   }
 }
 
-$('.range').each((index, el) => {
+$('.range-slider__range').each((index, el) => {
   new RangeSlider($(el))
 });

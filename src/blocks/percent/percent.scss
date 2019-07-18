@@ -41,16 +41,18 @@
   }
 }
 
-.percent__container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+.percent {
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-.percent-circle {
-  @include percent-circle(93px, 5px, #e75735, #ffffff);
-}
+  &-circle {
+    @include percent-circle(93px, 5px, #e75735, #ffffff);
+  }
 
-.hidden {
-  display: none;
+  &_hidden {
+    display: none;
+  }
 }

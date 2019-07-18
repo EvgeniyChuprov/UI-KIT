@@ -4,9 +4,10 @@ include ../range-slider/range-slider
 
 mixin sliders(options) 
 	- let {header="title", bubble={}, range={}} = options;
+
 	.sliders
 		+header({header:header})
-		
+
 		.sliders__block
 			.sliders__element
 				+bubble-slider(bubble)

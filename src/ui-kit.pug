@@ -60,27 +60,27 @@ html
 
 			+stages({header:"stages",  stage:{min:1, max:5, value:3}})
 
-			.form
+			.forms
 				+header({header:"form elements"})
 
-				.form__block
-					.form__element
+				.forms__block
+					.forms__element
 						+form({field:[{placeholder:"Your Name", type:"text", name:"form", correct: false},
 							{placeholder:"Your Email", type:"text", name:"form", correct: true}],
 							textarea:{placeholder:"Your Message", name:"form"},
 							button:{text: "submit", small: false, green: true}})
 
-					.form__element
+					.forms__element
 						+toggles-tick({toggleheader:"toggles", checkone:"", checksecond:"checked", tickheader:"tick boxes",
 							tick:[{name: "radio", id:"one", checked: true}, {name: "radio", id:"two", checked: false}]}) 
 
-					.form__element
+					.forms__element
 						+search-block({header:"search / drop down", 
 							search:[{placeholder:"Search", error:""},
 							{placeholder:"I've not found what I'm looking for...", error:" search-error"}],
 							select:{one:"This is option 1", two:"This is option 2", three:"This is option 3", four:"This is option 4"}})
 
-					.form__element
+					.forms__element
 						+users-profiles({header:"user profile", profiles:[
 							{img:require("./blocks/user-profile/img/photo-man.png"), name:"John Smith", job:"ux designer", color:"", 
 							webone:"/mock-address/change-me/", imgone:require("./blocks/user-profile/img/fb.svg"), altone:"FB",

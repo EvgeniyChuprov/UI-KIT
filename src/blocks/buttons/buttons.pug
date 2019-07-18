@@ -3,11 +3,11 @@ include ../button-ripple/button-ripple
 
 mixin buttons(options) 
   - let {header="header", buttons=[]} = options;
-  
+
   +header({header: header})
 
-  .standart-buttons
+  .buttons
 
     each item in buttons  
-      .standart-buttons__block
+      .buttons__block
         +button-ripple(item)

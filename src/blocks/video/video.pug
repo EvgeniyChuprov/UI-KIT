@@ -1,3 +1,4 @@
 mixin video(options)
   - let {link="link"} = options;
-  iframe( class="video-block" src= link  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+
+  iframe.video( src= link  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)

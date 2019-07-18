@@ -7,14 +7,13 @@
   border: none;
   background: none;
 
-  .arrow {
+  &_direction_left {
     display: inline-block;
-
     cursor: pointer;
     width: 2.8rem;
     height: 2.7rem;
     line-height: 2.5rem;
-    border: .25rem solid #44ae9f;
+    border: 0.25rem solid #44ae9f;
     border-radius: 50%;
 
     &::after {
@@ -24,8 +23,8 @@
       margin-left: 10%;
       width: 0.84rem;
       height: 0.84rem;
-      border-top: .25rem solid #44ae9f;
-      border-right: .25rem solid #44ae9f;
+      border-top: 0.25rem solid #44ae9f;
+      border-right: 0.25rem solid #44ae9f;
       transform: rotate(-135deg);
     }
 
@@ -37,69 +36,85 @@
         border-right-color: #ffffff;
       }
     }
+  }
 
-    &_direction_right {
+  &_direction_right {
+    display: inline-block;
+    cursor: pointer;
+    width: 2.8rem;
+    height: 2.7rem;
+    line-height: 2.5rem;
+    border: 0.25rem solid #44ae9f;
+    border-radius: 50%;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10%;
+      width: 0.84rem;
+      height: 0.84rem;
+      margin-left: 0;
+      border-top: none;
+      border-right: none;
+      margin-right: 13%;
+      border-bottom: 0.25rem solid #44ae9f;
+      border-left: 0.25rem solid #44ae9f;
+      transform: rotate(-135deg);
+    }
+
+    &:hover {
+      background: #44ae9f;
 
       &::after {
-        margin-left: 0;
-        border-top: none;
-        border-right: none;
-        margin-right: 13%;
-        border-bottom: .25rem solid #44ae9f;
-        border-left: .25rem solid #44ae9f;
+        border-bottom-color: #ffffff;
+        border-left-color: #ffffff;
+      }
+    }
+  }
+
+  &:disabled {
+    .arrow__button_direction_left {
+      cursor: default;
+      background-color: #e5e5e5;
+      border: 3px solid #e5e5e5;
+
+      &::after {
+        border-top: 0.25rem solid #ffffff;
+        border-right: 0.25rem solid #ffffff;
       }
 
       &:hover {
-
-        &::after {
-          border-bottom-color: #ffffff;
-          border-left-color: #ffffff;
-        }
+        background-color: #e5e5e5;
       }
     }
-  }
-
-  &:disabled{
-    
-    .arrow {
-        cursor: default;
-        background-color: #e5e5e5;
-        border: 3px solid #e5e5e5;
-      
-        &::after {
-          border-top: .25rem solid #ffffff;
-          border-right: .25rem solid #ffffff;
-        }
-      
-        &:hover {
-          background-color: #e5e5e5;
-        }
-    }
-    .arrow_direction_right{
+    .arrow__button_direction_right {
+      cursor: default;
+      background-color: #e5e5e5;
+      border: 3px solid #e5e5e5;
 
       &::after {
         margin-left: 0;
         border-top: none;
         border-right: none;
-        border-bottom: .25rem solid #ffffff;
-        border-left: .25rem solid #ffffff;
+        border-bottom: 0.25rem solid #ffffff;
+        border-left: 0.25rem solid #ffffff;
       }
     }
   }
-}
+  &_hover {
+    background: #44ae9f;
 
-.arrow_hover {
-  background: #44ae9f;
+    .arrow__button_direction_left::after {
+      border-top: 0.25rem solid #ffffff;
+      border-right: 0.25rem solid #ffffff;
+    }
 
-  > .arrow::after {
-    border-top: .25rem solid #ffffff;
-    border-right: .25rem solid #ffffff;
-  }
-
-  > .arrow_direction_right::after {
-    border-top: none;
-    border-right: none;
-    border-bottom: .25rem solid #ffffff;
-    border-left: .25rem solid #ffffff;
+    .arrow__button_direction_right::after {
+      border-top: none;
+      border-right: none;
+      border-bottom: 0.25rem solid #ffffff;
+      border-left: 0.25rem solid #ffffff;
+    }
   }
 }

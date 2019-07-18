@@ -2,5 +2,5 @@ mixin tick(options)
   - let {name= "name", id="id", check= true} = options;
   - let checked = check ? true : false;
 
-  input(type="radio" name= name  id= id class="ui-radio" checked= checked)
-  label(for= id class="ui-radio-label")
+  input.tick(type="radio" name= name  id= id  checked= checked)
+  label.tick-label(for= id)

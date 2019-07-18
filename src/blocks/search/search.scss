@@ -1,48 +1,44 @@
 .search {
-  padding: 2% 0% 0% 1.1%;
+  display: flex;
 
-  &__block {
+  &__field {
+    font-family: "sourcesanspro-light", "Arial", "Sans-Serif";
+    background-color: #e5e5e5;
+    outline: none;
+    border: none;
+    padding: 1.9%;
+    width: 84.8%;
+    border-radius: 0.25rem 0 0 0.25rem;
+
+    &::placeholder {
+      padding-left: 0.3rem;
+    }
+  }
+
+  &__button {
+    flex: 1;
     display: flex;
-
-    &_field {
-      font-family: "sourcesanspro-light", "Arial", "Sans-Serif";
-      background-color: #e5e5e5;
-      outline: none;
-      border: none;
-      padding: 1.9%;
-      width: 84.8%;
-      border-radius: 0.25rem 0 0 0.25rem;
-
-      &::placeholder {
-        padding-left: 0.3rem;
-      }
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("./img/search.svg");
+    background-position: center center;
+    background-size: 0.9rem;
+    background-repeat: no-repeat;
+    color: #888;
+    font: inherit;
+    background-color: #e75735;
+    border: none;
+    outline: none;
+    &:last-child {
+      border-radius: 0 0.25rem 0.25rem 0;
     }
+  }
 
-    &_button {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-image: url("./img/search.svg");
-      background-position: center center;
-      background-size: 0.9rem;
-      background-repeat: no-repeat;
-      color: #888;
-      font: inherit;
-      background-color: #e75735;
-      border: none;
-      outline: none;
-      &:last-child {
-        border-radius: 0 0.25rem 0.25rem 0;
-      }
-    }
+  .search-error {
+    background: #e75735;
 
-    .search-error {
-      background: #e75735;
-
-      &::placeholder {
-        color: #ffffff;
-      }
+    &::placeholder {
+      color: #ffffff;
     }
   }
 }

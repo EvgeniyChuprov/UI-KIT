@@ -3,7 +3,9 @@ include ../stage/stage
 
 mixin stages(options)
   - let {header="header", stage={}} = options;
+
   .stages
     +header({header:header})
+
     .stages__block
       +stage(stage)

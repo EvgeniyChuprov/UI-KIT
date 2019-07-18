@@ -4,7 +4,7 @@ include ../video/video
 mixin video-block(options)
   - let {header="header", link="link"} = options;
 
-  .video
+  .video-block
     +header({header:header}) 
 
     +video({link:link}) 
