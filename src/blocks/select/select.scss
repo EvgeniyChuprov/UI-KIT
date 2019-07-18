@@ -1,3 +1,14 @@
+.select {
+  padding-top: 1%;
+  > .ui-selectmenu-button.ui-button {
+    padding: 0.26em 1em;
+    outline: none;
+    width: 16rem;
+    background: #e5e5e5;
+    border-radius: 0.25rem;
+  }
+}
+
 .ui-selectmenu-text {
   font-family: "sourcesanspro-light", "Arial", "Sans-Serif";
   font-weight: 100;
@@ -13,13 +24,6 @@
     right: 0px;
     border-radius: 0 0.25rem 0.25rem 0;
   }
-}
-
-.select > .ui-selectmenu-button.ui-button {
-  outline: none;
-  width: 16rem;
-  background: #e5e5e5;
-  border-radius: 0.25rem;
 }
 
 .ui-selectmenu-menu .ui-menu {

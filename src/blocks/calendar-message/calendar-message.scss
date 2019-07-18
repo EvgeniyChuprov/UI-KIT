@@ -1,12 +1,17 @@
 .wrap {
-  padding-top: 9.1%;
+  padding-top: 9.4%;
   display: flex;
   justify-content: space-between;
 
   &__block {
-    width: 47%;
-    &_element {
-      padding-top: 9%;
+    width: 48.4%;
+
+    &_message {
+      padding: 8.4% 0.7% 0 0;
+    }
+
+    &_calendar {
+      padding: 8.4% 2.8% 0 1.2%;
     }
   }
 }

@@ -3,11 +3,11 @@
 
   &__state {
     width: 30%;
-    padding: 4.1% 0 2%;
+    padding: 5.1% 0 0;
     position: relative;
     background: #44ae9f;
     border-radius: 0.2rem;
-    margin-left: 0.5rem;
+    margin: 0 0.3% 0.2% 2.3%;
     text-align: center;
     color: #ffffff;
     font-size: 0.6rem;
@@ -31,11 +31,14 @@
     background-color: #e5e5e5;
     outline: none;
     border: none;
-    padding: 2.1% 6.5%;
-    width: 72.5%;
+    padding: 2.1% 4.6%;
+    letter-spacing: 0.04rem;
+    width: 76%;
     border-radius: 0.2rem;
+    margin-left: 1.2%;
   }
 }
+
 .correct_error {
   background: #e75735;
   &:after {

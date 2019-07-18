@@ -9,8 +9,8 @@ mixin form(options)
     each item in field 
       .form-elements__form
         +entry-field(item)
-    .form-elements__form
+    .form-elements__form.form-elements__form_text-area
       +text-area(textarea)
-    
+
     .form-elements__button
       +button-ripple(button)

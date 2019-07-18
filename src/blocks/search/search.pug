@@ -1,8 +1,8 @@
 mixin search(options)
   - let {placeholder='placeholder', error=''} = options;
-  - let classSearch = 'search-form__block_field ';
+  - let classSearch = 'search__block_field ';
   - classSearch += error;
 
-  .search-form__block
+  .search__block
     input(class= classSearch type="text" name="search" placeholder= placeholder)
-    button(class="search-form__block_button" type="submit")
+    button(class="search__block_button" type="submit")

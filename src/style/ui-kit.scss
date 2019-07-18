@@ -5,7 +5,7 @@
 }
 
 .form {
-  padding-top: 7.3%;
+  padding-top: 7.6%;
   &__block {
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,7 @@
   }
 
   &__element {
-    width: 48.3%;
+    width: 48.5%;
 
     &:nth-child(2) {
       padding-top: 1.6%;
@@ -22,7 +22,7 @@
 
     &:nth-child(3),
     &:nth-child(4) {
-      padding-top: 11.3%;
+      padding-top: 9.8%;
     }
   }
 }

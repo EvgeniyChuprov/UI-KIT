@@ -1,5 +1,5 @@
-.search-form {
-  padding: 2.9% 0;
+.search {
+  padding: 2% 0% 0% 1.1%;
 
   &__block {
     display: flex;
@@ -9,8 +9,8 @@
       background-color: #e5e5e5;
       outline: none;
       border: none;
-      padding: 2.2%;
-      width: 84.2%;
+      padding: 1.9%;
+      width: 84.8%;
       border-radius: 0.25rem 0 0 0.25rem;
 
       &::placeholder {

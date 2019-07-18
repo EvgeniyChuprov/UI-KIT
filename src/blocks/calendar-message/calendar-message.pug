@@ -7,10 +7,10 @@ mixin calendar-message(options)
   .wrap
     .wrap__block
       +header({header:calendarhead})
-      .wrap__block_element
+      .wrap__block_calendar
         +calendar(calendar)
 
     .wrap__block
       +header({header:messaginghead})
-      .wrap__block_element
+      .wrap__block_message
         +message(messaging)

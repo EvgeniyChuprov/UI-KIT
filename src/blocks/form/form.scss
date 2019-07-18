@@ -1,10 +1,14 @@
 .form-elements {
   &__form {
-    padding-top: 4.4%;
+    padding-top: 4.2%;
+
+    &_text-area {
+      margin-left: 1.1%;
+    }
   }
 
   &__button {
     float: right;
-    margin: 2.3% 0 0;
+    margin: 3% 0 0;
   }
 }

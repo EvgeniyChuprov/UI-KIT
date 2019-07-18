@@ -14,7 +14,7 @@
     width: 61%;
     position: relative;
     background: #e5e5e5;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
 
     &:before {
       content: "";
@@ -39,13 +39,13 @@
       font-family: "lato-light", "Arial", "Sans-Serif";
       font-weight: 700;
       color: #e75735;
-      padding-top: 6%;
+      padding-top: 3%;
       font-size: 1.2rem;
       text-align: center;
     }
 
     &_job {
-      padding-top: 4%;
+      padding-top: 1.5%;
       font-size: 0.7rem;
       letter-spacing: 0.05rem;
       text-align: center;
@@ -53,14 +53,11 @@
     }
 
     .social {
-      width: 55%;
-      padding: 6% 0;
+      width: 57%;
+      padding: 7.5% 0 0;
       margin: auto;
       display: flex;
-
-      &__link {
-        margin: auto;
-      }
+      justify-content: space-between;
     }
   }
 }
