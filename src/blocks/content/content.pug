@@ -1,0 +1,37 @@
+include ../header/header
+include ../buttons/buttons
+include ../arrows/arrows
+include ../percentages/percentages
+include ../sliders/sliders
+include ../stages/stages
+include ../forms/forms
+include ../entry-field/entry-field
+include ../news-events/news-events
+include ../location/location
+include ../calendar-message/calendar-message
+include ../video-block/video-block
+
+mixin content(options)
+  - let {buttons={}, arrows={}, percentages={}, sliders={}, stages={},
+  - forms={}, newsEvents={}, location={}, calendarMessage={}, videoBlock={}} = options;
+
+  .content
+    +buttons(buttons)
+
+    +arrows(arrows)
+
+    +percentages(percentages)
+
+    +sliders(sliders)
+
+    +stages(stages)
+
+    +forms(forms)
+
+    +news-events(newsEvents)
+
+    +location(location)
+
+    +calendar-message(calendarMessage)
+
+    +video-block(videoBlock)

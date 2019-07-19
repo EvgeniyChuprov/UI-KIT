@@ -1,0 +1,23 @@
+include ../header/header
+include ../form/form
+include ../toggles-tick/toggles-tick
+include ../search-block/search-block
+include ../users-profiles/users-profiles
+
+mixin forms(options) 
+  - let {header="header", form={}, togglesTick={}, searchBlock={}, usersProfiles={}}  = options;
+  .forms
+    +header({header:header})
+
+    .forms__block
+      .forms__element
+        +form(form)
+
+      .forms__element
+        +toggles-tick(togglesTick) 
+
+      .forms__element
+        +search-block(searchBlock)
+
+      .forms__element
+        +users-profiles(usersProfiles)
