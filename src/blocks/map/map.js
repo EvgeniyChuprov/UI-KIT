@@ -1,15 +1,19 @@
 class Map {
-  constructor(map) {
-    this.loadGoogleMapsApi = require('load-google-maps-api');
-    this.map = map;
-    this.zoom = this.map.data('zoom'); 
-    this.marker = this.map.data('marker');
-    this.lat = this.map.data('lat');
-    this.lng = this.map.data('lng');
-    this.maps();
+  constructor($map) {
+    this.$map = $map;
+    this.mapInit();
   }
 
-  maps() {
+  mapInit() {
+    this.loadGoogleMapsApi = require('load-google-maps-api');
+    this.zoom = this.$map.data('zoom');
+    this.marker = this.$map.data('marker');
+    this.lat = this.$map.data('lat');
+    this.lng = this.$map.data('lng');
+    this._maps();
+  }
+
+  _maps() {
     const pos = { lat: this.lat, lng: this.lng };
 
     this.loadGoogleMapsApi().then((googleMaps) => {
@@ -27,6 +31,6 @@ class Map {
   }
 }
 
-$('.map').each((index, el) => {
+$('.js-map').each((index, el) => {
   new Map($(el));
 });

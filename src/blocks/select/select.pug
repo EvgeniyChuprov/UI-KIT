@@ -2,7 +2,7 @@ mixin select(values)
   -let i = 0
 
   .select
-    select.select__block(name="select" )
+    select.select__block.js-select(name="select" )
       option.select__block_none(disabled selected) Choose an option
 
       each val in values

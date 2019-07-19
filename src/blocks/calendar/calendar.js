@@ -3,11 +3,15 @@ require('webpack-jquery-ui/datepicker');
 class Calendar {
   constructor($domEl) {
     this.$calendar = $domEl;
-    this.$calendarHeader = $domEl.children();
-    this.createCalendar(this.$calendar);
+    this.calendarInit();
   }
 
-  getCalendar() {
+  calendarInit() {
+    this.$calendarHeader = this.$calendar.children();
+    this._createCalendar();
+  }
+
+  _getCalendar() {
     return {
       dayNamesMin: this.$calendar.data('day-names'),
       firstDay: this.$calendar.data('first-day'),
@@ -21,8 +25,8 @@ class Calendar {
     };
   }
 
-  createCalendar() {
-    this.$calendar.datepicker(this.getCalendar());
+  _createCalendar() {
+    this.$calendar.datepicker(this._getCalendar());
     this.$calendarHeader.html($.datepicker.formatDate('dd', new Date()));
     this.$calendar.datepicker('setDate', new Date());
     // eslint-disable-next-line no-underscore-dangle
@@ -33,6 +37,6 @@ class Calendar {
   }
 }
 
-$('.calendar').each((index, domEl) => {
+$('.js-calendar').each((index, domEl) => {
   new Calendar($(domEl));
 });

@@ -1,12 +1,17 @@
 class BubbleSlider {
   constructor($domEl) {
-    this.$range = $domEl.children().first();
-    this.$tool = $domEl.children().last();
-    this.rangeTool();
-    this.bubble();
+    this.$bubbleSlider = $domEl;
+    this.sliderInit();
   }
 
-  rangeTool() {
+  sliderInit() {
+    this.$range = this.$bubbleSlider.children().first();
+    this.$tool = this.$bubbleSlider.children().last();
+    this._rangeTool();
+    this._bubble();
+  }
+
+  _rangeTool() {
     const tooltipAdjustmentFirst = -20;
     const tooltipAdjustmentSecond = 18;
     const moving = this.$range.val() * (this.$range.outerWidth() / this.$range.attr('max'))
@@ -16,11 +21,11 @@ class BubbleSlider {
     this.$tool.css('left', `${moving}px`);
   }
 
-  bubble() {
-    this.$range.on('input', this.rangeTool.bind(this));
+  _bubble() {
+    this.$range.on('input', this._rangeTool.bind(this));
   }
 }
 
-$('.bubble-slider').each((index, domElement) => {
+$('.js-bubble-slider').each((index, domElement) => {
   new BubbleSlider($(domElement));
 });

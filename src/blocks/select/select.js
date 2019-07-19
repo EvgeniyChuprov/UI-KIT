@@ -11,6 +11,6 @@ class Selectmenu {
   }
 }
 
-$('.select__block').each((index, domEl) => {
+$('.js-select').each((index, domEl) => {
   new Selectmenu($(domEl));
 });

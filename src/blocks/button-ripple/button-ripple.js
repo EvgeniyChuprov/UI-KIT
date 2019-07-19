@@ -1,28 +1,32 @@
 class ButtonRipple {
   constructor($ripple) {
     this.$ripple = $ripple;
+    this.rippleInit();
+  }
+
+  rippleInit() {
     this.$circle = this.$ripple.children();
     this.$offset = this.$ripple.parent().offset();
-    this.ripples();
-    this.delRipple();
+    this._ripples();
+    this._delRipple();
   }
 
-  ripples() {
-    this.$ripple.on('click', this.rippleEffect.bind(this));
+  _ripples() {
+    this.$ripple.on('click', this._rippleEffect.bind(this));
   }
 
-  rippleEffect(e) {
+  _rippleEffect(e) {
     const x = e.pageX - this.$offset.left;
     const y = e.pageY - this.$offset.top;
     this.$circle.css({ top: `${y}px`, left: `${x}px` });
     this.$ripple.addClass('is-active');
   }
 
-  delRipple() {
-    this.$ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', this.delClass.bind(this));
+  _delRipple() {
+    this.$ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', this._delClass.bind(this));
   }
 
-  delClass() {
+  _delClass() {
     this.$ripple.removeClass('is-active');
   }
 }

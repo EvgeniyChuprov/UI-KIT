@@ -156,14 +156,14 @@
         <div class="header"><span class="header__tile">sliders</span></div>
         <div class="sliders__block">
           <div class="sliders__element">
-            <div class="bubble-slider">
+            <div class="bubble-slider js-bubble-slider">
               <input class="bubble-slider__input" id="rangeslider" type="range" min="0" max="100" value="40" step="1">
               <label class="bubble-slider__tooltip" for="rangeslider">0</label>
             </div>
           </div>
           <div class="sliders__element">
             <div class="range-slider">
-              <input class="range-slider__range" type="range" min="0" max="100" value="75" step="25">
+              <input class="range-slider__range js-range-slider__range" type="range" min="0" max="100" value="75" step="25">
               <div class="range-slider__scale">
                 <div class="range-slider__digit">0</div>
                 <div class="range-slider__digit">25</div>
@@ -178,7 +178,7 @@
       <div class="stages">
         <div class="header"><span class="header__tile">stages</span></div>
         <div class="stages__block">
-          <ul class="stage" data-max="5" data-value="3">
+          <ul class="stage js-stage" data-max="5" data-value="3">
             <li class="stage__steps stage__steps_color complete">
               <div class="stage__number">1</div>
             </li>
@@ -266,7 +266,7 @@
                 </div>
               </div>
               <div class="select">
-                <select class="select__block" name="select">
+                <select class="select__block js-select" name="select">
                   <option class="select__block_none" disabled selected>Choose an option</option>
                   <option class="select__block_option" value="1">This is option 1</option>
                   <option class="select__block_option" value="2">This is option 2</option>
@@ -335,7 +335,7 @@
       <div class="location">
         <div class="header"><span class="header__tile">location</span></div>
         <div class="location__block">
-          <div class="map" data-marker="img/marker.png" data-lat="37.79568" data-lng="-122.415021" data-zoom="14"></div>
+          <div class="map js-map" data-marker="img/marker.png" data-lat="37.79568" data-lng="-122.415021" data-zoom="14"></div>
           <div class="map__menu"> 
             <div class="map__head">Meet us!</div>
             <div class="map__adress">1259  CALIFORNIA ST San Francisco, CA</div>
@@ -350,7 +350,7 @@
         <div class="calendar-message__block">
           <div class="header"><span class="header__tile">calendar</span></div>
           <div class="calendar-message__block_calendar">
-            <div class="calendar" data-day-names="[&quot;SUN&quot;,&quot;MON&quot;,&quot;TUE&quot;,&quot;WED&quot;,&quot;THU&quot;,&quot;FRI&quot;,&quot;SAT&quot;]" data-first-day="1" data-button-panel="true" data-other-months="true" data-data-format="dd" data-goto-current="false">
+            <div class="calendar js-calendar" data-day-names="[&quot;SUN&quot;,&quot;MON&quot;,&quot;TUE&quot;,&quot;WED&quot;,&quot;THU&quot;,&quot;FRI&quot;,&quot;SAT&quot;]" data-first-day="1" data-button-panel="true" data-other-months="true" data-data-format="dd" data-goto-current="false">
               <div class="calendar__header"></div>
             </div>
           </div>
