@@ -1,12 +1,13 @@
 mixin site-header(options)
   - let {headTitle="headTitle", menu={}} = options;
-  header.site-header
-    nav.navigation
-      a(href="index.html" class="navigation__logo")= headTitle
 
-      menu.navigation__menu
-        each item in menu
-          li.navigation__menu_element
-            a(href= item.link class="link")= item.title  
+    header.site-header
+      nav.navigation
+        a(href="index.html" class="navigation__logo")= headTitle
 
-    a(href="ui-kit.html" class="ui-kit") UI-KIT
+        menu.navigation__menu
+          each item in menu
+            li.navigation__menu_element
+              a(href= item.link class="link")= item.title  
+
+      a(href="ui-kit.html" class="ui-kit") UI-KIT

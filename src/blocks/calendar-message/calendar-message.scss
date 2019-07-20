@@ -5,13 +5,12 @@
 
   &__block {
     width: 48.4%;
+  }
+  &__message {
+    padding: 8.4% 0.7% 0 0;
+  }
 
-    &_message {
-      padding: 8.4% 0.7% 0 0;
-    }
-
-    &_calendar {
-      padding: 8.4% 2.8% 0 1.2%;
-    }
+  &__calendar {
+    padding: 8.4% 2.8% 0 1.2%;
   }
 }

@@ -36,17 +36,16 @@
     flex-grow: 1;
     padding: 0.4% 2.2% 0;
     justify-content: flex-end;
+  }
+  &__location {
+    background: url("./img/location.svg") no-repeat center;
+    width: 2rem;
+    padding-left: 5%;
+  }
 
-    &_locat {
-      background: url("./img/location.svg") no-repeat center;
-      width: 2rem;
-      padding-left: 5%;
-    }
-
-    &_pin {
-      background: url("./img/pin.svg") no-repeat center;
-      width: 2rem;
-      padding-left: 4.5%;
-    }
+  &__pin {
+    background: url("./img/pin.svg") no-repeat center;
+    width: 2rem;
+    padding-left: 4.5%;
   }
 }

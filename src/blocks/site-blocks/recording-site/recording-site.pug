@@ -4,35 +4,37 @@ include ../../calendar/calendar
 include ../../entry-field/entry-field
 include ../../buttons/buttons
 include ../../text-area/text-area
+include ../../button/button
 include ../../tick/tick
 include ../../calendar/calendar
 
 mixin recording-site(options)
   - let {siteHeader={}, calendar={}, title="", tickOne={}, tickTwo={}, entryField={}, textArea= {}, button={}} =  options;
 
-  +site-header(siteHeader)
+  .recording-site
+    +site-header(siteHeader)
 
-  h1.write Заполните форму записи на прием
+    h1.write Заполните форму записи на прием
 
-  .recording
-    .recording__block
-      +calendar(calendar)
+    .recording
+      .recording__block
+        +calendar(calendar)
 
-    .recording__block
-      .recording__gender
-        +header({header: title})
+      .recording__block
+        .recording__gender
+          +header({header: title})
 
-        .recording__radio
-          span Муж.
-          +tick(tickOne)
+          .recording__radio
+            span Муж.
+            +tick(tickOne)
 
-        .recording__radio
-          span  Жен. 
-          +tick(tickTwo)
+          .recording__radio
+            span  Жен. 
+            +tick(tickTwo)
 
-      each item in entryField
-        .fild
-          +entry-field(item)
+        each item in entryField
+          .fild
+            +entry-field(item)
 
-      +text-area(textArea)
-      +button-ripple(button)
+        +text-area(textArea)
+        +button(button)

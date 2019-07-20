@@ -6,17 +6,18 @@ include ../../video/video
 mixin staff-site(options)
   - let {siteHeader={}, headerVideo="headerVideo", video="", headerStaff="headerStaff", doctor=[]} = options;
 
-  +site-header(siteHeader)
+  .staff-site
+    +site-header(siteHeader)
 
-  .staff
-    .staff__video
-      +header({header:headerVideo})
+    .staff
+      .staff__video
+        +header({header:headerVideo})
 
-      .staff__video_block
-        +video({link:video})  
+        .staff__video_block
+          +video({link:video})  
 
-    .staff__doctor
-      +header({header:headerStaff})
-      each item in doctor
-        .staff__doctor_block
-          +userProfile(item)    
+      .staff__doctor
+        +header({header:headerStaff})
+        each item in doctor
+          .staff__doctor_block
+            +userProfile(item)    

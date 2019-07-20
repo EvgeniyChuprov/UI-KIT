@@ -16,25 +16,25 @@
       margin: auto;
       width: 100%;
     }
+  }
 
-    &_text {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      line-height: 0.4rem;
-      font-weight: bold;
-    }
+  &__text {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    line-height: 0.4rem;
+    font-weight: bold;
+  }
 
-    &_link {
-      text-decoration: none;
-      color: black;
-    }
+  &__link {
+    text-decoration: none;
+    color: black;
+  }
 
-    &_button {
-      margin: 1rem 4rem;
+  &__button {
+    margin: 1rem 4rem;
 
-      @media screen and (max-width: 760px) {
-        margin-top: 1.2rem;
-      }
+    @media screen and (max-width: 760px) {
+      margin-top: 1.2rem;
     }
   }
 

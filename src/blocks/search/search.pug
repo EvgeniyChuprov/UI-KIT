@@ -1,7 +1,7 @@
 mixin search(options)
-  - let {placeholder='placeholder', error=''} = options;
+  - let {placeholder='placeholder', error=false} = options;
   - let classSearch = 'search__field ';
-  - classSearch += error;
+  - classSearch += error ? " search__field_error" : "";
 
   .search
     input(class= classSearch type="text" name="search" placeholder= placeholder)

@@ -5,8 +5,10 @@ include ../../buttons/buttons
 
 mixin online-site(options)
   - let {siteHeader={}, message={}} = options;
-  +site-header(siteHeader)
 
-  h2.write Онлайн консультация
-  .online__block
-    +message(message)
+  .online-site
+    +site-header(siteHeader)
+
+    h2.write Онлайн консультация
+    .online-site__block
+      +message(message)

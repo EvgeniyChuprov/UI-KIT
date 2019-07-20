@@ -7,10 +7,10 @@ mixin calendar-message(options)
   .calendar-message
     .calendar-message__block
       +header({header:calendarhead})
-      .calendar-message__block_calendar
+      .calendar-message__calendar
         +calendar(calendar)
 
     .calendar-message__block
       +header({header:messaginghead})
-      .calendar-message__block_message
+      .calendar-message__message
         +message(messaging)

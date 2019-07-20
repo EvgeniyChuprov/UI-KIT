@@ -6,34 +6,34 @@
     border-radius: 0.25rem 0 0 0.25rem;
   }
 
-  &__text {
+  &__block {
     background: #e75735;
     width: 67.01%;
     border-radius: 0 0.25rem 0.25rem 0;
     color: #ffffff;
     padding-left: 8%;
     text-align: left;
+  }
 
-    &_header {
-      font-family: "lato-light", "Arial", "Sans-Serif";
-      font-size: 1.7rem;
-      line-height: 1.7rem;
-      padding-top: 12%;
-    }
+  &__header {
+    font-family: "lato-light", "Arial", "Sans-Serif";
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+    padding-top: 12%;
+  }
 
-    &_data {
-      text-transform: uppercase;
-      font-size: 0.68rem;
-      padding-top: 6.5%;
-      letter-spacing: 0.05rem;
-    }
+  &__data {
+    text-transform: uppercase;
+    font-size: 0.68rem;
+    padding-top: 6.5%;
+    letter-spacing: 0.05rem;
+  }
 
-    &_info {
-      font-family: "lato-light", "Arial", "Sans-Serif";
-      font-size: 0.7rem;
-      padding: 7% 10.5% 0 0;
-      line-height: 0.85rem;
-      letter-spacing: 0.03rem;
-    }
+  &__info {
+    font-family: "lato-light", "Arial", "Sans-Serif";
+    font-size: 0.7rem;
+    padding: 7% 10.5% 0 0;
+    line-height: 0.85rem;
+    letter-spacing: 0.03rem;
   }
 }

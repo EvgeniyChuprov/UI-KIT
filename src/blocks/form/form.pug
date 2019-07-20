@@ -1,6 +1,6 @@
 include ../entry-field/entry-field
 include ../text-area/text-area
-include ../button-ripple/button-ripple
+include ../button/button
 
 mixin form(options) 
   -let {field=[], textarea={}, button={}} = options;
@@ -10,8 +10,8 @@ mixin form(options)
       .form__elements
         +entry-field(item)
 
-    .form__elements.form__elements_text-area
+    .form__text-area
       +text-area(textarea)
 
     .form__button
-      +button-ripple(button)
+      +button(button)

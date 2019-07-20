@@ -1,5 +1,5 @@
 include ../header/header
-include ../button-ripple/button-ripple
+include ../button/button
 
 mixin buttons(options) 
   - let {header="header", buttons=[]} = options;
@@ -10,4 +10,4 @@ mixin buttons(options)
 
     each item in buttons  
       .buttons__block
-        +button-ripple(item)
+        +button(item)

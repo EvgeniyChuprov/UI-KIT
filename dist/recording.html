@@ -13,64 +13,66 @@
     <title>UI-KIT</title>
   <link href="main.css" rel="stylesheet"></head>
   <body>
-    <header class="site-header">
-      <nav class="navigation"><a class="navigation__logo" href="index.html">Зубы на полку</a>
-        <menu class="navigation__menu">
-          <li class="navigation__menu_element"><a class="link" href="discount.html">скидки и акции</a></li>
-          <li class="navigation__menu_element"><a class="link" href="recording.html">запись на прием</a></li>
-          <li class="navigation__menu_element"><a class="link" href="online.html">онлайн консультация</a></li>
-          <li class="navigation__menu_element"><a class="link" href="contacts.html">контакты</a></li>
-          <li class="navigation__menu_element"><a class="link" href="staff.html">наши врачи</a></li>
-        </menu>
-      </nav><a class="ui-kit" href="ui-kit.html">UI-KIT</a>
-    </header>
-    <h1 class="write">Заполните форму записи на прием</h1>
-    <div class="recording">
-      <div class="recording__block">
-        <div class="calendar js-calendar" data-day-names="[&quot;SUN&quot;,&quot;MON&quot;,&quot;TUE&quot;,&quot;WED&quot;,&quot;THU&quot;,&quot;FRI&quot;,&quot;SAT&quot;]" data-first-day="1" data-button-panel="true" data-other-months="true" data-data-format="dd" data-goto-current="false">
-          <div class="calendar__header"></div>
-        </div>
-      </div>
-      <div class="recording__block">
-        <div class="recording__gender">
-          <div class="header"><span class="header__tile">ваш пол</span></div>
-          <div class="recording__radio"><span>Муж.</span>
-            <input class="tick" type="radio" name="radio" id="one" checked>
-            <label class="tick-label" for="one"></label>
-          </div>
-          <div class="recording__radio"><span> Жен. </span>
-            <input class="tick" type="radio" name="radio" id="two" checked>
-            <label class="tick-label" for="two"></label>
+    <div class="recording-site">
+      <header class="site-header">
+        <nav class="navigation"><a class="navigation__logo" href="index.html">Зубы на полку</a>
+          <menu class="navigation__menu">
+            <li class="navigation__menu_element"><a class="link" href="discount.html">скидки и акции</a></li>
+            <li class="navigation__menu_element"><a class="link" href="recording.html">запись на прием</a></li>
+            <li class="navigation__menu_element"><a class="link" href="online.html">онлайн консультация</a></li>
+            <li class="navigation__menu_element"><a class="link" href="contacts.html">контакты</a></li>
+            <li class="navigation__menu_element"><a class="link" href="staff.html">наши врачи</a></li>
+          </menu>
+        </nav><a class="ui-kit" href="ui-kit.html">UI-KIT</a>
+      </header>
+      <h1 class="write">Заполните форму записи на прием</h1>
+      <div class="recording">
+        <div class="recording__block">
+          <div class="calendar js-calendar" data-day-names="[&quot;SUN&quot;,&quot;MON&quot;,&quot;TUE&quot;,&quot;WED&quot;,&quot;THU&quot;,&quot;FRI&quot;,&quot;SAT&quot;]" data-first-day="1" data-button-panel="true" data-other-months="true" data-data-format="dd" data-goto-current="false">
+            <div class="calendar__header"></div>
           </div>
         </div>
-        <div class="fild">
-          <div class="entry-field">
-            <input class="entry-field__form" type="text" name="form" placeholder="Ваше имя">
-            <div class="entry-field__state ">thanks</div>
+        <div class="recording__block">
+          <div class="recording__gender">
+            <div class="header"><span class="header__tile">ваш пол</span></div>
+            <div class="recording__radio"><span>Муж.</span>
+              <input class="tick" type="radio" name="radio" id="one" checked>
+              <label class="tick-label" for="one"></label>
+            </div>
+            <div class="recording__radio"><span> Жен. </span>
+              <input class="tick" type="radio" name="radio" id="two" checked>
+              <label class="tick-label" for="two"></label>
+            </div>
           </div>
-        </div>
-        <div class="fild">
-          <div class="entry-field">
-            <input class="entry-field__form" type="text" name="form" placeholder="Ваша фамилия">
-            <div class="entry-field__state entry-field__state_error">error</div>
+          <div class="fild">
+            <div class="entry-field">
+              <input class="entry-field__form" type="text" name="form" placeholder="Ваше имя">
+              <div class="entry-field__state ">thanks</div>
+            </div>
           </div>
-        </div>
-        <div class="fild">
-          <div class="entry-field">
-            <input class="entry-field__form" type="text" name="form" placeholder="Ваше отчество">
-            <div class="entry-field__state ">thanks</div>
+          <div class="fild">
+            <div class="entry-field">
+              <input class="entry-field__form" type="text" name="form" placeholder="Ваша фамилия">
+              <div class="entry-field__state entry-field__state_error">error</div>
+            </div>
           </div>
-        </div>
-        <div class="fild">
-          <div class="entry-field">
-            <input class="entry-field__form" type="text" name="form" placeholder="Ваш номер телефона">
-            <div class="entry-field__state entry-field__state_error">error</div>
+          <div class="fild">
+            <div class="entry-field">
+              <input class="entry-field__form" type="text" name="form" placeholder="Ваше отчество">
+              <div class="entry-field__state ">thanks</div>
+            </div>
           </div>
+          <div class="fild">
+            <div class="entry-field">
+              <input class="entry-field__form" type="text" name="form" placeholder="Ваш номер телефона">
+              <div class="entry-field__state entry-field__state_error">error</div>
+            </div>
+          </div>
+          <textarea class="text-area" name="form" placeholder="Дополнительная информация"></textarea>
+          <button class="button button_color_green">отправить
+            <div class="element-ripple"><span class="element-ripple__circle"></span></div>
+          </button>
         </div>
-        <textarea class="text-area" name="form" placeholder="Дополнительная информация"></textarea>
-        <button class="button-ripple button-ripple__element_color_green">отправить
-          <div class="element-ripple"><span class="element-ripple__circle"></span></div>
-        </button>
       </div>
     </div>
   <script type="text/javascript" src="main.js"></script></body>

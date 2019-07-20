@@ -15,29 +15,19 @@
   }
 
   &__slider {
-    margin: auto;
-    padding: 2rem;
+    margin: 0 auto;
+  }
 
-    &_range {
-      width: 90%;
+  &-slider {
+    padding-top: 10%;
+    width: 90%;
+    &__header {
+      margin: 0 auto;
+      padding-bottom: 10%;
     }
 
-    &_bubble {
-      width: 90%;
-
-      &_header {
-        margin: 3rem auto;
-      }
-    }
-
-    &_coupon {
-      margin-top: 6rem;
-      &-header {
-        margin: 2rem auto;
-      }
-      &-toggle {
-        text-align: center;
-      }
+    &__toggle {
+      text-align: center;
     }
   }
 }

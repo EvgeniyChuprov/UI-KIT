@@ -1,5 +1,8 @@
+include ../button/button
+
 mixin message(options)
   - let {text= "text", placeholder= "placeholder", foto="img", button="button"} = options;
+
   .message
     .message__header
       .message__chat
@@ -10,9 +13,10 @@ mixin message(options)
           img(src=require("./blocks/message/img/camera.png") alt="camera icon")
       .message__name Sarah Brown
       img(class="message__photo" src= foto alt="User photo")
+
     .message__body
-      .message__body_from= text
-      .message__body_text-area
+      .message__from= text
+      .message__text-area
         +text-area({ name:"form", placeholder: placeholder})
-      .message__body-button
-        +button-ripple({text: button, small: false, green: true, fillGreen:true})
+      .message__button
+        +button({text: button, small: false, green: true, fillGreen:true})

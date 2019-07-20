@@ -1,4 +1,4 @@
-.arrow__button {
+.arrow-button {
   text-align: center;
   display: inline-block;
   border-radius: 50%;
@@ -74,7 +74,7 @@
   }
 
   &:disabled {
-    .arrow__button_direction_left {
+    .arrow-button_direction_left {
       cursor: default;
       background-color: #e5e5e5;
       border: 3px solid #e5e5e5;
@@ -88,7 +88,7 @@
         background-color: #e5e5e5;
       }
     }
-    .arrow__button_direction_right {
+    .arrow-button_direction_right {
       cursor: default;
       background-color: #e5e5e5;
       border: 3px solid #e5e5e5;
@@ -105,12 +105,12 @@
   &_hover {
     background: #44ae9f;
 
-    .arrow__button_direction_left::after {
+    .arrow-button_direction_left::after {
       border-top: 0.25rem solid #ffffff;
       border-right: 0.25rem solid #ffffff;
     }
 
-    .arrow__button_direction_right::after {
+    .arrow-button_direction_right::after {
       border-top: none;
       border-right: none;
       border-bottom: 0.25rem solid #ffffff;

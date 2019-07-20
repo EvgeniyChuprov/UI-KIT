@@ -13,45 +13,47 @@
     <title>UI-KIT</title>
   <link href="main.css" rel="stylesheet"></head>
   <body>
-    <header class="site-header">
-      <nav class="navigation"><a class="navigation__logo" href="index.html">Зубы на полку</a>
-        <menu class="navigation__menu">
-          <li class="navigation__menu_element"><a class="link" href="discount.html">скидки и акции</a></li>
-          <li class="navigation__menu_element"><a class="link" href="recording.html">запись на прием</a></li>
-          <li class="navigation__menu_element"><a class="link" href="online.html">онлайн консультация</a></li>
-          <li class="navigation__menu_element"><a class="link" href="contacts.html">контакты</a></li>
-          <li class="navigation__menu_element"><a class="link" href="staff.html">наши врачи</a></li>
-        </menu>
-      </nav><a class="ui-kit" href="ui-kit.html">UI-KIT</a>
-    </header>
-    <div class="contacts">
-      <div class="contacts__block">
-        <div class="header"><span class="header__tile">контакты</span></div>
-        <p class="contacts__block_text">  Контактные телефоны: </p>
-        <p class="contacts__block_text"><a class="contacts__block_link" href="tel: 9 999 999-999-9">9 999 999-999-9</a></p>
-        <p class="contacts__block_text"><a class="contacts__block_link" href="tel: 9 999 999-555-5">9 999 999-555-5</a></p>
-        <p class="contacts__block_text"><a class="contacts__block_link" href="tel: 9 999 999-333-3">9 999 999-333-3</a></p>
-        <p class="contacts__block_text">  Эл. почта: </p>
-        <p class="contacts__block_text"><a class="contacts__block_link" href="mailto: zubynapolku@mail.com">zubynapolku@mail.com</a></p>
-      </div>
-      <div class="contacts__block">
-        <div class="header"><span class="header__tile">оставьте отзыв</span></div>
-        <textarea class="text-area" name="form" placeholder="Дополнительная информация"></textarea>
-        <div class="contacts__text_button">
-          <button class="button-ripple button-ripple__element_color_green">text
-            <div class="element-ripple"><span class="element-ripple__circle"></span></div>
-          </button>
+    <div class="contacts-site">
+      <header class="site-header">
+        <nav class="navigation"><a class="navigation__logo" href="index.html">Зубы на полку</a>
+          <menu class="navigation__menu">
+            <li class="navigation__menu_element"><a class="link" href="discount.html">скидки и акции</a></li>
+            <li class="navigation__menu_element"><a class="link" href="recording.html">запись на прием</a></li>
+            <li class="navigation__menu_element"><a class="link" href="online.html">онлайн консультация</a></li>
+            <li class="navigation__menu_element"><a class="link" href="contacts.html">контакты</a></li>
+            <li class="navigation__menu_element"><a class="link" href="staff.html">наши врачи</a></li>
+          </menu>
+        </nav><a class="ui-kit" href="ui-kit.html">UI-KIT</a>
+      </header>
+      <div class="contacts">
+        <div class="contacts__block">
+          <div class="header"><span class="header__tile">контакты</span></div>
+          <p class="contacts__text">  Контактные телефоны: </p>
+          <p class="contacts__text"><a class="contacts__link" href="tel: 9 999 999-999-9">9 999 999-999-9</a></p>
+          <p class="contacts__text"><a class="contacts__link" href="tel: 9 999 999-555-5">9 999 999-555-5</a></p>
+          <p class="contacts__text"><a class="contacts__link" href="tel: 9 999 999-333-3">9 999 999-333-3</a></p>
+          <p class="contacts__text">  Эл. почта: </p>
+          <p class="contacts__text"><a class="contacts__link" href="mailto: zubynapolku@mail.com">zubynapolku@mail.com</a></p>
+        </div>
+        <div class="contacts__block">
+          <div class="header"><span class="header__tile">оставьте отзыв</span></div>
+          <textarea class="text-area" name="form" placeholder="Дополнительная информация"></textarea>
+          <div class="contacts__button">
+            <button class="button button_color_green">text
+              <div class="element-ripple"><span class="element-ripple__circle"></span></div>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="contacts__map">
-      <div class="map js-map" data-marker="img/marker.png" data-lat="59.966584" data-lng="30.374066" data-zoom="8"></div>
-      <div class="map__menu"> 
-        <div class="map__head">Где то тут!</div>
-        <div class="map__adress">Санкт-Петербург</div>
-        <div class="map__icon">
-          <div class="map__icon_locat"></div>
-          <div class="map__icon_pin"></div>
+      <div class="contacts__map">
+        <div class="map js-map" data-marker="img/marker.png" data-lat="59.966584" data-lng="30.374066" data-zoom="8"></div>
+        <div class="map__menu"> 
+          <div class="map__head">Где то тут!</div>
+          <div class="map__adress">Санкт-Петербург</div>
+          <div class="map__icon">
+            <div class="map__location"></div>
+            <div class="map__pin"></div>
+          </div>
         </div>
       </div>
     </div>

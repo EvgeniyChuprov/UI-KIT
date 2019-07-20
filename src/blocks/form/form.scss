@@ -1,10 +1,11 @@
 .form {
   &__elements {
     padding-top: 4.2%;
+  }
 
-    &_text-area {
-      margin-left: 1.1%;
-    }
+  &__text-area {
+    padding-top: 4.2%;
+    margin-left: 1.1%;
   }
 
   &__button {

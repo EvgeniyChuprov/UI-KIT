@@ -3,7 +3,9 @@ include ../map/map
 
 mixin location(options)
   - let {header="header", map= {}} = options;
+
   .location
     +header({header:header})
+
     .location__block
       +map(map)

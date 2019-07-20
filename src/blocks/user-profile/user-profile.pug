@@ -4,10 +4,11 @@ mixin userProfile(options)
   -  teme += color === "green" ? " user-profile__tooltip_green" : "";
 
   .user-profile
-    img(class="photo-block__image" src= img alt="User photo")
+    img.user-profile__image(src= img alt="User photo")
+
     div(class= teme)
-      .user-profile__tooltip_name= name
-      .user-profile__tooltip_job= job
+      .user-profile__name= name
+      .user-profile__job= job
       .social
         a.social__link(href= webone, target="_blank", rel="noopener noreferrer")
           img(src= imgone alt= altone)

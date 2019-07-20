@@ -10,6 +10,14 @@
     width: 84.8%;
     border-radius: 0.25rem 0 0 0.25rem;
 
+    &_error {
+      background: #e75735;
+
+      &::placeholder {
+        color: #ffffff;
+      }
+    }
+
     &::placeholder {
       padding-left: 0.3rem;
     }
@@ -31,14 +39,6 @@
     outline: none;
     &:last-child {
       border-radius: 0 0.25rem 0.25rem 0;
-    }
-  }
-
-  .search-error {
-    background: #e75735;
-
-    &::placeholder {
-      color: #ffffff;
     }
   }
 }

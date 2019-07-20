@@ -1,4 +1,4 @@
-.button-ripple {
+.button {
   font-family: "lato-black", "Arial", "Sans-Serif";
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -11,61 +11,59 @@
   background-color: #ffffff;
   padding: 0.45rem;
 
-  &__element {
-    &_size_small {
-      padding: 0.3rem;
-      width: 100%;
-      min-width: 4.9rem;
-      font-size: 0.6rem;
-    }
+  &_size_small {
+    padding: 0.3rem;
+    width: 100%;
+    min-width: 4.9rem;
+    font-size: 0.6rem;
+  }
 
-    &_color {
-      &_green {
-        border: 1px #44ae9f solid;
-        color: #44ae9f;
-        box-shadow: 0 3px #28a290;
+  &_color {
+    &_green {
+      border: 1px #44ae9f solid;
+      color: #44ae9f;
+      box-shadow: 0 3px #28a290;
 
-        &:hover {
-          background-color: #44ae9f;
-          color: #ffffff;
-        }
-
-        &:active {
-          top: 3px;
-          background-color: #44ae9f;
-          box-shadow: none;
-          color: #ffffff;
-        }
-      }
-
-      &_red {
-        border: 1px #e75735 solid;
-        background-color: #ffffff;
-        color: #e75735;
-        box-shadow: 0 3px #c94322;
-
-        &:hover {
-          background-color: #e75735;
-          color: #ffffff;
-        }
-
-        &:active {
-          top: 3px;
-          background-color: #e75735;
-          box-shadow: none;
-          color: #ffffff;
-        }
-      }
-
-      &_fill-green {
+      &:hover {
         background-color: #44ae9f;
         color: #ffffff;
       }
 
-      &_fill-red {
+      &:active {
+        top: 3px;
+        background-color: #44ae9f;
+        box-shadow: none;
+        color: #ffffff;
+      }
+    }
+
+    &_red {
+      border: 1px #e75735 solid;
+      background-color: #ffffff;
+      color: #e75735;
+      box-shadow: 0 3px #c94322;
+
+      &:hover {
         background-color: #e75735;
         color: #ffffff;
       }
+
+      &:active {
+        top: 3px;
+        background-color: #e75735;
+        box-shadow: none;
+        color: #ffffff;
+      }
+    }
+
+    &_fill-green {
+      background-color: #44ae9f;
+      color: #ffffff;
+    }
+
+    &_fill-red {
+      background-color: #e75735;
+      color: #ffffff;
     }
   }
 }

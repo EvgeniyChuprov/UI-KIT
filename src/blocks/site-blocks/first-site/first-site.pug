@@ -6,18 +6,19 @@ include ../../buttons/buttons
 mixin first-site(options)
   - let {siteHeader={}, news= {}, event= {}} = options;
 
-  +site-header(siteHeader)
+  .first-site
+    +site-header(siteHeader)
 
-  .headers
-    h1.headers__name Зубы на полку 
-    h2.headers__company Стоматологическая клиника  
-    h3.headers__news Новости клиники
+    .headers
+      h1.headers__name Зубы на полку 
+      h2.headers__company Стоматологическая клиника  
+      h3.headers__news Новости клиники
 
-  .news-block
-    each item in news
-      .news-block__elem
-        +news(item)
+    .news-block
+      each item in news
+        .news-block__elem
+          +news(item)
 
-    each item in event
-      .news-block__elem
-        +event(item)
+      each item in event
+        .news-block__elem
+          +event(item)
