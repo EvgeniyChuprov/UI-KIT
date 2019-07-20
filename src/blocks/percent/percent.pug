@@ -1,10 +1,10 @@
 mixin percent(options)
   - let {num= 100} = options;
-  .percent
-    .percent__container
-      .percent-circle(data-percent= num)
-        svg
-          use.percent-circle__inner(xlink:href="#percent-circle-svg")
+
+  .percent.js-percent
+    .percent-circle(data-percent= num)
+      svg
+        use.percent-circle__inner(xlink:href="#percent-circle-svg")
 
     svg.percent_hidden
       circle(id="percent-circle-svg", cx="50%", cy="50%", r="50%", stroke-alignment="inner")

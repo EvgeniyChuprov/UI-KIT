@@ -2,7 +2,7 @@ require('webpack-jquery-ui/selectmenu');
 
 class Selectmenu {
   constructor($domEl) {
-    this.$select = $domEl;
+    this.$select = $domEl.children();
     this.selectmenu();
   }
 

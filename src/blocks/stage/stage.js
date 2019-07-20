@@ -1,3 +1,4 @@
+/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class Stage {
   constructor($domEl) {
     this.$stage = $domEl;

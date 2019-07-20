@@ -1,3 +1,4 @@
+/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class BubbleSlider {
   constructor($domEl) {
     this.$bubbleSlider = $domEl;

@@ -1,8 +1,8 @@
 mixin select(values)
   -let i = 0
 
-  .select
-    select.select-block.js-select(name="select" )
+  .select.js-select
+    select.select-block(name="select" )
       option.select-block__none(disabled selected) Choose an option
 
       each val in values

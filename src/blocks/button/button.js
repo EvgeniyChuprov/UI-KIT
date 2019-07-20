@@ -1,6 +1,7 @@
+/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class ButtonRipple {
   constructor($ripple) {
-    this.$ripple = $ripple;
+    this.$ripple = $ripple.children();
     this.rippleInit();
   }
 
@@ -31,6 +32,6 @@ class ButtonRipple {
   }
 }
 
-$('.js-ripple').each((index, el) => {
+$('.js-button').each((index, el) => {
   new ButtonRipple($(el));
 });

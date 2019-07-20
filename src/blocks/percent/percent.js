@@ -1,19 +1,19 @@
 class Percent {
-  constructor(el) {
-    this.circles = el;
+  constructor($el) {
+    this.$circles = $el.children();
     this.drawCharts();
   }
 
   drawCharts() {
-    const percent = this.circles.dataset.percent / 100;
-    const diameter = this.circles.offsetWidth;
+    const percent = this.$circles.data('percent') / 100;
+    const diameter = this.$circles.outerWidth();
     const circumference = Math.ceil(diameter * Math.PI);
     const stroke = Math.ceil(circumference * percent);
     const diff = circumference - stroke;
-    $(this.circles).children().children().css('strokeDasharray', `${stroke}px ${diff}px`);
+    $(this.$circles).children().children().css('strokeDasharray', `${stroke}px ${diff}px`);
   }
 }
 
-$('.percent-circle').each((index, el) => {
-  new Percent(el);
+$('.js-percent').each((index, el) => {
+  new Percent($(el));
 });

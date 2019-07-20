@@ -17,23 +17,23 @@
       <div class="header"><span class="header__tile">standard  buttons</span></div>
       <div class="buttons">
         <div class="buttons__block">
-          <button class="button button_size_small button_color_green button_color_fill-green">button
-            <div class="element-ripple js-ripple"><span class="element-ripple__circle"></span></div>
+          <button class="button js-button button_size_small button_color_green button_color_fill-green">button
+            <div class="element-ripple"><span class="element-ripple__circle"></span></div>
           </button>
         </div>
         <div class="buttons__block">
-          <button class="button button_color_green button_color_fill-green">button
-            <div class="element-ripple js-ripple"><span class="element-ripple__circle"></span></div>
+          <button class="button js-button button_color_green button_color_fill-green">button
+            <div class="element-ripple"><span class="element-ripple__circle"></span></div>
           </button>
         </div>
         <div class="buttons__block">
-          <button class="button button_color_red button_color_fill-red">button
-            <div class="element-ripple js-ripple"><span class="element-ripple__circle"></span></div>
+          <button class="button js-button button_color_red button_color_fill-red">button
+            <div class="element-ripple"><span class="element-ripple__circle"></span></div>
           </button>
         </div>
         <div class="buttons__block">
-          <button class="button button_size_small button_color_red button_color_fill-red">button
-            <div class="element-ripple js-ripple"><span class="element-ripple__circle"></span></div>
+          <button class="button js-button button_size_small button_color_red button_color_fill-red">button
+            <div class="element-ripple"><span class="element-ripple__circle"></span></div>
           </button>
         </div>
         <div class="buttons__block">
@@ -91,49 +91,41 @@
       <div class="percentages">
         <div class="header"><span class="header__tile">percentages / pie chart</span></div>
         <div class="percentages__block">
-          <div class="percent">
-            <div class="percent__container">
-              <div class="percent-circle" data-percent="0">
-                <svg>
-                  <use class="percent-circle__inner" xlink:href="#percent-circle-svg"></use>
-                </svg>
-              </div>
+          <div class="percent js-percent">
+            <div class="percent-circle" data-percent="0">
+              <svg>
+                <use class="percent-circle__inner" xlink:href="#percent-circle-svg"></use>
+              </svg>
             </div>
             <svg class="percent_hidden">
               <circle id="percent-circle-svg" cx="50%" cy="50%" r="50%" stroke-alignment="inner"></circle>
             </svg>
           </div>
-          <div class="percent">
-            <div class="percent__container">
-              <div class="percent-circle" data-percent="38">
-                <svg>
-                  <use class="percent-circle__inner" xlink:href="#percent-circle-svg"></use>
-                </svg>
-              </div>
+          <div class="percent js-percent">
+            <div class="percent-circle" data-percent="38">
+              <svg>
+                <use class="percent-circle__inner" xlink:href="#percent-circle-svg"></use>
+              </svg>
             </div>
             <svg class="percent_hidden">
               <circle id="percent-circle-svg" cx="50%" cy="50%" r="50%" stroke-alignment="inner"></circle>
             </svg>
           </div>
-          <div class="percent">
-            <div class="percent__container">
-              <div class="percent-circle" data-percent="62">
-                <svg>
-                  <use class="percent-circle__inner" xlink:href="#percent-circle-svg"></use>
-                </svg>
-              </div>
+          <div class="percent js-percent">
+            <div class="percent-circle" data-percent="62">
+              <svg>
+                <use class="percent-circle__inner" xlink:href="#percent-circle-svg"></use>
+              </svg>
             </div>
             <svg class="percent_hidden">
               <circle id="percent-circle-svg" cx="50%" cy="50%" r="50%" stroke-alignment="inner"></circle>
             </svg>
           </div>
-          <div class="percent">
-            <div class="percent__container">
-              <div class="percent-circle" data-percent="89">
-                <svg>
-                  <use class="percent-circle__inner" xlink:href="#percent-circle-svg"></use>
-                </svg>
-              </div>
+          <div class="percent js-percent">
+            <div class="percent-circle" data-percent="89">
+              <svg>
+                <use class="percent-circle__inner" xlink:href="#percent-circle-svg"></use>
+              </svg>
             </div>
             <svg class="percent_hidden">
               <circle id="percent-circle-svg" cx="50%" cy="50%" r="50%" stroke-alignment="inner"></circle>
@@ -265,8 +257,8 @@
                   <button class="search__button" type="submit"></button>
                 </div>
               </div>
-              <div class="select">
-                <select class="select-block js-select" name="select">
+              <div class="select js-select">
+                <select class="select-block" name="select">
                   <option class="select-block__none" disabled selected>Choose an option</option>
                   <option class="select-block__option" value="1">This is option 1</option>
                   <option class="select-block__option" value="2">This is option 2</option>

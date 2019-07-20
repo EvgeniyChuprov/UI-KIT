@@ -1,5 +1,6 @@
 require('webpack-jquery-ui/datepicker');
 
+/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class Calendar {
   constructor($domEl) {
     this.$calendar = $domEl;

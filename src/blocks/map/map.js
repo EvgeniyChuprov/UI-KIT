@@ -1,3 +1,4 @@
+/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class Map {
   constructor($map) {
     this.$map = $map;

@@ -42,11 +42,9 @@
 }
 
 .percent {
-  &__container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   &-circle {
     @include percent-circle(93px, 5px, #e75735, #ffffff);
