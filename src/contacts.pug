@@ -14,10 +14,63 @@ html
     meta( name="theme-color" content="#ffffff")
     title UI-KIT
   body
-    +contacts-site({siteHeader:{headTitle: "Зубы на полку", menu:[{link: "discount.html", title: "скидки и акции"}, 
-    {link: "recording.html", title: "запись на прием"}, {link: "online.html", title: "онлайн консультация"}, 
-    {link: "contacts.html", title: "контакты"},{link: "staff.html", title: "наши врачи"}]},
-    headCont: "контакты", phone:[{tel:"9 999 999-999-9"}, {tel:"9 999 999-555-5"}, {tel:"9 999 999-333-3"}],
-    email:"zubynapolku@mail.com" , headerText:"оставьте отзыв", text:{placeholder:"Дополнительная информация", name:"form"},
-    button:{name: "отправить", small: false, green: true}, map:{marker:require("./blocks/map/img/marker.png"), lat:"59.966584",
-    lng:"30.374066", zoom: 8, city:"Санкт-Петербург", title:"Где то тут!"} })
+    +contacts-site({siteHeader:
+      {
+        headTitle: "Зубы на полку", 
+        menu:
+          [
+            {
+              link: "discount.html", 
+              title: "скидки и акции"
+            }, 
+            {
+              link: "recording.html", 
+              title: "запись на прием"
+            },
+            {
+              link: "online.html", 
+              title: "онлайн консультация"
+            }, 
+            {
+              link: "contacts.html", 
+              title: "контакты"
+            },
+            {
+              link: "staff.html", 
+              title: "наши врачи"
+            }
+          ]
+        },
+        headCont: "контакты", 
+        phone:[
+          {
+            tel:"9 999 999-999-9"
+          },
+          {
+            tel:"9 999 999-555-5"
+          },
+          {
+            tel:"9 999 999-333-3"
+          }
+        ],
+        email:"zubynapolku@mail.com", 
+        headerText:"оставьте отзыв", 
+        text:{
+          placeholder:"Дополнительная информация", 
+          name:"form"
+        },
+        button:{
+          text: "отправить", 
+          small: false, 
+          green: true,
+          bRipple: true
+        }, 
+        map:{
+          marker:require("./blocks/map/img/marker.png"),
+          lat:"59.966584",
+          lng:"30.374066", 
+          zoom: 8, 
+          city:"Санкт-Петербург", 
+          title:"Где то тут!"
+        } 
+      })

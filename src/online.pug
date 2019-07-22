@@ -14,8 +14,41 @@ html
     meta( name="theme-color" content="#ffffff")
     title UI-KIT
   body
-    +online-site({siteHeader:{headTitle: "Зубы на полку", menu:[{link: "discount.html", title: "скидки и акции"}, 
-    {link: "recording.html", title: "запись на прием"}, {link: "online.html", title: "онлайн консультация"}, 
-    {link: "contacts.html", title: "контакты"},{link: "staff.html", title: "наши врачи"}]},
-    message: {text:"Здравствуйте! Чем я могу вам помоч?", placeholder:"Добрый день. Как записаться на прием?", 
-    foto:require("./blocks/message/img/photo-woman.png"), button:"ответить"}})
+    +online-site({siteHeader:
+      {
+        headTitle: "Зубы на полку", 
+        menu:[
+          {
+            link: "discount.html", 
+            title: "скидки и акции"
+          }, 
+          {
+            link: "recording.html", 
+            title: "запись на прием"
+          }, 
+          {
+            link: "online.html", 
+            title: "онлайн консультация"
+          }, 
+          {
+            link: "contacts.html", 
+            title: "контакты"
+          },
+          {
+            link: "staff.html", 
+            title: "наши врачи"
+          }
+        ]
+      },
+      message: {
+        text:"Здравствуйте! Чем я могу вам помоч?", 
+        placeholder:"Добрый день. Как записаться на прием?", 
+        foto:require("./blocks/message/img/photo-woman.png"),
+        button:{
+          text: "ответить", 
+          small: false, 
+          green: true,
+          bRipple: true
+        }
+      }
+})

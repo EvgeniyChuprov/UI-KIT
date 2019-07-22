@@ -14,15 +14,85 @@ html
     meta( name="theme-color" content="#ffffff")
     title UI-KIT
   body
-    +recording-site({siteHeader:{headTitle: "Зубы на полку", menu:[{link: "discount.html", title: "скидки и акции"}, 
-    {link: "recording.html", title: "запись на прием"}, {link: "online.html", title: "онлайн консультация"}, 
-    {link: "contacts.html", title: "контакты"},{link: "staff.html", title: "наши врачи"}]},
-    calendar:{dayNames: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'], firstDay: 1,
-    buttonPanel:"true", otherMonths:"true", dateFormat: "dd", gotoCurrent:"false"},
-    title:"ваш пол", tickOne:{name: "radio", id:"one", checked: false}, tickTwo:{name: "radio", id:"two", checked: true},
-    entryField:[{placeholder:"Ваше имя", type:"text", name:"form", correct: true},
-    {placeholder:"Ваша фамилия", type:"text", name:"form", correct: false},
-    {placeholder:"Ваше отчество", type:"text", name:"form", correct: true},
-    {placeholder:"Ваш номер телефона", type:"tel", name:"form", correct: false}],
-    textArea:{placeholder:"Дополнительная информация", name:"form"},
-    button:{text: "отправить", small: false, green: true}})
+    +recording-site({siteHeader:
+      {
+        headTitle: "Зубы на полку", 
+        menu:[
+          {
+            link: "discount.html", 
+            title: "скидки и акции"
+          }, 
+          {
+            link: "recording.html", 
+            title: "запись на прием"
+          }, 
+          {
+            link: "online.html", 
+            title: "онлайн консультация"
+          }, 
+          {
+            link: "contacts.html", 
+            title: "контакты"
+          },
+          {
+            link: "staff.html", 
+            title: "наши врачи"
+          }
+        ]
+      },
+      calendar:{
+        dayNames: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'], 
+        firstDay: 1,
+        buttonPanel:"true", 
+        otherMonths:"true", 
+        dateFormat: "dd", 
+        gotoCurrent:"false"
+      },
+      title:"ваш пол", 
+      tickOne:{
+        name: "radio", 
+        id:"one", 
+        checked: false
+      }, 
+      tickTwo:{
+        name: "radio", 
+        id:"two", 
+        checked: true
+      },
+      entryField:[
+        {
+          placeholder:"Ваше имя", 
+          type:"text", 
+          name:"form", 
+          correct: true
+        },
+        {
+          placeholder:"Ваша фамилия", 
+          type:"text", 
+          name:"form", 
+          correct: false
+        },
+        {
+          placeholder:"Ваше отчество", 
+          type:"text", 
+          name:"form", 
+          correct: true
+        },
+        {
+          placeholder:"Ваш номер телефона", 
+          type:"tel", 
+          name:"form", 
+          correct: false
+        }
+      ],
+      textArea:{
+        placeholder:"Дополнительная информация", 
+        name:"form"
+      },
+      button:{
+        text: "отправить", 
+        small: false, 
+        green: true,
+        bRipple: true
+      }
+    })

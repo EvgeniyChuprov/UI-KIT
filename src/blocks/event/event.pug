@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin event(options)
-  - let {img="img", header="header", dataNum="24", dataMonth="12", text="text", buttonText="text"} = options;
+  - let {img="img", header="header", dataNum="24", dataMonth="12", text="text", button={}} = options;
 
   .event
     img(class="event__img" src= img alt="bike")
@@ -13,4 +13,4 @@ mixin event(options)
       .event-text__header=  header
       .event-text__info= text
       .event-text__button
-        +button({text: buttonText, small: true, green: true})
+        +button(button)

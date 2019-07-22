@@ -15,14 +15,76 @@ html
     meta( name="theme-color" content="#ffffff")
     title UI-KIT
   body
-    +first-site({siteHeader:{headTitle: "Зубы на полку", menu:[{link: "discount.html", title: "скидки и акции"}, 
-    {link: "recording.html", title: "запись на прием"}, {link: "online.html", title: "онлайн консультация"}, 
-    {link: "contacts.html", title: "контакты"},{link: "staff.html", title: "наши врачи"}]},
-    news:[{img:require("./blocks/news/img/photo-bike.png"), header: "It’s all going downhill", data: "24  august  2013",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."},
-    {img:require("./blocks/news/img/photo-bike.png"), header: "It’s all going downhill", data: "24  august  2013", 
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."}],
-    event:[{img:require("./blocks/event/img/photo-city.png"), header: "this is the title", dataNum: "24", dataMonth:"Aug", 
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", buttonText:"add to calendar"},
-    {img:require("./blocks/event/img/photo-city.png"), header: "this is the title", dataNum: "24", dataMonth:"Aug", 
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", buttonText:"add to calendar"}]})
+    +first-site({siteHeader:
+      {
+        headTitle: "Зубы на полку", 
+        menu:[
+          {
+            link: "discount.html", 
+            title: "скидки и акции"
+          }, 
+          {
+            link: "recording.html", 
+            title: "запись на прием"
+          }, 
+          {
+            link: "online.html", 
+            title: "онлайн консультация"
+          }, 
+          {
+            link: "contacts.html", 
+            title: "контакты"
+          },
+          {
+            link: "staff.html", 
+            title: "наши врачи"
+          }
+        ]
+      },
+      news:[
+        {
+          img:require("./blocks/news/img/photo-bike.png"), 
+          header: "It’s all going downhill", 
+          data: "24  august  2013",
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+            "Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."
+        },
+        {
+          img:require("./blocks/news/img/photo-bike.png"), 
+          header: "It’s all going downhill", 
+          data: "24  august  2013", 
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+            "Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros."
+        }
+      ],
+      event:[
+        {
+          img:require("./blocks/event/img/photo-city.png"), 
+          header: "this is the title", 
+          dataNum: "24", 
+          dataMonth:"Aug", 
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", 
+          button:{
+            text: "add to calendar", 
+            small: true, 
+            green: true, 
+            bRipple: true, 
+            fillGreen:false, 
+            fillRed:false
+          }
+        },
+        {
+          img:require("./blocks/event/img/photo-city.png"), 
+          header: "this is the title", 
+          dataNum: "24", 
+          dataMonth:"Aug", 
+          text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", 
+          button:{
+            text: "add to calendar",
+            small: true, 
+            green: true, 
+            bRipple: true, 
+          }
+        }
+      ]
+    })
