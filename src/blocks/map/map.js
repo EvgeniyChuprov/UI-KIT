@@ -2,10 +2,10 @@
 class Map {
   constructor($map) {
     this.$map = $map;
-    this.mapInit();
+    this._mapInit();
   }
 
-  mapInit() {
+  _mapInit() {
     this.loadGoogleMapsApi = require('load-google-maps-api');
     this.zoom = this.$map.data('zoom');
     this.marker = this.$map.data('marker');

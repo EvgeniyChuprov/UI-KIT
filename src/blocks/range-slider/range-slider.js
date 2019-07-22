@@ -2,10 +2,10 @@
 class RangeSlider {
   constructor($range) {
     this.$range = $range;
-    this.rangeInit();
+    this._rangeInit();
   }
 
-  rangeInit() {
+  _rangeInit() {
     this._move();
     this._color();
   }

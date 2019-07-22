@@ -2,10 +2,10 @@
 class Stage {
   constructor($domEl) {
     this.$stage = $domEl;
-    this.stageInit();
+    this._stageInit();
   }
 
-  stageInit() {
+  _stageInit() {
     this.$stageStep = this.$stage.children();
     this.$first = this.$stage.children().first();
     this._stages();

@@ -2,12 +2,12 @@
 class BubbleSlider {
   constructor($domEl) {
     this.$bubbleSlider = $domEl;
-    this.sliderInit();
+    this._sliderInit();
   }
 
-  sliderInit() {
-    this.$range = this.$bubbleSlider.children().first();
-    this.$tool = this.$bubbleSlider.children().last();
+  _sliderInit() {
+    this.$range = this.$bubbleSlider.find('.bubble-slider__input');
+    this.$tool = this.$bubbleSlider.find('.bubble-slider__tooltip');
     this._rangeTool();
     this._bubble();
   }

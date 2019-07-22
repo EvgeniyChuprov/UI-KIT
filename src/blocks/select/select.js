@@ -1,12 +1,13 @@
 require('webpack-jquery-ui/selectmenu');
 
+/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class Selectmenu {
   constructor($domEl) {
     this.$select = $domEl.children();
-    this.selectmenu();
+    this._selectmenu();
   }
 
-  selectmenu() {
+  _selectmenu() {
     this.$select.selectmenu();
   }
 }

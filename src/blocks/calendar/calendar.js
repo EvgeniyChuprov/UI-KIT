@@ -4,10 +4,10 @@ require('webpack-jquery-ui/datepicker');
 class Calendar {
   constructor($domEl) {
     this.$calendar = $domEl;
-    this.calendarInit();
+    this._calendarInit();
   }
 
-  calendarInit() {
+  _calendarInit() {
     this.$calendarHeader = this.$calendar.children();
     this._createCalendar();
   }
@@ -21,7 +21,7 @@ class Calendar {
       dateFormat: this.$calendar.data('data-format'),
       gotoCurrent: this.$calendar.data('goto-current'),
       onSelect(selectedDate) {
-        $(this).children().first().html(selectedDate);
+        $(this).find('.calendar__header').html(selectedDate);
       },
     };
   }

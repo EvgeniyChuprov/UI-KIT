@@ -2,10 +2,10 @@
 class ButtonRipple {
   constructor($ripple) {
     this.$ripple = $ripple.children();
-    this.rippleInit();
+    this._rippleInit();
   }
 
-  rippleInit() {
+  _rippleInit() {
     this.$circle = this.$ripple.children();
     this.$offset = this.$ripple.parent().offset();
     this._ripples();
