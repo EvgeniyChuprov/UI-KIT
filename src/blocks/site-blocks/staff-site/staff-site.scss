@@ -1,15 +1,17 @@
-.staff {
-  display: flex;
+.staff-site {
+  &__wrapper {
+    display: flex;
 
-  @media screen and (max-width: 950px) {
-    display: block;
+    @media screen and (max-width: 950px) {
+      display: block;
+    }
   }
 
   &__video {
     margin-left: auto;
     margin-top: 2.5rem;
 
-    &_block {
+    &-block {
       margin-top: 30px;
       width: 40rem;
       height: 22rem;
@@ -39,7 +41,7 @@
       width: 50%;
     }
 
-    &_block {
+    &-block {
       margin-top: 12%;
     }
   }

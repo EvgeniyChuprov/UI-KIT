@@ -1,12 +1,15 @@
-.write {
-  margin: 4% auto;
-  text-align: center;
-}
-.discount {
-  display: flex;
+.discount-site {
+  &__wrapper {
+    display: flex;
 
-  @media screen and (max-width: 700px) {
-    display: block;
+    @media screen and (max-width: 700px) {
+      display: block;
+    }
+  }
+
+  &__header {
+    margin: 4% auto;
+    text-align: center;
   }
 
   &__block {
@@ -16,17 +19,17 @@
 
   &__slider {
     margin: 0 auto;
-  }
+    &-block {
+      padding-top: 10%;
+      width: 90%;
+    }
 
-  &-slider {
-    padding-top: 10%;
-    width: 90%;
-    &__header {
+    &-header {
       margin: 0 auto;
       padding-bottom: 10%;
     }
 
-    &__toggle {
+    &-toggle {
       text-align: center;
     }
   }

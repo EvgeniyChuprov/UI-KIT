@@ -9,33 +9,34 @@ mixin discount-site(options)
   - let {siteHeader={}, length=4, percent=[], percentHeader=[], headerAge="Ваш возраст", age={}, headerTooth="", slider={}, headerCoupon="", check="" } = options;
   - let a = percent.length;
 
-  +site-header(siteHeader)
+  .discount-site
+    +site-header(siteHeader)
 
-  h1.write Скидки и акции
+    h1.discount-site__header Скидки и акции
 
-  .discount 
-    .discount__block
-      - for (let i = 0; i < length; i += 1) {
-        +header(percentHeader[i])  
-        +percent(percent[i])
-      -};
+    .discount-site__wrapper 
+      .discount-site__block
+        - for (let i = 0; i < length; i += 1) {
+          +header(percentHeader[i])  
+          +percent(percent[i])
+        -};
 
-    .discount__slider
-      .discount-slider
-        .discount-slider__header
-          +header({header:headerAge})
+      .discount-site__slider
+        .discount-site__slider-block
+          .discount-site__slider-header
+            +header({header:headerAge})
 
-        +range-slider(age)
+          +range-slider(age)
 
-      .discount-slider
-        .discount-slider__header
-          +header({header:headerTooth})
+        .discount-site__slider-block
+          .discount-site__slider-header
+            +header({header:headerTooth})
 
-        +bubble-slider(slider)
+          +bubble-slider(slider)
 
-      .discount-slider
-        .discount-slider__header
-          +header({header:headerCoupon}) 
+        .discount-site__slider-block
+          .discount-site__slider-header
+            +header({header:headerCoupon}) 
 
-        .discount-slider__toggle
-          +toggle({check:check})   
+          .discount-site__slider-toggle
+            +toggle({check:check})   

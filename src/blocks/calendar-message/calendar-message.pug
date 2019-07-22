@@ -4,6 +4,7 @@ include ../message/message
 
 mixin calendar-message(options)
   - let {calendarHead="header", calendar={}, messagingHead="header", messaging={}} = options;
+
   .calendar-message
     .calendar-message__block
       +header({header:calendarHead})

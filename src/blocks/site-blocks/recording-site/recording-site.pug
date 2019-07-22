@@ -14,26 +14,26 @@ mixin recording-site(options)
   .recording-site
     +site-header(siteHeader)
 
-    h1.write Заполните форму записи на прием
+    h1.recording-site__header Заполните форму записи на прием
 
-    .recording
-      .recording__block
+    .recording-site__wrapper
+      .recording-site__block
         +calendar(calendar)
 
-      .recording__block
-        .recording__gender
+      .recording-site__block
+        .recording-site__gender
           +header({header: title})
 
-          .recording__radio
+          .recording-site__radio
             span Муж.
             +tick(tickOne)
 
-          .recording__radio
+          .recording-site__radio
             span  Жен. 
             +tick(tickTwo)
 
         each item in entryField
-          .field
+          .recording-site__field
             +entry-field(item)
 
         +text-area(textArea)

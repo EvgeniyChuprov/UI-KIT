@@ -9,16 +9,16 @@ mixin first-site(options)
   .first-site
     +site-header(siteHeader)
 
-    .headers
-      h1.headers__name Зубы на полку 
-      h2.headers__company Стоматологическая клиника  
-      h3.headers__news Новости клиники
+    .first-site__headers
+      h1.first-site__name Зубы на полку 
+      h2.first-site__company Стоматологическая клиника  
+      h3.first-site__news Новости клиники
 
-    .news-block
+    .first-site__block
       each item in news
-        .news-block__elem
+        .first-site__element
           +news(item)
 
       each item in event
-        .news-block__elem
+        .first-site__element
           +event(item)

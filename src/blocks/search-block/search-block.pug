@@ -5,11 +5,12 @@ include ../select/select
 mixin search-block(options) 
   -let {header="header", search=[], select={}} = options;
 
-  +header({header:header}) 
+  .search-block
+    +header({header:header}) 
 
-  form.search-block
-    each item in search 
-      .search-block__search
-        +search(item) 
+    form.search-block__form
+      each item in search 
+        .search-block__search
+          +search(item) 
 
-    +select(select)   
+      +select(select)   

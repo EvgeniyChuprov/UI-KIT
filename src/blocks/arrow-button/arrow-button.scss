@@ -7,60 +7,62 @@
   border: none;
   background: none;
 
-  &_direction_left {
-    display: inline-block;
-    cursor: pointer;
-    width: 2.8rem;
-    height: 2.7rem;
-    line-height: 2.5rem;
-    border: 0.25rem solid #44ae9f;
-    border-radius: 50%;
-
-    &::after {
-      content: "";
+  &__arrow {
+    &_direction_left {
       display: inline-block;
-      vertical-align: middle;
-      margin-left: 10%;
-      width: 0.84rem;
-      height: 0.84rem;
-      border-top: 0.25rem solid #44ae9f;
-      border-right: 0.25rem solid #44ae9f;
-      transform: rotate(-135deg);
-    }
-
-    &:hover {
-      background: #44ae9f;
+      cursor: pointer;
+      width: 2.8rem;
+      height: 2.7rem;
+      line-height: 2.5rem;
+      border: 0.25rem solid #44ae9f;
+      border-radius: 50%;
 
       &::after {
-        border-top-color: #ffffff;
-        border-right-color: #ffffff;
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10%;
+        width: 0.84rem;
+        height: 0.84rem;
+        border-top: 0.25rem solid #44ae9f;
+        border-right: 0.25rem solid #44ae9f;
+        transform: rotate(-135deg);
+      }
+
+      &:hover {
+        background: #44ae9f;
+
+        &::after {
+          border-top-color: #ffffff;
+          border-right-color: #ffffff;
+        }
       }
     }
-  }
 
-  &_direction_right {
-    display: inline-block;
-    cursor: pointer;
-    width: 2.8rem;
-    height: 2.7rem;
-    line-height: 2.5rem;
-    border: 0.25rem solid #44ae9f;
-    border-radius: 50%;
-
-    &::after {
-      content: "";
+    &_direction_right {
       display: inline-block;
-      vertical-align: middle;
-      margin-left: 10%;
-      width: 0.84rem;
-      height: 0.84rem;
-      margin-left: 0;
-      border-top: none;
-      border-right: none;
-      margin-right: 13%;
-      border-bottom: 0.25rem solid #44ae9f;
-      border-left: 0.25rem solid #44ae9f;
-      transform: rotate(-135deg);
+      cursor: pointer;
+      width: 2.8rem;
+      height: 2.7rem;
+      line-height: 2.5rem;
+      border: 0.25rem solid #44ae9f;
+      border-radius: 50%;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10%;
+        width: 0.84rem;
+        height: 0.84rem;
+        margin-left: 0;
+        border-top: none;
+        border-right: none;
+        margin-right: 13%;
+        border-bottom: 0.25rem solid #44ae9f;
+        border-left: 0.25rem solid #44ae9f;
+        transform: rotate(-135deg);
+      }
     }
 
     &:hover {
@@ -74,7 +76,7 @@
   }
 
   &:disabled {
-    .arrow-button_direction_left {
+    .arrow-button__arrow_direction_left {
       cursor: default;
       background-color: #e5e5e5;
       border: 3px solid #e5e5e5;
@@ -88,7 +90,7 @@
         background-color: #e5e5e5;
       }
     }
-    .arrow-button_direction_right {
+    .arrow-button__arrow_direction_right {
       cursor: default;
       background-color: #e5e5e5;
       border: 3px solid #e5e5e5;
@@ -105,12 +107,12 @@
   &_hover {
     background: #44ae9f;
 
-    .arrow-button_direction_left::after {
+    .arrow-button__arrow_direction_left::after {
       border-top: 0.25rem solid #ffffff;
       border-right: 0.25rem solid #ffffff;
     }
 
-    .arrow-button_direction_right::after {
+    .arrow-button__arrow_direction_right::after {
       border-top: none;
       border-right: none;
       border-bottom: 0.25rem solid #ffffff;

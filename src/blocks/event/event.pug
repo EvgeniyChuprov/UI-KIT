@@ -6,11 +6,11 @@ mixin event(options)
   .event
     img(class="event__img" src= img alt="bike")
 
-    .event-text
-      .event-text__data
-        .event-text__data-num= dataNum
-        .event-text__data-month= dataMonth
-      .event-text__header=  header
-      .event-text__info= text
-      .event-text__button
+    .event__block
+      .event__data
+        .event__data-num= dataNum
+        .event__data-month= dataMonth
+      .event__header=  header
+      .event__info= text
+      .event__button
         +button(button)

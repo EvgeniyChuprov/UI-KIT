@@ -4,10 +4,10 @@ include ../button/button
 mixin buttons(options) 
   - let {header="header", buttons=[]} = options;
 
-  +header({header: header})
-
   .buttons
+    +header({header: header})
 
-    each item in buttons  
-      .buttons__block
-        +button(item)
+    .buttons__block
+      each item in buttons  
+        .buttons__element
+          +button(item)

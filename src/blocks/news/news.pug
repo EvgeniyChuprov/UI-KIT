@@ -2,7 +2,7 @@ mixin news(options)
   - let {img="img", header="header", data="data", text="text"} = options;
 
   .news
-    img(class="news__img" src= img alt="bike")
+    img.news__img(src= img alt="bike")
 
     .news__block
       .news__header=  header

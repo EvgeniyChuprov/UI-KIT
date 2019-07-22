@@ -20,7 +20,7 @@ class ButtonRipple {
     const x = e.pageX - this.$offset.left;
     const y = e.pageY - this.$offset.top;
     this.$circle.css({ top: `${y}px`, left: `${x}px` });
-    this.$ripple.addClass('is-active');
+    this.$ripple.addClass('button__ripple_active');
   }
 
   _delRipple() {
@@ -28,7 +28,7 @@ class ButtonRipple {
   }
 
   _delClass() {
-    this.$ripple.removeClass('is-active');
+    this.$ripple.removeClass('button__ripple_active');
   }
 }
 

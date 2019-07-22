@@ -1,12 +1,14 @@
 .buttons {
-  margin: auto;
-  padding: 10% 9% 0;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: flex-end;
-
   &__block {
+    margin: auto;
+    padding: 10% 9% 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  &__element {
     display: inline-block;
     margin: 2.2%;
     vertical-align: bottom;

@@ -9,12 +9,12 @@
   overflow: hidden;
   position: relative;
 
-  svg {
+  .percent__svg {
     width: $diameter;
     height: $diameter;
     transform: rotate(-90deg);
 
-    .percent-circle__inner {
+    &-inner {
       fill: #ffffff;
       stroke: #e75735;
       stroke-width: $stroke-width * 2;
@@ -46,7 +46,7 @@
   justify-content: space-around;
   align-items: center;
 
-  &-circle {
+  &__circle {
     @include percent-circle(93px, 5px, #e75735, #ffffff);
   }
 

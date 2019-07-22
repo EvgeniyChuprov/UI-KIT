@@ -10,10 +10,10 @@ mixin user-profile(options)
       .user-profile__name= name
       .user-profile__job= job
 
-      .social
+      .user-profile__social
         each item in socialNetwork
           - let {websiteAddress="/mock-address/change-me", websiteImg="", imgAlt=""} = item
 
-          a.social__link(href= websiteAddress, target="_blank", rel="noopener noreferrer")
+          a(href= websiteAddress, target="_blank", rel="noopener noreferrer")
             img(src= websiteImg alt= imgAlt)
 

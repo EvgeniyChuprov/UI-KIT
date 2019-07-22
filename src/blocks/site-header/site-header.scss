@@ -1,53 +1,78 @@
 .site-header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background: #689cd2;
-  justify-content: space-around;
+  &__header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #689cd2;
+    justify-content: space-around;
+  }
 
-  .navigation {
+  &__navigation {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 15px;
 
-    &__logo {
-      color: #ffffff;
-      font-size: 2rem;
-      font-weight: bold;
-      text-decoration: none;
-      vertical-align: middle;
+    @media screen and (max-width: 1140px) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 
-      &:hover {
-        color: greenyellow;
+  &__logo {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    vertical-align: middle;
+
+    @media screen and (max-width: 1140px) {
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      color: greenyellow;
+    }
+  }
+
+  &__menu {
+    list-style: none;
+    text-transform: uppercase;
+    display: flex;
+
+    @media screen and (max-width: 575px) {
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    &-element {
+      padding: 0 15px;
+      font-size: 1rem;
+      font-weight: bold;
+
+      @media screen and (max-width: 1140px) {
+        padding: 0 5px;
+        font-size: 0.65rem;
+      }
+
+      @media screen and (max-width: 575px) {
+        margin-bottom: 7px;
       }
     }
 
-    &__menu {
-      list-style: none;
-      text-transform: uppercase;
-      display: flex;
+    .link {
+      color: #ffffff;
+      text-decoration: none;
 
-      &_element {
-        padding: 0 15px;
-        font-size: 1rem;
-        font-weight: bold;
-      }
-
-      .link {
-        color: #ffffff;
-        text-decoration: none;
-
-        &:hover {
-          color: greenyellow;
-          border-bottom: greenyellow solid 3px;
-          padding-bottom: 3px;
-        }
+      &:hover {
+        color: greenyellow;
+        border-bottom: greenyellow solid 3px;
+        padding-bottom: 3px;
       }
     }
   }
 
-  .ui-kit {
+  &__ui-kit {
     height: 20px;
     width: 100%;
     background: #e75735;
@@ -55,35 +80,5 @@
     text-decoration: none;
     font-weight: bold;
     color: #ffffff;
-  }
-}
-@media screen and (max-width: 1140px) {
-  .site-header {
-    .navigation {
-      flex-direction: column;
-      justify-content: center;
-      &__logo {
-        margin-bottom: 20px;
-      }
-      &__menu {
-        &_element {
-          padding: 0 5px;
-          font-size: 0.65rem;
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: 575px) {
-  .site-header {
-    .navigation {
-      &__menu {
-        display: flex;
-        flex-flow: column wrap;
-        &_element {
-          margin-bottom: 7px;
-        }
-      }
-    }
   }
 }

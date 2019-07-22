@@ -1,17 +1,19 @@
-.write {
-  margin: 4% auto;
-  text-align: center;
-}
-
-.online-site__block {
-  width: 20%;
-  margin: 5% auto 0;
-
-  @media screen and (max-width: 1150px) {
-    width: 30%;
+.online-site {
+  &__header {
+    margin: 4% auto;
+    text-align: center;
   }
 
-  @media screen and (max-width: 750px) {
-    width: 50%;
+  &__block {
+    width: 20%;
+    margin: 5% auto 0;
+
+    @media screen and (max-width: 1150px) {
+      width: 30%;
+    }
+
+    @media screen and (max-width: 750px) {
+      width: 50%;
+    }
   }
 }

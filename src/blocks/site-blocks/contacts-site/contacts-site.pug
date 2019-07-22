@@ -11,26 +11,26 @@ mixin contacts-site(options)
   .contacts-site
     +site-header(siteHeader) 
 
-    .contacts
-      .contacts__block
+    .contacts-site__wrapper
+      .contacts-site__block
         +header({header:headCont})
 
-        p.contacts__text   Контактные телефоны: 
+        p.contacts-site__text   Контактные телефоны: 
         each item in phone
-          p.contacts__text
-            a.contacts__link(href=`tel: ${item.tel}`)=  item.tel
+          p.contacts-site__text
+            a.contacts-site__link(href=`tel: ${item.tel}`)=  item.tel
 
-        p.contacts__text   Эл. почта: 
-        p.contacts__text
-          a.contacts__link(href=`mailto: ${email}`)=  email
+        p.contacts-site__text   Эл. почта: 
+        p.contacts-site__text
+          a.contacts-site__link(href=`mailto: ${email}`)=  email
 
-      .contacts__block
+      .contacts-site__block
         +header({header:headerText})
 
         +text-area(text)
 
-        .contacts__button
+        .contacts-site__button
           +button(button) 
 
-    .contacts__map
+    .contacts-site__map
       +map(map)

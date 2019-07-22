@@ -9,15 +9,16 @@ mixin staff-site(options)
   .staff-site
     +site-header(siteHeader)
 
-    .staff
-      .staff__video
+    .staff-site__wrapper
+      .staff-site__video
         +header({header:headerVideo})
 
-        .staff__video_block
+        .staff-site__video-block
           +video({link:video})  
 
-      .staff__doctor
+      .staff-site__doctor
         +header({header:headerStaff})
+
         each item in doctor
-          .staff__doctor_block
+          .staff-site__doctor-block
             +user-profile(item)    

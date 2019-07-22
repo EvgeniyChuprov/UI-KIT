@@ -1,9 +1,11 @@
-.contacts {
-  display: flex;
-  margin-top: 3%;
+.contacts-site {
+  &__wrapper {
+    display: flex;
+    margin-top: 3%;
 
-  @media screen and (max-width: 760px) {
-    display: block;
+    @media screen and (max-width: 760px) {
+      display: block;
+    }
   }
 
   &__block {

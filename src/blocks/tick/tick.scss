@@ -1,24 +1,24 @@
 .tick {
   display: none;
-}
 
-.tick-label {
-  position: relative;
-  &:before {
-    content: "";
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    background: #e5e5e5 url("./img/check-off.svg") no-repeat center;
-    border-radius: 100%;
+  &__label {
+    position: relative;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: #e5e5e5 url("./img/check-off.svg") no-repeat center;
+      border-radius: 100%;
+    }
   }
 }
 
-.tick:checked + .tick-label:before {
+.tick:checked + .tick__label:before {
   background: #4eb7a8 url("./img/check.svg") no-repeat center;
 }
 
-.tick:checked + .tick-label:after {
+.tick:checked + .tick__label:after {
   position: absolute;
   content: "";
   display: inline-block;

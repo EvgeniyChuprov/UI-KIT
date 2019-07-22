@@ -66,16 +66,16 @@
       color: #ffffff;
     }
   }
-}
 
-.element-ripple {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: transparent;
+  &__ripple {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+  }
 
   &__circle {
     position: absolute;
@@ -88,7 +88,7 @@
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.25);
 
-    .element-ripple.is-active & {
+    .button__ripple.button__ripple_active & {
       animation: a-ripple 0.4s ease-in;
     }
   }

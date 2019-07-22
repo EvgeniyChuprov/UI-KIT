@@ -1,9 +1,9 @@
 mixin select(values)
-  -let i = 0
+  -let i = 0;
 
   .select.js-select
-    select.select-block(name="select" )
-      option.select-block__none(disabled selected) Choose an option
+    select.select__block(name="select" )
+      option.select__option.select__option_none(disabled selected) Choose an option
 
       each val in values
-        option.select-block__option(value= i += 1)= val
+        option.select__option(value= i += 1)= val

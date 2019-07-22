@@ -6,50 +6,49 @@
     border-radius: 0.25rem 0 0 0.25rem;
   }
 
-  &-text {
+  &__block {
     background: #44ae9f;
     width: 67.01%;
     border-radius: 0 0.25rem 0.25rem 0;
     color: #ffffff;
     padding-left: 6%;
     text-align: left;
+  }
+  &__data {
+    font-family: "lato-light", "Arial", "Sans-Serif";
+    display: flex;
 
-    &__data {
-      font-family: "lato-light", "Arial", "Sans-Serif";
-      display: flex;
-
-      &-num {
-        font-size: 4.5rem;
-        padding: 2.5% 0 0 0.7%;
-        letter-spacing: -0.14rem;
-      }
-
-      &-month {
-        font-size: 1.8rem;
-        padding: 26.8% 0 0 8%;
-      }
+    &-num {
+      font-size: 4.5rem;
+      padding: 2.5% 0 0 0.7%;
+      letter-spacing: -0.14rem;
     }
 
-    &__header {
-      text-transform: uppercase;
-      font-size: 0.73rem;
-      letter-spacing: 0.05rem;
-      padding-top: 6.5%;
-      margin-left: 2%;
+    &-month {
+      font-size: 1.8rem;
+      padding: 26.8% 0 0 8%;
     }
+  }
 
-    &__info {
-      font-family: "lato-light", "Arial", "Sans-Serif";
-      font-size: 0.7rem;
-      padding-top: 2%;
-      margin-left: 2%;
-      letter-spacing: 0.04rem;
-      line-height: 0.8rem;
-    }
+  &__header {
+    text-transform: uppercase;
+    font-size: 0.73rem;
+    letter-spacing: 0.05rem;
+    padding-top: 6.5%;
+    margin-left: 2%;
+  }
 
-    &__button {
-      width: 74%;
-      padding: 11% 0 5% 8%;
-    }
+  &__info {
+    font-family: "lato-light", "Arial", "Sans-Serif";
+    font-size: 0.7rem;
+    padding-top: 2%;
+    margin-left: 2%;
+    letter-spacing: 0.04rem;
+    line-height: 0.8rem;
+  }
+
+  &__button {
+    width: 74%;
+    padding: 11% 0 5% 8%;
   }
 }

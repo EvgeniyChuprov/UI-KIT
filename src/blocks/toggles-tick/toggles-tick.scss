@@ -14,12 +14,12 @@
       margin-left: 4%;
     }
   }
-}
 
-.tick-box {
-  margin-top: 10.2%;
-  margin: 10.2% auto;
-  display: flex;
-  justify-content: space-between;
-  width: 21%;
+  &__box {
+    margin-top: 10.2%;
+    margin: 10.2% auto;
+    display: flex;
+    justify-content: space-between;
+    width: 21%;
+  }
 }

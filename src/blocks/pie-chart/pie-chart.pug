@@ -2,9 +2,9 @@ mixin pie-chart(options)
   -let {colorOne="fff", colorTwo="fff", colorThree="fff",  one=10 , two=10, three=10} = options;
 
   .pie-chart
-    svg.donut(width="100%" height="100%" viewBox="0 0 42 42")
-      circle.donut-hole( cx="21" cy="21" r="15.91549430918954" fill="#fff")
-      circle.donut-ring( cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#e5e5e5" stroke-width="7")
-      circle.donut-segment( cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke=colorOne stroke-width="7" stroke-dasharray=one stroke-dashoffset="25")
-      circle.donut-segment( cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke=colorTwo stroke-width="7" stroke-dasharray=two stroke-dashoffset="25")
-      circle.donut-segment( cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke=colorThree stroke-width="7" stroke-dasharray=three stroke-dashoffset="25")
+    svg.pie-chart__donut(width="100%" height="100%" viewBox="0 0 42 42")
+      circle.pie-chart__hole( cx="21" cy="21" r="15.91549430918954" fill="#fff")
+      circle.pie-chart__ring( cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#e5e5e5" stroke-width="7")
+      circle.pie-chart__segment( cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke=colorOne stroke-width="7" stroke-dasharray=one stroke-dashoffset="25")
+      circle.pie-chart__segment( cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke=colorTwo stroke-width="7" stroke-dasharray=two stroke-dashoffset="25")
+      circle.pie-chart__segment( cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke=colorThree stroke-width="7" stroke-dasharray=three stroke-dashoffset="25")

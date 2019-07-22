@@ -34,14 +34,6 @@
         border-right-color: #44ae9f;
       }
     }
-
-    .social {
-      width: 57%;
-      padding: 7.5% 0 0;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-    }
   }
 
   &__name {
@@ -59,5 +51,13 @@
     letter-spacing: 0.05rem;
     text-align: center;
     text-transform: uppercase;
+  }
+
+  &__social {
+    width: 57%;
+    padding: 7.5% 0 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
   }
 }

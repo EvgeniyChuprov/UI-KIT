@@ -1,5 +1,7 @@
 .search-block {
-  padding: 1.2% 0 0 1.1%;
+  &__form {
+    padding: 1.2% 0 0 1.1%;
+  }
 
   &__search {
     margin: 5.25% 0;

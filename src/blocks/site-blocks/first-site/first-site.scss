@@ -1,26 +1,29 @@
-.headers {
-  text-align: center;
+.first-site {
+  &__headers {
+    text-align: center;
+  }
+
   &__name {
     text-transform: uppercase;
   }
-}
 
-.news-block {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 50%;
-  margin: auto;
+  &__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+    margin: auto;
 
-  @media screen and (max-width: 590px) {
-    width: 100%;
+    @media screen and (max-width: 590px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 920px) {
+      display: block;
+    }
   }
 
-  @media screen and (max-width: 920px) {
-    display: block;
-  }
-
-  .news-block__elem {
+  &__element {
     width: 40%;
     margin-bottom: 2rem;
 
