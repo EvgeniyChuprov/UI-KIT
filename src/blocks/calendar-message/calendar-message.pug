@@ -3,14 +3,14 @@ include ../calendar/calendar
 include ../message/message
 
 mixin calendar-message(options)
-  - let {calendarhead="header", calendar={}, messaginghead="header", messaging={}} = options;
+  - let {calendarHead="header", calendar={}, messagingHead="header", messaging={}} = options;
   .calendar-message
     .calendar-message__block
-      +header({header:calendarhead})
+      +header({header:calendarHead})
       .calendar-message__calendar
         +calendar(calendar)
 
     .calendar-message__block
-      +header({header:messaginghead})
+      +header({header:messagingHead})
       .calendar-message__message
         +message(messaging)

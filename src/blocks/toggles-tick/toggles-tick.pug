@@ -3,18 +3,18 @@ include ../toggle/toggle
 include ../tick/tick
 
 mixin toggles-tick(options)
-	-	let {toggleheader="header", checkone="", checksecond="", tickheader="header", tick=[]} = options;
+	-	let {toggleHeader="header", checkOff="", checkOn="", tickHeader="header", tick=[]} = options;
 
 	.toggles-tick
-		+header({header: toggleheader})
+		+header({header: toggleHeader})
 
 		.toggles-tick__block
 			.toggles-tick__block.toggles-tick__block_off
-				+toggle({check: checkone})
+				+toggle({check: checkOff})
 			.toggles-tick__block.toggles-tick__block_on 
-				+toggle({check: checksecond})
+				+toggle({check: checkOn})
 
-		+header({header: tickheader})
+		+header({header: tickHeader})
 
 		.tick-box
 			each item in tick

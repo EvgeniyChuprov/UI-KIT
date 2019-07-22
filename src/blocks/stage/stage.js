@@ -13,8 +13,8 @@ class Stage {
 
   _stages() {
     const max = this.$stage.data('max');
-    const resuilt = `${100 / (max - 1)}%`;
-    this.$stageStep.css('width', resuilt);
+    const result = `${100 / (max - 1)}%`;
+    this.$stageStep.css('width', result);
     this.$first.css('width', '0');
   }
 }

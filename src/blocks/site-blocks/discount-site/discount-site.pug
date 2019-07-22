@@ -6,8 +6,8 @@ include ../../bubble-slider/bubble-slider
 include ../../toggle/toggle
 
 mixin discount-site(options)
-  - let {siteHeader={}, lenght=4, percent=[], percentHeader=[], headerAge="Ваш возраст", age={}, headerTooth="", slider={}, headerCoupon="", check="" } = options;
-  - let a = percent.lenght;
+  - let {siteHeader={}, length=4, percent=[], percentHeader=[], headerAge="Ваш возраст", age={}, headerTooth="", slider={}, headerCoupon="", check="" } = options;
+  - let a = percent.length;
 
   +site-header(siteHeader)
 
@@ -15,7 +15,7 @@ mixin discount-site(options)
 
   .discount 
     .discount__block
-      - for (let i = 0; i < lenght; i += 1) {
+      - for (let i = 0; i < length; i += 1) {
         +header(percentHeader[i])  
         +percent(percent[i])
       -};

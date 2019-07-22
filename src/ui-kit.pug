@@ -184,10 +184,10 @@ html
             }
           }, 
           togglesTick:{
-            toggleheader:"toggles",
-            checkone:"", 
-            checksecond:"checked", 
-            tickheader:"tick boxes",
+            toggleHeader:"toggles",
+            checkOff:"", 
+            checkOn:"checked", 
+            tickHeader:"tick boxes",
             tick:[
               {
                 name: "radio", 
@@ -228,30 +228,46 @@ html
                 name:"John Smith",
                 job:"ux designer", 
                 color:"", 
-                webone:"/mock-address/change-me/",
-                imgone:require("./blocks/user-profile/img/fb.svg"),
-                altone:"FB", 
-                websecond:"/mock-address/change-me/",
-                imgsecond:require("./blocks/user-profile/img/twitter.png"), 
-                altsecond:"Twitter",
-                webthird:"/mock-address/change-me/", 
-                imgthird:require("./blocks/user-profile/img/dribbble.png"),
-                altthird:"Dribbble"
+                socialNetwork:[
+                  { 
+                    websiteAddress:"/mock-address/change-me",
+                    websiteImg:require("./blocks/user-profile/img/fb.svg"),
+                    imgAlt:"FB"
+                  },
+                  { 
+                    websiteAddress:"/mock-address/change-me",
+                    websiteImg:require("./blocks/user-profile/img/twitter.png"),
+                    imgAlt:"Twitter"
+                  },
+                  { 
+                    websiteAddress:"/mock-address/change-me",
+                    websiteImg:require("./blocks/user-profile/img/dribbble.png"),
+                    imgAlt:"Dribbble"
+                  },
+                ]
               },
               {
                 img:require("./blocks/user-profile/img/photo-woman.png"), 
                 name:"Sarah Brown",
                 job:"developer", 
                 color:"green", 
-                webone:"/mock-address/change-me/",
-                imgone:require("./blocks/user-profile/img/fb-white.png"), 
-                altone:"FB", 
-                websecond:"/mock-address/change-me/",
-                imgsecond:require("./blocks/user-profile/img/twitter-white.png"), 
-                altsecond:"Twitter",
-                webthird:"/mock-address/change-me/", 
-                imgthird:require("./blocks/user-profile/img/dribbble-white.png"),
-                altthird:"Dribbble"
+                socialNetwork:[
+                  { 
+                    websiteAddress:"/mock-address/change-me",
+                    websiteImg:require("./blocks/user-profile/img/fb-white.png"),
+                    imgAlt:"FB"
+                  },
+                  { 
+                    websiteAddress:"/mock-address/change-me",
+                    websiteImg:require("./blocks/user-profile/img/twitter-white.png"),
+                    imgAlt:"Twitter"
+                  },
+                  { 
+                    websiteAddress:"/mock-address/change-me",
+                    websiteImg:require("./blocks/user-profile/img/dribbble-white.png"),
+                    imgAlt:"Dribbble"
+                  },
+                ]
               }
             ]
           }
@@ -289,7 +305,7 @@ html
           }
         },
         calendarMessage:{
-          calendarhead:"calendar", 
+          calendarHead:"calendar", 
           calendar:{
             dayNames: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
             firstDay: 1, 
@@ -298,11 +314,11 @@ html
             dateFormat: "dd", 
             gotoCurrent:"false"
           }, 
-          messaginghead:"messaging",
+          messagingHead:"messaging",
           messaging:{
             text:"Hey! So are we cool to meet at the art gallery? Say 8pm",
             placeholder:"Yeah that sounds great. See you then.",
-            foto:require("./blocks/message/img/photo-woman.png"), 
+            photo:require("./blocks/message/img/photo-woman.png"), 
             button:{
               text: "reply",
               small: false, 

@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin message(options)
-  - let {text= "text", placeholder= "placeholder", foto="img", button={}} = options;
+  - let {text= "text", placeholder= "placeholder", photo="img", button={}} = options;
 
   .message
     .message__header
@@ -12,7 +12,7 @@ mixin message(options)
         a(href="/mock-address/change-me/", target="_blank", rel="noopener noreferrer")
           img(src=require("./blocks/message/img/camera.png") alt="camera icon")
       .message__name Sarah Brown
-      img(class="message__photo" src= foto alt="User photo")
+      img(class="message__photo" src= photo alt="User photo")
 
     .message__body
       .message__from= text

@@ -1,18 +1,19 @@
-mixin userProfile(options)
-  -  let {img ="img", name = "name", job = "job", color = "", webone = "/mock-address/change-me", imgone = "img", altone = "alttitle", websecond = "/mock-address/change-me", imgsecond = "img", altsecond = "alttitle", webthird = "/mock-address/change-me", imgthird = "img", altthird = "alttitle"} = options; 
-  -  let teme = "user-profile__tooltip";
-  -  teme += color === "green" ? " user-profile__tooltip_green" : "";
+mixin user-profile(options)
+  -  let {img ="img", name = "name", job = "job", color = "", socialNetwork=[]} = options; 
+  -  let theme = "user-profile__tooltip";
+  -  theme += color === "green" ? " user-profile__tooltip_green" : "";
 
   .user-profile
     img.user-profile__image(src= img alt="User photo")
 
-    div(class= teme)
+    div(class= theme)
       .user-profile__name= name
       .user-profile__job= job
+
       .social
-        a.social__link(href= webone, target="_blank", rel="noopener noreferrer")
-          img(src= imgone alt= altone)
-        a.social__link(href= websecond, target="_blank", rel="noopener noreferrer")
-          img(src= imgsecond alt= altsecond)
-        a.social__link(href= webthird, target="_blank", rel="noopener noreferrer")  
-          img(src= imgthird alt= altthird)
+        each item in socialNetwork
+          - let {websiteAddress="/mock-address/change-me", websiteImg="", imgAlt=""} = item
+
+          a.social__link(href= websiteAddress, target="_blank", rel="noopener noreferrer")
+            img(src= websiteImg alt= imgAlt)
+
