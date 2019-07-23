@@ -5,10 +5,10 @@ mixin stage(options)
 
     - for (let i = min; i <= max; i += 1) {
       -if (i <= value){
-        li.stage__steps.stage__steps_color
+        li.stage__filled.stage__filled_point
           .stage__number= i
       -} else {
-        li.stage__steps
+        li.stage__filled
           .stage__number= i
       -};
     -};

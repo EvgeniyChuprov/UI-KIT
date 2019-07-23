@@ -30,47 +30,47 @@
       <h1 class="discount-site__header">Скидки и акции</h1>
       <div class="discount-site__wrapper"> 
         <div class="discount-site__block">
-          <div class="header"><span class="header__tile">скидка за каждую пломбу</span></div>
+          <div class="header"><span class="header__title">скидка за каждую пломбу</span></div>
           <div class="percent js-percent">
             <div class="percent__circle" data-percent="5">
               <svg class="percent__svg">
                 <use class="percent__svg-inner" xlink:href="#percent__circle-svg"></use>
               </svg>
             </div>
-            <svg class="percent percent_hidden">
+            <svg class="percent__svg percent__svg_hidden">
               <circle id="percent__circle-svg" cx="50%" cy="50%" r="50%" stroke-alignment="inner"></circle>
             </svg>
           </div>
-          <div class="header"><span class="header__tile">скидка на удаление зуба</span></div>
+          <div class="header"><span class="header__title">скидка на удаление зуба</span></div>
           <div class="percent js-percent">
             <div class="percent__circle" data-percent="7">
               <svg class="percent__svg">
                 <use class="percent__svg-inner" xlink:href="#percent__circle-svg"></use>
               </svg>
             </div>
-            <svg class="percent percent_hidden">
+            <svg class="percent__svg percent__svg_hidden">
               <circle id="percent__circle-svg" cx="50%" cy="50%" r="50%" stroke-alignment="inner"></circle>
             </svg>
           </div>
-          <div class="header"><span class="header__tile">скидка на виниры</span></div>
+          <div class="header"><span class="header__title">скидка на виниры</span></div>
           <div class="percent js-percent">
             <div class="percent__circle" data-percent="12">
               <svg class="percent__svg">
                 <use class="percent__svg-inner" xlink:href="#percent__circle-svg"></use>
               </svg>
             </div>
-            <svg class="percent percent_hidden">
+            <svg class="percent__svg percent__svg_hidden">
               <circle id="percent__circle-svg" cx="50%" cy="50%" r="50%" stroke-alignment="inner"></circle>
             </svg>
           </div>
-          <div class="header"><span class="header__tile">скидка на брекеты</span></div>
+          <div class="header"><span class="header__title">скидка на брекеты</span></div>
           <div class="percent js-percent">
             <div class="percent__circle" data-percent="25">
               <svg class="percent__svg">
                 <use class="percent__svg-inner" xlink:href="#percent__circle-svg"></use>
               </svg>
             </div>
-            <svg class="percent percent_hidden">
+            <svg class="percent__svg percent__svg_hidden">
               <circle id="percent__circle-svg" cx="50%" cy="50%" r="50%" stroke-alignment="inner"></circle>
             </svg>
           </div>
@@ -78,7 +78,7 @@
         <div class="discount-site__slider">
           <div class="discount-site__slider-block">
             <div class="discount-site__slider-header">
-              <div class="header"><span class="header__tile">Ваш возраст</span></div>
+              <div class="header"><span class="header__title">Ваш возраст</span></div>
             </div>
             <div class="range-slider">
               <input class="range-slider__range js-range-slider__range" type="range" min="0" max="100" value="35" step="5">
@@ -109,7 +109,7 @@
           </div>
           <div class="discount-site__slider-block">
             <div class="discount-site__slider-header">
-              <div class="header"><span class="header__tile">Количество зубов</span></div>
+              <div class="header"><span class="header__title">Количество зубов</span></div>
             </div>
             <div class="bubble-slider js-bubble-slider">
               <input class="bubble-slider__input" id="rangeSlider" type="range" min="0" max="32" value="25" step="1">
@@ -118,10 +118,11 @@
           </div>
           <div class="discount-site__slider-block">
             <div class="discount-site__slider-header">
-              <div class="header"><span class="header__tile">У Вас есть дисконтная карта?</span></div>
+              <div class="header"><span class="header__title">У Вас есть дисконтная карта?</span></div>
             </div>
             <div class="discount-site__slider-toggle">
-              <label class="toggle"><input id="switch" type="checkbox"  checked>
+              <label class="toggle">
+                <input id="switch" type="checkbox" checked="checked">
                 <div class="toggle__on-off">                         </div>
                 <div class="toggle__ball"></div>
               </label>

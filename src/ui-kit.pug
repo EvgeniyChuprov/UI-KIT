@@ -185,14 +185,20 @@ html
           }, 
           togglesTick:{
             toggleHeader:"toggles",
-            checkOff:"", 
-            checkOn:"checked", 
+            toggleCheck:[
+              {
+                check: false,
+              },
+              {
+                check: true,
+              }
+              ],
             tickHeader:"tick boxes",
             tick:[
               {
                 name: "radio", 
                 id:"one", 
-                checked: true
+                check: true
               }, 
               {
                 name: "radio", 

@@ -50,7 +50,9 @@
     @include percent-circle(93px, 5px, #e75735, #ffffff);
   }
 
-  &_hidden {
-    display: none;
+  &__svg {
+    &_hidden {
+      display: none;
+    }
   }
 }

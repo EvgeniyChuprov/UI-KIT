@@ -1,21 +1,15 @@
 .toggles-tick {
   padding-top: 0.4%;
 
-  &__block {
-    margin: 5% auto 6%;
-    text-align: center;
-
-    &_off {
-      display: inline-block;
-    }
-
-    &_on {
-      display: inline-block;
-      margin-left: 4%;
-    }
+  &__toggle-block {
+    display: flex;
+    justify-content: space-between;
+    width: 47%;
+    padding: 9.5% 0 13.5%;
+    margin: auto;
   }
 
-  &__box {
+  &__tick-block {
     margin-top: 10.2%;
     margin: 10.2% auto;
     display: flex;

@@ -15,7 +15,7 @@
   <body>
     <div class="content">
       <div class="buttons">
-        <div class="header"><span class="header__tile">standard  buttons</span></div>
+        <div class="header"><span class="header__title">standard  buttons</span></div>
         <div class="buttons__block">
           <div class="buttons__element">
             <button class="button js-button button_size_small button_color_green button_color_fill-green">button
@@ -80,7 +80,7 @@
         </div>
       </div>
       <div class="arrows">
-        <div class="header"><span class="header__tile">arrow buttons</span></div>
+        <div class="header"><span class="header__title">arrow buttons</span></div>
         <div class="arrows__block">
           <button class="arrow-button" type="button"> <span class="arrow-button__arrow arrow-button__arrow_direction_left"></span></button>
           <button class="arrow-button" type="button"> <span class="arrow-button__arrow arrow-button__arrow_direction_right"></span></button>
@@ -91,7 +91,7 @@
         </div>
       </div>
       <div class="percentages">
-        <div class="header"><span class="header__tile">percentages / pie chart</span></div>
+        <div class="header"><span class="header__title">percentages / pie chart</span></div>
         <div class="percentages__block">
           <div class="percent js-percent">
             <div class="percent__circle" data-percent="0">
@@ -99,7 +99,7 @@
                 <use class="percent__svg-inner" xlink:href="#percent__circle-svg"></use>
               </svg>
             </div>
-            <svg class="percent percent_hidden">
+            <svg class="percent__svg percent__svg_hidden">
               <circle id="percent__circle-svg" cx="50%" cy="50%" r="50%" stroke-alignment="inner"></circle>
             </svg>
           </div>
@@ -109,7 +109,7 @@
                 <use class="percent__svg-inner" xlink:href="#percent__circle-svg"></use>
               </svg>
             </div>
-            <svg class="percent percent_hidden">
+            <svg class="percent__svg percent__svg_hidden">
               <circle id="percent__circle-svg" cx="50%" cy="50%" r="50%" stroke-alignment="inner"></circle>
             </svg>
           </div>
@@ -119,7 +119,7 @@
                 <use class="percent__svg-inner" xlink:href="#percent__circle-svg"></use>
               </svg>
             </div>
-            <svg class="percent percent_hidden">
+            <svg class="percent__svg percent__svg_hidden">
               <circle id="percent__circle-svg" cx="50%" cy="50%" r="50%" stroke-alignment="inner"></circle>
             </svg>
           </div>
@@ -129,7 +129,7 @@
                 <use class="percent__svg-inner" xlink:href="#percent__circle-svg"></use>
               </svg>
             </div>
-            <svg class="percent percent_hidden">
+            <svg class="percent__svg percent__svg_hidden">
               <circle id="percent__circle-svg" cx="50%" cy="50%" r="50%" stroke-alignment="inner"></circle>
             </svg>
           </div>
@@ -147,7 +147,7 @@
         </div>
       </div>
       <div class="sliders">
-        <div class="header"><span class="header__tile">sliders</span></div>
+        <div class="header"><span class="header__title">sliders</span></div>
         <div class="sliders__block">
           <div class="sliders__element">
             <div class="bubble-slider js-bubble-slider">
@@ -170,29 +170,29 @@
         </div>
       </div>
       <div class="stages">
-        <div class="header"><span class="header__tile">stages</span></div>
+        <div class="header"><span class="header__title">stages</span></div>
         <div class="stages__block">
           <ul class="stage js-stage" data-max="5" data-value="3">
-            <li class="stage__steps stage__steps_color">
+            <li class="stage__filled stage__filled_point">
               <div class="stage__number">1</div>
             </li>
-            <li class="stage__steps stage__steps_color">
+            <li class="stage__filled stage__filled_point">
               <div class="stage__number">2</div>
             </li>
-            <li class="stage__steps stage__steps_color">
+            <li class="stage__filled stage__filled_point">
               <div class="stage__number">3</div>
             </li>
-            <li class="stage__steps">
+            <li class="stage__filled">
               <div class="stage__number">4</div>
             </li>
-            <li class="stage__steps">
+            <li class="stage__filled">
               <div class="stage__number">5</div>
             </li>
           </ul>
         </div>
       </div>
       <div class="forms">
-        <div class="header"><span class="header__tile">form elements</span></div>
+        <div class="header"><span class="header__title">form elements</span></div>
         <div class="forms__block">
           <div class="forms__element">
             <form class="form">
@@ -220,33 +220,31 @@
           </div>
           <div class="forms__element">
             <div class="toggles-tick">
-              <div class="header"><span class="header__tile">toggles</span></div>
-              <div class="toggles-tick__block">
-                <div class="toggles-tick__block toggles-tick__block_off">
-                  <label class="toggle"><input id="switch" type="checkbox"  >
-                    <div class="toggle__on-off">                         </div>
-                    <div class="toggle__ball"></div>
-                  </label>
-                </div>
-                <div class="toggles-tick__block toggles-tick__block_on"> 
-                  <label class="toggle"><input id="switch" type="checkbox"  checked>
-                    <div class="toggle__on-off">                         </div>
-                    <div class="toggle__ball"></div>
-                  </label>
-                </div>
+              <div class="header"><span class="header__title">toggles</span></div>
+              <div class="toggles-tick__toggle-block">
+                <label class="toggle">
+                  <input id="switch" type="checkbox">
+                  <div class="toggle__on-off">                         </div>
+                  <div class="toggle__ball"></div>
+                </label>
+                <label class="toggle">
+                  <input id="switch" type="checkbox" checked>
+                  <div class="toggle__on-off">                         </div>
+                  <div class="toggle__ball"></div>
+                </label>
               </div>
-              <div class="header"><span class="header__tile">tick boxes</span></div>
-              <div class="toggles-tick__box">
+              <div class="header"><span class="header__title">tick boxes</span></div>
+              <div class="toggles-tick__tick-block">
                 <input class="tick" type="radio" name="radio" id="one" checked>
                 <label class="tick__label" for="one"></label>
-                <input class="tick" type="radio" name="radio" id="two" checked>
+                <input class="tick" type="radio" name="radio" id="two">
                 <label class="tick__label" for="two"></label>
               </div>
             </div>
           </div>
           <div class="forms__element">
             <div class="search-block">
-              <div class="header"><span class="header__tile">search / drop down</span></div>
+              <div class="header"><span class="header__title">search / drop down</span></div>
               <form class="search-block__form">
                 <div class="search-block__search">
                   <div class="search">
@@ -274,7 +272,7 @@
           </div>
           <div class="forms__element">
             <div class="users-profiles">
-              <div class="header"><span class="header__tile">user profile</span></div>
+              <div class="header"><span class="header__title">user profile</span></div>
               <div class="users-profiles__block">
                 <div class="user-profile"><img class="user-profile__image" src="img/photo-man.png" alt="User photo">
                   <div class="user-profile__tooltip">
@@ -300,7 +298,7 @@
         </div>
       </div>
       <div class="news-events">
-        <div class="header"><span class="header__tile">news &amp; events</span></div>
+        <div class="header"><span class="header__title">news &amp; events</span></div>
         <div class="news-events__wrap">
           <div class="news-events__block">
             <div class="news"><img class="news__img" src="img/photo-bike.png" alt="bike">
@@ -331,7 +329,7 @@
         </div>
       </div>
       <div class="location">
-        <div class="header"><span class="header__tile">location</span></div>
+        <div class="header"><span class="header__title">location</span></div>
         <div class="location__block">
           <div class="map js-map" data-marker="img/marker.png" data-lat="37.79568" data-lng="-122.415021" data-zoom="14"></div>
           <div class="map__menu"> 
@@ -346,7 +344,7 @@
       </div>
       <div class="calendar-message">
         <div class="calendar-message__block">
-          <div class="header"><span class="header__tile">calendar</span></div>
+          <div class="header"><span class="header__title">calendar</span></div>
           <div class="calendar-message__calendar">
             <div class="calendar js-calendar" data-day-names="[&quot;SUN&quot;,&quot;MON&quot;,&quot;TUE&quot;,&quot;WED&quot;,&quot;THU&quot;,&quot;FRI&quot;,&quot;SAT&quot;]" data-first-day="1" data-button-panel="true" data-other-months="true" data-data-format="dd" data-goto-current="false">
               <div class="calendar__header"></div>
@@ -354,7 +352,7 @@
           </div>
         </div>
         <div class="calendar-message__block">
-          <div class="header"><span class="header__tile">messaging</span></div>
+          <div class="header"><span class="header__title">messaging</span></div>
           <div class="calendar-message__message">
             <div class="message">
               <div class="message__header">
@@ -378,7 +376,7 @@
         </div>
       </div>
       <div class="video-block">
-        <div class="header"><span class="header__tile">video</span></div>
+        <div class="header"><span class="header__title">video</span></div>
         <iframe class="video" src="https://player.vimeo.com/video/62980495" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
