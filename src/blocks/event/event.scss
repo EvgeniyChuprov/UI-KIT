@@ -13,7 +13,10 @@
     color: #ffffff;
     padding-left: 6%;
     text-align: left;
+    position: relative;
+    padding-bottom: 50px;
   }
+
   &__data {
     font-family: "lato-light", "Arial", "Sans-Serif";
     display: flex;
@@ -26,7 +29,9 @@
 
     &-month {
       font-size: 1.8rem;
-      padding: 26.8% 0 0 8%;
+      padding: 0 0 4% 8%;
+      display: flex;
+      align-items: flex-end;
     }
   }
 
@@ -48,7 +53,9 @@
   }
 
   &__button {
-    width: 74%;
+    width: 65.2%;
     padding: 11% 0 5% 8%;
+    position: absolute;
+    bottom: 7%;
   }
 }
