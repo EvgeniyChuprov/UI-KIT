@@ -4,7 +4,7 @@
   list-style-type: none;
   padding: 0;
 
-  &__filled {
+  &__point {
     float: left;
     min-height: 1px;
     position: relative;
@@ -25,13 +25,13 @@
   }
 }
 
-.stage__filled_point > .stage__number,
-.stage__filled_point > .stage__number:hover {
+.stage__point_filled > .stage__number,
+.stage__point_filled > .stage__number:hover {
   background-color: #e75735;
   color: #ffffff;
 }
 
-.stage__filled_point + .stage__filled_point:before {
+.stage__point_filled + .stage__point_filled:before {
   background-color: #e75735;
   content: "";
   height: 0.25rem;
