@@ -38,11 +38,15 @@
 
   &__name {
     font-family: "lato-light", "Arial", "Sans-Serif";
-    font-weight: 700;
+    font-weight: 400;
     color: #e75735;
     padding-top: 3%;
     font-size: 1.2rem;
     text-align: center;
+
+    &_text-color_white {
+      color: white;
+    }
   }
 
   &__job {

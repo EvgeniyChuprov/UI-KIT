@@ -1,13 +1,15 @@
 mixin user-profile(options)
   -  let {img ="img", name = "name", job = "job", color = "", socialNetwork=[]} = options; 
   -  let theme = "user-profile__tooltip";
+  -  let userName = "user-profile__name";
   -  theme += color === "green" ? " user-profile__tooltip_background_green" : "";
+  -  userName += color === "green" ? " user-profile__name_text-color_white" : "";
 
   .user-profile
     img.user-profile__image(src= img alt="User photo")
 
     div(class= theme)
-      .user-profile__name= name
+      div(class= userName)= name
       .user-profile__job= job
 
       .user-profile__social
