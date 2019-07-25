@@ -1,8 +1,8 @@
 mixin range-slider(options)
   -let {min=0, max=100, step=1, value=0} = options;
 
-  .range-slider
-    input.range-slider__range.js-range-slider__range( type="range" min= min max= max value= value step= step)
+  .range-slider.js-range-slider
+    input.range-slider__range( type="range" min= min max= max value= value step= step)
     .range-slider__scale
       -for (let i = min; i <= max; i += step) {
         .range-slider__digit= i

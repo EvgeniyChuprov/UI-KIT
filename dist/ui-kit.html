@@ -156,8 +156,8 @@
             </div>
           </div>
           <div class="sliders__element">
-            <div class="range-slider">
-              <input class="range-slider__range js-range-slider__range" type="range" min="0" max="100" value="75" step="25">
+            <div class="range-slider js-range-slider">
+              <input class="range-slider__range" type="range" min="0" max="100" value="75" step="25">
               <div class="range-slider__scale">
                 <div class="range-slider__digit">0</div>
                 <div class="range-slider__digit">25</div>
@@ -223,22 +223,26 @@
               <div class="header"><span class="header__title">toggles</span></div>
               <div class="toggles-tick__toggle-block">
                 <label class="toggle">
-                  <input id="switch" type="checkbox">
+                  <input class="toggle__input" id="switch" type="checkbox">
                   <div class="toggle__on-off">                         </div>
                   <div class="toggle__ball"></div>
                 </label>
                 <label class="toggle">
-                  <input id="switch" type="checkbox" checked>
+                  <input class="toggle__input" id="switch" type="checkbox" checked>
                   <div class="toggle__on-off">                         </div>
                   <div class="toggle__ball"></div>
                 </label>
               </div>
               <div class="header"><span class="header__title">tick boxes</span></div>
               <div class="toggles-tick__tick-block">
-                <input class="tick" type="radio" name="radio" id="one" checked>
-                <label class="tick__label" for="one"></label>
-                <input class="tick" type="radio" name="radio" id="two">
-                <label class="tick__label" for="two"></label>
+                <div class="tick">
+                  <input class="tick__input" type="radio" name="radio" id="one" checked>
+                  <label class="tick__label" for="one"></label>
+                </div>
+                <div class="tick">
+                  <input class="tick__input" type="radio" name="radio" id="two">
+                  <label class="tick__label" for="two"></label>
+                </div>
               </div>
             </div>
           </div>
@@ -260,7 +264,7 @@
                 </div>
                 <div class="select js-select">
                   <select class="select__block" name="select">
-                    <option class="select__option select__option_none" disabled selected>Choose an option</option>
+                    <option class="select__option select__option_selected" disabled selected>Choose an option</option>
                     <option class="select__option" value="1">This is option 1</option>
                     <option class="select__option" value="2">This is option 2</option>
                     <option class="select__option" value="3">This is option 3</option>
@@ -278,17 +282,17 @@
                   <div class="user-profile__tooltip">
                     <div class="user-profile__name">John Smith</div>
                     <div class="user-profile__job">ux designer</div>
-                    <div class="user-profile__social"><a href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><img src="img/fb.svg" alt="FB"></a><a href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><img src="img/twitter.png" alt="Twitter"></a><a href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><img src="img/dribbble.png" alt="Dribbble"></a>
+                    <div class="user-profile__social"><a class="user-profile__link" href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><img class="user-profile__link-logo" src="img/fb.svg" alt="FB"></a><a class="user-profile__link" href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><img class="user-profile__link-logo" src="img/twitter.png" alt="Twitter"></a><a class="user-profile__link" href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><img class="user-profile__link-logo" src="img/dribbble.png" alt="Dribbble"></a>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="users-profiles__block">
                 <div class="user-profile"><img class="user-profile__image" src="img/photo-woman.png" alt="User photo">
-                  <div class="user-profile__tooltip user-profile__tooltip_green">
+                  <div class="user-profile__tooltip user-profile__tooltip_background_green">
                     <div class="user-profile__name">Sarah Brown</div>
                     <div class="user-profile__job">developer</div>
-                    <div class="user-profile__social"><a href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><img src="img/fb-white.png" alt="FB"></a><a href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><img src="img/twitter-white.png" alt="Twitter"></a><a href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><img src="img/dribbble-white.png" alt="Dribbble"></a>
+                    <div class="user-profile__social"><a class="user-profile__link" href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><img class="user-profile__link-logo" src="img/fb-white.png" alt="FB"></a><a class="user-profile__link" href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><img class="user-profile__link-logo" src="img/twitter-white.png" alt="Twitter"></a><a class="user-profile__link" href="/mock-address/change-me" target="_blank" rel="noopener noreferrer"><img class="user-profile__link-logo" src="img/dribbble-white.png" alt="Dribbble"></a>
                     </div>
                   </div>
                 </div>
@@ -332,13 +336,15 @@
       <div class="location">
         <div class="header"><span class="header__title">location</span></div>
         <div class="location__block">
-          <div class="map js-map" data-marker="img/marker.png" data-lat="37.79568" data-lng="-122.415021" data-zoom="14"></div>
-          <div class="map__menu"> 
-            <div class="map__head">Meet us!</div>
-            <div class="map__address">1259  CALIFORNIA ST San Francisco, CA</div>
-            <div class="map__icon">
-              <div class="map__location"></div>
-              <div class="map__pin"></div>
+          <div class="map js-map">
+            <div class="map__location" data-marker="img/marker.png" data-lat="37.79568" data-lng="-122.415021" data-zoom="14"></div>
+            <div class="map__menu"> 
+              <div class="map__head">Meet us!</div>
+              <div class="map__address">1259  CALIFORNIA ST San Francisco, CA</div>
+              <div class="map__icon">
+                <div class="map__icon-location"></div>
+                <div class="map__icon-pin"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -357,8 +363,8 @@
           <div class="calendar-message__message">
             <div class="message">
               <div class="message__header">
-                <div class="message__chat"><a href="/mock-address/change-me/" target="_blank" rel="noopener noreferrer"><img src="img/chat.png" alt="chat icon"></a></div>
-                <div class="message__camera"><a href="/mock-address/change-me/" target="_blank" rel="noopener noreferrer"><img src="img/camera.png" alt="camera icon"></a></div>
+                <div class="message__chat"><a class="message__link" href="/mock-address/change-me/" target="_blank" rel="noopener noreferrer"><img class="message__chat-img" src="img/chat.png" alt="chat icon"></a></div>
+                <div class="message__camera"><a class="message__link" href="/mock-address/change-me/" target="_blank" rel="noopener noreferrer"><img class="message__camera-img" src="img/camera.png" alt="camera icon"></a></div>
                 <div class="message__name">Sarah Brown</div><img class="message__photo" src="img/photo-woman.png" alt="User photo">
               </div>
               <div class="message__body">

@@ -1,7 +1,7 @@
 mixin user-profile(options)
   -  let {img ="img", name = "name", job = "job", color = "", socialNetwork=[]} = options; 
   -  let theme = "user-profile__tooltip";
-  -  theme += color === "green" ? " user-profile__tooltip_green" : "";
+  -  theme += color === "green" ? " user-profile__tooltip_background_green" : "";
 
   .user-profile
     img.user-profile__image(src= img alt="User photo")
@@ -14,6 +14,6 @@ mixin user-profile(options)
         each item in socialNetwork
           - let {websiteAddress="/mock-address/change-me", websiteImg="", imgAlt=""} = item
 
-          a(href= websiteAddress, target="_blank", rel="noopener noreferrer")
-            img(src= websiteImg alt= imgAlt)
+          a.user-profile__link(href= websiteAddress, target="_blank", rel="noopener noreferrer")
+            img.user-profile__link-logo(src= websiteImg alt= imgAlt)
 

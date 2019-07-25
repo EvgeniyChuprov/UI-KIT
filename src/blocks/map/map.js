@@ -1,7 +1,7 @@
 /* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class Map {
   constructor($map) {
-    this.$map = $map;
+    this.$map = $map.find('.map__location');
     this._mapInit();
   }
 
@@ -16,9 +16,8 @@ class Map {
 
   _maps() {
     const pos = { lat: this.lat, lng: this.lng };
-
     this.loadGoogleMapsApi().then((googleMaps) => {
-      const maps = new googleMaps.Map(document.querySelector('.map'), {
+      const maps = new googleMaps.Map(document.querySelector('.map__location'), {
         center: pos,
         zoom: this.zoom,
       });

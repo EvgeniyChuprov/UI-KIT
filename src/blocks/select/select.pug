@@ -3,7 +3,7 @@ mixin select(values)
 
   .select.js-select
     select.select__block(name="select" )
-      option.select__option.select__option_none(disabled selected) Choose an option
+      option.select__option.select__option_selected(disabled selected) Choose an option
 
       each val in values
         option.select__option(value= i += 1)= val

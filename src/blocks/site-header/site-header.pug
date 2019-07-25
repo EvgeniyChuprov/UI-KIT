@@ -9,6 +9,6 @@ mixin site-header(options)
         menu.site-header__menu
           each item in menu
             li.site-header__menu-element
-              a(href= item.link class="link")= item.title  
+              a.site-header__menu-link(href= item.link)= item.title  
 
       a.site-header__ui-kit(href="ui-kit.html") UI-KIT

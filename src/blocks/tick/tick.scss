@@ -1,5 +1,7 @@
 .tick {
-  display: none;
+  &__input {
+    display: none;
+  }
 
   &__label {
     position: relative;
@@ -14,11 +16,11 @@
   }
 }
 
-.tick:checked + .tick__label:before {
+.tick__input:checked + .tick__label:before {
   background: #4eb7a8 url("./img/check.svg") no-repeat center;
 }
 
-.tick:checked + .tick__label:after {
+.tick__input:checked + .tick__label:after {
   position: absolute;
   content: "";
   display: inline-block;

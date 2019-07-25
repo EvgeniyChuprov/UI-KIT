@@ -6,13 +6,13 @@ mixin message(options)
   .message
     .message__header
       .message__chat
-        a(href="/mock-address/change-me/", target="_blank", rel="noopener noreferrer")
-          img(src=require("./blocks/message/img/chat.png") alt="chat icon")
+        a.message__link(href="/mock-address/change-me/", target="_blank", rel="noopener noreferrer")
+          img.message__chat-img(src=require("./blocks/message/img/chat.png") alt="chat icon")
       .message__camera
-        a(href="/mock-address/change-me/", target="_blank", rel="noopener noreferrer")
-          img(src=require("./blocks/message/img/camera.png") alt="camera icon")
+        a.message__link(href="/mock-address/change-me/", target="_blank", rel="noopener noreferrer")
+          img.message__camera-img(src=require("./blocks/message/img/camera.png") alt="camera icon")
       .message__name Sarah Brown
-      img(class="message__photo" src= photo alt="User photo")
+      img.message__photo(src= photo alt="User photo")
 
     .message__body
       .message__from= text

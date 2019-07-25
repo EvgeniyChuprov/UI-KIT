@@ -1,7 +1,13 @@
 .map {
   width: 100%;
-  height: 75.8%;
+  height: 100%;
   display: block;
+
+  &__location {
+    height: 76.2%;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
 
   &__menu {
     background: #e75735;
@@ -17,10 +23,10 @@
     font-size: 1.8rem;
     padding-left: 4.6%;
     vertical-align: middle;
-    letter-spacing: 0.035rem;
+    letter-spacing: 0.026rem;
   }
 
-  &__adress {
+  &__address {
     font-family: "lato-light", "Arial", "Sans-Serif";
     text-transform: uppercase;
     font-size: 0.75rem;
@@ -36,16 +42,17 @@
     flex-grow: 1;
     padding: 0.4% 2.2% 0;
     justify-content: flex-end;
-  }
-  &__location {
-    background: url("./img/location.svg") no-repeat center;
-    width: 2rem;
-    padding-left: 5%;
-  }
 
-  &__pin {
-    background: url("./img/pin.svg") no-repeat center;
-    width: 2rem;
-    padding-left: 4.5%;
+    &-location {
+      background: url("./img/location.svg") no-repeat center;
+      width: 2rem;
+      padding-left: 5%;
+    }
+
+    &-pin {
+      background: url("./img/pin.svg") no-repeat center;
+      width: 2rem;
+      padding-left: 4.5%;
+    }
   }
 }
