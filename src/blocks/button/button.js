@@ -1,37 +1,33 @@
 /* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class ButtonRipple {
-  constructor($ripple) {
-    this.$ripple = $ripple.children();
+  constructor($element) {
+    this.$button = $element;
     this._rippleInit();
   }
 
   _rippleInit() {
-    this.$circle = this.$ripple.children();
-    this.$offset = this.$ripple.parent().offset();
+    this.$circle = this.$button.find('.button__circle');
+    this.$offset = this.$button.offset();
     this._ripples();
-    this._delRipple();
   }
 
   _ripples() {
-    this.$ripple.on('click', this._rippleEffect.bind(this));
+    this.$button.on('click', this._handleButtonRippleEffect.bind(this));
+    this.$button.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', this._delClass.bind(this));
   }
 
-  _rippleEffect(e) {
+  _handleButtonRippleEffect(e) {
     const x = e.pageX - this.$offset.left;
     const y = e.pageY - this.$offset.top;
     this.$circle.css({ top: `${y}px`, left: `${x}px` });
-    this.$ripple.addClass('button__ripple_active');
-  }
-
-  _delRipple() {
-    this.$ripple.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', this._delClass.bind(this));
+    this.$button.addClass('button_effect_ripple');
   }
 
   _delClass() {
-    this.$ripple.removeClass('button__ripple_active');
+    this.$button.removeClass('button_effect_ripple');
   }
 }
 
-$('.js-button').each((index, el) => {
-  new ButtonRipple($(el));
+$('.js-button').each((index, element) => {
+  new ButtonRipple($(element));
 });

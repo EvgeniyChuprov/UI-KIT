@@ -31,6 +31,6 @@ class Map {
   }
 }
 
-$('.js-map').each((index, el) => {
-  new Map($(el));
+$('.js-map').each((index, element) => {
+  new Map($(element));
 });

@@ -1,7 +1,7 @@
 /* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class Percent {
-  constructor($el) {
-    this.$circles = $el.children();
+  constructor($element) {
+    this.$circles = $element.children();
     this._drawCharts();
   }
 
@@ -15,6 +15,6 @@ class Percent {
   }
 }
 
-$('.js-percent').each((index, el) => {
-  new Percent($(el));
+$('.js-percent').each((index, element) => {
+  new Percent($(element));
 });

@@ -88,7 +88,7 @@
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.25);
 
-    .button__ripple.button__ripple_active & {
+    .button_effect_ripple & {
       animation: a-ripple 0.4s ease-in;
     }
   }

@@ -9,8 +9,8 @@ mixin toggles-tick(options)
 		+header({header: toggleHeader})
 
 		.toggles-tick__toggle-block
-			each i in toggleCheck
-				+toggle(i)
+			each item in toggleCheck
+				+toggle(item)
 
 		+header({header: tickHeader})
 

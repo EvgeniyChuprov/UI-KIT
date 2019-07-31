@@ -2,8 +2,8 @@ require('webpack-jquery-ui/datepicker');
 
 /* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class Calendar {
-  constructor($domEl) {
-    this.$calendar = $domEl;
+  constructor($element) {
+    this.$calendar = $element;
     this._calendarInit();
   }
 
@@ -38,6 +38,6 @@ class Calendar {
   }
 }
 
-$('.js-calendar').each((index, domEl) => {
-  new Calendar($(domEl));
+$('.js-calendar').each((index, element) => {
+  new Calendar($(element));
 });

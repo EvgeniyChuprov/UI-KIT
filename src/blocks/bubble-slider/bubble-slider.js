@@ -1,7 +1,7 @@
 /* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class BubbleSlider {
-  constructor($domEl) {
-    this.$bubbleSlider = $domEl;
+  constructor($element) {
+    this.$bubbleSlider = $element;
     this._sliderInit();
   }
 
@@ -27,6 +27,6 @@ class BubbleSlider {
   }
 }
 
-$('.js-bubble-slider').each((index, domElement) => {
-  new BubbleSlider($(domElement));
+$('.js-bubble-slider').each((index, element) => {
+  new BubbleSlider($(element));
 });
