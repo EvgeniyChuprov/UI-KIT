@@ -1,5 +1,36 @@
 .content {
-  margin: 0 auto;
-  padding-top: 4.25%;
-  max-width: 600px;
+  &__element{
+    max-width: 600px;
+    margin: 0 auto;
+    &_buttons{
+      padding-top: 4.25%;
+    }
+    &_arrows{
+      padding: 2.5% 0 0;
+    }
+    &_percentages{
+      padding: 2.4% 0 0;
+    }
+    &_sliders{
+      padding-top: 1.6%;
+    }
+    &_stages{
+      padding: 2% 34.7% 0%;
+    }
+    &_forms{
+      padding-top: 2.6%;
+    }
+    &_news-events{
+      padding-top: 5.3%;
+    }
+    &_location{
+      padding: 2.65% 0 0;
+    }
+    &_calendar-message{
+      padding-top: 3.1%;
+    }
+    &_video-block{
+      padding: 2.9% 34.1% 0;
+    }
+  }
 }

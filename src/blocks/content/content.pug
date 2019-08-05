@@ -16,22 +16,23 @@ mixin content(options)
   - forms={}, newsEvents={}, location={}, calendarMessage={}, videoBlock={}} = options;
 
   .content
-    +buttons(buttons)
-
-    +arrows(arrows)
-
-    +percentages(percentages)
-
-    +sliders(sliders)
-
-    +stages(stages)
-
-    +forms(forms)
-
-    +news-events(newsEvents)
-
-    +location(location)
-
-    +calendar-message(calendarMessage)
-
-    +video-block(videoBlock)
+    .content__element.content__element_buttons
+      +buttons(buttons)
+    .content__element.content__element_arrows
+      +arrows(arrows)
+    .content__element.content__element_percentages
+      +percentages(percentages)
+    .content__element.content__element_sliders
+      +sliders(sliders)
+    .content__element.content__element_stages
+      +stages(stages)
+    .content__element.content__element_forms
+      +forms(forms)
+    .content__element.content__element_news-events
+      +news-events(newsEvents)
+    .content__element.content__element_location
+      +location(location)
+    .content__element.content__element_calendar-message
+      +calendar-message(calendarMessage)
+    .content__element.content__element_video-block
+      +video-block(videoBlock)

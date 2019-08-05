@@ -1,11 +1,10 @@
 .percentages {
-  padding: 7.4% 0 0;
-
   &__block {
     display: flex;
     justify-content: space-between;
     padding-top: 3.3%;
   }
+
   &__pie {
     width: 6.5rem;
     height: 6.5rem;
