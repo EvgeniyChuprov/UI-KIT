@@ -8,11 +8,11 @@ class BubbleSlider {
   _sliderInit() {
     this.$range = this.$bubbleSlider.find('.bubble-slider__input');
     this.$tool = this.$bubbleSlider.find('.bubble-slider__tooltip');
-    this._rangeTool();
-    this._bubble();
+    this._rangeToolShow();
+    this._bubbleMove();
   }
 
-  _rangeTool() {
+  _rangeToolShow() {
     const tooltipAdjustmentFirst = -20;
     const tooltipAdjustmentSecond = 18;
     const moving = this.$range.val() * (this.$range.outerWidth() / this.$range.attr('max'))
@@ -22,8 +22,12 @@ class BubbleSlider {
     this.$tool.css('left', `${moving}px`);
   }
 
-  _bubble() {
-    this.$range.on('input', this._rangeTool.bind(this));
+  _bubbleMove() {
+    this.$range.on('input', this._handleRangeInput.bind(this));
+  }
+
+  _handleRangeInput() {
+    this._rangeToolShow();
   }
 }
 

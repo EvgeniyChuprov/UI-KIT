@@ -7,14 +7,18 @@ class RangeSlider {
 
   _rangeInit() {
     this._move();
-    this._color();
+    this._colorDraw();
   }
 
   _move() {
-    this.$range.on('input', this._color.bind(this));
+    this.$range.on('input', this._handleRangeInput.bind(this));
   }
 
-  _color() {
+  _handleRangeInput() {
+    this._colorDraw();
+  }
+
+  _colorDraw() {
     const color = `-webkit-linear-gradient(left, #4eb7a8 0%, #4eb7a8 
       ${this.$range.val()}%, #e5e5e5 ${this.$range.val()}%, #e5e5e5 100%)`;
 

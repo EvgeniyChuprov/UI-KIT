@@ -8,10 +8,10 @@ class Stage {
   _stageInit() {
     this.$stageStep = this.$stage.children();
     this.$firstStepWidth = this.$stage.children().first();
-    this._stages();
+    this._addStages();
   }
 
-  _stages() {
+  _addStages() {
     const max = this.$stage.data('max');
     const result = `${100 / (max - 1)}%`;
     this.$stageStep.css('width', result);

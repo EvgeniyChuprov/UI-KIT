@@ -8,22 +8,23 @@ class ButtonRipple {
   _rippleInit() {
     this.$circle = this.$button.find('.button__circle');
     this.$offset = this.$button.offset();
-    this._ripples();
+    this._addRipples();
   }
 
-  _ripples() {
-    this.$button.on('click', this._handleButtonRippleEffect.bind(this));
-    this.$button.on('animationend webkitAnimationEnd oanimationend MSAnimationEnd', this._delClass.bind(this));
+  _addRipples() {
+    this.$button.on('click', this._handleButtonClick.bind(this));
+    this.$button.on('animationEnd webkitAnimationEnd oanimationEnd MSAnimationEnd',
+      this._handleButtonAnimationEnd.bind(this));
   }
 
-  _handleButtonRippleEffect(e) {
+  _handleButtonClick(e) {
     const x = e.pageX - this.$offset.left;
     const y = e.pageY - this.$offset.top;
     this.$circle.css({ top: `${y}px`, left: `${x}px` });
     this.$button.addClass('button_effect_ripple');
   }
 
-  _delClass() {
+  _handleButtonAnimationEnd() {
     this.$button.removeClass('button_effect_ripple');
   }
 }

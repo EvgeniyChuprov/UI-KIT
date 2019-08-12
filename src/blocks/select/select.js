@@ -4,10 +4,10 @@ require('webpack-jquery-ui/selectmenu');
 class Selectmenu {
   constructor($element) {
     this.$select = $element.children();
-    this._selectmenu();
+    this._selectMenu();
   }
 
-  _selectmenu() {
+  _selectMenu() {
     this.$select.selectmenu();
   }
 }

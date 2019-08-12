@@ -11,10 +11,10 @@ class Map {
     this.marker = this.$map.data('marker');
     this.lat = this.$map.data('lat');
     this.lng = this.$map.data('lng');
-    this._maps();
+    this._mapDraw();
   }
 
-  _maps() {
+  _mapDraw() {
     const pos = { lat: this.lat, lng: this.lng };
     this.loadGoogleMapsApi().then((googleMaps) => {
       const maps = new googleMaps.Map(document.querySelector('.map__location'), {
