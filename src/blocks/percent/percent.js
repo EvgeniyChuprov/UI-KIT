@@ -1,4 +1,3 @@
-/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class Percent {
   constructor($element) {
     this.$circles = $element.children();

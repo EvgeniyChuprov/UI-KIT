@@ -1,4 +1,3 @@
-/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class RangeSlider {
   constructor($element) {
     this.$range = $element.find('.range-slider__range');
@@ -27,5 +26,5 @@ class RangeSlider {
 }
 
 $('.js-range-slider').each((index, element) => {
-  new RangeSlider($(element))
+  new RangeSlider($(element));
 });

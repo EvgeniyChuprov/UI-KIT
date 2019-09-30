@@ -1,6 +1,5 @@
-require('webpack-jquery-ui/datepicker');
+import datepicker from 'webpack-jquery-ui/datepicker';
 
-/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class Calendar {
   constructor($element) {
     this.$calendar = $element;
@@ -30,7 +29,7 @@ class Calendar {
     this.$calendar.datepicker(this._getCalendar());
     this.$calendarHeader.html($.datepicker.formatDate('dd', new Date()));
     this.$calendar.datepicker('setDate', new Date());
-    // eslint-disable-next-line no-underscore-dangle
+
     $.datepicker._gotoToday = (e) => {
       $(e).datepicker('setDate', new Date());
       this.$calendarHeader.html($.datepicker.formatDate('dd', new Date()));

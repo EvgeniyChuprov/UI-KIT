@@ -1,4 +1,3 @@
-/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class Stage {
   constructor($element) {
     this.$stage = $element;

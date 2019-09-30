@@ -1,7 +1,7 @@
-require('webpack-jquery-ui/selectmenu');
 
-/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
-class Selectmenu {
+import selectmenu from 'webpack-jquery-ui/selectmenu';
+
+class SelectMenu {
   constructor($element) {
     this.$select = $element.children();
     this._selectMenu();
@@ -13,5 +13,5 @@ class Selectmenu {
 }
 
 $('.js-select').each((index, element) => {
-  new Selectmenu($(element));
+  new SelectMenu($(element));
 });

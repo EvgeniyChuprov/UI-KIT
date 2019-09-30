@@ -1,4 +1,3 @@
-/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 class BubbleSlider {
   constructor($element) {
     this.$bubbleSlider = $element;

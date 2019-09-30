@@ -1,4 +1,5 @@
-/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
+import loadGoogleApi from 'load-google-maps-api';
+
 class Map {
   constructor($map) {
     this.$map = $map.find('.map__location');
@@ -6,7 +7,7 @@ class Map {
   }
 
   _mapInit() {
-    this.loadGoogleMapsApi = require('load-google-maps-api');
+    this.loadGoogleMapsApi = loadGoogleApi;
     this.zoom = this.$map.data('zoom');
     this.marker = this.$map.data('marker');
     this.lat = this.$map.data('lat');
