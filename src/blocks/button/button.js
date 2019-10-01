@@ -1,4 +1,3 @@
-
 class ButtonRipple {
   constructor($element) {
     this.$button = $element;

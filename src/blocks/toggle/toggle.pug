@@ -1,8 +1,8 @@
 mixin toggle(options)
-  -  let {option= false } = options;
+  -  let {isChecked= false } = options;
 
   label.toggle
-    input.toggle__input( id="switch" type="checkbox"  checked= option)
+    input.toggle__input( id="switch" type="checkbox"  checked= isChecked)
 
     .toggle__on-off                          
     .toggle__ball
