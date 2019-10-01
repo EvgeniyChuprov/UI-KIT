@@ -1,10 +1,10 @@
 mixin arrow-button(options)
   - let {right= false, disabled= false, hover= false} = options;
   - let arrowButton = "arrow-button";
-  - let arrowRight= "arrow-button__arrow";
+  - let arrowDirection= "arrow-button__arrow";
   - let disable = disabled ? true : false;
-  - arrowRight += right  ? " arrow-button__arrow_direction_right" : " arrow-button__arrow_direction_left";
+  - arrowDirection += right  ? " arrow-button__arrow_direction_right" : " arrow-button__arrow_direction_left";
   - arrowButton += hover ? " arrow-button_hover" : "";
 
   button(class= arrowButton type="button" disabled= disable) 
-    span(class= arrowRight)
+    span(class= arrowDirection)
