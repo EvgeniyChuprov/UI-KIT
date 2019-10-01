@@ -1,4 +1,4 @@
-/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
+
 class ButtonRipple {
   constructor($element) {
     this.$button = $element;
