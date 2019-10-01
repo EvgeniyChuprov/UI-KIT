@@ -1,6 +1,6 @@
 mixin tick(options)
-  - let {name= "name", id="id", check= false} = options;
+  - let {name= "name", id="id", option= false} = options;
 
   .tick
-    input.tick__input(type="radio" name= name  id= id  checked= check)
+    input.tick__input(type="radio" name= name  id= id  checked= option)
     label.tick__label(for= id)

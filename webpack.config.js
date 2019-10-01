@@ -1,8 +1,8 @@
-const path = require("path");
+const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
@@ -16,7 +16,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        loaders: ["style-loader", "css-loader"]
+        loaders: ['style-loader', 'css-loader'],
       },
       {
         test: /\.scss$/,
@@ -24,7 +24,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
           'sass-loader',
-        ]
+        ],
       },
       {
         test: /\.(jpg|svg|png|gif)$/,
@@ -34,30 +34,30 @@ module.exports = {
             options: {
               name: '/img/[name].[ext]',
               outputPath: './',
-              useRelativePath: true
-            }
+              useRelativePath: true,
+            },
           },
           {
             loader: 'image-webpack-loader',
             options: {
               mozjpeg: {
                 progressive: true,
-                quality: 75
+                quality: 75,
               },
               mozpng: {
                 progressive: true,
-                quality: 75
-              }
-            }
-          }
-        ]
+                quality: 75,
+              },
+            },
+          },
+        ],
       },
       {
         test: /\.pug$/,
         loader: 'pug-loader',
         options: {
-          pretty: true
-        }
+          pretty: true,
+        },
       },
       {
         test: /\.(ico)$/,
@@ -66,11 +66,10 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '/favicons/[name].[ext]',
-              useRelativePath: true
-            }
-          }
-        ]
-
+              useRelativePath: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -80,53 +79,53 @@ module.exports = {
             options: {
               name: 'fonts/[name].[ext]',
               outputPath: './',
-              useRelativePath: true
-            }
-          }
-        ]
-      }
-    ]
+              useRelativePath: true,
+            },
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/index.pug'
+      template: './src/index.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'ui-kit.html',
-      template: './src/ui-kit.pug'
+      template: './src/ui-kit.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'recording.html',
-      template: './src/recording.pug'
+      template: './src/recording.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'online.html',
-      template: './src/online.pug'
+      template: './src/online.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'staff.html',
-      template: './src/staff.pug'
+      template: './src/staff.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'discount.html',
-      template: './src/discount.pug'
+      template: './src/discount.pug',
     }),
     new HtmlWebpackPlugin({
       filename: 'contacts.html',
-      template: './src/contacts.pug'
+      template: './src/contacts.pug',
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: '[name].css',
     }),
     new CleanWebpackPlugin([
-      './dist/*.*'
+      './dist/*.*',
     ]),
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery'",
-      "window.$": "jquery"
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+      'window.$': 'jquery',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css/g,
@@ -134,11 +133,11 @@ module.exports = {
       cssProcessorPluginOptions: {
         preset: ['default', {
           discatdComments: {
-            removeAll: true
-          }
-        }]
+            removeAll: true,
+          },
+        }],
       },
-      canPrint: true
-    })
-  ]
-}
+      canPrint: true,
+    }),
+  ],
+};

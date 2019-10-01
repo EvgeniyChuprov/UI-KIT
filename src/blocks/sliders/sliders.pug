@@ -3,14 +3,14 @@ include ../bubble-slider/bubble-slider
 include ../range-slider/range-slider
 
 mixin sliders(options) 
-	- let {header="title", bubble={}, range={}} = options;
+  - let {header="title", bubble={}, range={}} = options;
 
-	.sliders
-		+header({header:header})
+  .sliders
+    +header({header:header})
 
-		.sliders__block
-			.sliders__element.sliders__element_bubble-slider
-				+bubble-slider(bubble)
+    .sliders__block
+      .sliders__element.sliders__element_bubble-slider
+        +bubble-slider(bubble)
 
-			.sliders__element.sliders__element_range-slider
-				+range-slider(range)
+      .sliders__element.sliders__element_range-slider
+        +range-slider(range)

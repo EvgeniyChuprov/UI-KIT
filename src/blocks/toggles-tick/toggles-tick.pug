@@ -3,17 +3,17 @@ include ../toggle/toggle
 include ../tick/tick
 
 mixin toggles-tick(options)
-	-	let {toggleHeader="header", toggleCheck=[], tickHeader="header", tick=[]} = options;
+  -	let {toggleHeader="header", toggleCheck=[], tickHeader="header", tick=[]} = options;
 
-	.toggles-tick
-		+header({header: toggleHeader})
+  .toggles-tick
+    +header({header: toggleHeader})
 
-		.toggles-tick__toggle-block
-			each item in toggleCheck
-				+toggle(item)
+    .toggles-tick__toggle-block
+      each item in toggleCheck
+        +toggle(item)
 
-		+header({header: tickHeader})
+    +header({header: tickHeader})
 
-		.toggles-tick__tick-block
-			each item in tick
-				+tick(item)
+    .toggles-tick__tick-block
+      each item in tick
+        +tick(item)

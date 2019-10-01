@@ -1,5 +1,4 @@
 .sliders {
-
   &__block {
     display: flex;
     justify-content: space-between;
@@ -7,10 +6,10 @@
 
   &__element {
     width: 44%;
-    &_bubble-slider{
+    &_bubble-slider {
       padding-top: 7%;
     }
-    &_range-slider{
+    &_range-slider {
       padding-top: 6%;
     }
   }
